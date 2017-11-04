@@ -1,48 +1,7 @@
 :root {
-  --bg-color-1: #795558;
-  --bg-color-2: #c5a097;
-  --bg-color-3: #e9d1ae;
-  --bg-color-4: #ac8366;
-  --bg-color-5: #6d7c95;
-
-  --progress-0: #ff6565;
-  --progress-10: #f26c64;
-  --progress-20: #e47862;
-  --progress-30: #d28663;
-  --progress-40: #bb9361;
-  --progress-50: #a6a55f;
-  --progress-60: #91b45d;
-  --progress-70: #7dc45c;
-  --progress-80: #69d25b;
-  --progress-90: #5adc5a;
-  --progress-100: #50e45b;
+  --hilite: #fffc00;
+  --em: #ff0200;
 }
 
-.speaker {
-  margin-left: 0.5em;
-}
-
-.level-box-1 { background-color: var(--bg-color-1); }
-.level-box-2 { background-color: var(--bg-color-2); }
-.level-box-3 { background-color: var(--bg-color-3); }
-.level-box-4 { background-color: var(--bg-color-4); }
-.level-box-5 { background-color: var(--bg-color-5); }
-.progress-0 { background-color: var(--progress-0); }
-.progress-10 { background-color: var(--progress-10); }
-.progress-20 { background-color: var(--progress-20); }
-.progress-30 { background-color: var(--progress-30); }
-.progress-40 { background-color: var(--progress-40); }
-.progress-50 { background-color: var(--progress-50); }
-.progress-60 { background-color: var(--progress-60); }
-.progress-70 { background-color: var(--progress-70); }
-.progress-80 { background-color: var(--progress-80); }
-.progress-90 { background-color: var(--progress-90); }
-.progress-100 { background-color: var(--progress-100); }
-
-.progress-count {
-  margin-top: 1em;
-}
-
-.progress-name p {
-  font-size: 0.75em;
-}
+.hilite { background-color: var(--hilite); }
+.em { color: var(--em); }
