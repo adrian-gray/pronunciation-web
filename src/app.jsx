@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { HashRouter, Route } from 'react-router-dom'
 
-import Landing from './pages/Landing'
+import Landing from './js/Landing'
 
-import NavBar from './components/NavBar'
+import NavBar from './js/components/NavBar'
 
 const App = () => {
   return (

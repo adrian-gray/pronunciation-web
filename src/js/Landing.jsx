@@ -1,21 +1,19 @@
 import React from 'react'
+import data from './../data'
+
+import SoundTitle from './components/SoundTitle'
+import PronounceText from './components/PronounceText'
 
 export default function Landing () {
   return (
     <div className='container'>
 
-      <h1><span className='em'>/æ/</span> - short <span className='em'>a</span> ‘b<span className='em'>a</span>d’</h1>
+      <SoundTitle phoneme={data.phoneme} str={data.title} />
 
       <p>pronouncing /æ/ animation</p>
 
       <h3>How to pronounce</h3>
-      <ul>
-        <li>jaw drops (quite a bit)</li>
-        <li>mouth opens wide</li>
-        <li>tip of the tongue stays forward – touching the back of the bottom front teeth (tongue tip is down)</li>
-        <li className='hilite'>back part of the tongue stretches up (back part lifts)</li>
-        <li>the tongue is wide</li>
-      </ul>
+      <PronounceText arr={data.pronounce.text} />
 
       <h3>How to pronounce /æ/</h3>
       <p>movie</p>
@@ -159,7 +157,7 @@ export default function Landing () {
       </ul>
 
       <h3>Find the words</h3>
-      <h4>Click (✓) the words with the ‘short a’ <spane className='em'>/æ/</spane> sound</h4>
+      <h4>Click (✓) the words with the ‘short a’ <span className='em'>/æ/</span> sound</h4>
       <div className='container'>
         <div className='row'>
           <div className='col'>cap</div>
