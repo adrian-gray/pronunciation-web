@@ -2,7 +2,8 @@ import React from 'react'
 import data from './../data'
 
 import SoundTitle from './components/SoundTitle'
-import PronounceText from './components/PronounceText'
+import Description from './components/Description'
+import Words from './components/Words'
 
 export default function Landing () {
   return (
@@ -12,37 +13,12 @@ export default function Landing () {
 
       <p>pronouncing /æ/ animation</p>
 
-      <h3>How to pronounce</h3>
-      <PronounceText arr={data.pronounce.text} />
+      <Description phoneme={data.phoneme} arr={data.pronounce.text} />
 
       <h3>How to pronounce /æ/</h3>
       <p>movie</p>
 
-      <table className='table table-sm'>
-        <thead>
-          <tr>
-            <th colSpan='2'>Words</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>b<span className='em'>a</span>d</td>
-            <td>/b<span className='em'>æ</span>d/</td>
-          </tr>
-          <tr>
-            <td>c<span className='em'>a</span>tch</td>
-            <td>/k<span className='em'>æ</span>tʃ/</td>
-          </tr>
-          <tr>
-            <td>th<span className='em'>a</span>nk</td>
-            <td>/θ<span className='em'>æ</span>ŋk/</td>
-          </tr>
-          <tr>
-            <td>h<span className='em'>a</span>nging</td>
-            <td>/h<span className='em'>æ</span>ŋɪŋ/</td>
-          </tr>
-        </tbody>
-      </table>
+      <Words words={data.pronounce.words} />
 
       <table className='table table-sm'>
         <thead>
