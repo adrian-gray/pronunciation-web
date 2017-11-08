@@ -5,3 +5,7 @@
 
 .hilite { background-color: var(--hilite); }
 .em { color: var(--em); }
+.plain-list {
+  padding-left: 0;
+  list-style: none;
+}

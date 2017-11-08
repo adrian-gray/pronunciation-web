@@ -2,11 +2,11 @@ import React from 'react'
 
 import { splitHilite } from './../Utils'
 
-export default function Words (props) {
+export default function Phrases (props) {
   const { words } = props
-  const list = Object.entries(words).map((arr, index) => {
+  const list = Object.entries(words).map((arr, i) => {
     return (
-      <tr key={index}>
+      <tr key={i}>
         <td>{splitHilite(arr[0])}</td>
         <td>{splitHilite(arr[1])}</td>
       </tr>
@@ -14,11 +14,11 @@ export default function Words (props) {
   })
 
   return (
-    <div className='words'>
+    <div className='phrases'>
       <table className='table table-sm'>
         <thead>
           <tr>
-            <th colSpan='2'>Words</th>
+            <th colSpan='2'>Phrases</th>
           </tr>
         </thead>
         <tbody>
