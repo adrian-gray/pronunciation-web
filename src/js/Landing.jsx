@@ -1,25 +1,26 @@
 import React from 'react'
 import data from './../data'
 
-import { splitHilite } from './Utils'
+// import { splitHilite } from './Utils'
 
-import CommonWords from './components/CommonWords'
-import Description from './components/Description'
-import Dialogues from './components/Dialogues'
-import FindTheWords from './components/FindTheWords'
-import HearTheWords from './components/HearTheWords'
-import IdentifySounds from './components/IdentifySounds'
-import OddOneOut from './components/OddOneOut'
-import Phrases from './components/Phrases'
-import SaySentences from './components/SaySentences'
-import SoundTitle from './components/SoundTitle'
-import TongueTwisters from './components/TongueTwisters'
-import Words from './components/Words'
+// import CommonWords from './components/CommonWords'
+// import Description from './components/Description'
+// import Dialogues from './components/Dialogues'
+// import FindTheWords from './components/FindTheWords'
+// import HearTheWords from './components/HearTheWords'
+// import IdentifySounds from './components/IdentifySounds'
+// import OddOneOut from './components/OddOneOut'
+// import Phrases from './components/Phrases'
+// import SaySentences from './components/SaySentences'
+// import SoundTitle from './components/SoundTitle'
+// import TongueTwisters from './components/TongueTwisters'
+// import Words from './components/Words'
 import WordsMaze from './components/WordsMaze'
 
 export default function Landing () {
   return (
     <div className='container'>
+      {/*
 
       <SoundTitle phoneme={data.phoneme} str={data.title} />
       <hr />
@@ -82,7 +83,7 @@ export default function Landing () {
       <h5>Snake Eats Tongs</h5>
       <IdentifySounds sentences={data.identifySounds} />
 
-      <hr />
+      <hr /> */}
 
       <h3>Words Maze</h3>
       <WordsMaze words={data.wordsMaze} />

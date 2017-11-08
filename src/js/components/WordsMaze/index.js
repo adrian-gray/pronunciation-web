@@ -1,19 +1,16 @@
 /* global Phaser */
 
 import Boot from './states/boot'
-import Preload from './states/preload'
-import Settings from './states/settings'
+// import Preload from './states/preload'
 import Game from './states/game'
 
 let game
 
-const KanaDrop = {
+const WordsMaze = {
   init (params) {
-    game = new Phaser.Game(768, 1024, Phaser.AUTO, 'game')
+    game = new Phaser.Game(750, 750, Phaser.AUTO, 'words-maze')
     game.data = params
     game.state.add('boot', Boot)
-    game.state.add('preload', Preload)
-    game.state.add('settings', Settings)
     game.state.add('game', Game)
     game.state.start('boot')
     return game
@@ -27,4 +24,4 @@ const KanaDrop = {
   }
 }
 
-export default KanaDrop
+export default WordsMaze
