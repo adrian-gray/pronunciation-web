@@ -23,7 +23,6 @@ Boot.prototype = {
 
   create: function bootCreate () {
     game.state.start('game')
-    console.log('READY', game.data.words)
   }
 }
 

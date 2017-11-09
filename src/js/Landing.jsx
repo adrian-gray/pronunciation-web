@@ -86,7 +86,7 @@ export default function Landing () {
       <hr /> */}
 
       <h3>Words Maze</h3>
-      <WordsMaze words={data.wordsMaze} />
+      <WordsMaze words={data.wordsMaze.words} correct={data.wordsMaze.correct} />
     </div>
   )
 }

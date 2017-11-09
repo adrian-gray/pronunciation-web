@@ -11,7 +11,8 @@ class Maze extends React.Component {
     super(props)
 
     this.state = {
-      words: props.words
+      words: props.words,
+      correct: props.correct
     }
 
     this.componentWillUnmount = this.componentWillUnmount.bind(this)
@@ -49,7 +50,8 @@ class Maze extends React.Component {
 
     if (this && this.state) {
       wordsMaze.init({
-        words: this.state.words
+        words: this.state.words,
+        correct: this.state.correct
       })
     } else {
       console.log('KWords Maze state no longer exists, move on without creating game')

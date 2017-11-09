@@ -1,3 +1,5 @@
+/* globals Phaser */
+
 import Tile from './../entities/tile'
 
 const Game = function Game () {}
@@ -10,6 +12,8 @@ Game.prototype = {
     state = this
     game = state.game
 
+    const $tiles = new Phaser.Signal()
+
     const board = state.add.group()
     let tiles = []
     let index = 0
@@ -21,9 +25,28 @@ Game.prototype = {
         const height = TILE_SIZE
         const pos = { x, y, width, height }
         const word = game.data.words[index]
-        tiles.push(Tile({ state, parent: board, pos, word }))
+        tiles.push(Tile({ index, state, $tiles, parent: board, pos, word }))
         index++
       }
+    }
+
+    $tiles.add(handleTileSignal, this)
+
+    function handleTileSignal (e) {
+      const { word, index } = e
+      if (game.data.correct.includes(word)) {
+        handleTileCorrect(index)
+      } else {
+        handleTileIncorrect(index)
+      }
+    }
+
+    function handleTileCorrect (index) {
+      tiles[index].correct()
+    }
+
+    function handleTileIncorrect (index) {
+      tiles[index].incorrect()
     }
   }
 }
