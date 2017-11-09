@@ -7,8 +7,15 @@ const CORRECT = 0xCCFFCC
 const STACK = "'Helvetica Neue', Helvetica, Arial, sans-serif"
 
 export default function Tile (params) {
-  const { index, state, $tiles, parent, pos, word } = params
-  const { x, y, width, height } = pos
+  const {
+    index,
+    state,
+    $tiles,
+    parent,
+    TILE_SIZE,
+    row,
+    col,
+    word } = params
 
   const group = state.add.group()
   parent.add(group)
@@ -18,30 +25,31 @@ export default function Tile (params) {
 
   const text = addText({ str: word, size: 54 })
 
-  group.addMultiple(back, text)
+  group.add(back)
+  group.add(text)
 
   function makeBack () {
-    const g = state.add.graphics(x, y)
+    const g = state.add.graphics(col * TILE_SIZE, row * TILE_SIZE)
 
     // set a fill and line style
     g.beginFill(DEFAULT)
     g.lineStyle(2, STROKE, 1)
 
-    g.drawRect(0, 0, width, height, 5)
+    g.drawRect(0, 0, TILE_SIZE, TILE_SIZE, 5)
     return g
   }
 
   function addText ({ str, size }) {
     const style = { font: `normal ${size}px ${STACK}` }
-    const posX = x + (width / 2)
-    const posY = y + (height / 2)
+    const posX = col * TILE_SIZE + (TILE_SIZE / 2)
+    const posY = row * TILE_SIZE + (TILE_SIZE / 2)
     const text = state.add.text(posX, posY, str, style)
     text.anchor.set(0.5)
     return text
   }
 
   function handleUp () {
-    $tiles.dispatch({ word, index })
+    $tiles.dispatch({ word, index, row, col })
   }
 
   function correct () {
