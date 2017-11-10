@@ -1,7 +1,7 @@
 import React from 'react'
 import data from './../data'
 
-// import { splitHilite } from './Utils'
+import { splitHilite } from './Utils'
 
 // import CommonWords from './components/CommonWords'
 // import Description from './components/Description'
@@ -86,6 +86,7 @@ export default function Landing () {
       <hr /> */}
 
       <h3>Words Maze</h3>
+      <p>{splitHilite('From the yellow square pick an adjacent square with a short ~/æ/~ sound. Keep going until you reach the blue square.')}</p>
       <WordsMaze words={data.wordsMaze.words} correct={data.wordsMaze.correct} />
     </div>
   )

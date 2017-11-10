@@ -57,27 +57,22 @@ Game.prototype = {
     }
 
     function handleTileCorrect (index, row, col) {
-      console.log(`(${col}, ${row}) - `, activePos)
       tiles[index].correct()
-      if (col > 1 && col < NUM_COLS - 2) {
-        if (col > activePos.col) {
-          moveBoard(RIGHT)
-        } else if (col < activePos.col) {
-          moveBoard(LEFT)
-        }
+
+      if (col > activePos.col && col > 1 && col < NUM_COLS - 1) {
+        moveBoard(RIGHT)
+      } else if (col < activePos.col && col > 0 && activePos.col < NUM_COLS - 1) {
+        moveBoard(LEFT)
       }
-      if (row > 1 && row < NUM_ROWS - 2) {
-        if (row > activePos.row) {
-          moveBoard(DOWN)
-        } else if (row < activePos.row) {
-          moveBoard(UP)
-        }
+      if (row > activePos.row && row > 1 && row < NUM_ROWS - 1) {
+        moveBoard(DOWN)
+      } else if (row < activePos.row && row > 0 && activePos.row < NUM_ROWS - 1) {
+        moveBoard(UP)
       }
       activePos = {row, col}
     }
 
     function moveBoard (direction) {
-      console.log(direction)
       switch (direction) {
         case LEFT:
           game.add.tween(board).to(

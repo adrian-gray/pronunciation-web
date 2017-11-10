@@ -4,6 +4,8 @@ const DEFAULT = 0xDDDDDD
 const STROKE = 0x000000
 const INCORRECT = 0xFFCCCC
 const CORRECT = 0xCCFFCC
+const YELLOW = 0xFFFFCC
+const BLUE = 0xCCCCFF
 const STACK = "'Helvetica Neue', Helvetica, Arial, sans-serif"
 
 export default function Tile (params) {
@@ -23,16 +25,19 @@ export default function Tile (params) {
   back.events.onInputUp.add(handleUp)
   back.inputEnabled = true
 
-  const text = addText({ str: word, size: 54 })
+  const text = addText({ str: word, size: 48 })
 
   group.add(back)
   group.add(text)
 
   function makeBack () {
     const g = state.add.graphics(col * TILE_SIZE, row * TILE_SIZE)
+    let color = DEFAULT
+    if (index === 0) color = YELLOW
+    if (index === 71) color = BLUE
 
     // set a fill and line style
-    g.beginFill(DEFAULT)
+    g.beginFill(color)
     g.lineStyle(2, STROKE, 1)
 
     g.drawRect(0, 0, TILE_SIZE, TILE_SIZE, 5)
