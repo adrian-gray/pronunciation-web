@@ -3,58 +3,74 @@ import data from './../data'
 
 import { splitHilite } from './Utils'
 
-// import CommonWords from './components/CommonWords'
-// import Description from './components/Description'
-// import Dialogues from './components/Dialogues'
-// import FindTheWords from './components/FindTheWords'
-// import HearTheWords from './components/HearTheWords'
-// import IdentifySounds from './components/IdentifySounds'
-// import OddOneOut from './components/OddOneOut'
-// import Phrases from './components/Phrases'
-// import SaySentences from './components/SaySentences'
-// import SoundTitle from './components/SoundTitle'
-// import TongueTwisters from './components/TongueTwisters'
-// import Words from './components/Words'
+import CommonWords from './components/CommonWords'
+import Description from './components/Description'
+import Dialogues from './components/Dialogues'
+import FindTheWords from './components/FindTheWords'
+import HearTheWords from './components/HearTheWords'
+import IdentifySounds from './components/IdentifySounds'
+import OddOneOut from './components/OddOneOut'
+import Phrases from './components/Phrases'
+import SaySentences from './components/SaySentences'
+import SoundTitle from './components/SoundTitle'
+import TongueTwisters from './components/TongueTwisters'
+import Words from './components/Words'
 import WordsMaze from './components/WordsMaze'
 
 export default function Landing () {
   return (
     <div className='container'>
-      {/*
-
       <SoundTitle phoneme={data.phoneme} str={data.title} />
       <hr />
 
-      <img src='/images/animation.png' />
-
-      <Description phoneme={data.phoneme} arr={data.text} />
+      <div className='container'>
+        <div className='row'>
+          <div className='col-sm'>
+            <div className='container img-container'>
+              <img className='responsive-img' src='./images/animation.png' />
+            </div>
+          </div>
+          <div className='col-sm'>
+            <Description phoneme={data.phoneme} arr={data.text} />
+          </div>
+        </div>
+      </div>
       <hr />
 
-      <img src='/images/video1.png' />
+      <div className='container img-container'>
+        <img className='responsive-img' src='./images/video1.png' />
+      </div>
 
-      <Words words={data.words} />
-      <hr />
-
-      <Phrases words={data.phrases} />
-
+      <div className='container'>
+        <div className='row'>
+          <div className='col-sm'>
+            <Words words={data.words} />
+          </div>
+          <div className='col-sm'>
+            <Phrases words={data.phrases} />
+          </div>
+        </div>
+      </div>
       <hr />
 
       <Dialogues dialogues={data.dialogues} />
+      <hr />
 
-      <img src='/images/dialogues.png' />
+      <div className='container img-container'>
+        <img className='responsive-img' src='./images/dialogues.png' />
+      </div>
       <hr />
 
       <h3>{'Common Words'}</h3>
 
       <CommonWords words={data.commonWords} />
 
-      <hr />
-      <h2>Member section</h2>
-      <br />
-
       <h3>Tongue twisters</h3>
       <TongueTwisters />
       <hr />
+
+      <h2>Members section interactives</h2>
+      <br />
 
       <h3>Find the words</h3>
       <h4>Click (✓) the words with the ‘short a’ <span className='em'>/æ/</span> sound</h4>
@@ -83,11 +99,13 @@ export default function Landing () {
       <h5>Snake Eats Tongs</h5>
       <IdentifySounds sentences={data.identifySounds} />
 
-      <hr /> */}
+      <hr />
 
       <h3>Words Maze</h3>
       <p>{splitHilite('From the yellow square pick an adjacent square with a short ~/æ/~ sound. Keep going until you reach the blue square.')}</p>
       <WordsMaze words={data.wordsMaze.words} correct={data.wordsMaze.correct} />
+
+      <hr />
     </div>
   )
 }
