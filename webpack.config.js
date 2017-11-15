@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   context: __dirname,
-  entry: './src/app.jsx',
+  entry: ['babel-polyfill', './src/app.jsx'],
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, 'public'),
