@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { splitHilite } from './../Utils'
+import { splitHilite } from './../utils/utils'
 
 export default function Description (props) {
   const { phoneme, arr } = props

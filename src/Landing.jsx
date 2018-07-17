@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function Landing () {
-  return (
-    <div className='container'>
-      <h1>This is landing page</h1>
-      <hr />
-    </div>
-  )
-}
+const Landing = () =>
+  <div className='container'>
+    <h1>Pronounce Web</h1>
+    <hr />
+  </div>
+
+export default Landing

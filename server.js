@@ -5,6 +5,7 @@ const express = require('express')
 const React = require('react')
 const ReactDOMServer = require('react-dom/server')
 const ReactRouter = require('react-router-dom')
+const Helmet = require('react-helmet').Helmet
 const _ = require('lodash')
 const fs = require('fs')
 const compression = require('compression')
@@ -29,6 +30,7 @@ server.use((req, res) => {
       React.createElement(App)
     )
   )
+  const helmet = Helmet.renderStatic()
 
   if (context.url) {
     res.redirect(context.url)
@@ -38,7 +40,7 @@ server.use((req, res) => {
     res.status(context.status)
   }
 
-  res.write(template({ body }))
+  res.write(template({ body, helmet }))
   res.end()
 })
 
