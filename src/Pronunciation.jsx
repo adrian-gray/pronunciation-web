@@ -27,7 +27,7 @@ export default function Landing () {
         <div className='row'>
           <div className='col-sm'>
             <div className='container img-container'>
-              <img className='responsive-img' src='./images/animation.png' />
+              <img className='responsive-img' src='/public/images/animation.png' />
             </div>
           </div>
           <div className='col-sm'>
@@ -38,7 +38,7 @@ export default function Landing () {
       <hr />
 
       <div className='container img-container'>
-        <img className='responsive-img' src='./images/video1.png' />
+        <img className='responsive-img' src='/public/images/video1.png' />
       </div>
 
       <div className='container'>
@@ -57,7 +57,7 @@ export default function Landing () {
       <hr />
 
       <div className='container img-container'>
-        <img className='responsive-img' src='./images/dialogues.png' />
+        <img className='responsive-img' src='/public/images/dialogues.png' />
       </div>
       <hr />
 
