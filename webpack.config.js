@@ -2,14 +2,15 @@ const path = require('path')
 
 module.exports = {
   context: __dirname,
-  entry: ['babel-polyfill', './src/app.jsx'],
+  entry: ['babel-polyfill', './src/ClientApp.jsx'],
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
   },
   devServer: {
-    publicPath: '/public/'
+    publicPath: '/public/',
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json']

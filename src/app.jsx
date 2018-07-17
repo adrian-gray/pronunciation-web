@@ -1,20 +1,20 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { HashRouter, Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
-import Landing from './js/Landing'
+import Landing from './Landing'
+import Pronunciation from './Pronunciation'
+import NavBar from './components/NavBar'
 
-import NavBar from './js/components/NavBar'
+const FourOhFour = () => <h1>404</h1>
 
-const App = () => {
-  return (
-    <HashRouter>
-      <div>
-        <NavBar />
-        <Route exact path='/' component={Landing} />
-      </div>
-    </HashRouter>
-  )
-}
+const App = () =>
+  <div className='container'>
+    <NavBar />
+    <Switch>
+      <Route exact path='/' component={Landing} />
+      <Route exact path='/pronunciation' component={Pronunciation} />
+      <Route default component={FourOhFour} />
+    </Switch>
+  </div>
 
-ReactDOM.render(<App />, document.getElementById('app'))
+export default App
