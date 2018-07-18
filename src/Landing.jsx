@@ -1,9 +1,5 @@
 import React from 'react'
-import MailchimpSubscribe from 'react-mailchimp-subscribe'
-
-const url = '//endual.us8.list-manage.com/subscribe/post?u=5cfcc43825365c2c32230cdde&amp;id=f0489cd39a'
-
-// https://github.com/revolunet/react-mailchimp-subscribe/blob/master/demo/src/index.js
+import MailchimpCustom from './components/MailchimpCustom'
 
 const Landing = () =>
   <div className='container'>
@@ -16,15 +12,9 @@ const Landing = () =>
       <p>We have English pronunciation video lessons from a registered English pronunciation instructor. The pronunciation lessons are followed by English pronunciation examples, recorded conversations, and interactive activities to help improve your pronunciation the right way. You will learn how to pronounce English clearly and professionally.</p>
       <p>Take your English pronunciation to the next level</p>
       <hr className='my-4' />
-      <div className='container text-center'>
-        <div className='mailchimp-subscribe'>
-          <h3 className='h2'>Get Updated!</h3>
-          <MailchimpSubscribe url={url} />
-        </div>
-      </div>
-      <hr className='my-4' />
       <p>We are currently running in a limited test. We aim to launch the early beta in September 2018.</p>
       <p>Sign up to our launch list to know as soon as our site is live.</p>
+      <MailchimpCustom />
     </div>
   </div>
 
