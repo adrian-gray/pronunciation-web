@@ -1,16 +1,14 @@
-  // title: 65-75, keywords near start
-  // title: '#################################################################-----'
-  // description: upto 160
-  // description: `Learn Japanese playing Katakana and Hiragana kana games online. Starting with a game to learn Hiragana and Katakana kanas, we're regularly adding more games.`,
-
 const URL = 'http://pronounceweb.com/'
 
 // title 65-75
+//  title: `##########**********##########**********##########**********@@@@@----------
+// description 50 - 300
+//  description: `##########**********##########**********##########++++`
 const meta = {
   'default': {
     canonical: URL,
-    title: 'English pronunciation practice with our English pronunciation app',
-    description: 'English pronunciation web app, Pronounce Web',
+    title: `English pronunciation practice to improve English word pronunciation`,
+    description: `English pronunciation lessons and practice with Nicky Brookes, English language consultant. PronounceWeb.com has videos helping you learn how to improve English pronunciation, English pronunciation exercises, and English pronunciation activities.`,
     imageFB: `${URL}/public/images/pronunciation-fb.jpg`,
     imageTW: `${URL}/public/images/pronunciation-twitter.jpg`
   }
