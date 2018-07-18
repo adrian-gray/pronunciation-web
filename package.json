@@ -23,6 +23,7 @@
   "scripts": {
     "build": "webpack -p",
     "dev": "webpack-dev-server",
+    "serve": "node server.js",
     "watch": "webpack --watch"
   }
 }

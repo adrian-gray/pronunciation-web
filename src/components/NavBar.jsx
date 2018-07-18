@@ -8,6 +8,7 @@ const NavBar = () =>
       <span className='navbar-toggler-icon' />
     </button>
 
+    {/*
     <div className='collapse navbar-collapse' id='navbarSupportedContent'>
       <ul className='navbar-nav mr-auto'>
         <li className='nav-item'>
@@ -22,6 +23,7 @@ const NavBar = () =>
         </li>
       </ul>
     </div>
+    */}
   </nav>
 
 export default NavBar
