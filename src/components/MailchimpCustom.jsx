@@ -55,8 +55,8 @@ const Form = ({ status, message, onValidated }) => {
         />
         <small id='emailHelp' className='form-text'>We'll never share your details with anyone else.</small>
       </div>
-      <button type='button' className='btn btn-success btn-block' onClick={submit}>
-        Submit
+      <button type='button' className='btn btn-warning btn-block' onClick={submit}>
+        Keep me updated!
       </button>
     </form>
   )
@@ -69,7 +69,6 @@ class MailchimpCustom extends React.Component {
     return (
       <div className='container text-center'>
         <div className='mailchimp-subscribe'>
-          <h3 className='h2'>Get Updated!</h3>
           <MailchimpSubscribe
             url={url}
             render={({ subscribe, status, message }) => (

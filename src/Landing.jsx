@@ -12,8 +12,8 @@ const Landing = () =>
       <p>We have English pronunciation video lessons from a registered English pronunciation instructor. The pronunciation lessons are followed by English pronunciation examples, recorded conversations, and interactive activities to help improve your pronunciation the right way. You will learn how to pronounce English clearly and professionally.</p>
       <p>Take your English pronunciation to the next level</p>
       <hr className='my-4' />
+      <h4>Be in the know as soon as we launch</h4>
       <p>We are currently running in a limited test. We aim to launch the early beta in September 2018.</p>
-      <p>Sign up to our launch list to know as soon as our site is live.</p>
       <MailchimpCustom />
     </div>
   </div>
