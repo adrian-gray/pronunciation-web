@@ -16,16 +16,16 @@ const Form = ({ status, message, onValidated }) => {
 
   return (
     <form>
-      {status === 'sending' && <div style={{ color: 'blue' }}>sending...</div>}
+      {status === 'sending' && <div>sending...</div>}
       {status === 'error' && (
         <div
-          style={{ color: 'red' }}
+          style={{ color: '#6b0400' }}
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
       {status === 'success' && (
         <div
-          style={{ color: 'green' }}
+          style={{ color: '#ffff00' }}
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
@@ -64,7 +64,7 @@ const Form = ({ status, message, onValidated }) => {
 
 class MailchimpCustom extends React.Component {
   render () {
-    const url = '//endual.us8.list-manage.com/subscribe/post?u=5cfcc43825365c2c32230cdde&ampid=f0489cd39a'
+    const url = '//endual.us8.list-manage.com/subscribe/post?u=5cfcc43825365c2c32230cdde&id=f0489cd39a'
 
     return (
       <div className='container text-center'>
