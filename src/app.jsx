@@ -14,7 +14,7 @@ const App = () =>
     <NavBar />
     <Switch>
       <Route exact path='/' component={Landing} />
-      <Route exact path='/pronunciation' component={Pronunciation} />
+      <Route exact path='/app' component={Pronunciation} />
       <Route default component={FourOhFour} />
     </Switch>
   </div>

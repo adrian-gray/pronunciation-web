@@ -1,7 +1,7 @@
 import React from 'react'
 import data from './data/data'
 
-import { splitHilite } from './utils/utils'
+import { splitHilite } from './utils/Utils'
 
 import CommonWords from './components/CommonWords'
 import Description from './components/Description'
@@ -26,7 +26,7 @@ const Pronunciation = () =>
       <div className='row'>
         <div className='col-sm'>
           <div className='container img-container'>
-            <img className='responsive-img' src='/public/images/animation.png' />
+            <img className='responsive-img' src='/assets/images/animation.png' />
           </div>
         </div>
         <div className='col-sm'>
@@ -37,7 +37,7 @@ const Pronunciation = () =>
     <hr />
 
     <div className='container img-container'>
-      <img className='responsive-img' src='/public/images/video1.png' />
+      <img className='responsive-img' src='/assets/images/video1.png' />
     </div>
 
     <div className='container'>
@@ -56,7 +56,7 @@ const Pronunciation = () =>
     <hr />
 
     <div className='container img-container'>
-      <img className='responsive-img' src='/public/images/dialogues.png' />
+      <img className='responsive-img' src='/assets/images/dialogues.png' />
     </div>
     <hr />
 

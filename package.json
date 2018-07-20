@@ -9,6 +9,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.2",
     "loader": "^2.1.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

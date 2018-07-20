@@ -1,4 +1,5 @@
 const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   context: __dirname,
@@ -33,5 +34,12 @@ module.exports = {
         loader: 'babel-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: './assets', to: './assets' },
+      { from: './src/styles.css', to: './styles.css' },
+      { from: './src/index.html', to: './index.html' }
+    ])
+  ]
 }

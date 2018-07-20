@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { splitHilite } from './../utils/utils'
+import { splitHilite } from './../utils/Utils'
 
 export default function SoundTitle (props) {
   const { phoneme, str } = props

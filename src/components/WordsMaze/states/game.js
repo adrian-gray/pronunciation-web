@@ -1,6 +1,6 @@
 /* globals Phaser */
 
-import Tile from './../entities/tile'
+import Tile from './../entities/Tile'
 
 const Game = function Game () {}
 const TILE_SIZE = 250

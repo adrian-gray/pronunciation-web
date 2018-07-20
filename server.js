@@ -19,7 +19,7 @@ const template = _.template(baseTemplate)
 const server = express()
 server.use(compression())
 
-server.use('/public', express.static('./public'))
+server.use('/public', express.static('./public/assets/'))
 
 server.use((req, res) => {
   const context = {}
