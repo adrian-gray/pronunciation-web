@@ -11,8 +11,10 @@ import NavBar from './components/NavBar'
 const FourOhFour = () => <h1>404</h1>
 
 const App = () => {
-  ReactGA.initialize('UA-122566851-1')
-  ReactGA.pageview(window.location.pathname + window.location.search)
+  if (window) {
+    ReactGA.initialize('UA-122566851-1')
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }
 
   return (
     <div className='container'>
