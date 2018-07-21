@@ -1,7 +1,7 @@
 import React from 'react'
 import data from './data/data'
 
-import { splitHilite } from './utils/Utils'
+import { splitHilite } from './utils/utils'
 
 import CommonWords from './components/CommonWords'
 import Description from './components/Description'

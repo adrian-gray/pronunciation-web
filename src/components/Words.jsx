@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { splitHilite } from './../utils/Utils'
+import { splitHilite } from './../utils/utils'
 
 export default function Words (props) {
   const { words } = props
