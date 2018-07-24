@@ -1,10 +1,11 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import ReactGA from 'react-ga'
 
-import Landing from './Landing'
-import Pronunciation from './Pronunciation'
+import Landing from './pages/Landing'
+import Pronunciation from './pages/Pronunciation'
+
 import SEO from './components/SEO'
 import NavBar from './components/NavBar'
 
@@ -16,18 +17,18 @@ const App = () => {
     ReactGA.pageview(window.location.pathname + window.location.search)
   }
 
-  console.log('aPPPXX')
-
   return (
-    <div className='container'>
-      <SEO />
-      <NavBar />
-      <Switch>
-        <Route exact path='/' component={Landing} />
-        <Route exact path='/app' component={Pronunciation} />
-        <Route default component={FourOhFour} />
-      </Switch>
-    </div>
+    <BrowserRouter>
+      <div className='container'>
+        <SEO />
+        <NavBar />
+        <Switch>
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/app' component={Pronunciation} />
+          <Route default component={FourOhFour} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   )
 }
 

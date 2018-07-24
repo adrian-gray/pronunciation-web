@@ -1,5 +1,5 @@
 import React from 'react'
-import MailchimpCustom from './components/MailchimpCustom'
+import MailchimpCustom from './../components/MailchimpCustom'
 
 const Landing = () =>
   <div className='container'>
