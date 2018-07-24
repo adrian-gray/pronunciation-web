@@ -1,47 +1,30 @@
-/* eslint no-console:0 */
-require('babel-register')
-
 const express = require('express')
-const React = require('react')
-const ReactDOMServer = require('react-dom/server')
-const ReactRouter = require('react-router-dom')
-const Helmet = require('react-helmet').Helmet
-const _ = require('lodash')
-const fs = require('fs')
+const path = require('path')
 const compression = require('compression')
-const App = require('./src/App.jsx')
 
-const StaticRouter = ReactRouter.StaticRouter
-const PORT = 8080
-const baseTemplate = fs.readFileSync('./index-template.html')
-const template = _.template(baseTemplate)
+const PORT = 9000
 
 const server = express()
 server.use(compression())
 
-server.use('/public', express.static('./public/assets/'))
+server.use('/assets', express.static(path.join(__dirname, 'dist/assets/')))
 
-server.use((req, res) => {
-  const context = {}
-  const body = ReactDOMServer.renderToString(
-    React.createElement(
-      StaticRouter,
-      { location: req.url, context },
-      React.createElement(App)
-    )
-  )
-  const helmet = Helmet.renderStatic()
+server.get('/bundle.js', (req, res) => {
+  const file = path.join(__dirname, 'dist', 'bundle.js')
+  console.log('serving: ', file)
+  res.sendFile(path.join(__dirname, 'dist', 'bundle.js'))
+})
 
-  if (context.url) {
-    res.redirect(context.url)
-  }
+server.get('/styles.css', (req, res) => {
+  const file = path.join(__dirname, 'dist', 'styles.css')
+  console.log('serving: ', file)
+  res.sendFile(path.join(__dirname, 'dist', 'styles.css'))
+})
 
-  if (context.status) {
-    res.status(context.status)
-  }
-
-  res.write(template({ body, helmet }))
-  res.end()
+server.get('*', (req, res) => {
+  const file = path.join(__dirname, 'dist', 'index.html')
+  console.log('serving: ', file)
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 })
 
 console.log(`listening on port ${PORT}`)
