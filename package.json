@@ -1,6 +1,12 @@
 {
+  "scripts": {
+    "webpack": "webpack",
+    "build": "webpack -p",
+    "dev": "webpack-dev-server",
+    "serve": "node server.js",
+    "watch": "webpack --watch"
+  },
   "dependencies": {
-    "loader": "^2.1.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-ga": "^2.5.3",
@@ -8,13 +14,6 @@
     "react-load-script": "^0.0.6",
     "react-mailchimp-subscribe": "^2.0.2",
     "react-router-dom": "^4.3.1"
-  },
-  "scripts": {
-    "webpack": "webpack",
-    "build": "webpack -p",
-    "dev": "webpack-dev-server",
-    "serve": "node server.js",
-    "watch": "webpack --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -28,6 +27,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "copy-webpack-plugin": "^4.5.2",
     "html-webpack-plugin": "^3.2.0",
+    "loader": "^2.1.1",
     "standard": "^11.0.1",
     "standard-loader": "^6.0.1",
     "webpack": "v4.16.2",

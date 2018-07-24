@@ -6,7 +6,7 @@ const publicPath = 'dist'
 
 module.exports = {
   context: __dirname,
-  entry: ['babel-polyfill', './src/Index.jsx'],
+  entry: ['./src/Index.jsx'],
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, publicPath),
