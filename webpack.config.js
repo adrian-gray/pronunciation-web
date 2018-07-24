@@ -1,16 +1,19 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+
+const publicPath = '/dist/'
 
 module.exports = {
   context: __dirname,
-  entry: ['babel-polyfill', './ClientApp.jsx'],
+  entry: ['babel-polyfill', './src/App.jsx'],
   devtool: 'source-map',
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'dist'), 
     filename: 'bundle.js'
   },
   devServer: {
-    publicPath: '/public/',
+    publicPath: 'dist',
     historyApiFallback: true
   },
   resolve: {
@@ -36,10 +39,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin(),
     new CopyWebpackPlugin([
-      { from: './assets', to: './assets' },
-      { from: './src/styles.css', to: './styles.css' },
-      { from: './src/index.html', to: './index.html' }
+      { from: './src/assets', to: 'assets' },
+      { from: './src/styles.css', to: 'styles.css' }
     ])
   ]
 }
