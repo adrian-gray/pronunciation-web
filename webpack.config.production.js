@@ -8,6 +8,7 @@ const publicPath = 'dist'
 module.exports = {
   context: __dirname,
   entry: [
+    'babel-polyfill',
     './src/Index.jsx',
     './src/scss/main.scss'
   ],
