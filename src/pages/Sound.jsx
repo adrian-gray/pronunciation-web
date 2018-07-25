@@ -17,7 +17,7 @@ import TongueTwisters from './../components/TongueTwisters'
 import Words from './../components/Words'
 import WordsMaze from './../components/WordsMaze'
 
-const Pronounce = () =>
+const Sound = () =>
   <div className='container'>
     <SoundTitle phoneme={data.phoneme} str={data.title} />
     <hr />
@@ -107,4 +107,4 @@ const Pronounce = () =>
     <hr />
   </div>
 
-export default Pronounce
+export default Sound

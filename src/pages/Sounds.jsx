@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Pronunciation = () =>
+const Sounds = () =>
   <div className='container'>
     <h1>Pronunciation</h1>
   </div>
 
-export default Pronunciation
+export default Sounds

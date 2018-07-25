@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import ReactGA from 'react-ga'
 
-import PronounceRoutes from './routes/PronounceRoutes'
+import SoundRoutes from './routes/SoundRoutes'
 
 import Landing from './pages/Landing'
 
@@ -25,7 +25,7 @@ const App = () => {
         <NavBar />
         <Switch>
           <Route exact path='/' component={Landing} />
-          <Route path='/pronounce' component={PronounceRoutes} />
+          <Route path='/sounds' component={SoundRoutes} />
           <Route default component={FourOhFour} />
         </Switch>
       </div>
