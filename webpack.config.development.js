@@ -7,6 +7,7 @@ const publicPath = 'dist'
 
 module.exports = {
   context: __dirname,
+  mode: 'development',
   entry: [
     './src/Index.jsx',
     './src/scss/main.scss'

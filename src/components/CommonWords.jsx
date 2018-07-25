@@ -1,3 +1,4 @@
+import React from 'react'
 import { splitHilite } from './../utils/utils'
 
 export default function CommonWords (props) {
