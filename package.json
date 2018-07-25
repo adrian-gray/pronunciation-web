@@ -1,10 +1,8 @@
 {
   "scripts": {
-    "webpack": "webpack",
-    "build": "webpack -p",
-    "dev": "webpack-dev-server",
-    "serve": "node server.js",
-    "watch": "webpack --watch"
+    "build": "webpack --config webpack.config.production.js",
+    "dev": "webpack-dev-server --config webpack.config.development.js --watch",
+    "serve": "node server.js"
   },
   "dependencies": {
     "react": "^16.4.1",
