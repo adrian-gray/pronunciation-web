@@ -7,7 +7,7 @@ const PORT = 9000
 const server = express()
 server.use(compression())
 
-server.use('/assets', express.static(path.join(__dirname, 'dist/assets/')))
+server.use('/assets', express.static(path.join(__dirname, 'dist/assets')))
 
 server.get('/bundle.js', (req, res) => {
   const file = path.join(__dirname, 'dist', 'bundle.js')
