@@ -19,8 +19,8 @@ server.get('/bundle.js.map', (req, res) => {
   res.sendFile(file)
 })
 
-server.get('/styles.css', (req, res) => {
-  const file = path.join(__dirname, 'dist', 'styles.css')
+server.get('/main.css', (req, res) => {
+  const file = path.join(__dirname, 'dist', 'main.css')
   res.sendFile(file)
 })
 
