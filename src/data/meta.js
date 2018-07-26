@@ -6,13 +6,14 @@ const URL = 'https://pronounceweb.com/'
 //  description: `##########**********##########**********##########++++`
 const meta = {
   'default': {
-    canonical: URL,
     title: `English pronunciation practice to improve English word pronunciation`,
     description: `English pronunciation lessons and practice with Nicky Brookes, English language consultant. PronounceWeb.com has videos helping you learn how to improve English pronunciation, English pronunciation exercises, and English pronunciation activities.`,
     imageFB: `${URL}/assets/images/pronunciation-fb.jpg`,
     imageTW: `${URL}/assets/images/pronunciation-twitter.jpg`
+  },
+  'sounds': {
+    title: `English sounds pronunciation practice. Phoenetic list of practice sounds.`
   }
-
   // Utility pages
   // 'apps': {
   //   canonical: `${URL}/apps/`,

@@ -11,7 +11,6 @@ function SEO (props) {
     <Helmet>
       <title>{ title }</title>
       <meta name='description' content={description} />
-      <link rel='canonical' href={canonical} />
 
       <meta property='og:url' content={canonical} />
       <meta property='og:type' content='website' />
