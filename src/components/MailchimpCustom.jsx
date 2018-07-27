@@ -1,5 +1,8 @@
 import React from 'react'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
+import { withStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button'
 
 const Form = ({ status, message, onValidated }) => {
   let email, fname, lname
@@ -13,6 +16,21 @@ const Form = ({ status, message, onValidated }) => {
       FNAME: fname.value,
       LNAME: lname.value
     })
+
+  const styles = theme => ({
+    container: {
+      display: 'flex',
+      flexWrap: 'wrap'
+    },
+    textField: {
+      marginLeft: theme.spacing.unit,
+      marginRight: theme.spacing.unit,
+      width: 200
+    },
+    menu: {
+      width: 200
+    }
+  })
 
   return (
     <form>
@@ -29,35 +47,37 @@ const Form = ({ status, message, onValidated }) => {
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
-      <div className='form-group'>
-        <input
-          className='form-control'
-          ref={node => (fname = node)}
-          type='text'
-          placeholder='First name'
-        />
-      </div>
-      <div className='form-group'>
-        <input
-          className='form-control'
-          ref={node => (lname = node)}
-          type='text'
-          placeholder='Last name'
-        />
-      </div>
-      <div className='form-group'>
-        <input
-          className='form-control'
-          ref={node => (email = node)}
-          type='email'
-          id='email'
-          placeholder='Email'
-        />
-        <small id='emailHelp' className='form-text'>We'll never share your details with anyone else.</small>
-      </div>
-      <button type='button' className='btn btn-warning btn-block' onClick={submit}>
+      <TextField
+        id='firstName'
+        label='First Name'
+        className='form-control'
+        ref={node => (fname = node)}
+        margin='normal'
+      />
+      <TextField
+        id='lastName'
+        label='Last Name'
+        className='form-control'
+        ref={node => (lname = node)}
+        margin='normal'
+      />
+      <TextField
+        id='email'
+        label='Email'
+        className='form-control'
+        ref={node => (email = node)}
+        margin='normal'
+      />
+      <br />
+      <small id='emailHelp' className='form-text'>We'll never share your details with anyone else.</small>
+      <br />
+      <Button 
+        onClick={submit}
+        variant='contained'
+        color='primary'
+      >
         Keep me updated!
-      </button>
+      </Button>
     </form>
   )
 }

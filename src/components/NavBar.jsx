@@ -1,29 +1,47 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
 
-const NavBar = () =>
-  <nav className='navbar navbar-expand-lg navbar-light bg-light'>
-    <a className='navbar-brand' href='/'>Pronounce Web</a>
-    <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-      <span className='navbar-toggler-icon' />
-    </button>
+const styles = {
+  root: {
+    flexGrow: 1
+  },
+  flex: {
+    flexGrow: 1
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20
+  }
+}
 
-    {/*
-    <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-      <ul className='navbar-nav mr-auto'>
-        <li className='nav-item'>
-          <Link to='/' className='nav-link'>
-            Home
-          </Link>
-        </li>
-        <li className='nav-item'>
-          <Link to='/pronunciation' className='nav-link'>
-            Pronunciation
-          </Link>
-        </li>
-      </ul>
+function NavBar (props) {
+  const { classes } = props
+  return (
+    <div className={classes.root}>
+      <AppBar position='static'>
+        <Toolbar>
+          <IconButton className={classes.menuButton} color='inherit' aria-label='Menu'>
+            <MenuIcon />
+          </IconButton>
+          <Typography variant='title' color='inherit' className={classes.flex}>
+            Pronounce Web
+          </Typography>
+          <Button color='inherit'>Login</Button>
+        </Toolbar>
+      </AppBar>
     </div>
-    */}
-  </nav>
+  )
+}
 
-export default NavBar
+NavBar.propTypes = {
+  classes: PropTypes.object.isRequired
+}
+
+export default withStyles(styles)(NavBar)

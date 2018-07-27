@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-
 import ReactGA from 'react-ga'
+import CssBaseline from '@material-ui/core/CssBaseline'
 
 import SoundRoutes from './routes/SoundRoutes'
 
@@ -20,15 +20,18 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className='container'>
-        <SEO />
-        <NavBar />
-        <Switch>
-          <Route exact path='/' component={Landing} />
-          <Route path='/sounds' component={SoundRoutes} />
-          <Route default component={FourOhFour} />
-        </Switch>
-      </div>
+      <Fragment>
+        <CssBaseline />
+        <div className='container'>
+          <SEO />
+          <NavBar />
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route path='/sounds' component={SoundRoutes} />
+            <Route default component={FourOhFour} />
+          </Switch>
+        </div>
+      </Fragment>
     </BrowserRouter>
   )
 }
