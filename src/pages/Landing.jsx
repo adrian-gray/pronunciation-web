@@ -14,7 +14,7 @@ const styles = theme => ({
 
 const Landing = (props) => {
   const { classes } = props
-  
+
   return (
     <div className='container'>
       <br />
