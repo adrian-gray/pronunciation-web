@@ -3,22 +3,46 @@ import { withStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 
-// const MailchimpForm = ({ status, message, onValidated }) => {
+const styles = (theme) => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200
+  },
+  menu: {
+    width: 200
+  }
+})
 
 class MailchimpForm extends React.Component {
   constructor (props) {
     super(props)
 
+    console.log('*', props)
+    console.log('**', props.message)
+    console.log('***', props.onValidated)
+
     this.state = {
-      status: props.status,
-      message: props.message,
       firstName: '',
       lastName: '',
       email: ''
     }
-    this.styles = this.styles.bind(this)
+
     this.handleChange = this.handleChange.bind(this)
     this.submit = this.submit.bind(this)
+    this.handleValidation = this.handleValidation.bind(this)
+  }
+
+  handleValidation () {
+    this.props.onValidated({
+      EMAIL: this.state.email,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName
+    })
   }
 
   handleChange (name) {
@@ -30,50 +54,42 @@ class MailchimpForm extends React.Component {
   }
 
   submit () {
-    return this.email &&
-      this.firstName &&
-      this.lastName &&
-      this.email.value.indexOf('@') > -1 &&
-      this.state.onValidated({
-        EMAIL: this.email.value,
-        firstName: this.firstName.value,
-        lastName: this.lastName.value
-      })
-  }
-
-  styles (theme) {
-    return {
-      container: {
-        display: 'flex',
-        flexWrap: 'wrap'
-      },
-      textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
-        width: 200
-      },
-      menu: {
-        width: 200
-      }
-    }
+    console.log('submitted', this)
+    return this.state.email &&
+      this.state.firstName &&
+      this.state.lastName &&
+      this.state.email.indexOf('@') > -1 &&
+      this.handleValidation()
   }
 
   render () {
-    return (
-      <form>
-        {this.status === 'sending' && <div>sending...</div>}
-        {this.status === 'error' && (
+    console.log('status: ', this.props.status)
+    let status
+    switch (this.props.staus) {
+      case 'sending':
+        status = <div>Sending</div>
+        break
+      case 'error':
+        status = (
           <div
             style={{ color: '#6b0400' }}
-            dangerouslySetInnerHTML={{ __html: this.message }}
+            dangerouslySetInnerHTML={{ __html: this.props.message }}
           />
-        )}
-        {this.status === 'success' && (
+        )
+        break
+      case 'success':
+        status = (
           <div
             style={{ color: '#ffff00' }}
-            dangerouslySetInnerHTML={{ __html: this.message }}
+            dangerouslySetInnerHTML={{ __html: this.props.message }}
           />
-        )}
+        )
+        break
+    }
+
+    return (
+      <form>
+        {status}
         <TextField
           id='firstName'
           label='First Name'
@@ -113,4 +129,4 @@ class MailchimpForm extends React.Component {
   }
 }
 
-export default MailchimpForm
+export default withStyles(styles)(MailchimpForm)
