@@ -1,5 +1,5 @@
 import React from 'react'
-import MailchimpCustom from './../components/MailchimpCustom'
+import Mailchimp from './../components/Mailchimp'
 import { withStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import { Typography } from '@material-ui/core'
@@ -43,7 +43,7 @@ const Landing = (props) => {
           <Typography gutterBottom>
             We are currently running in a limited test. We aim to launch the early beta in September 2018.
           </Typography>
-          <MailchimpCustom />
+          <Mailchimp />
         </Paper>
       </div>
     </div>

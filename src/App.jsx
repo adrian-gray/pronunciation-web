@@ -13,7 +13,7 @@ import NavBar from './components/NavBar'
 const FourOhFour = () => <h1>404</h1>
 
 const App = () => {
-  if (window) {
+  if (window && window.location.href.includes('pronounceweb.com')) {
     ReactGA.initialize('UA-122566851-1')
     ReactGA.pageview(window.location.pathname + window.location.search)
   }
