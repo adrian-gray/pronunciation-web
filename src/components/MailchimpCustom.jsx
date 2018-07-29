@@ -5,17 +5,20 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 
 const styles = (theme) => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  },
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-    width: 200
-  },
-  menu: {
-    width: 200
+  foo: {
+    padding: 20,
+    container: {
+      display: 'flex',
+      flexWrap: 'wrap'
+    },
+    textField: {
+      marginLeft: theme.spacing.unit,
+      marginRight: theme.spacing.unit,
+      width: 200
+    },
+    menu: {
+      width: 200
+    }
   }
 })
 
@@ -123,6 +126,8 @@ class MailchimpForm extends React.Component {
   }
 
   render () {
+    const { classes } = this.props
+
     let status
     switch (this.props.status) {
       case 'sending':
@@ -141,41 +146,43 @@ class MailchimpForm extends React.Component {
     }
 
     return (
-      <form>
-        {status}
-        <TextField
-          error={this.state.nameError}
-          helperText={this.state.nameErrorMsg}
-          id='name'
-          label='Your first name'
-          className='form-control'
-          value={this.state.name}
-          onChange={this.handleChange('name')}
-          margin='normal'
-        />
-        <TextField
-          error={this.state.emailError}
-          helperText={this.state.emailErrorMsg}
-          id='email'
-          label='Your Email'
-          className='form-control'
-          value={this.state.email}
-          onChange={this.handleChange('email')}
-          margin='normal'
-        />
-        <br />
-        <Typography gutterBottom>
-          {`We hate spam and will never share your details with anyone else.`}
-        </Typography>
-        <br />
-        <Button
-          onClick={this.submit}
-          variant='contained'
-          color='primary'
-        >
-          Keep me updated!
-        </Button>
-      </form>
+      <div className={classes.foo}>
+        <form>
+          {status}
+          <TextField
+            error={this.state.nameError}
+            helperText={this.state.nameErrorMsg}
+            id='name'
+            label='Your first name'
+            className='form-control'
+            value={this.state.name}
+            onChange={this.handleChange('name')}
+            margin='normal'
+          />
+          <TextField
+            error={this.state.emailError}
+            helperText={this.state.emailErrorMsg}
+            id='email'
+            label='Your Email'
+            className='form-control'
+            value={this.state.email}
+            onChange={this.handleChange('email')}
+            margin='normal'
+          />
+          <br />
+          <Typography gutterBottom>
+            {`We hate spam and will never share your details with anyone else.`}
+          </Typography>
+          <br />
+          <Button
+            onClick={this.submit}
+            variant='contained'
+            color='primary'
+          >
+            Keep me updated!
+          </Button>
+        </form>
+      </div>
     )
   }
 }

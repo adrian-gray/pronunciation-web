@@ -1,8 +1,25 @@
 import React from 'react'
+import { Paper, withStyles } from '@material-ui/core'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import MailchimpCustom from './MailchimpCustom'
 
 const url = '//endual.us8.list-manage.com/subscribe/post?u=5cfcc43825365c2c32230cdde&id=f0489cd39a'
+
+const styles = (theme) => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200
+  },
+  menu: {
+    width: 200
+  }
+})
+
 const form = ({ subscribe, status, message }) => {
   return (
     <MailchimpCustom
@@ -15,15 +32,15 @@ const form = ({ subscribe, status, message }) => {
 
 const Mailchimp = () => {
   return (
-    <div className='container text-center'>
+    <Paper>
       <div className='mailchimp-subscribe'>
         <MailchimpSubscribe
           url={url}
           render={form}
         />
       </div>
-    </div>
+    </Paper>
   )
 }
 
-export default Mailchimp
+export default withStyles(styles)(Mailchimp)

@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import ReactGA from 'react-ga'
-import CssBaseline from '@material-ui/core/CssBaseline'
+import { CssBaseline, withStyles } from '@material-ui/core'
 
 import SoundRoutes from './routes/SoundRoutes'
 
@@ -12,28 +12,44 @@ import NavBar from './components/NavBar'
 
 const FourOhFour = () => <h1>404</h1>
 
-const App = () => {
-  if (window && window.location.href.includes('pronounceweb.com')) {
-    ReactGA.initialize('UA-122566851-1')
-    ReactGA.pageview(window.location.pathname + window.location.search)
+const styles = {
+  root: {
+    margin: 0,
+    'margin-left': 'auto',
+    'margin-right': 'auto',
+    padding: [0, 20, 0, 20],
+    maxWidth: 1024
   }
-
-  return (
-    <BrowserRouter>
-      <Fragment>
-        <CssBaseline />
-        <div className='container'>
-          <SEO />
-          <NavBar />
-          <Switch>
-            <Route exact path='/' component={Landing} />
-            <Route path='/sounds' component={SoundRoutes} />
-            <Route default component={FourOhFour} />
-          </Switch>
-        </div>
-      </Fragment>
-    </BrowserRouter>
-  )
 }
 
-export default App
+class App extends Component {
+  componentDidMount () {
+    if (window && window.location.href.includes('pronounceweb.com')) {
+      ReactGA.initialize('UA-122566851-1')
+      ReactGA.pageview(window.location.pathname + window.location.search)
+    }
+  }
+
+  render () {
+    const { classes } = this.props
+
+    return (
+      <BrowserRouter>
+        <Fragment>
+          <CssBaseline />
+          <div className={classes.root}>
+            <SEO />
+            <NavBar />
+            <Switch>
+              <Route exact path='/' component={Landing} />
+              <Route path='/sounds' component={SoundRoutes} />
+              <Route default component={FourOhFour} />
+            </Switch>
+          </div>
+        </Fragment>
+      </BrowserRouter>
+    )
+  }
+}
+
+export default withStyles(styles)(App)
