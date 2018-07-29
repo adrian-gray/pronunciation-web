@@ -1,5 +1,6 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
+import { Typography } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 
@@ -22,27 +23,17 @@ class MailchimpForm extends React.Component {
   constructor (props) {
     super(props)
 
-    console.log('*', props)
-    console.log('**', props.message)
-    console.log('***', props.onValidated)
-
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: ''
+      name: '',
+      nameError: null,
+      nameErrorMsg: '',
+      email: '',
+      emailError: null,
+      emailErrorMsg: ''
     }
 
     this.handleChange = this.handleChange.bind(this)
     this.submit = this.submit.bind(this)
-    this.handleValidation = this.handleValidation.bind(this)
-  }
-
-  handleValidation () {
-    this.props.onValidated({
-      EMAIL: this.state.email,
-      firstName: this.state.firstName,
-      lastName: this.state.lastName
-    })
   }
 
   handleChange (name) {
@@ -54,68 +45,128 @@ class MailchimpForm extends React.Component {
   }
 
   submit () {
-    console.log('submitted', this)
-    return this.state.email &&
-      this.state.firstName &&
-      this.state.lastName &&
-      this.state.email.indexOf('@') > -1 &&
-      this.handleValidation()
+    this.setState({
+      emailError: null,
+      emalErrorMsg: '',
+      nameError: null,
+      nameErrorMsg: ''
+    })
+    if (!this.state.name) {
+      this.setState({
+        nameEror: true,
+        nameErrorMsg: 'Oops, you forgot your name.'
+      })
+      return
+    }
+    if (!this.state.email) {
+      this.setState({
+        emailError: true,
+        emailErrorMsg: 'Oops, you forgot your email.'
+      })
+      return
+    }
+    this.props.onValidated({
+      EMAIL: this.state.email,
+      FNAME: this.state.name
+    })
+  }
+
+  componentDidUpdate (prevProps, prevState, snapshot) {
+    if (this.props.status !== prevProps.status) {
+      if (this.props.status === 'error') {
+        const message = this.props.message
+        switch (true) {
+          case (message === '0 - An email address must contain a single @'):
+            this.setState({
+              emailError: true,
+              emailErrorMsg: 'An email address must contain a single @'
+            })
+            break
+          case (message === '0 - The username portion of the email address is empty'):
+            this.setState({
+              emailError: true,
+              emailErrorMsg: 'The username portion of the email is empty'
+            })
+            break
+          case (message.includes('0 - The domain portion of the email address is invalid')):
+            this.setState({
+              emailError: true,
+              emailErrorMsg: 'The domain portion of the email is invalid'
+            })
+            break
+          case (message.includes('0 - The username portion of the email address is invalid')):
+            this.setState({
+              emailError: true,
+              emailErrorMsg: 'The username portion of the email is invalid'
+            })
+            break
+          case (message.includes('This email address looks fake or invalid')):
+            this.setState({
+              emailError: true,
+              emailErrorMsg: 'This email address looks fake or invalid'
+            })
+            break
+          case (message.includes('has too many recent signup requests')):
+            this.setState({
+              emailError: true,
+              emailErrorMsg: 'This email has too many recent signup requests'
+            })
+            break
+          default:
+            this.setState({
+              nameError: true,
+              nameErrorMsg: 'Something went wrong, please check your details'
+            })
+        }
+      }
+    }
   }
 
   render () {
-    console.log('status: ', this.props.status)
     let status
-    switch (this.props.staus) {
+    switch (this.props.status) {
       case 'sending':
-        status = <div>Sending</div>
-        break
-      case 'error':
         status = (
-          <div
-            style={{ color: '#6b0400' }}
-            dangerouslySetInnerHTML={{ __html: this.props.message }}
-          />
+          <Typography gutterBottom>
+            {`Sending subscription`}
+          </Typography>
         )
         break
       case 'success':
         status = (
-          <div
-            style={{ color: '#ffff00' }}
-            dangerouslySetInnerHTML={{ __html: this.props.message }}
-          />
+          <Typography gutterBottom>
+            {`Thankyou for subscribing`}
+          </Typography>
         )
-        break
     }
 
     return (
       <form>
         {status}
         <TextField
-          id='firstName'
-          label='First Name'
+          error={this.state.nameError}
+          helperText={this.state.nameErrorMsg}
+          id='name'
+          label='Your first name'
           className='form-control'
-          value={this.state.firstName}
-          onChange={this.handleChange('firstName')}
+          value={this.state.name}
+          onChange={this.handleChange('name')}
           margin='normal'
         />
         <TextField
-          id='lastName'
-          label='Last Name'
-          className='form-control'
-          value={this.state.lastName}
-          onChange={this.handleChange('lastName')}
-          margin='normal'
-        />
-        <TextField
+          error={this.state.emailError}
+          helperText={this.state.emailErrorMsg}
           id='email'
-          label='Email'
+          label='Your Email'
           className='form-control'
           value={this.state.email}
           onChange={this.handleChange('email')}
           margin='normal'
         />
         <br />
-        <small id='emailHelp' className='form-text'>We'll never share your details with anyone else.</small>
+        <Typography gutterBottom>
+          {`We hate spam and will never share your details with anyone else.`}
+        </Typography>
         <br />
         <Button
           onClick={this.submit}

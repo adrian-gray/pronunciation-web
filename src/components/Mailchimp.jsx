@@ -1,21 +1,19 @@
 import React from 'react'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
-import MailchimpForm from './MailchimpForm'
+import MailchimpCustom from './MailchimpCustom'
 
 const url = '//endual.us8.list-manage.com/subscribe/post?u=5cfcc43825365c2c32230cdde&id=f0489cd39a'
 const form = ({ subscribe, status, message }) => {
-  console.log('======== bork')
   return (
-    <MailchimpForm
+    <MailchimpCustom
       status={status}
-      message={'cat'}
+      message={message}
       onValidated={(formData) => subscribe(formData)}
     />
   )
 }
 
-const MailchimpCustom = () => {
-  console.log('+++++++')
+const Mailchimp = () => {
   return (
     <div className='container text-center'>
       <div className='mailchimp-subscribe'>
@@ -28,4 +26,4 @@ const MailchimpCustom = () => {
   )
 }
 
-export default MailchimpCustom
+export default Mailchimp
