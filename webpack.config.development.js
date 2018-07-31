@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const CompressionPlugin = require("compression-webpack-plugin")
 
 const publicPath = 'dist'
 
@@ -67,6 +68,7 @@ module.exports = {
       filename: '[name].css',
       chunkFileName: '[id].css'
     }),
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin(),
+    new CompressionPlugin({ algorithm: 'gzip' }) 
   ]
 }
