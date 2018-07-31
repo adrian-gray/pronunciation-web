@@ -1,17 +1,17 @@
 {
   "presets": [
-    "es2015",
-    "stage-1",
     "react",
     ["env", {
       "targets": {
         "browsers": "last 2 versions"
       },
+      "exclude": ["transform-async-to-generator"],
       "loose": true,
-      "modules": false
+      "modules": "commonjs"
     }]
   ],
   "plugins": [
+    "transform-object-rest-spread",
     "add-module-exports"
   ]
 }
