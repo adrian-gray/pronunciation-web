@@ -8,6 +8,7 @@ const Sounds = () => {
   const links = list.map(phoneme => {
     const title = phonemes[phoneme]['key']
     const link = `/sounds/pronounce_${title}`
+    // Maybe name a card per sound and display common words on card?
     return (
       <li key={phoneme}>
         <a href={link}>

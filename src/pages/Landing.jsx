@@ -1,8 +1,12 @@
 import React from 'react'
+
+import {
+  Paper,
+  Typography,
+  withStyles
+} from '@material-ui/core'
+
 import Mailchimp from './../components/Mailchimp'
-import { withStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import { Typography } from '@material-ui/core'
 import SEO from './../components/SEO'
 
 const styles = theme => ({

@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const publicPath = 'dist'
 
@@ -59,11 +60,13 @@ module.exports = {
       template: path.join(__dirname, '/src/index.html')
     }),
     new CopyWebpackPlugin([
-      { from: './src/assets', to: 'assets' }
+      { from: './src/assets', to: 'assets' },
+      { from: './src/sitemap.xml', to: 'sitemap.xml' }
     ]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFileName: '[id].css'
-    })
+    }),
+    new BundleAnalyzerPlugin()
   ]
 }

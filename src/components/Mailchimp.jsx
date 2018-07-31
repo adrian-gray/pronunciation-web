@@ -1,6 +1,11 @@
 import React from 'react'
-import { Paper, withStyles } from '@material-ui/core'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
+
+import {
+  Paper,
+  withStyles
+} from '@material-ui/core'
+
 import MailchimpCustom from './MailchimpCustom'
 
 const url = '//endual.us8.list-manage.com/subscribe/post?u=5cfcc43825365c2c32230cdde&id=f0489cd39a'

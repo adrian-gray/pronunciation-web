@@ -1,12 +1,14 @@
 import React, { Component, Fragment } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import ReactGA from 'react-ga'
-import { CssBaseline, withStyles } from '@material-ui/core'
+
+import {
+  CssBaseline,
+  withStyles
+} from '@material-ui/core'
 
 import SoundRoutes from './routes/SoundRoutes'
-
 import Landing from './pages/Landing'
-
 import SEO from './components/SEO'
 import NavBar from './components/NavBar'
 

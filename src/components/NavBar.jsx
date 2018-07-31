@@ -1,12 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
+import { Link } from 'react-router-dom'
+
+import {
+  AppBar,
+  Button,
+  IconButton,
+  MenuIcon,
+  Toolbar,
+  Typography,
+  withStyles
+} from '@material-ui/core'
 
 const styles = {
   root: {
@@ -20,6 +24,9 @@ const styles = {
     marginRight: 20
   }
 }
+//         <IconButton className={classes.menuButton} color='inherit' aria-label='Menu'>
+//           <MenuIcon />
+//          </IconButton>
 
 function NavBar (props) {
   const { classes } = props
@@ -27,13 +34,11 @@ function NavBar (props) {
     <div className={classes.root}>
       <AppBar position='static'>
         <Toolbar>
-          <IconButton className={classes.menuButton} color='inherit' aria-label='Menu'>
-            <MenuIcon />
-          </IconButton>
           <Typography variant='title' color='inherit' className={classes.flex}>
-            Pronounce Web
+            {'Pronounce Web'}
           </Typography>
-          <Button color='inherit'>Login</Button>
+          <Button color='inherit' component={Link} to='/'>{'Home'}</Button>
+          <Button color='inherit'>{'Login'}</Button>
         </Toolbar>
       </AppBar>
     </div>
