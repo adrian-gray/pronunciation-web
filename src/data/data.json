@@ -1,6 +1,8 @@
 {
   "phonemes": {
     "~/æ/~": {
+      "name": "æ",
+      "tag": "short a",
       "key": "ae",
       "title": "short ~a~ ‘b~a~d’",
       "text": [

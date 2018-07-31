@@ -6,11 +6,13 @@ export function splitHilite (str) {
   do {
     let el = elements.shift()
     if (el === '~') {
-      arr.push(<span className='em' key={arr.length}>{elements.shift()}</span>)
+      const txt = elements.shift()
+      arr.push(<span className='split-em' key={txt}>{txt}</span>)
       elements.shift() // closing ~
     } else {
-      arr.push(el)
+      arr.push(<span className='split-normal' key={el}>{el}</span>)
     }
   } while (elements.length)
+  arr.push(' ')
   return arr
 }

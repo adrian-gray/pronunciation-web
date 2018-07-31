@@ -1,16 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 
 import {
   AppBar,
   Button,
+  Drawer,
   IconButton,
-  MenuIcon,
+  MenuItem,
   Toolbar,
   Typography,
   withStyles
 } from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
 
 const styles = {
   root: {
@@ -22,31 +22,70 @@ const styles = {
   menuButton: {
     marginLeft: -12,
     marginRight: 20
+  },
+  list: {
+    width: 250
   }
 }
-//         <IconButton className={classes.menuButton} color='inherit' aria-label='Menu'>
-//           <MenuIcon />
-//          </IconButton>
 
-function NavBar (props) {
-  const { classes } = props
-  return (
-    <div className={classes.root}>
-      <AppBar position='static'>
-        <Toolbar>
-          <Typography variant='title' color='inherit' className={classes.flex}>
-            {'Pronounce Web'}
-          </Typography>
-          <Button color='inherit' component={Link} to='/'>{'Home'}</Button>
-          <Button color='inherit'>{'Login'}</Button>
-        </Toolbar>
-      </AppBar>
-    </div>
-  )
-}
+class NavBar extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = { open: false }
+    this.handleToggle = this.handleToggle.bind(this)
+  }
 
-NavBar.propTypes = {
-  classes: PropTypes.object.isRequired
+  handleToggle () {
+    this.setState({ open: !this.state.open })
+  }
+
+  render () {
+    const classes = this.props.classes
+    return (
+      <div className={classes.root}>
+        <AppBar position='static'>
+          <Toolbar>
+            <IconButton
+              className={classes.menuButton}
+              color='inherit'
+              aria-label='Menu'
+            >
+              <div
+                tabIndex={0}
+                role='button'
+                onClick={this.handleToggle}
+              >
+                <MenuIcon />
+              </div>
+            </IconButton>
+            <Drawer
+              open={this.state.open}
+              onClick={this.handleToggle}
+              onKeyDown={this.handleToggle}
+            >
+              <MenuItem>
+                <Button href='/' className={classes.button}>
+                  Home
+                </Button>
+              </MenuItem>
+              <MenuItem>
+                <Button href='/sounds' className={classes.button}>
+                  Sounds
+                </Button>
+              </MenuItem>
+            </Drawer>
+            <Typography
+              variant='title'
+              color='inherit'
+              className={classes.flex}>
+              {'Pronounce Web'}
+            </Typography>
+            <Button color='inherit'>{'Login'}</Button>
+          </Toolbar>
+        </AppBar>
+      </div>
+    )
+  }
 }
 
 export default withStyles(styles)(NavBar)

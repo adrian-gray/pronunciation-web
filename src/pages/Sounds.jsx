@@ -1,32 +1,45 @@
 import React from 'react'
-import SEO from './../components/SEO'
-import data from './../data/data'
 
-const Sounds = () => {
+import {
+  Paper,
+  Typography,
+  withStyles
+} from '@material-ui/core'
+
+import data from './../data/data'
+import SEO from './../components/SEO'
+import Phoneme from './../components/Phoneme'
+
+const styles = theme => ({
+  root: {
+    ...theme.mixins.gutters(),
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2
+  }
+})
+
+const Sounds = (props) => {
+  const { classes } = props
+
   const phonemes = data.phonemes
   const list = Object.keys(phonemes)
-  const links = list.map(phoneme => {
-    const title = phonemes[phoneme]['key']
+  const cards = list.map(phoneme => {
+    const title = phonemes[phoneme]['name']
+    const tag = phonemes[phoneme]['tag']
     const link = `/sounds/pronounce_${title}`
-    // Maybe name a card per sound and display common words on card?
-    return (
-      <li key={phoneme}>
-        <a href={link}>
-          {title}
-        </a>
-      </li>
-    )
+    const words = phonemes[phoneme]['commonWords']
+    return <Phoneme key={title} title={title} tag={tag} link={link} words={words} />
   })
 
   return (
-    <div className='container'>
+    <Paper className={classes.root}>
       <SEO meta='sounds' />
-      <h1>Pronunciation</h1>
-      <ul>
-        {links}
-      </ul>
-    </div>
+      <Typography variant='display1' gutterBottom>
+        {'Phoenetic English Pronunciation'}
+      </Typography>
+      {cards}
+    </Paper>
   )
 }
 
-export default Sounds
+export default withStyles(styles)(Sounds)

@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core'
 
 const styles = (theme) => ({
-  foo: {
+  root: {
     padding: 20,
     container: {
       display: 'flex',
@@ -149,7 +149,7 @@ class MailchimpForm extends React.Component {
     }
 
     return (
-      <div className={classes.foo}>
+      <div className={classes.root}>
         <form>
           {status}
           <TextField
