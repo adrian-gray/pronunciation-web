@@ -9,7 +9,7 @@ import {
 import Mailchimp from './../components/Mailchimp'
 import SEO from './../components/SEO'
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,

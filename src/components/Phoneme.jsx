@@ -9,6 +9,7 @@ import {
 
 const styles = (theme) => ({
   root: {
+    margin: 20,
     padding: 20,
     container: {
       display: 'flex',

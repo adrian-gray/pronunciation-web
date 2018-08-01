@@ -10,7 +10,7 @@ import data from './../data/data'
 import SEO from './../components/SEO'
 import Phoneme from './../components/Phoneme'
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,

@@ -12,7 +12,7 @@ import {
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 
-const styles = {
+const styles = (theme) => ({
   root: {
     flexGrow: 1
   },
@@ -26,7 +26,7 @@ const styles = {
   list: {
     width: 250
   }
-}
+})
 
 class NavBar extends React.Component {
   constructor (props) {

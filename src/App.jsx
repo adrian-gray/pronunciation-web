@@ -14,13 +14,13 @@ import NavBar from './components/NavBar'
 
 const FourOhFour = () => <h1>404</h1>
 
-const styles = {
+const styles = (theme) => ({
   root: {
     margin: [0, 'auto', 0, 'auto'],
     padding: [0, 20, 0, 20],
     maxWidth: 1024
   }
-}
+})
 
 class App extends Component {
   componentDidMount () {
