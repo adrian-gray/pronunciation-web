@@ -25,6 +25,12 @@ const styles = (theme) => ({
   },
   list: {
     width: 250
+  },
+  headLeft: {
+    color: 'yellow'
+  },
+  headRight: {
+    color: 'purple'
   }
 })
 
@@ -65,20 +71,22 @@ class NavBar extends React.Component {
             >
               <MenuItem>
                 <Button href='/' className={classes.button}>
-                  Home
+                  {'Home'}
                 </Button>
               </MenuItem>
               <MenuItem>
                 <Button href='/sounds' className={classes.button}>
-                  Sounds
+                  {'Sounds'}
                 </Button>
               </MenuItem>
             </Drawer>
             <Typography
               variant='title'
               color='inherit'
-              className={classes.flex}>
-              {'Pronounce Web'}
+              className={classes.flex}
+            >
+              <span className={classes.headLeft}>{'Pronounce'}</span>
+              <span className={classes.headRight}>{'Web'}</span>
             </Typography>
             <Button color='inherit'>{'Login'}</Button>
           </Toolbar>
