@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import {
   AppBar,
@@ -26,10 +27,10 @@ const styles = (theme) => ({
   list: {
     width: 250
   },
-  headLeft: {
+  left: {
     color: 'yellow'
   },
-  headRight: {
+  right: {
     color: 'purple'
   }
 })
@@ -85,9 +86,10 @@ class NavBar extends React.Component {
               color='inherit'
               className={classes.flex}
             >
-              <span className={classes.headLeft}>{'Pronounce'}</span>
-              <span className={classes.headRight}>{'Web'}</span>
+              <span className={classes.left}>{'Pronounce'}</span>
+              <span className={classes.right}>{'Web'}</span>
             </Typography>
+            <Button component={Link} to='/' color='inherit'>{'Home'}</Button>
             <Button color='inherit'>{'Login'}</Button>
           </Toolbar>
         </AppBar>
