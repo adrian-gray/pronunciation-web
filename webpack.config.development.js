@@ -1,9 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-const CompressionPlugin = require("compression-webpack-plugin")
+const CompressionPlugin = require('compression-webpack-plugin')
 
 const publicPath = 'dist'
 
@@ -11,8 +10,7 @@ module.exports = {
   context: __dirname,
   mode: 'development',
   entry: [
-    './src/Index.jsx',
-    './src/scss/main.scss'
+    './src/Index.jsx'
   ],
   devtool: 'source-map',
   output: {
@@ -45,14 +43,6 @@ module.exports = {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
       }
     ]
   },
@@ -64,11 +54,7 @@ module.exports = {
       { from: './src/assets', to: 'assets' },
       { from: './src/sitemap.xml', to: 'sitemap.xml' }
     ]),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFileName: '[id].css'
-    }),
     new BundleAnalyzerPlugin(),
-    new CompressionPlugin({ algorithm: 'gzip' }) 
+    new CompressionPlugin({ algorithm: 'gzip' })
   ]
 }

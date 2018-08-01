@@ -1,5 +1,5 @@
 import React from 'react'
-import { splitHilite } from './../utils/utils'
+import SplitHilite from './SplitHilite'
 
 import {
   Paper,
@@ -26,7 +26,7 @@ const styles = (theme) => ({
 
 const Phoneme = (props) => {
   const { classes, title, tag, words, link } = props
-  const wordList = words.map(word => splitHilite(word))
+  const wordList = words.map(word => <SplitHilite str={word} key={word} />)
 
   return (
     <Paper className={classes.root}>
