@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { splitHilite } from './../utils/utils'
+import SplitHilite from './SplitHilite'
 
 export default function IdentifySounds (props) {
   const sentences = props.sentences.map((sentence, index) => {
-    return <p key={index}>{splitHilite(sentence)}</p>
+    return <p key={index}><SplitHilite str={sentence} /></p>
   })
 
   return (

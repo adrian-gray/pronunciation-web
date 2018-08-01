@@ -1,10 +1,14 @@
 import React from 'react'
 
-import { splitHilite } from './../utils/utils'
+import SplitHilite from './SplitHilite'
 
 export default function Dialogues (props) {
   function extractLines (dialogue, index) {
-    return dialogue.map((line, index) => <li key={index}>{splitHilite(line)}</li>)
+    return dialogue.map((line, index) => (
+      <li key={index}>
+        <SplitHilite str={line} />
+      </li>
+    ))
   }
 
   function expandDialogue (dialogue, index) {

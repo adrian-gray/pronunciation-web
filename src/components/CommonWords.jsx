@@ -1,11 +1,11 @@
 import React from 'react'
-import { splitHilite } from './../utils/utils'
+import SplitHilite from './SplitHilite'
 
 export default function CommonWords (props) {
   const words = props.words.map((el, index) => {
     return (
       <div className='col' key={index}>
-        <p>{splitHilite(el)}</p>
+        <p><SplitHilite str={el} key={el} /></p>
       </div>
     )
   })

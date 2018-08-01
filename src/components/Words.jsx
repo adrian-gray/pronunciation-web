@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { splitHilite } from './../utils/utils'
+import SplitHilite from './SplitHilite'
 
 export default function Words (props) {
   const { words } = props
   const list = Object.entries(words).map((arr, index) => {
     return (
       <tr key={index}>
-        <td>{splitHilite(arr[0])}</td>
-        <td>{splitHilite(arr[1])}</td>
+        <td><SplitHilite str={arr[0]} /></td>
+        <td><SplitHilite str={arr[1]} /></td>
       </tr>
     )
   })

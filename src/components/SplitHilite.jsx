@@ -18,15 +18,17 @@ export function SplitHilite (props) {
   const elements = str.split(/(~)/)
 
   const arr = []
+  let index = 0
   do {
     let el = elements.shift()
     if (el === '~') {
       const txt = elements.shift()
-      arr.push(<span className={classes.splitEm} key={txt}>{txt}</span>)
+      arr.push(<span className={classes.splitEm} key={`${txt}${index}`}>{txt}</span>)
       elements.shift() // closing ~
     } else {
-      arr.push(<span className={classes.splitNormal} key={el}>{el}</span>)
+      arr.push(<span className={classes.splitNormal} key={`${el}${index}`}>{el}</span>)
     }
+    index++
   } while (elements.length)
   arr.push(' ')
 

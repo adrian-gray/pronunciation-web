@@ -26,9 +26,8 @@ const Sounds = (props) => {
   const cards = list.map(phoneme => {
     const title = phonemes[phoneme]['name']
     const tag = phonemes[phoneme]['tag']
-    const link = `/sounds/pronounce_${title}`
     const words = phonemes[phoneme]['commonWords']
-    return <Phoneme key={title} title={title} tag={tag} link={link} words={words} />
+    return <Phoneme phoneme={phoneme} key={title} title={title} tag={tag} words={words} />
   })
 
   return (
