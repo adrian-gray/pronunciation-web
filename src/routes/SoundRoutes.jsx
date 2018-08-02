@@ -7,7 +7,7 @@ import Sound from './../pages/Sound'
 const SoundRoutes = () => (
   <Switch>
     <Route exact path='/sounds' component={Sounds} />
-    <Route path='/sounds/:sound' component={Sound} />
+    <Route path='/sounds/:phoneme' component={Sound} />
   </Switch>
 )
 

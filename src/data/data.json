@@ -1,15 +1,14 @@
 {
   "phonemes": {
-    "~/æ/~": {
-      "name": "æ",
-      "tag": "short a",
-      "key": "ae",
+    "æ": {
+      "ipa": "~/æ/~", 
       "title": "short ~a~ ‘b~a~d’",
+      "tag": "short ‘a’",
       "text": [
-        "jaw drops (quite a bit)",
-        "mouth opens wide",
-        "tip of the tongue stretches up (back part lifts)",
-        "the tongue is wide"
+        "Jaw drops (quite a bit)",
+        "Mouth opens wide",
+        "Tip of the tongue stretches up (back part lifts)",
+        "The tongue is wide"
       ],
       "words": {
         "b~a~d": "/b~æ~d/",

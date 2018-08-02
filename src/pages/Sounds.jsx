@@ -24,10 +24,11 @@ const Sounds = (props) => {
   const phonemes = data.phonemes
   const list = Object.keys(phonemes)
   const cards = list.map(phoneme => {
-    const title = phonemes[phoneme]['name']
+    const ipa = phonemes[phoneme]['ipa']
+    const title = phonemes[phoneme]['title']
     const tag = phonemes[phoneme]['tag']
     const words = phonemes[phoneme]['commonWords']
-    return <Phoneme phoneme={phoneme} key={title} title={title} tag={tag} words={words} />
+    return <Phoneme key={phoneme} phoneme={phoneme} ipa={ipa} title={title} tag={tag} words={words} />
   })
 
   return (

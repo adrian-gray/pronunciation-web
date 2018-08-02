@@ -16,8 +16,14 @@ const FourOhFour = () => <h1>404</h1>
 
 const styles = (theme) => ({
   root: {
-    margin: [0, 'auto', 0, 'auto'],
-    padding: [0, 20, 0, 20],
+    marginTop: 0,
+    marginLeft: 'auto',
+    marginBottom: 0,
+    marginRight: 'auto',
+    paddingTop: 0,
+    paddingLeft: 20,
+    paddingBottom: 0,
+    paddingRight: 20,
     maxWidth: 1024
   }
 })

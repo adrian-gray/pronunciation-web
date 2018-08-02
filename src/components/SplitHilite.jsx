@@ -5,11 +5,8 @@ import {
 } from '@material-ui/core'
 
 const styles = (theme) => ({
-  splitEm: {
+  em: {
     color: '#8b0000'
-  },
-  splitNormal: {
-    color: 'black'
   }
 })
 
@@ -23,10 +20,10 @@ export function SplitHilite (props) {
     let el = elements.shift()
     if (el === '~') {
       const txt = elements.shift()
-      arr.push(<span className={classes.splitEm} key={`${txt}${index}`}>{txt}</span>)
+      arr.push(<span className={classes.em} key={`${txt}${index}`}>{txt}</span>)
       elements.shift() // closing ~
     } else {
-      arr.push(<span className={classes.splitNormal} key={`${el}${index}`}>{el}</span>)
+      arr.push(<span key={`${el}${index}`}>{el}</span>)
     }
     index++
   } while (elements.length)

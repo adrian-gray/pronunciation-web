@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SplitHilite from './SplitHilite'
-import data from './../data/data'
 
 import {
   Paper,
@@ -28,22 +27,22 @@ const styles = (theme) => ({
 })
 
 const Phoneme = (props) => {
-  const { phoneme, classes, title, tag, words } = props
+  const { classes, phoneme, ipa, tag, title, words } = props
+  const displayTitle = <span><SplitHilite str={ipa} /> – <SplitHilite str={title} /></span>
   const wordList = words.map(word => <SplitHilite str={word} key={word} />)
 
-  console.log('#### data.phomenes[phoneme]', data.phonemes[phoneme])
   return (
     <Paper className={classes.root}>
-      <Link to={{pathname: `/sounds/${title}`, state: { phoneme, data: data.phonemes[phoneme] }}} className={classes.links}>
+      <Link to={{pathname: `/sounds/${phoneme}`}} className={classes.links}>
         <div>
           <Typography variant='headline' gutterBottom>
-            {`Sound ${title} – ${tag}`}
+            {displayTitle}
           </Typography>
           <Typography className={classes.words} variant='body2' gutterBottom >
             {wordList}
           </Typography>
           <Typography variant='body1' gutterBottom>
-            {`Click to learn more about the ${title} sound`}
+            {`Click to learn more about the ${tag} sound`}
           </Typography>
         </div>
       </Link>

@@ -1,5 +1,12 @@
 import React from 'react'
 
+import {
+  Grid,
+  Paper,
+  withStyles
+} from '@material-ui/core'
+
+import jsonData from './../data/data'
 import CommonWords from './../components/CommonWords'
 import Description from './../components/Description'
 import Dialogues from './../components/Dialogues'
@@ -15,31 +22,39 @@ import TongueTwisters from './../components/TongueTwisters'
 import Words from './../components/Words'
 import WordsMaze from './../components/WordsMaze'
 
+const styles = (theme) => ({
+  root: {
+    ...theme.mixins.gutters(),
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
+    flexGrow: 1
+  }
+})
+
 const Sound = (props) => {
-  const phoneme = props.location.state.phoneme
-  const data = props.location.state.data
+  const { classes } = props
+  const phoneme = props.match.params.phoneme
+  const data = jsonData['phonemes'][phoneme]
 
   return (
-    <div className='container'>
+    <Paper className={classes.root}>
       <SoundTitle phoneme={phoneme} str={data.title} />
-      <hr />
-      <div className='container'>
-        <div className='row'>
-          <div className='col-sm'>
-            <div className='container img-container'>
-              <img className='responsive-img' src='/assets/images/animation.png' />
-            </div>
-          </div>
-          <div className='col-sm'>
-            <Description phoneme={phoneme} arr={data.text} />
-          </div>
-        </div>
-      </div>
+
+      <Grid container spacing={24}>
+        <Grid item xs={12} sm={6}>
+          <img src='/assets/images/animation.png' width='100%' />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Description phoneme={phoneme} arr={data.text} />
+        </Grid>
+      </Grid>
       <hr />
 
-      <div className='container img-container'>
-        <img className='responsive-img' src='/assets/images/video1.png' />
-      </div>
+      <Grid container spacing={24}>
+        <Grid item xs={12}>
+          <img src='/assets/images/video1.png' width='100%' />
+        </Grid>
+      </Grid>
 
       <div className='container'>
         <div className='row'>
@@ -106,8 +121,8 @@ const Sound = (props) => {
       <WordsMaze words={data.wordsMaze.words} correct={data.wordsMaze.correct} />
 
       <hr />
-    </div>
+    </Paper>
   )
 }
 
-export default Sound
+export default withStyles(styles)(Sound)
