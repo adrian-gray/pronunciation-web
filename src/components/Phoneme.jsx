@@ -33,7 +33,7 @@ const Phoneme = (props) => {
 
   return (
     <Paper className={classes.root}>
-      <Link to={{pathname: `/sounds/${phoneme}`}} className={classes.links}>
+      <Link to={{pathname: `/sound/${phoneme}`}} className={classes.links}>
         <div>
           <Typography variant='headline' gutterBottom>
             {displayTitle}

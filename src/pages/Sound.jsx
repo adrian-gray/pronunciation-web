@@ -1,7 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import {
   Grid,
+  List,
+  ListItem,
+  ListItemText,
   Paper,
   withStyles
 } from '@material-ui/core'
@@ -31,14 +35,39 @@ const styles = (theme) => ({
   }
 })
 
+const toLink = (phoneme, activity) => {
+  const title = activity.charAt(0).toUpperCase() + activity.substr(1)
+  const websafe = activity.split(' ').join('_')
+  return (
+    <ListItem key={websafe}>
+      <ListItemText>
+        <Link to={`/sound/${phoneme}/${websafe}`}>
+          {title}
+        </Link>
+      </ListItemText>
+    </ListItem>
+  )
+}
+
 const Sound = (props) => {
   const { classes } = props
   const phoneme = props.match.params.phoneme
   const data = jsonData['phonemes'][phoneme]
+  const activities = ['animation', 'how to pronounce', 'words', 'common words',
+    'dialogues', 'find the words', 'words maze']
+  const activityLinks = activities.map((activity) => toLink(phoneme, activity))
 
   return (
     <Paper className={classes.root}>
       <SoundTitle phoneme={phoneme} str={data.title} />
+
+      <Grid container spacing={24}>
+        <Grid item xs={12}>
+          <List>
+            {activityLinks}
+          </List>
+        </Grid>
+      </Grid>
 
       <Grid container spacing={24}>
         <Grid item xs={12} sm={6}>

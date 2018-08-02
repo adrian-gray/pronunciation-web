@@ -9,6 +9,7 @@ import {
 
 import SoundRoutes from './routes/SoundRoutes'
 import Landing from './pages/Landing'
+import Sounds from './pages/Sounds'
 import SEO from './components/SEO'
 import NavBar from './components/NavBar'
 
@@ -48,7 +49,8 @@ class App extends Component {
             <NavBar />
             <Switch>
               <Route exact path='/' component={Landing} />
-              <Route path='/sounds' component={SoundRoutes} />
+              <Route path='/sounds' component={Sounds} />
+              <Route path='/sound' component={SoundRoutes} />
               <Route default component={FourOhFour} />
             </Switch>
           </div>
