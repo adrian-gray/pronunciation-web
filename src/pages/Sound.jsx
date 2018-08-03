@@ -10,7 +10,7 @@ import {
 import jsonData from './../data/data'
 import ActivityButton from './../components/ActivityButton'
 // import CommonWords from './../components/CommonWords'
-import Description from './../components/Description'
+import HowToPronounce from './../components/HowToPronounce'
 import Dialogues from './../components/Dialogues'
 // import FindTheWords from './../components/FindTheWords'
 // import HearTheWords from './../components/HearTheWords'
@@ -41,18 +41,21 @@ const styles = (theme) => ({
 const Sound = (props) => {
   const { classes } = props
   const phoneme = props.match.params.phoneme
-  const activity = props.match.params.activity
+  const activity = props.match.params.activity.replace(/_/g, ' ')
   const data = jsonData['phonemes'][phoneme]
 
   const activities = {
-    'description': <Description phoneme={phoneme} arr={data.text} />,
+    'how to pronounce': (
+      <HowToPronounce
+        phoneme={phoneme}
+        arr={data['how to pronounce'].text}
+        url={data['how to pronounce'].url}
+      />
+    ),
     'movie': <Movie tag={data.tag} url={data.movie.url} />,
     'dialogues': <Dialogues tag={data.tag} dialogues={data.dialogues} />,
     'words': <Words words={data.words} tag={data.tag} />
   }
-
-  //  const activities = ['animation', 'how to pronounce', 'words', 'common words',
-  //    'dialogues', 'find the words', 'words maze']
 
   const activityNames = Object.keys(activities)
   const activityButtons = activityNames.map(activity => (

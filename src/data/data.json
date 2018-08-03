@@ -1,15 +1,18 @@
 {
-  "phonemes": {
+  "phonemes" :{
     "æ": {
       "ipa": "~/æ/~", 
       "title": "short ~a~ ‘b~a~d’",
       "tag": "short ‘a’",
-      "text": [
-        "Jaw drops (quite a bit)",
-        "Mouth opens wide",
-        "Tip of the tongue stretches up (back part lifts)",
-        "The tongue is wide"
-      ],
+      "how to pronounce": {
+        "url": "/assets/images/animation.png",
+        "text": [
+          "Jaw drops (quite a bit)",
+          "Mouth opens wide",
+          "Tip of the tongue stretches up (back part lifts)",
+          "The tongue is wide"
+        ]
+      },
       "movie": {
         "url": "/assets/images/video1.png"
       },
@@ -47,7 +50,7 @@
           "I’m h~a~nging in there."
         ]
       ],
-      "commonWords": [
+      "common words": [
         "c~a~sh",
         "tr~a~sh",
         "tr~a~nsfer",
@@ -73,7 +76,7 @@
         "p~a~ckage",
         "c~a~ncel"
       ],
-      "findTheWords": [
+      "find the words": [
         "cap",
         "hat",
         "bug",
@@ -85,7 +88,7 @@
         "said",
         "hot"
       ],
-      "hearTheWords": [
+      "hear the words": [
         "matter",
         "mutter",
         "pain",
@@ -97,12 +100,12 @@
         "ankle",
         "uncle"
       ],
-      "saySentences": [
+      "say sentences": [
         "My uncle had a bad ankle.",
         "Whatever you mutter doesn’t matter.",
         "Just tap the top of the tape."
       ],
-      "oddOneOut": [
+      "odd one out": [
         "ran",
         "answer",
         "band",
@@ -114,12 +117,12 @@
         "had",
         "name"
       ],
-      "identifySounds": [
+      "identify sounds": [
         "A m~a~n (~/æ/~ or ~/eɪ/~) from Austr~a~lia (~/æ/~ or ~/eɪ/~) has a sn~a~ke (~/æ/~ or ~/eɪ/~). He feeds it a r~a~t (~/æ/~ or ~/eɪ/~) . He holds the rat with tongs. The snake eats the tongs, too.",
         "This is d~a~ngerous (~/æ/~ or ~/eɪ/~) for the snake. Doctors operate on it. They t~a~ke (~/æ/~ or ~/eɪ/~) out the tongs.",
         "The snake’s n~a~me (~/æ/~ or ~/eɪ/~) is Winston. After the oper~a~tion (~/æ/~ or ~/eɪ/~) he gets better."
       ],
-      "wordsMaze": {
+      "words maze": {
         "words" : [
           "happy",
           "weather",

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {
+  Grid,
   Paper,
   List,
   ListItem,
@@ -20,11 +21,14 @@ const styles = (theme) => ({
   },
   title: {
     margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`
+  },
+  image: {
+    width: '100%'
   }
 })
 
-const Description = (props) => {
-  const { arr, classes, phoneme } = props
+const HowToPronounce = (props) => {
+  const { arr, classes, phoneme, url } = props
 
   const list = arr.map((el, i) => (
     <ListItem key={i}>
@@ -41,12 +45,19 @@ const Description = (props) => {
       </Typography>
 
       <Paper className={classes.root}>
-        <List>
-          {list}
-        </List>
+        <Grid container spacing={24}>
+          <Grid item xs={12} sm={6}>
+            <img className={classes.image} src={url} />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <List>
+              {list}
+            </List>
+          </Grid>
+        </Grid>
       </Paper>
     </div>
   )
 }
 
-export default withStyles(styles)(Description)
+export default withStyles(styles)(HowToPronounce)
