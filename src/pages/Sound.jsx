@@ -44,7 +44,7 @@ const Sound = (props) => {
 
   const activities = {
     'description': <Description phoneme={phoneme} arr={data.text} />,
-    'dialogues': <Dialogues dialogues={data.dialogues} />,
+    'dialogues': <Dialogues tag={data.tag} dialogues={data.dialogues} />,
     'words': <Words words={data.words} />
   }
 
