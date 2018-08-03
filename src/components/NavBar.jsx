@@ -89,7 +89,7 @@ class NavBar extends React.Component {
               <span className={classes.left}>{'Pronounce'}</span>
               <span className={classes.right}>{'Web'}</span>
             </Typography>
-            <Button component={Link} to='/' color='inherit'>{'Home'}</Button>
+            <Button component={Link} to='/sounds' color='inherit'>{'Sounds'}</Button>
             <Button color='inherit'>{'Login'}</Button>
           </Toolbar>
         </AppBar>
