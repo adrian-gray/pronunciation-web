@@ -1,30 +1,63 @@
 import React from 'react'
 
+import {
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableRow,
+  Typography,
+  withStyles
+} from '@material-ui/core'
+
 import SplitHilite from './SplitHilite'
 
-export default function Words (props) {
-  const { words } = props
+const styles = (theme) => ({
+  root: {
+    ...theme.mixins.gutters(),
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 2
+  },
+  title: {
+    margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`
+  }
+})
+
+const Words = (props) => {
+  const { classes, tag, words } = props
   const list = Object.entries(words).map((arr, index) => {
     return (
-      <tr key={index}>
-        <td><SplitHilite str={arr[0]} /></td>
-        <td><SplitHilite str={arr[1]} /></td>
-      </tr>
+      <TableRow key={index}>
+        <TableCell>
+          <Typography variant='title' gutterBottom>
+            <SplitHilite str={arr[0]} />
+          </Typography>
+        </TableCell>
+        <TableCell>
+          <Typography variant='title' gutterBottom>
+            <SplitHilite str={arr[1]} />
+          </Typography>
+        </TableCell>
+      </TableRow>
     )
   })
 
   return (
-    <div className='words'>
-      <table className='table table-sm'>
-        <thead>
-          <tr>
-            <th colSpan='2'>Words</th>
-          </tr>
-        </thead>
-        <tbody>
-          {list}
-        </tbody>
-      </table>
+    <div>
+      <Typography variant='title' className={classes.title} gutterBottom>
+        {`Words using ${tag}`}
+      </Typography>
+
+      <Paper className={classes.root}>
+        <Table className={classes.root}>
+          <TableBody>
+            {list}
+          </TableBody>
+        </Table>
+      </Paper>
     </div>
   )
 }
+
+export default withStyles(styles)(Words)

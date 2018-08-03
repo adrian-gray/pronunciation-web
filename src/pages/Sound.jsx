@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {
+  Divider,
   Paper,
   Typography,
   withStyles
@@ -14,6 +15,7 @@ import Dialogues from './../components/Dialogues'
 // import FindTheWords from './../components/FindTheWords'
 // import HearTheWords from './../components/HearTheWords'
 // import IdentifySounds from './../components/IdentifySounds'
+import Movie from './../components/Movie'
 // import OddOneOut from './../components/OddOneOut'
 // import Phrases from './../components/Phrases'
 // import SaySentences from './../components/SaySentences'
@@ -44,8 +46,9 @@ const Sound = (props) => {
 
   const activities = {
     'description': <Description phoneme={phoneme} arr={data.text} />,
+    'movie': <Movie tag={data.tag} url={data.movie.url} />,
     'dialogues': <Dialogues tag={data.tag} dialogues={data.dialogues} />,
-    'words': <Words words={data.words} />
+    'words': <Words words={data.words} tag={data.tag} />
   }
 
   //  const activities = ['animation', 'how to pronounce', 'words', 'common words',
@@ -59,6 +62,7 @@ const Sound = (props) => {
   return (
     <Paper className={classes.root}>
       <SoundTitle phoneme={phoneme} str={data.title} />
+      <Divider />
 
       <Typography variant='headline' gutterBottom>
         {`Pronunciation activities for ${phoneme}`}
@@ -67,6 +71,7 @@ const Sound = (props) => {
       <div className={classes.chipContainer}>
         {activityButtons}
       </div>
+      <Divider />
 
       {activities[activity]}
     </Paper>

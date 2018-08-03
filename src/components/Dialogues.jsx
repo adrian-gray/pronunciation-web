@@ -36,8 +36,8 @@ const Dialogues = (props) => {
   }
 
   const expandDialogue = (dialogue, index) => (
-    <Paper className={classes.root}>
-      <List className='plain-list' key={index}>
+    <Paper className={classes.root} key={index}>
+      <List className='plain-list'>
         {extractLines(dialogue)}
       </List>
     </Paper>
@@ -46,7 +46,7 @@ const Dialogues = (props) => {
   const lines = dialogues.map(expandDialogue)
 
   return (
-    <div className='dialogues'>
+    <div>
       <Typography variant='title' className={classes.title} gutterBottom>
         {'Short dialogues using '}<SplitHilite str={tag} />
       </Typography>

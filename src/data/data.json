@@ -10,6 +10,9 @@
         "Tip of the tongue stretches up (back part lifts)",
         "The tongue is wide"
       ],
+      "movie": {
+        "url": "/assets/images/video1.png"
+      },
       "words": {
         "b~a~d": "/b~æ~d/",
         "c~a~tch": "/k~æ~tʃ/",

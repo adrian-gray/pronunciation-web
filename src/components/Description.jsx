@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {
+  Paper,
   List,
   ListItem,
   ListItemText,
@@ -11,6 +12,12 @@ import {
 import SplitHilite from './SplitHilite'
 
 const styles = (theme) => ({
+  root: {
+    ...theme.mixins.gutters(),
+    paddingTop: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
+    flexGrow: 1
+  },
   title: {
     margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`
   }
@@ -32,9 +39,12 @@ const Description = (props) => {
       <Typography variant='title' className={classes.title} gutterBottom>
         {'How to pronounce '}<SplitHilite str={phoneme} />
       </Typography>
-      <List>
-        {list}
-      </List>
+
+      <Paper className={classes.root}>
+        <List>
+          {list}
+        </List>
+      </Paper>
     </div>
   )
 }
