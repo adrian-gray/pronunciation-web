@@ -9,7 +9,7 @@ import {
 
 import jsonData from './../data/data'
 import ActivityButton from './../components/ActivityButton'
-// import CommonWords from './../components/CommonWords'
+import CommonWords from './../components/CommonWords'
 import HowToPronounce from './../components/HowToPronounce'
 import Dialogues from './../components/Dialogues'
 // import FindTheWords from './../components/FindTheWords'
@@ -54,9 +54,10 @@ const Sound = (props) => {
       />
     ),
     'movie': <Movie tag={data.tag} url={data.movie.url} />,
-    'dialogues': <Dialogues tag={data.tag} dialogues={data.dialogues} />,
     'words': <Words words={data.words} tag={data.tag} />,
-    'phrases': <Phrases phrases={data.phrases} tag={data.tag} />
+    'phrases': <Phrases phrases={data.phrases} tag={data.tag} />,
+    'dialogues': <Dialogues tag={data.tag} dialogues={data.dialogues} />,
+    'common words': <CommonWords tag={data.tag} words={data['common words']} />
   }
 
   const activityNames = Object.keys(activities)
@@ -119,7 +120,7 @@ const Sound = (props) => {
 //      </div>
 //      <hr />
 //
-//      <h3>{'Common Words'}</h3>
+//      <h3>{'C ommon Words'}</h3>
 //
 //      <CommonWords words={data.commonWords} />
 //

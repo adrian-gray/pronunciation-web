@@ -25,6 +25,7 @@ const styles = (theme) => ({
 
 const Dialogues = (props) => {
   const { classes, dialogues, tag } = props
+  console.log('classes', classes)
   const extractLines = (dialogue, index) => {
     return dialogue.map((line, index) => (
       <ListItem key={index}>
@@ -36,7 +37,7 @@ const Dialogues = (props) => {
   }
 
   const expandDialogue = (dialogue, index) => (
-    <Paper className={classes.root} key={index}>
+    <Paper className={classes.page} key={index}>
       <List className='plain-list'>
         {extractLines(dialogue)}
       </List>
