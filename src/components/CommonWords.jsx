@@ -22,16 +22,20 @@ const styles = (theme) => ({
   title: {
     margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`
   },
-  words: {
-    wordSpacing: '1.5'
+  cell: {
+    paddingLeft: 12,
+    paddingRight: 12
+  },
+  word: {
+    fontSize: '1.25rem'
   }
 })
 
 const CommonWords = (props) => {
   const { classes, tag, words } = props
   const cells = words.map((el, index) => (
-    <TableCell key={index}>
-      <Typography variant='title' gutterBottom>
+    <TableCell className={classes.cell} key={index}>
+      <Typography className={classes.word} gutterBottom>
         <SplitHilite str={el} key={el} />
       </Typography>
     </TableCell>
@@ -56,8 +60,8 @@ const CommonWords = (props) => {
       <Typography variant='title' className={classes.title} gutterBottom>
         {'Common words with '}<SplitHilite str={tag} />
       </Typography>
-      <Paper className={classes.root}>
-        <Table className={classes.root}>
+      <Paper>
+        <Table>
           <TableBody>
             {rows}
           </TableBody>
