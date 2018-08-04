@@ -17,7 +17,7 @@ import Dialogues from './../components/Dialogues'
 // import IdentifySounds from './../components/IdentifySounds'
 import Movie from './../components/Movie'
 // import OddOneOut from './../components/OddOneOut'
-// import Phrases from './../components/Phrases'
+import Phrases from './../components/Phrases'
 // import SaySentences from './../components/SaySentences'
 // import SplitHilite from './../components/SplitHilite'
 import SoundTitle from './../components/SoundTitle'
@@ -55,7 +55,8 @@ const Sound = (props) => {
     ),
     'movie': <Movie tag={data.tag} url={data.movie.url} />,
     'dialogues': <Dialogues tag={data.tag} dialogues={data.dialogues} />,
-    'words': <Words words={data.words} tag={data.tag} />
+    'words': <Words words={data.words} tag={data.tag} />,
+    'phrases': <Phrases phrases={data.phrases} tag={data.tag} />
   }
 
   const activityNames = Object.keys(activities)
