@@ -21,11 +21,16 @@ const styles = (theme) => ({
     marginLeft: 'auto',
     marginBottom: 0,
     marginRight: 'auto',
-    paddingTop: 0,
-    paddingLeft: 20,
-    paddingBottom: 0,
-    paddingRight: 20,
-    maxWidth: 1024
+    padding: 0,
+    maxWidth: 1024,
+    [theme.breakpoints.up('xs')]: {
+      paddingRight: 0,
+      paddingLeft: 0
+    },
+    [theme.breakpoints.up('sm')]: {
+      paddingRight: 20,
+      paddingLeft: 20
+    }
   }
 })
 
