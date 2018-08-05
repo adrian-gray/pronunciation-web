@@ -20,7 +20,7 @@ const toLink = (phoneme, activity) => {
   return { title, link }
 }
 
-function ActivityButton (props) {
+const ActivityButton = (props) => {
   const { classes, phoneme, activity } = props
 
   const { title, link } = toLink(phoneme, activity)

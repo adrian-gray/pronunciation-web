@@ -57,7 +57,8 @@ const Sound = (props) => {
     'find the words': (
       <FindTheWords
         tag={data.tag}
-        words={data['find the words']}
+        words={data['find the words'].words}
+        correct={data['find the words'].correct}
       />
     )
   }

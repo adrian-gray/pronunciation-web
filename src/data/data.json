@@ -81,18 +81,27 @@
         "I’m chatting with the man at Chatime, Chatswood.",
         "Can you can a can as a canner can can a can?"
       ],
-      "find the words": [
-        "cap",
-        "hat",
-        "bug",
-        "cup",
-        "sad",
-        "hut",
-        "bag",
-        "hate",
-        "said",
-        "hot"
-      ],
+      "find the words": {
+        "words": [
+          "cap",
+          "hat",
+          "bug",
+          "cup",
+          "sad",
+          "hut",
+          "bag",
+          "hate",
+          "said",
+          "hot"
+        ],
+        "correct": [
+          "cap",
+          "hat",
+          "sad",
+          "bag",
+          "said"
+        ]
+      },
       "hear the words": [
         "matter",
         "mutter",
