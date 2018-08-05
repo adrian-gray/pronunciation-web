@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { capitalise } from './../utils'
+
 import {
   Chip,
   withStyles
@@ -11,10 +13,8 @@ const styles = (theme) => ({
   }
 })
 
-const capitalize = str => str.charAt(0).toUpperCase() + str.substr(1)
-
 const toLink = (phoneme, activity) => {
-  const title = capitalize(activity)
+  const title = capitalise(activity)
   const websafe = activity.split(' ').join('_')
   const link = `/sound/${phoneme}/${websafe}`
   return { title, link }

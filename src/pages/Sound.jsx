@@ -21,7 +21,7 @@ import Phrases from './../components/Phrases'
 // import SaySentences from './../components/SaySentences'
 // import SplitHilite from './../components/SplitHilite'
 import SoundTitle from './../components/SoundTitle'
-// import TongueTwisters from './../components/TongueTwisters'
+import TongueTwisters from './../components/TongueTwisters'
 import Words from './../components/Words'
 // import WordsMaze from './../components/WordsMaze'
 const styles = (theme) => ({
@@ -47,7 +47,13 @@ const Sound = (props) => {
     'words': <Words words={data.words} tag={data.tag} />,
     'phrases': <Phrases phrases={data.phrases} tag={data.tag} />,
     'dialogues': <Dialogues tag={data.tag} dialogues={data.dialogues} />,
-    'common words': <CommonWords tag={data.tag} words={data['common words']} />
+    'common words': <CommonWords tag={data.tag} words={data['common words']} />,
+    'tongue twisters': (
+      <TongueTwisters
+        tag={data.tag}
+        tongueTwisters={data['tongue twisters']}
+      />
+    )
   }
 
   const activityNames = Object.keys(activities)
@@ -74,46 +80,6 @@ const Sound = (props) => {
   )
 }
 
-//      <Grid container spacing={24}>
-//        <Grid item xs={12} sm={6}>
-//          <img src='/assets/images/animation.png' width='100%' />
-//        </Grid>
-//        <Grid item xs={12} sm={6}>
-//          <Description phoneme={phoneme} arr={data.text} />
-//        </Grid>
-//      </Grid>
-//      <hr />
-//
-//      <Grid container spacing={24}>
-//        <Grid item xs={12}>
-//          <img src='/assets/images/video1.png' width='100%' />
-//        </Grid>
-//      </Grid>
-//
-//      <div className='container'>
-//        <div className='row'>
-//          <div className='col-sm'>
-//            <Words words={data.words} />
-//          </div>
-//          <div className='col-sm'>
-//            <Phrases words={data.phrases} />
-//          </div>
-//        </div>
-//      </div>
-//      <hr />
-//
-//      <Dialogues dialogues={data.dialogues} />
-//      <hr />
-//
-//      <div className='container img-container'>
-//        <img className='responsive-img' src='/assets/images/dialogues.png' />
-//      </div>
-//      <hr />
-//
-//      <h3>{'C ommon Words'}</h3>
-//
-//      <CommonWords words={data.commonWords} />
-//
 //      <h3>Tongue twisters</h3>
 //      <TongueTwisters />
 //      <hr />

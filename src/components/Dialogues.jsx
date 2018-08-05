@@ -19,7 +19,7 @@ const styles = (theme) => ({
 
 const Dialogues = (props) => {
   const { classes, dialogues, tag } = props
-  console.log('classes', classes)
+
   const extractLines = (dialogue, index) => {
     return dialogue.map((line, index) => (
       <ListItem key={index}>
@@ -32,7 +32,7 @@ const Dialogues = (props) => {
 
   const expandDialogue = (dialogue, index) => (
     <Paper className={classes.subCanvas} key={index}>
-      <List className='plain-list'>
+      <List>
         {extractLines(dialogue)}
       </List>
     </Paper>
@@ -42,7 +42,7 @@ const Dialogues = (props) => {
 
   return (
     <div className={classes.headspace}>
-      <Typography className={classes.largeText} gutterBottom>
+      <Typography variant='title' gutterBottom>
         {'Short dialogues using '}<SplitHilite str={tag} />
       </Typography>
       {lines}
