@@ -9,12 +9,11 @@ import {
 const styles = (theme) => ({
   headspace: theme.headspace,
   largeText: theme.largeText,
-  subCanvas: theme.subCanvas,
   left: {
+    ...theme.subCanvas,
     float: 'left',
-    margin: '1rem',
-    paddingTop: '1rem',
-    paddingRight: '2rem'
+    margin: '2rem',
+    padding: '1rem'
   },
   clearFloat: {
     clear: 'both'
@@ -25,11 +24,15 @@ const FindTheWords = (props) => {
   const { classes, tag, words } = props
 
   const wordList = words.map((word, index) => {
-    return <div className={classes.left} key={index}>
-      <Typography className={classes.largeText} gutterBottom>
-        {word}
-      </Typography>
-    </div>
+    return (
+      <div key={index}>
+        <Paper className={classes.left}>
+          <Typography className={classes.largeText} gutterBottom>
+            {word}
+          </Typography>
+        </Paper>
+      </div>
+    )
   })
 
   return (
@@ -37,12 +40,8 @@ const FindTheWords = (props) => {
       <Typography variant='title' gutterBottom>
         {`Find the words with a ${tag}`}
       </Typography>
-      <Paper className={classes.subCanvas}>
-        <div className='row'>
-          {wordList}
-        </div>
-        <div className={classes.clearFloat} />
-      </Paper>
+      {wordList}
+      <div className={classes.clearFloat} />
     </div>
   )
 }
