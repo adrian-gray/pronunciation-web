@@ -12,7 +12,7 @@ import ActivityButton from './../components/ActivityButton'
 import CommonWords from './../components/CommonWords'
 import HowToPronounce from './../components/HowToPronounce'
 import Dialogues from './../components/Dialogues'
-// import FindTheWords from './../components/FindTheWords'
+import FindTheWords from './../components/FindTheWords'
 // import HearTheWords from './../components/HearTheWords'
 // import IdentifySounds from './../components/IdentifySounds'
 import Movie from './../components/Movie'
@@ -53,6 +53,12 @@ const Sound = (props) => {
         tag={data.tag}
         tongueTwisters={data['tongue twisters']}
       />
+    ),
+    'find the words': (
+      <FindTheWords
+        tag={data.tag}
+        words={data['find the words']}
+      />
     )
   }
 
@@ -80,13 +86,6 @@ const Sound = (props) => {
   )
 }
 
-//      <h3>Tongue twisters</h3>
-//      <TongueTwisters />
-//      <hr />
-//
-//      <h2>Members section interactives</h2>
-//      <br />
-//
 //      <h3>Find the words</h3>
 //      <h4>Click (✓) the words with the ‘short a’ <span className='em'>/æ/</span> sound</h4>
 //      <FindTheWords words={data.findTheWords} />
