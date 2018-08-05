@@ -11,6 +11,10 @@ const styles = (theme) => ({
   headspace: theme.headspace,
   clearFloat: {
     clear: 'both'
+  },
+  correct: {
+    textAlign: 'center',
+    color: 'green'
   }
 })
 
@@ -62,9 +66,9 @@ class FindTheWords extends Component {
   render () {
     const { classes, tag, words } = this.props
 
-    const resultStr = this.state.allCorrect ? 'Correct!' : ''
+    const resultStr = this.state.allCorrect ? '✓' : ''
     const result = (
-      <Typography variant='display2' gutterBottom>
+      <Typography className={classes.correct} variant='display3' gutterBottom>
         {resultStr}
       </Typography>
     )
