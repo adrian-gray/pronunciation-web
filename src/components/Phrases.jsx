@@ -13,29 +13,24 @@ import {
 import SplitHilite from './SplitHilite'
 
 const styles = (theme) => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 2
-  },
-  title: {
-    margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`
-  }
+  headspace: theme.headspace,
+  subCanvas: theme.subCanvas,
+  largeText: theme.largeText
 })
 
 const Phrases = (props) => {
   const { classes, phrases, tag } = props
+
   const list = Object.entries(phrases).map((arr, index) => {
     return (
       <TableRow key={index}>
         <TableCell>
-          <Typography variant='title' gutterBottom>
+          <Typography className={classes.largeText}>
             <SplitHilite str={arr[0]} />
           </Typography>
         </TableCell>
         <TableCell>
-          <Typography variant='title' gutterBottom>
+          <Typography className={classes.largeText}>
             <SplitHilite str={arr[1]} />
           </Typography>
         </TableCell>
@@ -44,13 +39,13 @@ const Phrases = (props) => {
   })
 
   return (
-    <div>
-      <Typography variant='title' className={classes.title} gutterBottom>
+    <div className={classes.headspace}>
+      <Typography variant='title' gutterBottom>
         {`Phrases using ${tag}`}
       </Typography>
 
-      <Paper className={classes.root}>
-        <Table className={classes.root}>
+      <Paper className={classes.subCanvas}>
+        <Table>
           <TableBody>
             {list}
           </TableBody>

@@ -11,11 +11,7 @@ import SEO from './../components/SEO'
 import Phoneme from './../components/Phoneme'
 
 const styles = (theme) => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2
-  }
+  page: theme.page
 })
 
 const Sounds = (props) => {
@@ -32,7 +28,7 @@ const Sounds = (props) => {
   })
 
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.page}>
       <SEO meta='sounds' />
       <Typography variant='display1' gutterBottom>
         {'Phoenetic English Pronunciation'}

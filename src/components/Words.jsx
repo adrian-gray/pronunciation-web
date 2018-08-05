@@ -13,15 +13,9 @@ import {
 import SplitHilite from './SplitHilite'
 
 const styles = (theme) => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 2
-  },
-  title: {
-    margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`
-  }
+  headspace: theme.headspace,
+  largeText: theme.largeText,
+  subCanvas: theme.subCanvas
 })
 
 const Words = (props) => {
@@ -30,12 +24,12 @@ const Words = (props) => {
     return (
       <TableRow key={index}>
         <TableCell>
-          <Typography variant='title' gutterBottom>
+          <Typography className={classes.largeText}>
             <SplitHilite str={arr[0]} />
           </Typography>
         </TableCell>
         <TableCell>
-          <Typography variant='title' gutterBottom>
+          <Typography className={classes.largeText}>
             <SplitHilite str={arr[1]} />
           </Typography>
         </TableCell>
@@ -44,12 +38,12 @@ const Words = (props) => {
   })
 
   return (
-    <div>
-      <Typography variant='title' className={classes.title} gutterBottom>
+    <div className={classes.headspace}>
+      <Typography variant='title' gutterBottom>
         {`Words using ${tag}`}
       </Typography>
 
-      <Paper className={classes.root}>
+      <Paper className={classes.subCanvas}>
         <Table className={classes.root}>
           <TableBody>
             {list}

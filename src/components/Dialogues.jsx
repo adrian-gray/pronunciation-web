@@ -12,15 +12,9 @@ import {
 import SplitHilite from './SplitHilite'
 
 const styles = (theme) => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 2
-  },
-  title: {
-    margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`
-  }
+  headspace: theme.headspace,
+  largeText: theme.largeText,
+  subCanvas: theme.subCanvas
 })
 
 const Dialogues = (props) => {
@@ -37,7 +31,7 @@ const Dialogues = (props) => {
   }
 
   const expandDialogue = (dialogue, index) => (
-    <Paper className={classes.page} key={index}>
+    <Paper className={classes.subCanvas} key={index}>
       <List className='plain-list'>
         {extractLines(dialogue)}
       </List>
@@ -47,8 +41,8 @@ const Dialogues = (props) => {
   const lines = dialogues.map(expandDialogue)
 
   return (
-    <div>
-      <Typography variant='title' className={classes.title} gutterBottom>
+    <div className={classes.headspace}>
+      <Typography className={classes.largeText} gutterBottom>
         {'Short dialogues using '}<SplitHilite str={tag} />
       </Typography>
       {lines}

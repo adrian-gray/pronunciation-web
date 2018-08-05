@@ -24,18 +24,8 @@ import SoundTitle from './../components/SoundTitle'
 // import TongueTwisters from './../components/TongueTwisters'
 import Words from './../components/Words'
 // import WordsMaze from './../components/WordsMaze'
-
 const styles = (theme) => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    flexGrow: 1
-  },
-  chipContainer: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  }
+  page: theme.page
 })
 
 const Sound = (props) => {
@@ -66,7 +56,7 @@ const Sound = (props) => {
   ))
 
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.page}>
       <SoundTitle phoneme={phoneme} str={data.title} />
       <Divider />
 
@@ -74,7 +64,7 @@ const Sound = (props) => {
         {`Pronunciation activities for ${phoneme}`}
       </Typography>
 
-      <div className={classes.chipContainer}>
+      <div>
         {activityButtons}
       </div>
       <Divider />

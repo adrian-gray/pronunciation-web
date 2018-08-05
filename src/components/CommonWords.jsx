@@ -13,29 +13,19 @@ import {
 import SplitHilite from './SplitHilite'
 
 const styles = (theme) => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    marginBottom: theme.spacing.unit * 2
-  },
-  title: {
-    margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`
-  },
   cell: {
     paddingLeft: 12,
     paddingRight: 12
   },
-  word: {
-    fontSize: '1.25rem'
-  }
+  largeText: theme.largeText,
+  headspace: theme.headspace
 })
 
 const CommonWords = (props) => {
   const { classes, tag, words } = props
   const cells = words.map((el, index) => (
     <TableCell className={classes.cell} key={index}>
-      <Typography className={classes.word} gutterBottom>
+      <Typography className={classes.largeText}>
         <SplitHilite str={el} key={el} />
       </Typography>
     </TableCell>
@@ -56,8 +46,8 @@ const CommonWords = (props) => {
   } while (cellCount < cells.length)
 
   return (
-    <div>
-      <Typography variant='title' className={classes.title} gutterBottom>
+    <div className={classes.headspace} >
+      <Typography variant='title' gutterBottom>
         {'Common words with '}<SplitHilite str={tag} />
       </Typography>
       <Paper>

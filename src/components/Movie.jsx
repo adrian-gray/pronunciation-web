@@ -6,9 +6,7 @@ import {
 } from '@material-ui/core'
 
 const styles = (theme) => ({
-  image: {
-    width: '100%'
-  }
+  fullWidth: theme.fullWidth
 })
 
 const Movie = (props) => {
@@ -19,7 +17,7 @@ const Movie = (props) => {
       <Typography variant='display2' gutterBottom>
         {`Movie for ${tag}`}
       </Typography>
-      <img className={classes.image} src={url} alt={`Pronouncing ${tag}`} />
+      <img className={classes.fullWidth} src={url} alt={`Pronouncing ${tag}`} />
     </div>
   )
 }

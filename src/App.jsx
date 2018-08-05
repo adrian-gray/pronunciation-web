@@ -4,7 +4,8 @@ import ReactGA from 'react-ga'
 
 import {
   CssBaseline,
-  withStyles
+  withStyles,
+  withTheme
 } from '@material-ui/core'
 
 import SoundRoutes from './routes/SoundRoutes'
@@ -65,4 +66,4 @@ class App extends Component {
   }
 }
 
-export default withStyles(styles)(App)
+export default withTheme()(withStyles(styles)(App))

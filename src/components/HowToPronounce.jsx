@@ -13,18 +13,9 @@ import {
 import SplitHilite from './SplitHilite'
 
 const styles = (theme) => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    flexGrow: 1
-  },
-  title: {
-    margin: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 2}px`
-  },
-  image: {
-    width: '100%'
-  }
+  headspace: theme.headspace,
+  fullWidth: theme.fullWidth,
+  subCanvas: theme.subCanvas
 })
 
 const HowToPronounce = (props) => {
@@ -39,15 +30,15 @@ const HowToPronounce = (props) => {
   ))
 
   return (
-    <div>
-      <Typography variant='title' className={classes.title} gutterBottom>
+    <div className={classes.headspace}>
+      <Typography variant='title' gutterBottom>
         {'How to pronounce '}<SplitHilite str={phoneme} />
       </Typography>
 
-      <Paper className={classes.root}>
+      <Paper className={classes.subCanvas}>
         <Grid container spacing={24}>
           <Grid item xs={12} sm={6}>
-            <img className={classes.image} src={url} />
+            <img className={classes.fullWidth} src={url} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <List>

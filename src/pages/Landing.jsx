@@ -10,18 +10,14 @@ import Mailchimp from './../components/Mailchimp'
 import SEO from './../components/SEO'
 
 const styles = (theme) => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2
-  }
+  page: theme.page
 })
 
 const Landing = (props) => {
   const { classes } = props
 
   return (
-    <Paper className={classes.root}>
+    <Paper className={classes.page}>
       <SEO meta='landing' />
       <Typography variant='display2' gutterBottom>
         {'English Pronunciation Lessons'}
