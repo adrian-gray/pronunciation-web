@@ -1,6 +1,7 @@
 import React, {Component } from 'react'
 
 import {
+  Paper,
   Typography,
   withStyles
 } from '@material-ui/core'
@@ -15,6 +16,9 @@ const styles = (theme) => ({
   correct: {
     textAlign: 'center',
     color: 'green'
+  },
+  greenBG: {
+    backgroundColor: '#EEFFEE'
   }
 })
 
@@ -66,12 +70,17 @@ class FindTheWords extends Component {
   render () {
     const { classes, tag, words } = this.props
 
-    const resultStr = this.state.allCorrect ? '✓' : ''
-    const result = (
-      <Typography className={classes.correct} variant='display3' gutterBottom>
-        {resultStr}
-      </Typography>
-    )
+    let result = ''
+    let resultBG = ''
+
+    if (this.state.allCorrect) {
+      result = (
+        <Typography className={classes.correct} variant='display3' gutterBottom>
+          {'Yes ✓'}
+        </Typography>
+      )
+      resultBG = classes.greenBG
+    }
 
     this.wordTiles = words.map((word, index) => (
       <Tile
@@ -86,11 +95,13 @@ class FindTheWords extends Component {
     return (
       <div className={classes.headspace}>
         <Typography variant='title' gutterBottom>
-          {`Find the words with a ${tag}`}
+          {`Find the words with a ${tag} sound`}
         </Typography>
-        {this.wordTiles}
-        <div className={classes.clearFloat} />
-        {result}
+        <Paper className={resultBG}>
+          {this.wordTiles}
+          <div className={classes.clearFloat} />
+          {result}
+        </Paper>
       </div>
     )
   }

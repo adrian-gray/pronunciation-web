@@ -87,11 +87,6 @@ const Sound = (props) => {
   )
 }
 
-//      <h3>Find the words</h3>
-//      <h4>Click (✓) the words with the ‘short a’ <span className='em'>/æ/</span> sound</h4>
-//      <FindTheWords words={data.findTheWords} />
-//      <hr />
-//
 //      <h3>Hear the words</h3>
 //      <h4>Underline the ‘short a’ /æ/ sound you hear</h4>
 //      <HearTheWords words={data.hearTheWords} />
