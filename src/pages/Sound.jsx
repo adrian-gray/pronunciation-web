@@ -18,7 +18,7 @@ import FindTheWords from './../components/FindTheWords'
 import Movie from './../components/Movie'
 // import OddOneOut from './../components/OddOneOut'
 import Phrases from './../components/Phrases'
-// import SaySentences from './../components/SaySentences'
+import SayTheSentences from './../components/SayTheSentences'
 // import SplitHilite from './../components/SplitHilite'
 import SoundTitle from './../components/SoundTitle'
 import TongueTwisters from './../components/TongueTwisters'
@@ -47,7 +47,12 @@ const Sound = (props) => {
     'words': <Words words={data.words} tag={data.tag} />,
     'phrases': <Phrases phrases={data.phrases} tag={data.tag} />,
     'dialogues': <Dialogues tag={data.tag} dialogues={data.dialogues} />,
-    'common words': <CommonWords tag={data.tag} words={data['common words']} />,
+    'common words': (
+      <CommonWords
+        tag={data.tag}
+        words={data['common words']}
+      />
+    ),
     'tongue twisters': (
       <TongueTwisters
         tag={data.tag}
@@ -59,6 +64,12 @@ const Sound = (props) => {
         tag={data.tag}
         words={data['find the words'].words}
         correct={data['find the words'].correct}
+      />
+    ),
+    'say the sentences': (
+      <SayTheSentences
+        tag={data.tag}
+        sentences={data['say the sentences']}
       />
     )
   }
@@ -87,17 +98,6 @@ const Sound = (props) => {
   )
 }
 
-//      <h3>Hear the words</h3>
-//      <h4>Underline the ‘short a’ /æ/ sound you hear</h4>
-//      <HearTheWords words={data.hearTheWords} />
-//
-//      <hr />
-//
-//      <h3><em>Say</em> the sentences below</h3>
-//      <SaySentences sentences={data.saySentences} />
-//
-//      <hr />
-//
 //      <h3>The odd one out</h3>
 //      <h4>Circle the words that don’t have the ‘short a’ /æ/ sound</h4>
 //      <OddOneOut words={data.oddOneOut} />
