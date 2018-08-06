@@ -18,10 +18,10 @@ const styles = (theme) => ({
     cursor: 'pointer'
   },
   correct: {
-    color: 'green'
+    backgroundColor: '#CCFFCC'
   },
   incorrect: {
-    color: 'red'
+    backgroundColor: '#FFCCCC'
   }
 })
 
@@ -38,16 +38,18 @@ class Tile extends Component {
 
   render () {
     const { classes } = this.props
+    const paperClasses = [classes.left]
+
     let correctStatus = null
     if (this.props.isCorrect) {
-      correctStatus = 'correct'
+      paperClasses.push(classes.correct)
     } else if (this.props.isCorrect === false) {
-      correctStatus = 'incorrect'
+      paperClasses.push(classes.incorrect)
     }
 
     return (
       <div className={classes.clickable} onClick={this.handleClick}>
-        <Paper className={classes.left}>
+        <Paper className={paperClasses.join(' ')}>
           <Typography className={classes.largeText} gutterBottom>
             <span className={classes[correctStatus]}>
               {this.props.word}
