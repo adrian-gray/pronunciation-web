@@ -62,6 +62,8 @@ const Sound = (props) => {
     'find the words': (
       <FindTheWords
         tag={data.tag}
+        titleState='Select the words with a'
+        titleEnd='sound'
         words={data['find the words'].words}
         correct={data['find the words'].correct}
       />
@@ -70,6 +72,15 @@ const Sound = (props) => {
       <SayTheSentences
         tag={data.tag}
         sentences={data['say the sentences']}
+      />
+    ),
+    'odd one out': (
+      <FindTheWords
+        tag={data.tag}
+        titleStart="Select the words that don't have the"
+        titleEnd='sound'
+        words={data['odd one out'].words}
+        correct={data['odd one out'].correct}
       />
     )
   }
@@ -98,12 +109,6 @@ const Sound = (props) => {
   )
 }
 
-//      <h3>The odd one out</h3>
-//      <h4>Circle the words that don’t have the ‘short a’ /æ/ sound</h4>
-//      <OddOneOut words={data.oddOneOut} />
-//
-//      <hr />
-//
 //      <h3>Identify the sounds</h3>
 //      <h5><SplitHilite str='Select the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)' /></h5>
 //      <h5>Snake Eats Tongs</h5>

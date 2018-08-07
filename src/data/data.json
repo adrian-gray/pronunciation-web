@@ -107,18 +107,25 @@
         "Whatever you mutter doesn’t matter.",
         "Just tap the top of the tape."
       ],
-      "odd one out": [
-        "ran",
-        "answer",
-        "band",
-        "start",
-        "att",
-        "all",
-        "thanks",
-        "black",
-        "had",
-        "name"
-      ],
+      "odd one out": {
+        "words": [
+          "ran",
+          "answer",
+          "band",
+          "start",
+          "at",
+          "all",
+          "thanks",
+          "black",
+          "had",
+          "name"
+        ],
+        "correct": [
+          "start",
+          "all",
+          "name"
+        ]
+      },
       "identify sounds": [
         "A m~a~n (~/æ/~ or ~/eɪ/~) from Austr~a~lia (~/æ/~ or ~/eɪ/~) has a sn~a~ke (~/æ/~ or ~/eɪ/~). He feeds it a r~a~t (~/æ/~ or ~/eɪ/~) . He holds the rat with tongs. The snake eats the tongs, too.",
         "This is d~a~ngerous (~/æ/~ or ~/eɪ/~) for the snake. Doctors operate on it. They t~a~ke (~/æ/~ or ~/eɪ/~) out the tongs.",

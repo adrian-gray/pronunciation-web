@@ -68,7 +68,7 @@ class FindTheWords extends Component {
   }
 
   render () {
-    const { classes, tag, words } = this.props
+    const { classes, tag, titleStart, titleEnd, words } = this.props
 
     let result = ''
     let resultBG = ''
@@ -95,7 +95,7 @@ class FindTheWords extends Component {
     return (
       <div className={classes.headspace}>
         <Typography variant='title' gutterBottom>
-          {`Find the words with a ${tag} sound`}
+          {`${titleStart} ${tag} ${titleEnd}`}
         </Typography>
         <Paper className={resultBG}>
           {this.wordTiles}
