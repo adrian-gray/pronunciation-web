@@ -50,7 +50,7 @@ class Tile extends Component {
     return (
       <div className={classes.clickable} onClick={this.handleClick}>
         <Paper className={paperClasses.join(' ')}>
-          <Typography className={classes.largeText} gutterBottom>
+          <Typography className={classes.largeText}>
             <span className={classes[correctStatus]}>
               {this.props.word}
             </span>

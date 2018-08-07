@@ -5,9 +5,7 @@ import {
 } from '@material-ui/core'
 
 const styles = (theme) => ({
-  em: {
-    color: '#8b0000'
-  }
+  hilite: theme.hilite
 })
 
 export function SplitHilite (props) {
@@ -20,7 +18,7 @@ export function SplitHilite (props) {
     let el = elements.shift()
     if (el === '~') {
       const txt = elements.shift()
-      arr.push(<span className={classes.em} key={`${txt}${index}`}>{txt}</span>)
+      arr.push(<span className={classes.hilite} key={`${txt}${index}`}>{txt}</span>)
       elements.shift() // closing ~
     } else {
       arr.push(<span key={`${el}${index}`}>{el}</span>)

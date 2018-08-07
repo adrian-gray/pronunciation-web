@@ -29,5 +29,8 @@ export default createMuiTheme({
   },
   fullWidth: {
     width: '100%'
+  },
+  hilite: {
+    color: '#CC0000'
   }
 })

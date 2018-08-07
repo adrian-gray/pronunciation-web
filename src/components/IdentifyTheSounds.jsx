@@ -15,14 +15,20 @@ const styles = (theme) => ({
     padding: '0.5rem',
     paddingLeft: '1rem',
     paddingRight: '1rem',
-    fontSize: '1.15rem'
+    fontSize: '1.25rem'
   },
   correct: {
     textAlign: 'center',
-    color: 'green'
+    color: '#AAEEAA'
   },
   greenBG: {
     backgroundColor: '#EEFFEE'
+  },
+  green: {
+    backgroundColor: '#99FF99'
+  },
+  red: {
+    backgroundColor: '#FF9999'
   }
 })
 
@@ -41,8 +47,9 @@ class IdentifyTheSounds extends Component {
 
     const numSelectors = countSelectors(this.props.sentences)
     this.state = {
+      sentences: [],
       selectedOption: Array(numSelectors).fill(0),
-      sentences: []
+      selectedBgColour: Array(numSelectors).fill(undefined)
     }
 
     this.handleClick = this.handleClick.bind(this)
@@ -54,7 +61,7 @@ class IdentifyTheSounds extends Component {
 
   parseSentences (props) {
     let id = 0
-    let numSelectors = 0
+    let selectorId = 0
 
     const sentences = this.props.sentences.map((sentence, index) => {
       const fragments = []
@@ -68,14 +75,15 @@ class IdentifyTheSounds extends Component {
           fragments.push(
             <Picker
               options={this.props.options}
-              selected={props.selectedOption[numSelectors]}
+              selected={props.selectedOption[selectorId]}
+              colour={props.selectedBgColour && props.selectedBgColour[selectorId]}
               handleClick={this.handleClick}
               key={key}
               index={id}
             />
           )
           id++
-          numSelectors++
+          selectorId++
           sentence = sentence.substr(6, sentence.length)
         } else {
           const substr = sentence.slice(0, idx)
@@ -95,21 +103,41 @@ class IdentifyTheSounds extends Component {
     return { sentences }
   }
 
-  updateSentences (options) {
-    const { sentences } = this.parseSentences({
-      selectedOption: options
-    })
+  updateSentences (selectedOption, selectedBgColour = null) {
+    const { sentences } = this.parseSentences({ selectedOption, selectedBgColour })
 
     this.setState({ sentences })
   }
 
+  checkForCorrect (values) {
+    return values.map((value, index) => {
+      return this.props.options[value] === this.props.answers[index]
+    })
+  }
+
   handleClick (index) {
     const newStateSelectedOption = this.state.selectedOption.slice()
+    const selectedBgColour = []
     newStateSelectedOption[index] = ((this.state.selectedOption[index] + 1)) % 3
+    if (newStateSelectedOption.every(val => val > 0)) {
+      this.checkForCorrect(newStateSelectedOption).map((value, index) => {
+        switch (value) {
+          case true:
+            selectedBgColour[index] = this.props.classes.green
+            break
+          case false:
+            selectedBgColour[index] = this.props.classes.red
+            break
+          default:
+            selectedBgColour[index] = undefined
+        }
+      })
+    }
     this.setState({
-      selectedOption: newStateSelectedOption
+      selectedOption: newStateSelectedOption,
+      selectedBgColour
     })
-    this.updateSentences(newStateSelectedOption)
+    this.updateSentences(newStateSelectedOption, selectedBgColour)
   }
 
   render () {

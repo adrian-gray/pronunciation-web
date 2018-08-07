@@ -33,8 +33,9 @@ class Picker extends Component {
   }
 
   render () {
+    const classes = `${this.props.classes.clickable} ${this.props.colour}`
     return (
-      <span className={this.props.classes.clickable} onClick={this.handleClick}>
+      <span className={classes} onClick={this.handleClick}>
         {`${this.props.options[this.props.selected]}`}
       </span>
     )

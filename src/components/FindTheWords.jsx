@@ -15,7 +15,7 @@ const styles = (theme) => ({
   },
   correct: {
     textAlign: 'center',
-    color: 'green'
+    color: '#AAEEAA'
   },
   greenBG: {
     backgroundColor: '#EEFFEE'
