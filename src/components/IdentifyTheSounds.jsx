@@ -24,80 +24,95 @@ const styles = (theme) => ({
   }
 })
 
-const parseSentences = (props) => {
-  const { classes, sentences, handleClick, options } = props
-  const selectedOption = []
-
-  let id = 0
-  let numSelectors = 0
-
-  const sentenceList = sentences.map((sentence, index) => {
-    const fragments = []
-    let key = 0
-    do {
-      const idx = sentence.indexOf('OPTION')
-      if (idx === -1) {
-        break
-      } else if (idx === 0) {
-        selectedOption[numSelectors] = 0
-        fragments.push(
-          <Picker
-            options={options}
-            selected={selectedOption[numSelectors]}
-            handleClick={handleClick}
-            key={key}
-            index={id}
-          />
-        )
-        numSelectors++
-        id++
-        sentence = sentence.substr(6, sentence.length)
-      } else {
-        const substr = sentence.slice(0, idx)
-        fragments.push(<SplitHilite str={substr} key={key} />)
-        sentence = sentence.slice(substr.length)
-      }
-      key++
-    } while (sentence.length)
-
-    return (
-      <Paper className={classes.spacing} key={index}>
-        <Typography key={index}>
-          {fragments}
-        </Typography>
-      </Paper>
-    )
+const countSelectors = (arr) => {
+  let count = 0
+  arr.forEach((sentence) => {
+    const num = (sentence.match(/OPTION/g) || []).length
+    count += num
   })
-
-  return { sentences: sentenceList, selectedOption }
+  return count
 }
 
 class IdentifyTheSounds extends Component {
   constructor (props) {
     super(props)
 
-    this.handleClick = this.handleClick.bind(this)
+    const numSelectors = countSelectors(this.props.sentences)
+    this.state = {
+      selectedOption: Array(numSelectors).fill(0),
+      sentences: []
+    }
 
-    const { sentences, selectedOption } = parseSentences({
-      classes: props.classes,
-      sentences: props.sentences,
-      handleClick: this.handleClick,
-      options: this.props.options
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  componentDidMount () {
+    this.updateSentences(this.state.selectedOption)
+  }
+
+  parseSentences (props) {
+    let id = 0
+    let numSelectors = 0
+
+    const sentences = this.props.sentences.map((sentence, index) => {
+      const fragments = []
+      let key = 0
+      do {
+        const idx = sentence.indexOf('OPTION')
+        if (idx === -1) {
+          fragments.push(sentence)
+          break
+        } else if (idx === 0) {
+          fragments.push(
+            <Picker
+              options={this.props.options}
+              selected={props.selectedOption[numSelectors]}
+              handleClick={this.handleClick}
+              key={key}
+              index={id}
+            />
+          )
+          id++
+          numSelectors++
+          sentence = sentence.substr(6, sentence.length)
+        } else {
+          const substr = sentence.slice(0, idx)
+          fragments.push(<SplitHilite str={substr} key={key} />)
+          sentence = sentence.slice(substr.length)
+        }
+        key++
+      } while (sentence.length)
+
+      return (
+        <Paper className={this.props.classes.spacing} key={index}>
+          <Typography key={index}>
+            {fragments}
+          </Typography>
+        </Paper>
+      )
     })
 
-    this.state = {
-      selectedOption,
-      sentences
-    }
+    return { sentences }
+  }
+
+  updateSentences (options) {
+    console.log('upated to ', options)
+    const { sentences } = this.parseSentences({
+      selectedOption: options
+    })
+
+    this.setState({ sentences })
   }
 
   handleClick (index) {
+    console.log('clicked picker ', index, ' which is currently ', this.state.selectedOption[index])
     const newStateSelectedOption = this.state.selectedOption.slice()
-    newStateSelectedOption[index] = 3 % (index + 1)
+    newStateSelectedOption[index] = ((this.state.selectedOption[index] + 1)) % 3
     console.log('options', newStateSelectedOption)
-    this.setState({ 
+    this.setState({
       selectedOption: newStateSelectedOption
     })
+    this.updateSentences(newStateSelectedOption)
   }
 
   render () {

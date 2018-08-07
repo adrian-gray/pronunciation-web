@@ -30,7 +30,6 @@ class Picker extends Component {
   render () {
     return (
       <span onClick={this.handleClick}>
-        {this.props.selected}
         {`( ${this.props.options[this.props.selected]} )`}
       </span>
     )
