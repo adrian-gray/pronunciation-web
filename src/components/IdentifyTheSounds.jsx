@@ -13,7 +13,6 @@ const styles = (theme) => ({
   headspace: theme.headspace,
   spacing: {
     padding: '1rem',
-    margin: '1rem'
   },
   correct: {
     textAlign: 'center',
@@ -84,11 +83,9 @@ class IdentifyTheSounds extends Component {
       } while (sentence.length)
 
       return (
-        <Paper className={this.props.classes.spacing} key={index}>
-          <Typography key={index}>
-            {fragments}
-          </Typography>
-        </Paper>
+        <Typography key={index} className={this.props.classes.spacing}>
+          {fragments}
+        </Typography>
       )
     })
 
@@ -96,7 +93,6 @@ class IdentifyTheSounds extends Component {
   }
 
   updateSentences (options) {
-    console.log('upated to ', options)
     const { sentences } = this.parseSentences({
       selectedOption: options
     })
@@ -105,10 +101,8 @@ class IdentifyTheSounds extends Component {
   }
 
   handleClick (index) {
-    console.log('clicked picker ', index, ' which is currently ', this.state.selectedOption[index])
     const newStateSelectedOption = this.state.selectedOption.slice()
     newStateSelectedOption[index] = ((this.state.selectedOption[index] + 1)) % 3
-    console.log('options', newStateSelectedOption)
     this.setState({
       selectedOption: newStateSelectedOption
     })
@@ -126,7 +120,9 @@ class IdentifyTheSounds extends Component {
         <Typography variant='title' gutterBottom>
           <SplitHilite str={title} />
         </Typography>
-        {this.state.sentences}
+        <Paper>
+          {this.state.sentences}
+        </Paper>
       </div>
     )
   }
