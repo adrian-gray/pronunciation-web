@@ -13,13 +13,10 @@ import CommonWords from './../components/CommonWords'
 import HowToPronounce from './../components/HowToPronounce'
 import Dialogues from './../components/Dialogues'
 import FindTheWords from './../components/FindTheWords'
-// import HearTheWords from './../components/HearTheWords'
-// import IdentifySounds from './../components/IdentifySounds'
+import IdentifyTheSounds from './../components/IdentifyTheSounds'
 import Movie from './../components/Movie'
-// import OddOneOut from './../components/OddOneOut'
 import Phrases from './../components/Phrases'
 import SayTheSentences from './../components/SayTheSentences'
-// import SplitHilite from './../components/SplitHilite'
 import SoundTitle from './../components/SoundTitle'
 import TongueTwisters from './../components/TongueTwisters'
 import Words from './../components/Words'
@@ -81,6 +78,15 @@ const Sound = (props) => {
         titleEnd='sound'
         words={data['odd one out'].words}
         correct={data['odd one out'].correct}
+      />
+    ),
+    'identify the sounds': (
+      <IdentifyTheSounds
+        title={data['identify the sounds'].title}
+        headline={data['identify the sounds'].headline}
+        options={data['identify the sounds'].options}
+        sentences={data['identify the sounds'].sentences}
+        answers={data['identify the sounds'].answers}
       />
     )
   }

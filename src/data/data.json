@@ -126,11 +126,17 @@
           "name"
         ]
       },
-      "identify sounds": [
-        "A m~a~n (~/æ/~ or ~/eɪ/~) from Austr~a~lia (~/æ/~ or ~/eɪ/~) has a sn~a~ke (~/æ/~ or ~/eɪ/~). He feeds it a r~a~t (~/æ/~ or ~/eɪ/~) . He holds the rat with tongs. The snake eats the tongs, too.",
-        "This is d~a~ngerous (~/æ/~ or ~/eɪ/~) for the snake. Doctors operate on it. They t~a~ke (~/æ/~ or ~/eɪ/~) out the tongs.",
-        "The snake’s n~a~me (~/æ/~ or ~/eɪ/~) is Winston. After the oper~a~tion (~/æ/~ or ~/eɪ/~) he gets better."
-      ],
+      "identify the sounds": {
+        "title": "Choose the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)",
+        "headline": "Snake Eats Tongs",
+        "options": ["...", "æ", "eɪ"],
+        "answers": ["æ", "æ", "eɪ", "æ", "eɪ", "æ", "æ", "æ"],
+        "sentences": [
+          "A m~a~n OPTION from Austr~a~lia OPTION has a sn~a~ke OPTION. He feeds it a r~a~t OPTION. He holds the rat with tongs. The snake eats the tongs, too.",
+          "This is d~a~ngerous OPTION for the snake. Doctors operate on it. They t~a~ke OPTION out the tongs.",
+          "The snake’s n~a~me OPTION is Winston. After the oper~a~tion OPTION he gets better."
+        ]
+      },
       "words maze": {
         "words" : [
           "happy",
