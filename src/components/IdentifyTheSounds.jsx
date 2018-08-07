@@ -11,8 +11,11 @@ import Picker from './Picker'
 
 const styles = (theme) => ({
   headspace: theme.headspace,
-  spacing: {
-    padding: '1rem',
+  sentence: {
+    padding: '0.5rem',
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
+    fontSize: '1.15rem'
   },
   correct: {
     textAlign: 'center',
@@ -83,7 +86,7 @@ class IdentifyTheSounds extends Component {
       } while (sentence.length)
 
       return (
-        <Typography key={index} className={this.props.classes.spacing}>
+        <Typography key={index} className={this.props.classes.sentence}>
           {fragments}
         </Typography>
       )

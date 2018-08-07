@@ -6,7 +6,12 @@ import {
 
 const styles = (theme) => ({
   clickable: {
-    cursor: 'pointer'
+    cursor: 'pointer',
+    backgroundColor: '#CCC',
+    borderRadius: '4px',
+    padding: '0.25rem',
+    paddingLeft: '0.5rem',
+    paddingRight: '0.5rem'
   },
   correct: {
     backgroundColor: '#CCFFCC'
@@ -29,8 +34,8 @@ class Picker extends Component {
 
   render () {
     return (
-      <span onClick={this.handleClick}>
-        {`( ${this.props.options[this.props.selected]} )`}
+      <span className={this.props.classes.clickable} onClick={this.handleClick}>
+        {`${this.props.options[this.props.selected]}`}
       </span>
     )
   }
