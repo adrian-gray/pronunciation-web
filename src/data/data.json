@@ -130,7 +130,7 @@
         "title": "Choose the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)",
         "headline": "Snake Eats Tongs",
         "options": ["...", "æ", "eɪ"],
-        "answers": ["æ", "æ", "eɪ", "æ", "eɪ", "æ", "æ", "æ"],
+        "answers": ["æ", "eɪ", "eɪ", "æ", "eɪ", "æ", "æ", "æ"],
         "sentences": [
           "A m~a~n OPTION from Austr~a~lia OPTION has a sn~a~ke OPTION. He feeds it a r~a~t OPTION. He holds the rat with tongs. The snake eats the tongs, too.",
           "This is d~a~ngerous OPTION for the snake. Doctors operate on it. They t~a~ke OPTION out the tongs.",
