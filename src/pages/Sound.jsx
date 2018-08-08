@@ -20,7 +20,7 @@ import SayTheSentences from './../components/SayTheSentences'
 import SoundTitle from './../components/SoundTitle'
 import TongueTwisters from './../components/TongueTwisters'
 import Words from './../components/Words'
-// import WordsMaze from './../components/WordsMaze'
+import WordsMaze from './../components/WordsMaze'
 const styles = (theme) => ({
   page: theme.page
 })
@@ -88,6 +88,13 @@ const Sound = (props) => {
         sentences={data['identify the sounds'].sentences}
         answers={data['identify the sounds'].answers}
       />
+    ),
+    'words maze': (
+      <WordsMaze
+        tag={data.tag}
+        words={data['words maze'].words}
+        correct={data['words maze'].correct}
+      />
     )
   }
 
@@ -114,20 +121,5 @@ const Sound = (props) => {
     </Paper>
   )
 }
-
-//      <h3>Identify the sounds</h3>
-//      <h5><SplitHilite str='Select the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)' /></h5>
-//      <h5>Snake Eats Tongs</h5>
-//      <IdentifySounds sentences={data.identifySounds} />
-//
-//      <hr />
-//
-//      <h3>Words Maze</h3>
-//      <p><SplitHilite str='From the yellow square pick an adjacent square with a short ~/æ/~ sound. Keep going until you reach the blue square.' /></p>
-//      <WordsMaze words={data.wordsMaze.words} correct={data.wordsMaze.correct} />
-//
-//      <hr />
-//    </Paper>
-//  )
 
 export default withStyles(styles)(Sound)

@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Script from 'react-load-script'
 
+import SplitHilite from './SplitHilite'
 import WordsMaze from './WordsMaze/index'
+
+import {
+  Typography,
+  withStyles
+} from '@material-ui/core'
+
+const styles = (theme) => ({
+  headspace: theme.headspace
+})
 
 const NATIVE_WIDTH = 750
 const NATIVE_HEIGHT = 750
 
-class Maze extends React.Component {
+class Maze extends Component {
   constructor (props) {
     super(props)
 
@@ -15,11 +25,8 @@ class Maze extends React.Component {
       correct: props.correct
     }
 
-    this.componentWillUnmount = this.componentWillUnmount.bind(this)
     this.handleScriptError = this.handleScriptError.bind(this)
     this.handleScriptLoad = this.handleScriptLoad.bind(this)
-    this.render = this.render.bind(this)
-
     this._handleResize = this.handleResize.bind(this)
   }
 
@@ -54,8 +61,7 @@ class Maze extends React.Component {
         correct: this.state.correct
       })
     } else {
-      console.log('KWords Maze state no longer exists, move on without creating game')
-      // debugger
+      console.log('Words Maze state no longer exists, move on without creating game')
     }
   }
 
@@ -72,9 +78,14 @@ class Maze extends React.Component {
     const width = `${this.state.width}px`
     const height = `${this.state.height}px`
     const style = { width, height }
+    const title = `From the yellow square pick an adjacent square with
+     a short ~/æ/~ sound. Keep going until you reach the blue square.`
 
     return (
-      <div className='words-maze'>
+      <div className={this.props.classes.headspace}>
+        <Typography variant='title' gutterBottom>
+          <SplitHilite str={title} />
+        </Typography>
         <Script
           onLoad={this.handleScriptLoad}
           onError={this.handleScriptError}
@@ -86,4 +97,4 @@ class Maze extends React.Component {
   }
 }
 
-export default Maze
+export default withStyles(styles)(Maze)
