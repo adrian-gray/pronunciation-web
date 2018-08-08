@@ -7,16 +7,18 @@ import {
   withStyles
 } from '@material-ui/core'
 
+import { capitalise } from './../utils'
 import jsonData from './../data/data'
 import ActivityButton from './../components/ActivityButton'
 import CommonWords from './../components/CommonWords'
-import HowToPronounce from './../components/HowToPronounce'
 import Dialogues from './../components/Dialogues'
 import FindTheWords from './../components/FindTheWords'
+import HowToPronounce from './../components/HowToPronounce'
 import IdentifyTheSounds from './../components/IdentifyTheSounds'
 import Movie from './../components/Movie'
 import Phrases from './../components/Phrases'
 import SayTheSentences from './../components/SayTheSentences'
+import SEOlive from './../components/SEOLive'
 import SoundTitle from './../components/SoundTitle'
 import TongueTwisters from './../components/TongueTwisters'
 import Words from './../components/Words'
@@ -98,6 +100,10 @@ const Sound = (props) => {
     )
   }
 
+  const sub1 = capitalise(data.tag)
+  const sub2 = capitalise(activity)
+  const title = `${sub1} English pronunciation activity - ${sub2}`
+  const description = `Our ${sub2} activity helps you learn to pronounce ${sub1} correctly in English. PronounceWeb provides activities to improve your English pronunciation.`
   const activityNames = Object.keys(activities)
   const activityButtons = activityNames.map(activity => (
     <ActivityButton phoneme={phoneme} activity={activity} key={activity} />
@@ -105,6 +111,7 @@ const Sound = (props) => {
 
   return (
     <Paper className={classes.page}>
+      <SEOlive title={title} description={description} />
       <SoundTitle phoneme={phoneme} str={data.title} />
       <Divider />
 
