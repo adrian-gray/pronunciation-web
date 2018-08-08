@@ -2,4 +2,4 @@ dist/*
 *.swp
 *.swo
 yarn-error.log
-
+bin/*.png
