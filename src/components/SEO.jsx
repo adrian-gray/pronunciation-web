@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet'
 
 import meta from './../data/meta'
 
-function SEO (props) {
+const SEO = (props) => {
+  console.log('SEO received', props)
   const content = Object.assign({}, meta['default'], meta[props.meta])
   const { canonical, description, title, imageFB, imageTW } = content
 
