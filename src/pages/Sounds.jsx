@@ -6,7 +6,7 @@ import {
   withStyles
 } from '@material-ui/core'
 
-import data from './../data/data'
+import data from './../data/sounds'
 import SEO from './../components/SEO'
 import Phoneme from './../components/Phoneme'
 

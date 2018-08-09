@@ -1,5 +1,7 @@
 import React from 'react'
 
+import SplitHilite from './SplitHilite'
+
 import {
   Typography,
   withStyles
@@ -11,15 +13,17 @@ const styles = (theme) => ({
 })
 
 const Movie = (props) => {
-  const { classes, url, tag } = props
+  console.log('props', props)
+  const { classes, ipa, url } = props
 
   return (
     <div className={classes.headspace}>
       <Typography variant='title' gutterBottom>
-        {`Movie for ${tag}`}
+        {`English Pronuniciation movie for `}
+        <SplitHilite str={ipa} />
       </Typography>
 
-      <img className={classes.fullWidth} src={url} alt={`Pronouncing ${tag}`} />
+      <img className={classes.fullWidth} src={url} alt={`Pronouncing ${ipa}`} />
     </div>
   )
 }

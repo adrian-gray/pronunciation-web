@@ -19,40 +19,40 @@ const meta = {
     title: `English sounds pronunciation practice. Phoenetic list of practice sounds.`
   },
   'sound ~/æ/~ how to pronounce': {
-    title: 'short a how to pronounce'
+    title: 'How to pronounce æ, the short ‘a’ in English. Description and images.'
   },
   'sound ~/æ/~ movie': {
-    title: 'short a movie'
+    title: 'Movie demonstrating the correct pronunciation of short ‘a’ - the æ sound.'
   },
   'sound ~/æ/~ words': {
-    title: 'short a words'
+    title: 'Common English words using æ, the short ‘a’ sound, with phoenetic spelling'
   },
   'sound ~/æ/~ phrases': {
-    title: 'short a phrases'
+    title: 'English language phrases using the short ‘a’, or phoenetic æ sound'
   },
   'sound ~/æ/~ dialogues': {
-    title: 'short a dialogues'
+    title: 'Example English dialogues showing use of the short ‘a’, or æ, sound'
   },
   'sound ~/æ/~ common words': {
-    title: 'short a common words'
+    title: 'A list of common Wnglish words using the short ‘a’ sound, the IPA ‘æ’ sound'
   },
   'sound ~/æ/~ tongue twisters': {
-    title: 'short a tongue twisters'
+    title: 'English language tongue twisters featuring short ‘a’, or ‘æ’ sounds'
   },
   'sound ~/æ/~ find the words': {
-    title: 'short a find the words'
+    title: 'English pronunciation activty for the short ‘a’ sound. Find The Words with æ'
   },
   'sound ~/æ/~ say the sentences': {
-    title: 'short a say the sentences'
+    title: 'Say The Sentences with short ‘a’ English pronunciation. Practice the æ sound.'
   },
   'sound ~/æ/~ odd one out': {
-    title: 'short a odd one out'
+    title: "Odd One Out English pronunciation practice. Which words don't have a short ‘a’?"
   },
   'sound ~/æ/~ identify the sounds': {
-    title: 'short a identify the sounds'
+    title: 'Identify The Sounds, English language practice long and short ‘a’ sounds'
   },
   'sound ~/æ/~ words maze': {
-    title: 'short a words maze'
+    title: 'Solve the Words Maze puzzle. Short practice English pronunciation with short ‘a’'
   }
 }
 

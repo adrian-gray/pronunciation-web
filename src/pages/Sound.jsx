@@ -7,7 +7,7 @@ import {
   withStyles
 } from '@material-ui/core'
 
-import jsonData from './../data/data'
+import jsonData from './../data/sounds'
 import ActivityButton from './../components/ActivityButton'
 import CommonWords from './../components/CommonWords'
 import Dialogues from './../components/Dialogues'
@@ -30,37 +30,37 @@ const Sound = (props) => {
   const { classes } = props
   const phoneme = props.match.params.phoneme
   const activity = props.match.params.activity &&
-                   props.match.params.activity.replace(/_/g, ' ')
+                   props.match.params.activity.replace(/-/g, ' ')
   const data = jsonData['phonemes'][phoneme]
 
   const activities = {
     'how to pronounce': (
       <HowToPronounce
-        phoneme={phoneme}
+        ipa={data.ipa}
         arr={data['how to pronounce'].text}
         url={data['how to pronounce'].url}
       />
     ),
-    'movie': <Movie tag={data.tag} url={data.movie.url} />,
-    'words': <Words words={data.words} tag={data.tag} />,
-    'phrases': <Phrases phrases={data.phrases} tag={data.tag} />,
-    'dialogues': <Dialogues tag={data.tag} dialogues={data.dialogues} />,
+    'movie': <Movie ipa={data.ipa} url={data.movie.url} />,
+    'words': <Words ipa={data.ipa} words={data.words} />,
+    'phrases': <Phrases phrases={data.phrases} ipa={data.ipa} />,
+    'dialogues': <Dialogues ipa={data.ipa} dialogues={data.dialogues} />,
     'common words': (
       <CommonWords
-        tag={data.tag}
+        ipa={data.ipa}
         words={data['common words']}
       />
     ),
     'tongue twisters': (
       <TongueTwisters
-        tag={data.tag}
+        ipa={data.ipa}
         tongueTwisters={data['tongue twisters']}
       />
     ),
     'find the words': (
       <FindTheWords
-        tag={data.tag}
-        titleState='Select the words with a'
+        ipa={data.ipa}
+        titleStart='Select the words with an '
         titleEnd='sound'
         words={data['find the words'].words}
         correct={data['find the words'].correct}
@@ -68,14 +68,14 @@ const Sound = (props) => {
     ),
     'say the sentences': (
       <SayTheSentences
-        tag={data.tag}
+        ipa={data.ipa}
         sentences={data['say the sentences']}
       />
     ),
     'odd one out': (
       <FindTheWords
-        tag={data.tag}
-        titleStart="Select the words that don't have the"
+        ipa={data.ipa}
+        titleStart="Select the words that don't have the "
         titleEnd='sound'
         words={data['odd one out'].words}
         correct={data['odd one out'].correct}
@@ -107,11 +107,11 @@ const Sound = (props) => {
   return (
     <Paper className={classes.page}>
       <SEO meta={`sound ${data.ipa} ${activity || 'none'}`} />
-      <SoundTitle phoneme={phoneme} str={data.title} />
+      <SoundTitle phoneme={data.ipa} str={data.title} />
       <Divider />
 
       <Typography variant='headline' gutterBottom>
-        {`Pronunciation activities for ${phoneme}`}
+        {`Pronunciation activities for ${data.tag}`}
       </Typography>
 
       <div>

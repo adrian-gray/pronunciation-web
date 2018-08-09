@@ -19,7 +19,7 @@ const styles = (theme) => ({
 })
 
 const Phrases = (props) => {
-  const { classes, phrases, tag } = props
+  const { classes, ipa, phrases } = props
 
   const list = Object.entries(phrases).map((arr, index) => {
     return (
@@ -41,7 +41,8 @@ const Phrases = (props) => {
   return (
     <div className={classes.headspace}>
       <Typography variant='title' gutterBottom>
-        {`Phrases using ${tag}`}
+        {`Phrases using `}
+        <SplitHilite str={ipa} />
       </Typography>
 
       <Paper className={classes.subCanvas}>

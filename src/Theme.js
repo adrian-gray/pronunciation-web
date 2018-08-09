@@ -1,12 +1,12 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-import { pink, red } from '@material-ui/core/colors'
+import { indigo, red } from '@material-ui/core/colors'
 
 const defaultTheme = createMuiTheme()
 
 export default createMuiTheme({
   palette: {
-    primary: red,
-    secondary: pink
+    primary: indigo,
+    secondary: red
   },
   typography: {
     fontSize: 16

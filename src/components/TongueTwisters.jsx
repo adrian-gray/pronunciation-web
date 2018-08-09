@@ -19,7 +19,7 @@ const styles = (theme) => ({
 })
 
 const TongueTwisters = (props) => {
-  const { classes, tongueTwisters, tag } = props
+  const { classes, ipa, tongueTwisters } = props
 
   const twisters = tongueTwisters.map((line, index) => (
     <Paper className={classes.spacing} key={index}>
@@ -32,7 +32,8 @@ const TongueTwisters = (props) => {
   return (
     <div className={classes.headspace}>
       <Typography variant='title' gutterBottom>
-        <SplitHilite str={capitalise(tag)} />{' tongue twisters'}
+        <SplitHilite str={capitalise(ipa)} />
+        {' Tongue Twisters'}
       </Typography>
 
       {twisters}

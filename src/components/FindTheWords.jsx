@@ -6,6 +6,7 @@ import {
   withStyles
 } from '@material-ui/core'
 
+import SplitHilite from './SplitHilite'
 import Tile from './Tile'
 
 const styles = (theme) => ({
@@ -68,7 +69,7 @@ class FindTheWords extends Component {
   }
 
   render () {
-    const { classes, tag, titleStart, titleEnd, words } = this.props
+    const { classes, ipa, titleStart, titleEnd, words } = this.props
 
     let result = ''
     let resultBG = ''
@@ -95,7 +96,9 @@ class FindTheWords extends Component {
     return (
       <div className={classes.headspace}>
         <Typography variant='title' gutterBottom>
-          {`${titleStart} ${tag} ${titleEnd}`}
+          {titleStart}
+          <SplitHilite str={ipa} />
+          {titleEnd}
         </Typography>
         <Paper className={resultBG}>
           {this.wordTiles}

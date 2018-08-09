@@ -15,7 +15,7 @@ const styles = (theme) => ({
 
 const toLink = (phoneme, activity) => {
   const title = capitalise(activity)
-  const websafe = activity.split(' ').join('_')
+  const websafe = activity.split(' ').join('-')
   const link = `/sound/${phoneme}/${websafe}`
   return { title, link }
 }

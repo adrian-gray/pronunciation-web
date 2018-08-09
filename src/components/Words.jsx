@@ -19,7 +19,7 @@ const styles = (theme) => ({
 })
 
 const Words = (props) => {
-  const { classes, tag, words } = props
+  const { classes, ipa, words } = props
   const list = Object.entries(words).map((arr, index) => {
     return (
       <TableRow key={index}>
@@ -40,7 +40,8 @@ const Words = (props) => {
   return (
     <div className={classes.headspace}>
       <Typography variant='title' gutterBottom>
-        {`Words using ${tag}`}
+        {`Words using `}
+        <SplitHilite str={ipa} />
       </Typography>
 
       <Paper className={classes.subCanvas}>

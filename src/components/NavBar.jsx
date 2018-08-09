@@ -5,13 +5,11 @@ import {
   AppBar,
   Button,
   Drawer,
-  IconButton,
   MenuItem,
   Toolbar,
   Typography,
   withStyles
 } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
 
 const styles = (theme) => ({
   root: {
@@ -27,11 +25,8 @@ const styles = (theme) => ({
   list: {
     width: 250
   },
-  left: {
-    color: 'yellow'
-  },
-  right: {
-    color: 'purple'
+  white: {
+    color: '#FFFFFF'
   }
 })
 
@@ -48,23 +43,11 @@ class NavBar extends React.Component {
 
   render () {
     const classes = this.props.classes
+
     return (
       <div className={classes.root}>
         <AppBar position='static'>
           <Toolbar>
-            <IconButton
-              className={classes.menuButton}
-              color='inherit'
-              aria-label='Menu'
-            >
-              <div
-                tabIndex={0}
-                role='button'
-                onClick={this.handleToggle}
-              >
-                <MenuIcon />
-              </div>
-            </IconButton>
             <Drawer
               open={this.state.open}
               onClick={this.handleToggle}
@@ -82,12 +65,14 @@ class NavBar extends React.Component {
               </MenuItem>
             </Drawer>
             <Typography
-              variant='title'
-              color='inherit'
+              variant='subheading'
               className={classes.flex}
             >
-              <span className={classes.left}>{'Pronounce'}</span>
-              <span className={classes.right}>{'Web'}</span>
+              <Button href='/'>
+                <span className={classes.white}>
+                  {'Pronounce Web'}
+                </span>
+              </Button>
             </Typography>
             <Button component={Link} to='/sounds' color='inherit'>{'Sounds'}</Button>
             <Button color='inherit'>{'Login'}</Button>

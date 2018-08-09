@@ -18,7 +18,7 @@ const styles = (theme) => ({
 })
 
 const Dialogues = (props) => {
-  const { classes, dialogues, tag } = props
+  const { classes, dialogues, ipa } = props
 
   const extractLines = (dialogue, index) => {
     return dialogue.map((line, index) => (
@@ -43,7 +43,8 @@ const Dialogues = (props) => {
   return (
     <div className={classes.headspace}>
       <Typography variant='title' gutterBottom>
-        {'Short dialogues using '}<SplitHilite str={tag} />
+        {'Short dialogues using '}
+        <SplitHilite str={ipa} />
       </Typography>
       {lines}
     </div>

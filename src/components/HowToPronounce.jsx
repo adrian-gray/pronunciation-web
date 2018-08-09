@@ -19,7 +19,7 @@ const styles = (theme) => ({
 })
 
 const HowToPronounce = (props) => {
-  const { arr, classes, phoneme, url } = props
+  const { arr, classes, ipa, url } = props
 
   const list = arr.map((el, i) => (
     <ListItem key={i}>
@@ -32,7 +32,7 @@ const HowToPronounce = (props) => {
   return (
     <div className={classes.headspace}>
       <Typography variant='title' gutterBottom>
-        {'How to pronounce '}<SplitHilite str={phoneme} />
+        {'How to pronounce '}<SplitHilite str={ipa} />
       </Typography>
 
       <Paper className={classes.subCanvas}>

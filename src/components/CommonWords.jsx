@@ -22,7 +22,8 @@ const styles = (theme) => ({
 })
 
 const CommonWords = (props) => {
-  const { classes, tag, words } = props
+  console.log('props', props)
+  const { classes, ipa, words } = props
   const cells = words.map((el, index) => (
     <TableCell className={classes.cell} key={index}>
       <Typography className={classes.largeText}>
@@ -48,7 +49,8 @@ const CommonWords = (props) => {
   return (
     <div className={classes.headspace} >
       <Typography variant='title' gutterBottom>
-        {'Common words with '}<SplitHilite str={tag} />
+        {'Common words with '}
+        <SplitHilite str={ipa} />
       </Typography>
       <Paper>
         <Table>
