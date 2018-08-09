@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import ReactGA from 'react-ga'
 
 import {
@@ -8,13 +8,9 @@ import {
   withTheme
 } from '@material-ui/core'
 
-import SoundRoutes from './routes/SoundRoutes'
-import Landing from './pages/Landing'
-import Sounds from './pages/Sounds'
+import Router from './routes/Router'
 import SEO from './components/SEO'
 import NavBar from './components/NavBar'
-
-const FourOhFour = () => <h1>404</h1>
 
 const styles = (theme) => ({
   root: {
@@ -53,12 +49,7 @@ class App extends Component {
           <div className={classes.root}>
             <SEO />
             <NavBar />
-            <Switch>
-              <Route exact path='/' component={Landing} />
-              <Route path='/sounds' component={Sounds} />
-              <Route path='/sound' component={SoundRoutes} />
-              <Route default component={FourOhFour} />
-            </Switch>
+            <Router />
           </div>
         </Fragment>
       </BrowserRouter>
