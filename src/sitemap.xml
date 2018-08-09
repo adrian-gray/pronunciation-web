@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://pronounceweb.com/sounds/</loc> </url>
-<url> <loc>https://pronounceweb.com/sound/æ</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://pronounceweb.com/sound/æ/how_to_pronounce</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/how-to-pronounce</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/movie</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/words</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/phrases</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/dialogues</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/common-words</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/tongue-twisters</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/find-the-words</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/say-the-sentences</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/odd-one-out</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/identify-the-sounds</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/words-maze</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
