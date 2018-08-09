@@ -3,7 +3,6 @@ require('babel-polyfill')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 
@@ -49,10 +48,8 @@ module.exports = {
       template: path.join(__dirname, '/src/index.html')
     }),
     new CopyWebpackPlugin([
-      { from: './src/assets', to: 'assets' },
-      { from: './src/sitemap.xml', to: 'sitemap.xml' }
+      { from: './src/assets', to: 'assets' }
     ]),
-    new BundleAnalyzerPlugin(),
     new UglifyJsPlugin({
       uglifyOptions: {
         output: {

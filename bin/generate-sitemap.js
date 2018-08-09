@@ -23,4 +23,4 @@ const sitemap = sm.createSitemap({
   ]
 })
 
-fs.writeFileSync('./src/sitemap.xml', sitemap.toString())
+fs.writeFileSync('./src/assets/sitemap.xml', sitemap.toString())
