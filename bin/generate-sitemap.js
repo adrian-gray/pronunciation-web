@@ -15,10 +15,11 @@ const sitemap = sm.createSitemap({
     { url: '/sound/short-a/dialogues', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/common-words', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/tongue-twisters', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-a/minimal-pairs', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/find-the-words', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/say-the-sentences', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/odd-one-out', changefreq: 'weekly', priority: 0.5 },
-    { url: '/sound/short-a/identify-the-sounds', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-a/news-stories', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/words-maze', changefreq: 'weekly', priority: 0.5 }
   ]
 })

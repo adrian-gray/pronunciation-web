@@ -5,16 +5,19 @@
       "title": "short ~a~ ‘b~a~d’",
       "tag": "short ‘a’",
       "how to pronounce": {
-        "url": "/assets/images/animation.png",
+        "image": {
+          "url": "/assets/images/how-to-pronounce-short-a-english.jpg",
+          "alt": "How to pronounce the short 'a' in English",
+          "title": "How to pronounce the short 'a' in English"
+        },
         "text": [
-          "Jaw drops (quite a bit)",
-          "Mouth opens wide",
-          "Tip of the tongue stretches up (back part lifts)",
-          "The tongue is wide"
+          "Drop your jaw (quite a bit)",
+          "Spread your lips (quite a bit)",
+          "Keep the tip of your tongue forward – touch the back of your bottom front teeth (tongue tip is down)"
         ]
       },
       "movie": {
-        "url": "/assets/images/video1.png"
+        "url": "/assets/images/english-pronounce-short-a.jpg"
       },
       "words": {
         "b~a~d": "/b~æ~d/",
@@ -24,18 +27,17 @@
       },
       "phrases": {
         "I’m not b~a~d.": "/b~æ~d/",
-        "I didn’t c~a~tch that.": "/k~æ~tʃ/",
+        "We'll c~a~tch up soon.": "/k~æ~tʃ/",
         "I’m good, th~a~nks.": "/θ~æ~ŋk/",
         "I’m h~a~nging in there.": "/h~æ~ŋɪŋ/"
       },
       "dialogues": [
         [
-          "Hi, I’m James. What’s your name?",
-          "Hi, James, I’m  ~A~nne.",
-          "Sorry, I didn’t c~a~tch that.",
-          "~A~nne.",
-          "Oh, ~A~nne. Pleased to meet you. ~A~nne.",
-          "Pleased to meet you too."
+          "Morning, ~A~nne.",
+          "Morning, S~a~m.",
+          "Are you well?",
+          "Yes, th~a~nks. And you?",
+          "Yeah, I'm all right."
         ],[
           "Hi. How are you?",
           "Good, th~a~nks. And you?",
@@ -47,7 +49,8 @@
         ],[
           "Hi. How’s it going?",
           "Great. And you?",
-          "I’m h~a~nging in there."
+          "I’m h~a~nging in there. Oh well, I'd better be off. See you.",
+          "Yeah, we'll c~a~tch up soon. Have a good weekend."
         ]
       ],
       "common words": [
@@ -77,9 +80,25 @@
         "c~a~ncel"
       ],
       "tongue twisters": [
-        "The black bat had a bad back.",
-        "I’m chatting with the man at Chatime, Chatswood.",
-        "Can you can a can as a canner can can a can?"
+        "The black bag had a snagged tag.",
+        "Can you can a can as a canner can can a can?",
+        "I’m chatting with the man standing at the cab stand."
+      ],
+      "minimal pairs": [
+        ["g~a~s", "gu~e~ss"],
+        ["l~a~nd", "l~e~nd"],
+        ["l~au~ghed", "l~e~ft"],
+        ["b~a~ttle", "b~o~ttle"],
+        ["cr~a~sh", "cr~u~sh"],
+        ["~a~dd", "~o~dd"],
+        ["b~a~ck", "b~oo~k"],
+        ["sp~a~n", "sp~oo~n"],
+        ["c~a~tch", "c~ou~ch"],
+        ["s~a~nd", "s~ou~nd"],
+        ["t~a~n", "t~o~wn"],
+        ["c~a~n", "c~oi~n"],
+        ["p~a~nt", "p~oi~nt"],
+        ["b~a~dge", "b~u~dge"]
       ],
       "find the words": {
         "words": [
@@ -98,8 +117,7 @@
           "cap",
           "hat",
           "sad",
-          "bag",
-          "said"
+          "bag"
         ]
       },
       "say the sentences": [
@@ -113,24 +131,25 @@
           "answer",
           "band",
           "start",
-          "at",
+          "axe",
           "all",
           "thanks",
           "black",
-          "had",
+          "table",
           "name"
         ],
         "correct": [
           "start",
           "all",
+          "table",
           "name"
         ]
       },
-      "identify the sounds": {
+      "news stories": {
         "title": "Choose the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)",
         "headline": "Snake Eats Tongs",
         "options": ["...", "æ", "eɪ"],
-        "answers": ["æ", "eɪ", "eɪ", "æ", "eɪ", "æ", "æ", "æ"],
+        "answers": ["æ", "eɪ", "eɪ", "æ", "eɪ", "eɪ", "eɪ", "eɪ"],
         "sentences": [
           "A m~a~n OPTION from Austr~a~lia OPTION has a sn~a~ke OPTION. He feeds it a r~a~t OPTION. He holds the rat with tongs. The snake eats the tongs, too.",
           "This is d~a~ngerous OPTION for the snake. Doctors operate on it. They t~a~ke OPTION out the tongs.",
@@ -232,7 +251,19 @@
           "wrapped",
           "matter",
           "gather",
-          "said",
+          "transfer",
+          "ankle",
+          "swam",
+          "add",
+          "transport",
+          "rapid",
+          "national",
+          "answer",
+          "shallow",
+          "salary",
+          "catch",
+          "expand",
+          "salad",
           "candy",
           "snatch",
           "package",

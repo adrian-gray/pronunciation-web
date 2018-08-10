@@ -13,7 +13,8 @@ import CommonWords from './../components/CommonWords'
 import Dialogues from './../components/Dialogues'
 import FindTheWords from './../components/FindTheWords'
 import HowToPronounce from './../components/HowToPronounce'
-import IdentifyTheSounds from './../components/IdentifyTheSounds'
+import NewsStories from './../components/NewsStories'
+import MinimalPairs from './../components/MinimalPairs'
 import Movie from './../components/Movie'
 import Phrases from './../components/Phrases'
 import SayTheSentences from './../components/SayTheSentences'
@@ -38,7 +39,7 @@ const Sound = (props) => {
       <HowToPronounce
         ipa={data.ipa}
         arr={data['how to pronounce'].text}
-        url={data['how to pronounce'].url}
+        image={data['how to pronounce'].image}
       />
     ),
     'movie': <Movie ipa={data.ipa} url={data.movie.url} />,
@@ -55,6 +56,13 @@ const Sound = (props) => {
       <TongueTwisters
         ipa={data.ipa}
         tongueTwisters={data['tongue twisters']}
+      />
+    ),
+    'minimal pairs': (
+      <MinimalPairs
+        ipa={data.ipa}
+        tag={data.tag}
+        pairs={data['minimal pairs']}
       />
     ),
     'find the words': (
@@ -81,13 +89,13 @@ const Sound = (props) => {
         correct={data['odd one out'].correct}
       />
     ),
-    'identify the sounds': (
-      <IdentifyTheSounds
-        title={data['identify the sounds'].title}
-        headline={data['identify the sounds'].headline}
-        options={data['identify the sounds'].options}
-        sentences={data['identify the sounds'].sentences}
-        answers={data['identify the sounds'].answers}
+    'news stories': (
+      <NewsStories
+        title={data['news stories'].title}
+        headline={data['news stories'].headline}
+        options={data['news stories'].options}
+        sentences={data['news stories'].sentences}
+        answers={data['news stories'].answers}
       />
     ),
     'words maze': (

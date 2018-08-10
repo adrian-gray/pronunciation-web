@@ -14,20 +14,36 @@ import SplitHilite from './SplitHilite'
 const styles = (theme) => ({
   headspace: theme.headspace,
   largeText: theme.largeText,
-  subCanvas: theme.subCanvas
+  subCanvas: theme.subCanvas,
+  left: {
+    textAlign: 'left'
+  },
+  right: {
+    textAlign: 'right'
+  },
+  tight: {
+    paddingTop: 0,
+    paddingBottom: 0,
+    borderBottom: '1px solid #EEE'
+  }
 })
 
 const Dialogues = (props) => {
   const { classes, dialogues, ipa } = props
 
   const extractLines = (dialogue, index) => {
-    return dialogue.map((line, index) => (
-      <ListItem key={index}>
-        <ListItemText>
-          <SplitHilite str={line} />
-        </ListItemText>
-      </ListItem>
-    ))
+    return dialogue.map((line, index) => {
+      let style = classes.left
+      if (index % 2) style = classes.right
+
+      return (
+        <ListItem className={classes.tight} key={index}>
+          <ListItemText className={style}>
+            <SplitHilite str={line} />
+          </ListItemText>
+        </ListItem>
+      )
+    })
   }
 
   const expandDialogue = (dialogue, index) => (

@@ -13,7 +13,6 @@ const styles = (theme) => ({
 })
 
 const Movie = (props) => {
-  console.log('props', props)
   const { classes, ipa, url } = props
 
   return (

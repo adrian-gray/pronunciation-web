@@ -51,8 +51,7 @@ module.exports = {
       template: path.join(__dirname, '/src/index.html')
     }),
     new CopyWebpackPlugin([
-      { from: './src/assets', to: 'assets' },
-      { from: './src/sitemap.xml', to: 'sitemap.xml' }
+      { from: './src/assets', to: 'assets' }
     ]),
     new BundleAnalyzerPlugin(),
     new CompressionPlugin({ algorithm: 'gzip' })

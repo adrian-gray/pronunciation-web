@@ -179,8 +179,8 @@ class MailchimpForm extends React.Component {
           <br />
           <Button
             onClick={this.submit}
-            variant='contained'
-            color='primary'
+            variant='raised'
+            color='secondary'
           >
             Keep me updated!
           </Button>

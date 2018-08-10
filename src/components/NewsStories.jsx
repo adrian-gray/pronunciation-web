@@ -41,7 +41,7 @@ const countSelectors = (arr) => {
   return count
 }
 
-class IdentifyTheSounds extends Component {
+class NewsStories extends Component {
   constructor (props) {
     super(props)
 
@@ -146,9 +146,12 @@ class IdentifyTheSounds extends Component {
     return (
       <div className={classes.headspace}>
         <Typography variant='display1' gutterBottom>
+          {'News Stories'}
+        </Typography>
+        <Typography variant='headline' gutterBottom>
           {headline}
         </Typography>
-        <Typography variant='title' gutterBottom>
+        <Typography variant='subheading' gutterBottom>
           <SplitHilite str={title} />
         </Typography>
         <Paper>
@@ -159,4 +162,4 @@ class IdentifyTheSounds extends Component {
   }
 }
 
-export default withStyles(styles)(IdentifyTheSounds)
+export default withStyles(styles)(NewsStories)

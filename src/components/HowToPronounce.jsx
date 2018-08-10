@@ -15,11 +15,15 @@ import SplitHilite from './SplitHilite'
 const styles = (theme) => ({
   headspace: theme.headspace,
   fullWidth: theme.fullWidth,
-  subCanvas: theme.subCanvas
+  subCanvas: theme.subCanvas,
+  padded: {
+    padding: '1em'
+  }
 })
 
 const HowToPronounce = (props) => {
-  const { arr, classes, ipa, url } = props
+  const { arr, classes, image, ipa } = props
+  const { url, alt, title } = image
 
   const list = arr.map((el, i) => (
     <ListItem key={i}>
@@ -32,13 +36,24 @@ const HowToPronounce = (props) => {
   return (
     <div className={classes.headspace}>
       <Typography variant='title' gutterBottom>
-        {'How to pronounce '}<SplitHilite str={ipa} />
+        {'How to pronounce '}
+        <SplitHilite str={ipa} />
       </Typography>
 
       <Paper className={classes.subCanvas}>
         <Grid container spacing={24}>
           <Grid item xs={12} sm={6}>
-            <img className={classes.fullWidth} src={url} />
+            <div className={classes.padded}>
+              <img
+                className={classes.fullWidth}
+                src={url}
+                title={title}
+                alt={alt}
+              />
+              <Typography variant='subheading'>
+                {title}
+              </Typography>
+            </div>
           </Grid>
           <Grid item xs={12} sm={6}>
             <List>

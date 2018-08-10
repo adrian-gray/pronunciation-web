@@ -39,6 +39,9 @@ const meta = {
   'sound ~/æ/~ tongue twisters': {
     title: 'English language tongue twisters featuring short ‘a’, or ‘æ’ sounds'
   },
+  'sound ~/æ/~ minimal pairs': {
+    title: 'English language minimal pairs pronunciation practice with short ‘a’, or ‘æ’ sounds'
+  },
   'sound ~/æ/~ find the words': {
     title: 'English pronunciation activty for the short ‘a’ sound. Find The Words with æ'
   },
@@ -48,8 +51,8 @@ const meta = {
   'sound ~/æ/~ odd one out': {
     title: "Odd One Out English pronunciation practice. Which words don't have a short ‘a’?"
   },
-  'sound ~/æ/~ identify the sounds': {
-    title: 'Identify The Sounds, English language practice long and short ‘a’ sounds'
+  'sound ~/æ/~ news stories': {
+    title: 'Identify the News Story sounds, English language practice long and short ‘a’ sounds'
   },
   'sound ~/æ/~ words maze': {
     title: 'Solve the Words Maze puzzle. Short practice English pronunciation with short ‘a’'

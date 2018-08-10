@@ -11,6 +11,9 @@ import MailchimpCustom from './MailchimpCustom'
 const url = '//endual.us8.list-manage.com/subscribe/post?u=5cfcc43825365c2c32230cdde&id=f0489cd39a'
 
 const styles = (theme) => ({
+  mailchimp: {
+    backgroundColor: '#d9d9d1'
+  },
   container: {
     display: 'flex',
     flexWrap: 'wrap'
@@ -35,9 +38,9 @@ const form = ({ subscribe, status, message }) => {
   )
 }
 
-const Mailchimp = () => {
+const Mailchimp = (props) => {
   return (
-    <Paper>
+    <Paper className={props.classes.mailchimp}>
       <div className='mailchimp-subscribe'>
         <MailchimpSubscribe
           url={url}

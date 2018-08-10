@@ -15,6 +15,9 @@ const styles = (theme) => ({
     container: {
       display: 'flex',
       flexWrap: 'wrap'
+    },
+    '&:hover': {
+      background: '#F3F3FF'
     }
   },
   words: {
@@ -29,7 +32,9 @@ const styles = (theme) => ({
 const Phoneme = (props) => {
   const { classes, phoneme, ipa, tag, title, words } = props
   const displayTitle = <span><SplitHilite str={ipa} /> – <SplitHilite str={title} /></span>
-  const wordList = words.map(word => <SplitHilite str={word} key={word} />)
+  const wordList = words
+    .slice(0, 6)
+    .map(word => <SplitHilite str={word} key={word} />)
 
   return (
     <Paper className={classes.root}>
@@ -38,10 +43,13 @@ const Phoneme = (props) => {
           <Typography variant='headline' gutterBottom>
             {displayTitle}
           </Typography>
+          <Typography variant='body2' gutterBottom >
+            {'Exmaple words containing a short ‘a’'}
+          </Typography>
           <Typography className={classes.words} variant='body2' gutterBottom >
             {wordList}
           </Typography>
-          <Typography variant='body1' gutterBottom>
+          <Typography variant='subheading' gutterBottom>
             {`Click to learn more about the ${tag} sound`}
           </Typography>
         </div>
