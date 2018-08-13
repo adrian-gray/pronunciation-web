@@ -113,7 +113,6 @@ const Sound = (props) => {
   ))
 
   const SEOlocation = `sound ${phoneme} ${activity || 'none'}`
-  console.log(SEOlocation)
 
   return (
     <Paper className={classes.page}>

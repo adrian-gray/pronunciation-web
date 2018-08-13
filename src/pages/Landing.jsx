@@ -33,7 +33,7 @@ const Landing = (props) => {
       <Typography variant='display1' gutterBottom>
         {'Improve English Pronunciation'}
       </Typography>
-      <Typography classes={classes.para} gutterBottom>
+      <Typography className={classes.para} gutterBottom>
         {'Is poor English pronunciation holding you back in your career or studies? Do you want to improve English pronunciation, but are not sure how? We are here to help you.'}
       </Typography>
       <Typography className={classes.para} gutterBottom>
