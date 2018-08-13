@@ -12,7 +12,7 @@ const meta = {
     imageTW: `${URL}/assets/images/pronunciation-twitter.jpg`
   },
   'landing': {
-    title: `English pronunciation practice to improve English word pronunciation`,
+    title: `English pronunciation practice activities`,
     description: `English pronunciation lessons and practice with Nicky Brookes, English language consultant. PronounceWeb.com has videos helping you learn how to improve English pronunciation, English pronunciation exercises, and English pronunciation activities.`
   },
   'sounds': {
