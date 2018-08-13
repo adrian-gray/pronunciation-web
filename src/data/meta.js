@@ -18,43 +18,46 @@ const meta = {
   'sounds': {
     title: `English sounds pronunciation practice. Phoenetic list of practice sounds.`
   },
-  'sound ~/æ/~ how to pronounce': {
+  'sound short-a none': {
+    title: 'How to pronounce short a in English. Lessons and interactive activities.'
+  },
+  'sound short-a how to pronounce': {
     title: 'How to pronounce æ, the short ‘a’ in English. Description and images.'
   },
-  'sound ~/æ/~ movie': {
+  'sound short-a movie': {
     title: 'Movie demonstrating the correct pronunciation of short ‘a’ - the æ sound.'
   },
-  'sound ~/æ/~ words': {
+  'sound short-a words': {
     title: 'Common English words using æ, the short ‘a’ sound, with phoenetic spelling'
   },
-  'sound ~/æ/~ phrases': {
+  'sound short-a phrases': {
     title: 'English language phrases using the short ‘a’, or phoenetic æ sound'
   },
-  'sound ~/æ/~ dialogues': {
+  'sound short-a dialogues': {
     title: 'Example English dialogues showing use of the short ‘a’, or æ, sound'
   },
-  'sound ~/æ/~ common words': {
+  'sound short-a common words': {
     title: 'A list of common Wnglish words using the short ‘a’ sound, the IPA ‘æ’ sound'
   },
-  'sound ~/æ/~ tongue twisters': {
+  'sound short-a tongue twisters': {
     title: 'English language tongue twisters featuring short ‘a’, or ‘æ’ sounds'
   },
-  'sound ~/æ/~ minimal pairs': {
+  'sound short-a minimal pairs': {
     title: 'English language minimal pairs pronunciation practice with short ‘a’, or ‘æ’ sounds'
   },
-  'sound ~/æ/~ find the words': {
+  'sound short-a find the words': {
     title: 'English pronunciation activty for the short ‘a’ sound. Find The Words with æ'
   },
-  'sound ~/æ/~ say the sentences': {
+  'sound short-a say the sentences': {
     title: 'Say The Sentences with short ‘a’ English pronunciation. Practice the æ sound.'
   },
-  'sound ~/æ/~ odd one out': {
+  'sound short-a odd one out': {
     title: "Odd One Out English pronunciation practice. Which words don't have a short ‘a’?"
   },
-  'sound ~/æ/~ news stories': {
+  'sound short-a news stories': {
     title: 'Identify the News Story sounds, English language practice long and short ‘a’ sounds'
   },
-  'sound ~/æ/~ words maze': {
+  'sound short-a words maze': {
     title: 'Solve the Words Maze puzzle. Short practice English pronunciation with short ‘a’'
   }
 }

@@ -22,7 +22,6 @@ const styles = (theme) => ({
 })
 
 const CommonWords = (props) => {
-  console.log('props', props)
   const { classes, ipa, words } = props
   const cells = words.map((el, index) => (
     <TableCell className={classes.cell} key={index}>

@@ -112,9 +112,12 @@ const Sound = (props) => {
     <ActivityButton phoneme={phoneme} activity={activity} key={activity} />
   ))
 
+  const SEOlocation = `sound ${phoneme} ${activity || 'none'}`
+  console.log(SEOlocation)
+
   return (
     <Paper className={classes.page}>
-      <SEO meta={`sound ${data.ipa} ${activity || 'none'}`} />
+      <SEO meta={SEOlocation} />
       <SoundTitle phoneme={data.ipa} str={data.title} />
       <Divider />
 
