@@ -2,10 +2,9 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import SoundRouter from './SoundRouter'
+import FourOhFour from './../pages/404'
 import Landing from './../pages/Landing'
 import Sounds from './../pages/Sounds'
-
-const FourOhFour = () => <h1>404</h1>
 
 const Router = () => (
   <Switch>
