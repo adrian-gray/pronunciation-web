@@ -34,6 +34,16 @@ const Sound = (props) => {
                    props.match.params.activity.replace(/-/g, ' ')
   const data = jsonData['phonemes'][phoneme]
 
+  if (!data) {
+    return (
+      <Paper className={classes.page}>
+        <Typography variant='headline' gutterBottom>
+          {'Oops, not a valid sound'}
+        </Typography>
+      </Paper>
+    )
+  }
+
   const activities = {
     'how to pronounce': (
       <HowToPronounce
