@@ -75,7 +75,7 @@ class NavBar extends React.Component {
               </Button>
             </Typography>
             <Button component={Link} to='/sounds' color='inherit'>{'Sounds'}</Button>
-            <Button color='inherit'>{'Login'}</Button>
+            <Button component={Link} to='/signin' color='inherit'>{'Sign In'}</Button>
           </Toolbar>
         </AppBar>
       </div>
