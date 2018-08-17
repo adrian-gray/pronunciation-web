@@ -1,0 +1,17 @@
+users
+{
+  id - long random string for id to prevent guessing
+  name
+  email
+  gravatar
+  admin
+  subscriber
+  expires
+}
+
+resets
+{
+  key
+  expires
+  userId
+}
