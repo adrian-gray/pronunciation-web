@@ -6,6 +6,7 @@ import FourOhFour from './../pages/404'
 import Landing from './../pages/Landing'
 import Login from './../pages/Login'
 import Sounds from './../pages/Sounds'
+import Profile from './../pages/Profile'
 
 const Router = () => (
   <Switch>
@@ -13,6 +14,7 @@ const Router = () => (
     <Route path='/sounds' component={Sounds} />
     <Route path='/sound' component={SoundRouter} />
     <Route path='/login' component={Login} />
+    <Route path='/profile' component={Profile} />
     <Route default component={FourOhFour} />
   </Switch>
 )

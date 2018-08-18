@@ -1,4 +1,5 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 import firebase from 'firebase/app'
 
 import {
@@ -21,12 +22,26 @@ class Login extends React.Component {
   constructor (props) {
     super(props)
 
+    this.state = {
+      isLoggedIn: false
+    }
+
     this.handleGoogleLogin = this.handleGoogleLogin.bind(this)
+    this.redirectIfLoggedIn = this.redirectIfLoggedIn.bind(this)
   }
 
   handleGoogleLogin () {
     const provider = new firebase.auth.GoogleAuthProvider()
     firebase.auth().signInWithPopup(provider)
+      .then(() => {
+        this.setState({ isLoggedIn: true })
+      })
+  }
+
+  redirectIfLoggedIn () {
+    if (this.state.isLoggedIn) {
+      return <Redirect to='/profile' />
+    }
   }
 
   render () {
@@ -34,6 +49,7 @@ class Login extends React.Component {
 
     return (
       <Paper className={classes.page}>
+        {this.redirectIfLoggedIn()}
         <div className={classes.headspace}>
           <Typography variant='title' gutterBottom>
             {`Login`}
