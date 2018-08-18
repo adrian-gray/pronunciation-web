@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import firebase from 'firebase/app'
 
 import {
   AppBar,
@@ -33,16 +34,61 @@ const styles = (theme) => ({
 class NavBar extends React.Component {
   constructor (props) {
     super(props)
-    this.state = { open: false }
+
+    this.state = {
+      isLoggedIn: false,
+      open: false
+    }
+
     this.handleToggle = this.handleToggle.bind(this)
+    this.initFirebaseAuth = this.initFirebaseAuth.bind(this)
+    this.handleAuthChange = this.handleAuthChange.bind(this)
+  }
+
+  componentDidMount () {
+    this.initFirebaseAuth()
   }
 
   handleToggle () {
     this.setState({ open: !this.state.open })
   }
 
+  initFirebaseAuth () {
+    firebase.auth().onAuthStateChanged(this.handleAuthChange)
+  }
+
+  handleAuthChange (e) {
+    let isLoggedIn = false
+    if (e) {
+      isLoggedIn = true
+    }
+
+    this.setState({ isLoggedIn })
+  }
+
+  handleGoogleLogin () {
+    const provider = new firebase.auth.GoogleAuthProvider()
+    firebase.auth().signInWithPopup(provider)
+  }
+
+  handleSignOut () {
+    firebase.auth().signOut()
+  }
+
   render () {
     const classes = this.props.classes
+
+    let changeLoginStatus
+    console.log('render', this.state.isLoggedIn)
+    if (this.state.isLoggedIn) {
+      changeLoginStatus = (
+        <Button onClick={this.handleSignOut} color='inherit'>{'Sign Out'}</Button>
+      )
+    } else {
+      changeLoginStatus = (
+        <Button component={Link} to='/login' color='inherit'>{'Log In'}</Button>
+      )
+    }
 
     return (
       <div className={classes.root}>
@@ -74,8 +120,7 @@ class NavBar extends React.Component {
                 </span>
               </Button>
             </Typography>
-            <Button component={Link} to='/sounds' color='inherit'>{'Sounds'}</Button>
-            <Button component={Link} to='/signin' color='inherit'>{'Sign In'}</Button>
+            {changeLoginStatus}
           </Toolbar>
         </AppBar>
       </div>
