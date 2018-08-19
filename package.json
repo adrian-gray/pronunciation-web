@@ -2,7 +2,7 @@
   "scripts": {
     "build": "yarn sitemap; webpack --config webpack.config.production.js",
     "dev": "webpack-dev-server --config webpack.config.development.js --watch",
-    "serve": "node server.js",
+    "deploy": "yarn firebase deploy",
     "sitemap": "node ./bin/generate-sitemap.js"
   },
   "dependencies": {
