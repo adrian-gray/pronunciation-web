@@ -9,7 +9,8 @@ import {
   withTheme
 } from '@material-ui/core'
 
-import Router from './routes/Router'
+import { auth } from './firebase'
+import Router from './Router'
 import SEO from './components/SEO'
 import NavBar from './components/NavBar'
 
@@ -37,7 +38,8 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      user: null
+      user: null,
+      subscriptionLevel: null
     }
 
     this.initFirebaseAuth = this.initFirebaseAuth.bind(this)
@@ -57,6 +59,12 @@ class App extends React.Component {
   }
 
   handleAuthChange (user) {
+    if (user) {
+      auth.getUserData()
+        .then(val => {
+          this.setState({ subscriptionLevel: val })
+        })
+    }
     this.setState({ user })
   }
 
@@ -70,7 +78,10 @@ class App extends React.Component {
           <div className={classes.root}>
             <SEO />
             <NavBar user={this.state.user} />
-            <Router user={this.state.user} />
+            <Router
+              user={this.state.user}
+              subscriptionLevel={this.state.subscriptionLevel}
+            />
           </div>
         </Fragment>
       </BrowserRouter>

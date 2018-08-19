@@ -93,6 +93,23 @@ class FindTheWords extends Component {
       />
     ))
 
+    let display
+    if (this.props.userAuth) {
+      display = (
+        <Paper className={resultBG}>
+          {this.wordTiles}
+          <div className={classes.clearFloat} />
+          {result}
+        </Paper>
+      )
+    } else {
+      display = (
+        <Typography variant='subheading' className={classes.headspace} gutterBottom>
+          {'Sorry, activity for members only.'}
+        </Typography>
+      )
+    }
+
     return (
       <div className={classes.headspace}>
         <Typography variant='title' gutterBottom>
@@ -100,11 +117,7 @@ class FindTheWords extends Component {
           <SplitHilite str={ipa} />
           {titleEnd}
         </Typography>
-        <Paper className={resultBG}>
-          {this.wordTiles}
-          <div className={classes.clearFloat} />
-          {result}
-        </Paper>
+        {display}
       </div>
     )
   }

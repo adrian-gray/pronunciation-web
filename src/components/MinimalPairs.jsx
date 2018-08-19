@@ -40,12 +40,9 @@ const MinimalPairs = (props) => {
     </TableRow>
   ))
 
-  return (
-    <div className={classes.headspace} >
-      <Typography variant='title' gutterBottom>
-        {`English  minimal pairs with ${tag} - `}
-        <SplitHilite str={ipa} />
-      </Typography>
+  let display
+  if (props.userAuth) {
+    display = (
       <Paper>
         <Table>
           <TableBody>
@@ -53,6 +50,22 @@ const MinimalPairs = (props) => {
           </TableBody>
         </Table>
       </Paper>
+    )
+  } else {
+    display = (
+      <Typography variant='subheading' className={classes.headspace} gutterBottom>
+        {'Sorry, activity for members only.'}
+      </Typography>
+    )
+  }
+
+  return (
+    <div className={classes.headspace} >
+      <Typography variant='title' gutterBottom>
+        {`English  minimal pairs with ${tag} - `}
+        <SplitHilite str={ipa} />
+      </Typography>
+      {display}
     </div>
   )
 }

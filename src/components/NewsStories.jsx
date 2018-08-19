@@ -143,6 +143,21 @@ class NewsStories extends Component {
   render () {
     const { classes, headline, title } = this.props
 
+    let display
+    if (this.props.userAuth) {
+      display = (
+        <Paper>
+          {this.state.sentences}
+        </Paper>
+      )
+    } else {
+      display = (
+        <Typography variant='subheading' className={classes.headspace} gutterBottom>
+          {'Sorry, activity for members only.'}
+        </Typography>
+      )
+    }
+
     return (
       <div className={classes.headspace}>
         <Typography variant='display1' gutterBottom>
@@ -154,9 +169,7 @@ class NewsStories extends Component {
         <Typography variant='subheading' gutterBottom>
           <SplitHilite str={title} />
         </Typography>
-        <Paper>
-          {this.state.sentences}
-        </Paper>
+        {display}
       </div>
     )
   }
