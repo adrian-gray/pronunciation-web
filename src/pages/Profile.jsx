@@ -1,4 +1,5 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 import firebase from 'firebase/app'
 
 import {
@@ -12,7 +13,7 @@ const styles = (theme) => ({
   headspace: theme.headspace
 })
 
-class User extends React.Component {
+class Profile extends React.Component {
   constructor (props) {
     super(props)
 
@@ -35,6 +36,10 @@ class User extends React.Component {
   render () {
     const { classes } = this.props
 
+    if (!this.props.isLoggedIn) {
+      return <Redirect to='/' />
+    }
+
     return (
       <Paper className={classes.page}>
         <div className={classes.headspace}>
@@ -53,4 +58,4 @@ class User extends React.Component {
   }
 }
 
-export default withStyles(styles)(User)
+export default withStyles(styles)(Profile)

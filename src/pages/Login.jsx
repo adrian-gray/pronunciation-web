@@ -22,34 +22,23 @@ class Login extends React.Component {
   constructor (props) {
     super(props)
 
-    this.state = {
-      isLoggedIn: false
-    }
-
     this.handleGoogleLogin = this.handleGoogleLogin.bind(this)
-    this.redirectIfLoggedIn = this.redirectIfLoggedIn.bind(this)
   }
 
   handleGoogleLogin () {
     const provider = new firebase.auth.GoogleAuthProvider()
     firebase.auth().signInWithPopup(provider)
-      .then(() => {
-        this.setState({ isLoggedIn: true })
-      })
-  }
-
-  redirectIfLoggedIn () {
-    if (this.state.isLoggedIn) {
-      return <Redirect to='/profile' />
-    }
   }
 
   render () {
-    const { classes } = this.props
+    const { classes, user } = this.props
+    console.log('--> user', user)
+    if (user) {
+      return <Redirect to='/profile' />
+    }
 
     return (
       <Paper className={classes.page}>
-        {this.redirectIfLoggedIn()}
         <div className={classes.headspace}>
           <Typography variant='title' gutterBottom>
             {`Login`}

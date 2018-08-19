@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import firebase from 'firebase/app'
 import ReactGA from 'react-ga'
 
 import {
@@ -31,11 +32,33 @@ const styles = (theme) => ({
   }
 })
 
-class App extends Component {
+class App extends React.Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      user: null
+    }
+
+    this.initFirebaseAuth = this.initFirebaseAuth.bind(this)
+    this.handleAuthChange = this.handleAuthChange.bind(this)
+  }
+
   componentDidMount () {
     if (window && window.location.href.includes('pronounceweb.com')) {
       ReactGA.initialize('UA-122566851-1')
       ReactGA.pageview(window.location.pathname + window.location.search)
+    }
+    this.initFirebaseAuth()
+  }
+
+  initFirebaseAuth () {
+    firebase.auth().onAuthStateChanged(this.handleAuthChange)
+  }
+
+  handleAuthChange (user) {
+    if (user) {
+      this.setState({ user })
     }
   }
 
@@ -48,8 +71,8 @@ class App extends Component {
           <CssBaseline />
           <div className={classes.root}>
             <SEO />
-            <NavBar />
-            <Router />
+            <NavBar user={this.state.user} />
+            <Router user={this.state.user} />
           </div>
         </Fragment>
       </BrowserRouter>

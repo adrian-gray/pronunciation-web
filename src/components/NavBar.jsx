@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import firebase from 'firebase/app'
 
 import {
@@ -36,62 +36,26 @@ class NavBar extends React.Component {
     super(props)
 
     this.state = {
-      isLoggedIn: false,
-      justLoggedOut: false,
       open: false
     }
 
     this.handleToggle = this.handleToggle.bind(this)
-    this.initFirebaseAuth = this.initFirebaseAuth.bind(this)
-    this.handleAuthChange = this.handleAuthChange.bind(this)
     this.handleSignout = this.handleSignout.bind(this)
-    this.checkForJustLoggedOut = this.checkForJustLoggedOut.bind(this)
-  }
-
-  componentDidMount () {
-    this.initFirebaseAuth()
   }
 
   handleToggle () {
     this.setState({ open: !this.state.open })
   }
 
-  initFirebaseAuth () {
-    firebase.auth().onAuthStateChanged(this.handleAuthChange)
-  }
-
-  handleAuthChange (e) {
-    let isLoggedIn = false
-    if (e) {
-      isLoggedIn = true
-    }
-
-    this.setState({ isLoggedIn })
-  }
-
-  handleGoogleLogin () {
-    const provider = new firebase.auth.GoogleAuthProvider()
-    firebase.auth().signInWithPopup(provider)
-  }
-
   handleSignout () {
     firebase.auth().signOut()
-    this.setState({
-      justLoggedOut: true
-    })
-  }
-
-  checkForJustLoggedOut () {
-    if (this.state.justLoggedOut) {
-      return <Redirect to='/' />
-    }
   }
 
   render () {
-    const classes = this.props.classes
+    const { classes, user } = this.props
 
     let changeLoginStatus
-    if (this.state.isLoggedIn) {
+    if (user) {
       changeLoginStatus = (
         <Button onClick={this.handleSignout} color='inherit'>{'Sign Out'}</Button>
       )
@@ -103,7 +67,6 @@ class NavBar extends React.Component {
 
     return (
       <div className={classes.root}>
-        {this.checkForJustLoggedOut()}
         <AppBar position='static'>
           <Toolbar>
             <Drawer
