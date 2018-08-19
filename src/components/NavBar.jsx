@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import firebase from 'firebase/app'
+import { auth } from './../firebase'
 
 import {
   AppBar,
@@ -40,15 +40,10 @@ class NavBar extends React.Component {
     }
 
     this.handleToggle = this.handleToggle.bind(this)
-    this.handleSignout = this.handleSignout.bind(this)
   }
 
   handleToggle () {
     this.setState({ open: !this.state.open })
-  }
-
-  handleSignout () {
-    firebase.auth().signOut()
   }
 
   render () {
@@ -57,7 +52,7 @@ class NavBar extends React.Component {
     let changeLoginStatus
     if (user) {
       changeLoginStatus = (
-        <Button onClick={this.handleSignout} color='inherit'>{'Sign Out'}</Button>
+        <Button onClick={auth.signOut} color='inherit'>{'Sign Out'}</Button>
       )
     } else {
       changeLoginStatus = (

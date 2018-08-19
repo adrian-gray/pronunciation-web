@@ -1,6 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
-import firebase from 'firebase/app'
+import { auth } from './../firebase'
 
 import {
   Button,
@@ -19,17 +19,6 @@ const styles = (theme) => ({
 })
 
 class Login extends React.Component {
-  constructor (props) {
-    super(props)
-
-    this.handleGoogleLogin = this.handleGoogleLogin.bind(this)
-  }
-
-  handleGoogleLogin () {
-    const provider = new firebase.auth.GoogleAuthProvider()
-    firebase.auth().signInWithPopup(provider)
-  }
-
   render () {
     const { classes, user } = this.props
     if (user) {
@@ -43,7 +32,7 @@ class Login extends React.Component {
             {`Login`}
           </Typography>
           <Button
-            onClick={this.handleGoogleLogin}
+            onClick={auth.handleGoogleLogin}
             variant='contained'
             color='primary'
             className={classes.button}>

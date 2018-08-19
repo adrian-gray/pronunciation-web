@@ -44,7 +44,7 @@ const Phoneme = (props) => {
             {displayTitle}
           </Typography>
           <Typography variant='body2' gutterBottom >
-            {'Exmaple words containing a short ‘a’'}
+            {'Example words containing short ‘a’'}
           </Typography>
           <Typography className={classes.words} variant='body2' gutterBottom >
             {wordList}
