@@ -57,9 +57,7 @@ class App extends React.Component {
   }
 
   handleAuthChange (user) {
-    if (user) {
-      this.setState({ user })
-    }
+    this.setState({ user })
   }
 
   render () {

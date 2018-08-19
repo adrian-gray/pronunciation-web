@@ -1,6 +1,5 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
-import firebase from 'firebase/app'
 
 import {
   Paper,
@@ -13,49 +12,28 @@ const styles = (theme) => ({
   headspace: theme.headspace
 })
 
-class Profile extends React.Component {
-  constructor (props) {
-    super(props)
+const Profile = (props) => {
+  const { classes, user } = props
 
-    this.state = {
-      displayName: null,
-      photoURL: null,
-      subscriber: false
-    }
+  if (!user) {
+    return <Redirect to='/' />
   }
 
-  componentDidMount () {
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({
-        displayName: user.displayName,
-        photoURL: user.photoURL
-      })
-    })
-  }
-
-  render () {
-    const { classes } = this.props
-
-    if (!this.props.isLoggedIn) {
-      return <Redirect to='/' />
-    }
-
-    return (
-      <Paper className={classes.page}>
-        <div className={classes.headspace}>
-          <Typography variant='title' gutterBottom>
-            {`Your profile`}
-          </Typography>
-          <Typography>
-            {this.state.displayName}
-          </Typography>
-          <div>
-            <img width='100px' src={this.state.photoURL} />
-          </div>
+  return (
+    <Paper className={classes.page}>
+      <div className={classes.headspace}>
+        <Typography variant='title' gutterBottom>
+          {`Your profile`}
+        </Typography>
+        <Typography>
+          {user.displayName}
+        </Typography>
+        <div>
+          <img width='100px' src={user.photoURL} />
         </div>
-      </Paper>
-    )
-  }
+      </div>
+    </Paper>
+  )
 }
 
 export default withStyles(styles)(Profile)
