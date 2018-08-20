@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { capitalise } from './../utils'
 
@@ -29,8 +30,8 @@ const ActivityButton = (props) => {
     <Chip
       label={title}
       className={classes.chip}
-      component='a'
-      href={link}
+      component={Link}
+      to={link}
       clickable
       key={title}
     />

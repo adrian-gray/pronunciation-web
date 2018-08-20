@@ -1,18 +1,19 @@
-import React, { Fragment } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import React from 'react'
 import firebase from 'firebase/app'
 import ReactGA from 'react-ga'
 
 import {
   CssBaseline,
+  MuiThemeProvider,
   withStyles,
   withTheme
 } from '@material-ui/core'
 
 import { auth } from './firebase'
+import NavBar from './components/NavBar'
 import Router from './Router'
 import SEO from './components/SEO'
-import NavBar from './components/NavBar'
+import Theme from './Theme'
 
 const styles = (theme) => ({
   root: {
@@ -72,9 +73,9 @@ class App extends React.Component {
     const { classes } = this.props
 
     return (
-      <BrowserRouter>
-        <Fragment>
-          <CssBaseline />
+      <div>
+        <CssBaseline />
+        <MuiThemeProvider theme={Theme}>
           <div className={classes.root}>
             <SEO />
             <NavBar user={this.state.user} />
@@ -83,8 +84,8 @@ class App extends React.Component {
               subscriptionLevel={this.state.subscriptionLevel}
             />
           </div>
-        </Fragment>
-      </BrowserRouter>
+        </MuiThemeProvider>
+      </div>
     )
   }
 }

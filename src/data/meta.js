@@ -45,7 +45,7 @@ const meta = {
     canonical: `${URL}/sound/short-a/dialogues`
   },
   'sound short-a common words': {
-    title: 'A list of common Wnglish words using the short ‘a’ sound, the IPA ‘æ’ sound',
+    title: 'A list of common English words using the short ‘a’ sound, the IPA ‘æ’ sound',
     canonical: `${URL}/sound/short-a/common-words`
   },
   'sound short-a tongue twisters': {

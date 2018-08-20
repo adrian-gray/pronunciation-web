@@ -70,12 +70,12 @@ class NavBar extends React.Component {
               onKeyDown={this.handleToggle}
             >
               <MenuItem>
-                <Button href='/' className={classes.button}>
+                <Button component={Link} to='/' className={classes.button}>
                   {'Home'}
                 </Button>
               </MenuItem>
               <MenuItem>
-                <Button href='/sounds' className={classes.button}>
+                <Button component={Link} to='/sounds' className={classes.button}>
                   {'Sounds'}
                 </Button>
               </MenuItem>
@@ -84,13 +84,13 @@ class NavBar extends React.Component {
               variant='subheading'
               className={classes.flex}
             >
-              <Button href='/'>
+              <Button component={Link} to='/'>
                 <span className={classes.white}>
                   {'Pronounce Web'}
                 </span>
               </Button>
             </Typography>
-            <Button href='/sounds' className={classes.button} color='inherit'>
+            <Button component={Link} to='/sounds' className={classes.button} color='inherit'>
               {'Sounds'}
             </Button>
             {changeLoginStatus}
