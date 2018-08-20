@@ -12,7 +12,7 @@ const url = '//endual.us8.list-manage.com/subscribe/post?u=5cfcc43825365c2c32230
 
 const styles = (theme) => ({
   mailchimp: {
-    backgroundColor: '#d9d9d1'
+    backgroundColor: '#fff8f0'
   },
   container: {
     display: 'flex',

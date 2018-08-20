@@ -1,11 +1,13 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-import { indigo, orange } from '@material-ui/core/colors'
+import { orange } from '@material-ui/core/colors'
 
 const defaultTheme = createMuiTheme()
 
 export default createMuiTheme({
   palette: {
-    primary: indigo,
+    primary: {
+      main: '#b71c1c'
+    },
     secondary: orange
   },
   typography: {
