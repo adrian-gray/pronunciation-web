@@ -4,12 +4,13 @@ import Tile from './../entities/Tile'
 
 const Game = function Game () {}
 const TILE_SIZE = 250
-const NUM_ROWS = 12
-const NUM_COLS = 6
 const LEFT = 0
 const RIGHT = 1
 const UP = 2
 const DOWN = 3
+
+let NUM_ROWS = 12
+let NUM_COLS = 6
 let state
 let game
 
@@ -23,10 +24,12 @@ Game.prototype = {
     const board = state.add.group()
     let tiles = []
     let index = 0
+    NUM_COLS = game.data.words[0].length
+    NUM_ROWS = game.data.words.length
     let activePos = { row: 0, col: 0 }
     for (let row = 0; row < NUM_ROWS; row++) {
       for (let col = 0; col < NUM_COLS; col++) {
-        const word = game.data.words[index]
+        const word = game.data.words[row][col]
         tiles.push(Tile({
           index,
           state,
