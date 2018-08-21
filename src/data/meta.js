@@ -68,9 +68,9 @@ const meta = {
     title: "Odd One Out English pronunciation practice. Which words don't have a short a?",
     canonical: `${URL}/sound/short-a/odd-one-out`
   },
-  'sound short-a news stories': {
-    title: 'Identify the News Story sounds, English language practice long and short a sounds',
-    canonical: `${URL}/sound/short-a/news-stories`
+  'sound short-a beginner news stories': {
+    title: 'Beginner Identify the News Story sounds,  practice long and short a sounds',
+    canonical: `${URL}/sound/short-a/beginner-news-stories`
   },
   'sound short-a words maze': {
     title: 'Solve the Words Maze puzzle. Short practice English pronunciation with short a',
@@ -113,10 +113,15 @@ const meta = {
     title: 'English language minimal pairs pronunciation practice with long e, or i! sound',
     canonical: `${URL}/sound/long-e/minimal-pairs`
   },
-  'sound long-e news stories': {
-    title: 'Identify the News Story sounds, English language practice long and short e sounds',
-    canonical: `${URL}/sound/long-e/news-stories`
+  'sound long-e beginner news stories': {
+    title: 'Beginner Identify the News Story sounds, practice long and short e sounds',
+    canonical: `${URL}/sound/long-e/beginner-news-stories`
   },
+  'sound long-e intermediate news stories': {
+    title: 'Intermediate Identify the News Story sounds, practice long and short e sounds',
+    canonical: `${URL}/sound/long-e/intermediate-news-stories`
+  },
+
   'sound long-e words maze': {
     title: 'Solve the Words Maze puzzle. Short practice English pronunciation with long e sound',
     canonical: `${URL}/sound/long-e/words-maze`

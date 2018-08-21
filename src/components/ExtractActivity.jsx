@@ -105,6 +105,7 @@ const ExtractActivity = (params) => {
       break
 
     case 'find the words':
+    case 'odd one out':
       activityComponent = (
         <FindTheWords
           ipa={data.ipa}
@@ -127,20 +128,8 @@ const ExtractActivity = (params) => {
       )
       break
 
-    case 'odd one out':
-      activityComponent = (
-        <FindTheWords
-          ipa={data.ipa}
-          titleStart="Select the words that don't have the "
-          titleEnd='sound'
-          words={activity.words}
-          correct={activity.correct}
-          userAuth={userAuth}
-        />
-      )
-      break
-
-    case 'news stories':
+    case 'beginner news stories':
+    case 'intermediate news stories':
       activityComponent = (
         <NewsStories
           title={activity.title}

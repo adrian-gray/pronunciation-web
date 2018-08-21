@@ -167,7 +167,7 @@
             "name"
           ]
         },
-        "news stories": {
+        "beginner news stories": {
           "subscription level": 1,
           "title": "Choose the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)",
           "headline": "Snake Eats Tongs",
@@ -178,8 +178,6 @@
             "This is d~a~ngerous OPTION for the snake. Doctors operate on it. They t~a~ke OPTION out the tongs.",
             "The snake’s n~a~me OPTION is Winston. After the oper~a~tion OPTION he gets better."
           ]
-        },
-        "news stories intermediate": {
         },
         "pronunciation journey": {
         },
@@ -377,7 +375,7 @@
         },
         "count the sounds": {
         },
-        "news stories": {
+        "beginner news stories": {
           "subscription level": 1,
           "title": "Choose the correct sound: ~/:i/~ (the long ‘e’ sound) or ~/e/~ (the short ‘e’ sound)",
           "headline": "Eels travel far",
@@ -389,6 +387,20 @@
             "The eel d~ie~s OPTION, but its offpsring float back to Australia. They swim to the bay next to Sydney Airport. They move across the swampy land, th~e~ OPTION two golf courses, through the drainpipes and creeks back to the pond in the park'."
           ]
         },
+        "intermediate news stories": {
+          "subscription level": 1,
+          "title": "Choose the correct sound: ~/:i/~ (the long ‘e’ sound) or ~/e/~ (the short ‘e’ sound)",
+          "headline": "Eels travel far",
+          "options": ["...", ":i", "e"],
+          "answers": [":i", ":i", ":i", "e", "e", "e", "e", "e"],
+          "sentences": [
+            "This is a story of migrating ~ee~ls OPTION. In part~i~cular OPTION the long-finned eels of Cent~e~nnial OPTION Park, Sydney. These eel br~ee~d OPTION once in their lifetime and they travel quite a distance to reproduce.",
+            "Their breeding migration b~e~gins OPTION when the eel l~ea~ves OPTION its pond during the w~e~t OPTION s~ea~son OPTION of autumn. It swims through cr~ee~ks OPTION and drainpipes. It slithers over grass to the n~e~xt OPTION suburb. It moves across two golf courses. It crosses swampy ~a~reas OPTION and continues south through the d~e~nsely OPTION populated suburb of Kensington . It ev~e~ntually OPTION arrives at Sydney airport. The Airport is next to a bay. It ~e~nters OPTION the bay and swims across the s~ea~ OPTION 2 000 km to N~e~w OPTION Caledonia.",
+            "It lays m~a~ny OPTION eggs – about 20 million ~e~ggs OPTION.",
+            "At the ~e~nd OPTION of the long journey and after the eel lays its eggs, it d~ie~s OPTION, but its offspring float south on the ocean currents, back to Australia. They swim to the bay next to Sydney Airport. They move across the swampy land, th~e~ OPTION two golf courses, through the drainpipes and creeks back to the pond in Centennial Park."
+          ]
+        },
+ 
         "words maze": {
           "subscription level": 1,
           "words" : [

@@ -56,7 +56,19 @@ class NewsStories extends Component {
   }
 
   componentDidMount () {
-    this.updateSentences(this.state.selectedOption)
+    this.updateSentences(this.state.selectedOption, this.props.sentences)
+  }
+
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.sentences !== this.props.sentences) {
+      const numSelectors = countSelectors(nextProps.sentences)
+      this.setState({
+        sentences: [],
+        selectedOption: Array(numSelectors).fill(0),
+        selectedBgColour: Array(numSelectors).fill(undefined)
+      })
+      this.updateSentences(this.state.selectedOption, nextProps.sentences)
+    }
   }
 
   parseSentences (props) {
@@ -100,13 +112,14 @@ class NewsStories extends Component {
       )
     })
 
-    return { sentences }
+    return sentences
   }
 
-  updateSentences (selectedOption, selectedBgColour = null) {
-    const { sentences } = this.parseSentences({ selectedOption, selectedBgColour })
+  updateSentences (selectedOption, sentences, selectedBgColour = null) {
+    const parsedSentences = this.parseSentences({ sentences, selectedOption, selectedBgColour })
 
-    this.setState({ sentences })
+    console.log('parseSentences.length', parsedSentences.length)
+    this.setState({ sentences: parsedSentences })
   }
 
   checkForCorrect (values) {
@@ -137,7 +150,7 @@ class NewsStories extends Component {
       selectedOption: newStateSelectedOption,
       selectedBgColour
     })
-    this.updateSentences(newStateSelectedOption, selectedBgColour)
+    this.updateSentences(newStateSelectedOption, this.props.sentences, selectedBgColour)
   }
 
   render () {

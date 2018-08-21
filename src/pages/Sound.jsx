@@ -8,8 +8,8 @@ import {
 } from '@material-ui/core'
 
 import jsonData from './../data/sounds'
-import ExtractActivity from './../utils/ExtractActivity'
 import ActivityButton from './../components/ActivityButton'
+import ExtractActivity from './../components/ExtractActivity'
 import SEO from './../components/SEO'
 import SoundTitle from './../components/SoundTitle'
 
@@ -39,7 +39,7 @@ const Sound = (props) => {
     <ActivityButton phoneme={phoneme} activity={activity} key={activity} />
   ))
 
-  const SEOlocation = `sound ${phoneme} ${activity || 'none'}`
+  const SEOlocation = `sound ${phoneme} ${activity}`
 
   const activityComponent = ExtractActivity({
     activityName: activity,
