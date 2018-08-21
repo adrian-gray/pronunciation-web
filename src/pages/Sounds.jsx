@@ -23,7 +23,7 @@ const Sounds = (props) => {
     const ipa = phonemes[phoneme]['ipa']
     const title = phonemes[phoneme]['title']
     const tag = phonemes[phoneme]['tag']
-    const words = phonemes[phoneme]['common words'].words
+    const words = phonemes[phoneme]['activities']['common words'].words
     return <Phoneme key={phoneme} phoneme={phoneme} ipa={ipa} title={title} tag={tag} words={words} />
   })
 
