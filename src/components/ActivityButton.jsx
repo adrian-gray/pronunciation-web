@@ -11,7 +11,17 @@ import {
 const styles = (theme) => ({
   chip: {
     margin: theme.spacing.unit
-  }
+  },
+  open: {
+    color: 'green'
+  },
+  member: {
+    color: 'maroon'
+  },
+  pending: {
+    color: '#BBB'
+  },
+  page: theme.page
 })
 
 const toLink = (phoneme, activity) => {
@@ -22,14 +32,15 @@ const toLink = (phoneme, activity) => {
 }
 
 const ActivityButton = (props) => {
-  const { classes, phoneme, activity } = props
-
+  const { classes, phoneme, activity, accessStatus } = props
   const { title, link } = toLink(phoneme, activity)
+
+  const chipClasses = `${classes.chip} ${classes[accessStatus]}`
 
   return (
     <Chip
       label={title}
-      className={classes.chip}
+      className={chipClasses}
       component={Link}
       to={link}
       clickable

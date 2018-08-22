@@ -8,16 +8,13 @@ import {
 
 const styles = (theme) => ({
   headspace: theme.headspace,
-  sentence: {
-    padding: '0.5rem',
-    paddingLeft: '1rem',
-    paddingRight: '1rem',
-    fontSize: '1.2rem'
-  },
-  correct: {
-    textAlign: 'center',
-    color: '#AAEEAA'
-  },
+  largeText: theme.largeText,
+  cell: theme.cell,
+  sentence: theme.sentence,
+  clearFloat: theme.clearFloat,
+  correct: theme.correct,
+  greenBG: theme.greenBG,
+  personalSpace: theme.personalSpace,
   green: {
     backgroundColor: '#99FF99'
   },

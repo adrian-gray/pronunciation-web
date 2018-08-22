@@ -14,13 +14,9 @@ import MemberGate from './MemberGate'
 import SplitHilite from './SplitHilite'
 
 const styles = (theme) => ({
-  cell: {
-    paddingLeft: 12,
-    paddingRight: 12,
-    textAlign: 'center'
-  },
   largeText: theme.largeText,
-  headspace: theme.headspace
+  headspace: theme.headspace,
+  cell: theme.cell
 })
 
 const MinimalPairs = (props) => {

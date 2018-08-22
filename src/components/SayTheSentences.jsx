@@ -12,17 +12,14 @@ import {
 const styles = (theme) => ({
   headspace: theme.headspace,
   largeText: theme.largeText,
-  spacing: {
-    padding: '1rem',
-    margin: '1rem'
-  }
+  personalSpace: theme.personalSpace
 })
 
 const TongueTwisters = (props) => {
   const { classes, ipa, sentences } = props
 
   const lines = sentences.map((line, index) => (
-    <Paper className={classes.spacing} key={index}>
+    <Paper className={classes.personalSpace} key={index}>
       <Typography>
         {line}
       </Typography>

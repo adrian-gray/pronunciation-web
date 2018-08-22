@@ -16,7 +16,7 @@ const Pending = (props) => {
   return (
     <div className={classes.headspace}>
       <Typography variant='title' gutterBottom>
-        {'Pending Activity'}
+        {'This activity is coming soon'}
       </Typography>
     </div>
   )

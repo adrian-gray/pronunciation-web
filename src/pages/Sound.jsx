@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core'
 
 import jsonData from './../data/sounds'
-import ActivityButton from './../components/ActivityButton'
+import ActivityButtons from './../components/ActivityButtons'
 import ExtractActivity from './../components/ExtractActivity'
 import SEO from './../components/SEO'
 import SoundTitle from './../components/SoundTitle'
@@ -34,11 +34,6 @@ const Sound = (props) => {
     )
   }
 
-  const activityNames = Object.keys(data.activities)
-  const activityButtons = activityNames.map(activity => (
-    <ActivityButton phoneme={phoneme} activity={activity} key={activity} />
-  ))
-
   const SEOlocation = `sound ${phoneme} ${activity}`
 
   const activityComponent = ExtractActivity({
@@ -58,7 +53,11 @@ const Sound = (props) => {
       </Typography>
 
       <div>
-        {activityButtons}
+        <ActivityButtons
+          phoneme={phoneme}
+          activityNames={Object.keys(data.activities)}
+          {...props}
+        />
       </div>
       <Divider />
 

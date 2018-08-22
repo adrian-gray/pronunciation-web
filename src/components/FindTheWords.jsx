@@ -12,16 +12,9 @@ import Tile from './Tile'
 
 const styles = (theme) => ({
   headspace: theme.headspace,
-  clearFloat: {
-    clear: 'both'
-  },
-  correct: {
-    textAlign: 'center',
-    color: '#AAEEAA'
-  },
-  greenBG: {
-    backgroundColor: '#EEFFEE'
-  }
+  clearFloat: theme.clearFloat,
+  correct: theme.correct,
+  greenBG: theme.greenBG
 })
 
 class FindTheWords extends Component {

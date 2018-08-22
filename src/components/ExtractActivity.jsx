@@ -155,6 +155,11 @@ const ExtractActivity = (params) => {
       break
 
     case 'sort the words':
+    case 'hear the words':
+    case 'pronunciation journey':
+    case 'four in a row':
+    case 'rhyming words':
+    case 'count the sounds':
       activityComponent = <Pending />
       break
 

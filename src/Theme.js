@@ -34,5 +34,31 @@ export default createMuiTheme({
   },
   hilite: {
     color: '#CC0000'
+  },
+  cell: {
+    paddingLeft: 12,
+    paddingRight: 12,
+    textAlign: 'center'
+  },
+  sentence: {
+    padding: '0.5rem',
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
+    fontSize: '1.2rem'
+  },
+  clearFloat: {
+    clear: 'both'
+  },
+  correct: {
+    textAlign: 'center',
+    color: '#AAEEAA'
+  },
+  greenBG: {
+    backgroundColor: '#EEFFEE'
+  },
+  personalSpace: {
+    padding: '1rem',
+    margin: '1rem'
   }
+
 })
