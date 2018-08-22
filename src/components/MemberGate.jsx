@@ -7,7 +7,23 @@ import {
 } from '@material-ui/core'
 
 const styles = (theme) => ({
-  headspace: theme.headspace
+  headspace: theme.headspace,
+  sentence: {
+    padding: '0.5rem',
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
+    fontSize: '1.2rem'
+  },
+  correct: {
+    textAlign: 'center',
+    color: '#AAEEAA'
+  },
+  green: {
+    backgroundColor: '#99FF99'
+  },
+  red: {
+    backgroundColor: '#FF9999'
+  }
 })
 
 const MemberGate = (props) => {

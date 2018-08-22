@@ -16,16 +16,6 @@ const styles = (theme) => ({
     paddingLeft: '1rem',
     paddingRight: '1rem',
     fontSize: '1.2rem'
-  },
-  correct: {
-    textAlign: 'center',
-    color: '#AAEEAA'
-  },
-  green: {
-    backgroundColor: '#99FF99'
-  },
-  red: {
-    backgroundColor: '#FF9999'
   }
 })
 
@@ -50,17 +40,18 @@ class NewsStories extends Component {
 
     this.handleClick = this.handleClick.bind(this)
     this.parseSentences = this.parseSentences.bind(this)
+    this.addNewSentences = this.addNewSentences.bind(this)
     this.updateSentences = this.updateSentences.bind(this)
     this.checkForCorrect = this.checkForCorrect.bind(this)
   }
 
   componentDidMount () {
-    this.updateSentences(this.props.sentences)
+    this.addNewSentences(this.props.sentences)
   }
 
   componentWillReceiveProps (nextProps) {
     if (nextProps.sentences !== this.props.sentences) {
-      this.updateSentences(nextProps.sentences)
+      this.addNewSentences(nextProps.sentences)
     }
   }
 
@@ -108,7 +99,7 @@ class NewsStories extends Component {
     return parsedSentences
   }
 
-  updateSentences (newSentences) {
+  addNewSentences (newSentences) {
     const numSelectors = countSelectors(newSentences)
     const selectedOption = Array(numSelectors).fill(0)
     const selectedBgColour = Array(numSelectors).fill(undefined)
@@ -121,6 +112,20 @@ class NewsStories extends Component {
     })
   }
 
+  updateSentences (params) {
+    const newSentences = params.sentences
+    const selectedOption = params.selectedOption || this.state.selectedOption
+    const selectedBgColour = params.selectedBgColour || this.state.selectedBgColour
+
+    const sentences = this.parseSentences(
+      newSentences,
+      selectedOption,
+      selectedBgColour
+    )
+
+    this.setState({ sentences })
+  }
+
   checkForCorrect (values) {
     return values.map((value, index) => {
       return this.props.options[value] === this.props.answers[index]
@@ -130,7 +135,7 @@ class NewsStories extends Component {
   handleClick (index) {
     const newStateSelectedOption = this.state.selectedOption.slice()
     const selectedBgColour = []
-    newStateSelectedOption[index] = ((this.state.selectedOption[index] + 1)) % 3
+    newStateSelectedOption[index] = (this.state.selectedOption[index] + 1) % 3
     if (newStateSelectedOption.every(val => val > 0)) {
       this.checkForCorrect(newStateSelectedOption).map((value, index) => {
         switch (value) {
@@ -149,7 +154,11 @@ class NewsStories extends Component {
       selectedOption: newStateSelectedOption,
       selectedBgColour
     })
-    this.updateSentences(this.props.sentences)
+    this.updateSentences({
+      sentences: this.props.sentences,
+      selectedOption: newStateSelectedOption,
+      selectedBgColour
+    })
   }
 
   render () {
