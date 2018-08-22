@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
 import {
-  Paper,
   Typography,
   withStyles
 } from '@material-ui/core'
 
 import SplitHilite from './SplitHilite'
+import MemberGate from './MemberGate'
 import Picker from './Picker'
 
 const styles = (theme) => ({
@@ -20,9 +20,6 @@ const styles = (theme) => ({
   correct: {
     textAlign: 'center',
     color: '#AAEEAA'
-  },
-  greenBG: {
-    backgroundColor: '#EEFFEE'
   },
   green: {
     backgroundColor: '#99FF99'
@@ -45,37 +42,33 @@ class NewsStories extends Component {
   constructor (props) {
     super(props)
 
-    const numSelectors = countSelectors(this.props.sentences)
     this.state = {
       sentences: [],
-      selectedOption: Array(numSelectors).fill(0),
-      selectedBgColour: Array(numSelectors).fill(undefined)
+      selectedOption: [],
+      selectedBgColour: []
     }
 
     this.handleClick = this.handleClick.bind(this)
+    this.parseSentences = this.parseSentences.bind(this)
+    this.updateSentences = this.updateSentences.bind(this)
+    this.checkForCorrect = this.checkForCorrect.bind(this)
   }
 
   componentDidMount () {
-    this.updateSentences(this.state.selectedOption, this.props.sentences)
+    this.updateSentences(this.props.sentences)
   }
 
   componentWillReceiveProps (nextProps) {
     if (nextProps.sentences !== this.props.sentences) {
-      const numSelectors = countSelectors(nextProps.sentences)
-      this.setState({
-        sentences: [],
-        selectedOption: Array(numSelectors).fill(0),
-        selectedBgColour: Array(numSelectors).fill(undefined)
-      })
-      this.updateSentences(this.state.selectedOption, nextProps.sentences)
+      this.updateSentences(nextProps.sentences)
     }
   }
 
-  parseSentences (props) {
+  parseSentences (sentences, selectedOption, selectedBgColour) {
     let id = 0
     let selectorId = 0
 
-    const sentences = this.props.sentences.map((sentence, index) => {
+    const parsedSentences = sentences.map((sentence, index) => {
       const fragments = []
       let key = 0
       do {
@@ -87,8 +80,8 @@ class NewsStories extends Component {
           fragments.push(
             <Picker
               options={this.props.options}
-              selected={props.selectedOption[selectorId]}
-              colour={props.selectedBgColour && props.selectedBgColour[selectorId]}
+              selected={selectedOption[selectorId]}
+              colour={selectedBgColour[selectorId]}
               handleClick={this.handleClick}
               key={key}
               index={id}
@@ -112,14 +105,20 @@ class NewsStories extends Component {
       )
     })
 
-    return sentences
+    return parsedSentences
   }
 
-  updateSentences (selectedOption, sentences, selectedBgColour = null) {
-    const parsedSentences = this.parseSentences({ sentences, selectedOption, selectedBgColour })
+  updateSentences (newSentences) {
+    const numSelectors = countSelectors(newSentences)
+    const selectedOption = Array(numSelectors).fill(0)
+    const selectedBgColour = Array(numSelectors).fill(undefined)
+    const sentences = this.parseSentences(newSentences, selectedOption, selectedBgColour)
 
-    console.log('parseSentences.length', parsedSentences.length)
-    this.setState({ sentences: parsedSentences })
+    this.setState({
+      selectedOption,
+      selectedBgColour,
+      sentences
+    })
   }
 
   checkForCorrect (values) {
@@ -150,26 +149,11 @@ class NewsStories extends Component {
       selectedOption: newStateSelectedOption,
       selectedBgColour
     })
-    this.updateSentences(newStateSelectedOption, this.props.sentences, selectedBgColour)
+    this.updateSentences(this.props.sentences)
   }
 
   render () {
     const { classes, headline, title } = this.props
-
-    let display
-    if (this.props.userAuth) {
-      display = (
-        <Paper>
-          {this.state.sentences}
-        </Paper>
-      )
-    } else {
-      display = (
-        <Typography variant='subheading' className={classes.headspace} gutterBottom>
-          {'Sorry, activity for members only.'}
-        </Typography>
-      )
-    }
 
     return (
       <div className={classes.headspace}>
@@ -182,7 +166,7 @@ class NewsStories extends Component {
         <Typography variant='subheading' gutterBottom>
           <SplitHilite str={title} />
         </Typography>
-        {display}
+        <MemberGate content={this.state.sentences} {...this.props} />
       </div>
     )
   }

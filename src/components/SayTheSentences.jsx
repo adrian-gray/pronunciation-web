@@ -1,5 +1,6 @@
 import React from 'react'
 
+import MemberGate from './MemberGate'
 import SplitHilite from './SplitHilite'
 
 import {
@@ -28,23 +29,12 @@ const TongueTwisters = (props) => {
     </Paper>
   ))
 
-  let display
-  if (props.userAuth) {
-    display = lines
-  } else {
-    display = (
-      <Typography variant='subheading' className={classes.headspace} gutterBottom>
-        {'Sorry, activity for members only.'}
-      </Typography>
-    )
-  }
-
   return (
     <div className={classes.headspace}>
       <Typography variant='title' gutterBottom>
         {'Say the '}<SplitHilite str={ipa} />{' sentences'}
       </Typography>
-      {display}
+      <MemberGate content={lines} {...props} />
     </div>
   )
 }

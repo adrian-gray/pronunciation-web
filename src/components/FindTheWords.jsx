@@ -6,6 +6,7 @@ import {
   withStyles
 } from '@material-ui/core'
 
+import MemberGate from './MemberGate'
 import SplitHilite from './SplitHilite'
 import Tile from './Tile'
 
@@ -93,22 +94,13 @@ class FindTheWords extends Component {
       />
     ))
 
-    let display
-    if (this.props.userAuth) {
-      display = (
-        <Paper className={resultBG}>
-          {this.wordTiles}
-          <div className={classes.clearFloat} />
-          {result}
-        </Paper>
-      )
-    } else {
-      display = (
-        <Typography variant='subheading' className={classes.headspace} gutterBottom>
-          {'Sorry, activity for members only.'}
-        </Typography>
-      )
-    }
+    const display = (
+      <Paper className={resultBG}>
+        {this.wordTiles}
+        <div className={classes.clearFloat} />
+        {result}
+      </Paper>
+    )
 
     return (
       <div className={classes.headspace}>
@@ -117,7 +109,7 @@ class FindTheWords extends Component {
           <SplitHilite str={ipa} />
           {titleEnd}
         </Typography>
-        {display}
+        <MemberGate content={display} {...this.props} />
       </div>
     )
   }

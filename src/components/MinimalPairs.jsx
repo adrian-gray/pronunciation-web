@@ -10,6 +10,7 @@ import {
   withStyles
 } from '@material-ui/core'
 
+import MemberGate from './MemberGate'
 import SplitHilite from './SplitHilite'
 
 const styles = (theme) => ({
@@ -40,24 +41,15 @@ const MinimalPairs = (props) => {
     </TableRow>
   ))
 
-  let display
-  if (props.userAuth) {
-    display = (
-      <Paper>
-        <Table>
-          <TableBody>
-            {rows}
-          </TableBody>
-        </Table>
-      </Paper>
-    )
-  } else {
-    display = (
-      <Typography variant='subheading' className={classes.headspace} gutterBottom>
-        {'Sorry, activity for members only.'}
-      </Typography>
-    )
-  }
+  const display = (
+    <Paper>
+      <Table>
+        <TableBody>
+          {rows}
+        </TableBody>
+      </Table>
+    </Paper>
+  )
 
   return (
     <div className={classes.headspace} >
@@ -65,7 +57,7 @@ const MinimalPairs = (props) => {
         {`English  minimal pairs with ${tag} - `}
         <SplitHilite str={ipa} />
       </Typography>
-      {display}
+      <MemberGate content={display} {...props} />
     </div>
   )
 }

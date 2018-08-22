@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Script from 'react-load-script'
 
+import MemberGate from './MemberGate'
 import SplitHilite from './SplitHilite'
 import WordsMaze from './WordsMaze/index'
 
@@ -81,32 +82,23 @@ class Maze extends Component {
     const title = `From the yellow square pick an adjacent square with
      a short ~/æ/~ sound. Keep going until you reach the blue square.`
 
-    let display
-    if (this.props.userAuth) {
-      display = (
-        <div>
-          <Script
-            onLoad={this.handleScriptLoad}
-            onError={this.handleScriptError}
-            url='https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.min.js'
-          />
-          <div id='words-maze' style={style} />
-        </div>
-      )
-    } else {
-      display = (
-        <Typography variant='subheading' className={this.props.headspace} gutterBottom>
-          {'Sorry, activity for members only.'}
-        </Typography>
-      )
-    }
+    const display = (
+      <div>
+        <Script
+          onLoad={this.handleScriptLoad}
+          onError={this.handleScriptError}
+          url='https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.min.js'
+        />
+        <div id='words-maze' style={style} />
+      </div>
+    )
 
     return (
       <div className={this.props.classes.headspace}>
         <Typography variant='title' gutterBottom>
           <SplitHilite str={title} />
         </Typography>
-        {display}
+        <MemberGate content={display} {...this.props} />
       </div>
     )
   }
