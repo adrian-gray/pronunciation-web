@@ -1,6 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import {
+  Button,
   Paper,
   Typography,
   withStyles
@@ -10,6 +12,15 @@ import Mailchimp from './../components/Mailchimp'
 import SEO from './../components/SEO'
 
 const styles = (theme) => ({
+  center: {
+    textAlign: 'center'
+  },
+  button: {
+    marginTop: theme.spacing.unit,
+    marginBottom: 2 * theme.spacing.unit,
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
   page: theme.page,
   headspace: theme.headspace,
   para: {
@@ -39,7 +50,7 @@ const Landing = (props) => {
       <Typography className={classes.para} gutterBottom>
         {'We have English pronunciation video lessons from a registered English pronunciation instructor. The pronunciation lessons are followed by English pronunciation examples, recorded conversations, and interactive activities to help improve your pronunciation the right way. You will learn how to pronounce English clearly and professionally.'}
       </Typography>
-      <Typography className={classes.para} gutterBottom>
+      <Typography className={classes.para}>
         {'Take your English pronunciation to the next level'}
       </Typography>
       <img
@@ -56,6 +67,12 @@ const Landing = (props) => {
       <Typography className={classes.headspace} gutterBottom>
         {'We are currently running in a limited test. We aim to launch in late 2018.'}
       </Typography>
+      <hr className='my-4' />
+      <div className={classes.center}>
+        <Button variant='contained' size='large' className={classes.button} component={Link} to='/home'>
+          {'Get Started with Pronunciation activities'}
+        </Button>
+      </div>
     </Paper>
   )
 }

@@ -22,7 +22,7 @@ class Login extends React.Component {
   render () {
     const { classes, user } = this.props
     if (user) {
-      return <Redirect to='/profile' />
+      return <Redirect to='/home' />
     }
 
     return (

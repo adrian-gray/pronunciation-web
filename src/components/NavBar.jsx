@@ -1,12 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { auth } from './../firebase'
 
 import {
   AppBar,
   Button,
-  Drawer,
-  MenuItem,
   Toolbar,
   Typography,
   withStyles
@@ -52,7 +49,7 @@ class NavBar extends React.Component {
     let changeLoginStatus
     if (user) {
       changeLoginStatus = (
-        <Button onClick={auth.signOut} color='inherit'>{'Sign Out'}</Button>
+        <Button onClick={this.props.signout} color='inherit'>{'Sign Out'}</Button>
       )
     } else {
       changeLoginStatus = (
@@ -64,35 +61,16 @@ class NavBar extends React.Component {
       <div className={classes.root}>
         <AppBar position='static'>
           <Toolbar>
-            <Drawer
-              open={this.state.open}
-              onClick={this.handleToggle}
-              onKeyDown={this.handleToggle}
-            >
-              <MenuItem>
-                <Button component={Link} to='/' className={classes.button}>
-                  {'Home'}
-                </Button>
-              </MenuItem>
-              <MenuItem>
-                <Button component={Link} to='/sounds' className={classes.button}>
-                  {'Sounds'}
-                </Button>
-              </MenuItem>
-            </Drawer>
             <Typography
               variant='subheading'
               className={classes.flex}
             >
-              <Button component={Link} to='/'>
+              <Button component={Link} to='/home'>
                 <span className={classes.white}>
                   {'Pronounce Web'}
                 </span>
               </Button>
             </Typography>
-            <Button component={Link} to='/sounds' className={classes.button} color='inherit'>
-              {'Sounds'}
-            </Button>
             {changeLoginStatus}
           </Toolbar>
         </AppBar>

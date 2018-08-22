@@ -44,6 +44,7 @@ class App extends React.Component {
     }
 
     this.initFirebaseAuth = this.initFirebaseAuth.bind(this)
+    this.signout = this.signout.bind(this)
     this.handleAuthChange = this.handleAuthChange.bind(this)
   }
 
@@ -69,6 +70,15 @@ class App extends React.Component {
     this.setState({ user })
   }
 
+  signout () {
+    auth.signOut()
+    console.log('user is null')
+    this.setState({
+      user: null,
+      subscriptionLevel: 0
+    })
+  }
+
   render () {
     const { classes } = this.props
 
@@ -78,7 +88,7 @@ class App extends React.Component {
         <MuiThemeProvider theme={Theme}>
           <div className={classes.root}>
             <SEO />
-            <NavBar user={this.state.user} />
+            <NavBar user={this.state.user} signout={this.signout} />
             <Router
               user={this.state.user}
               subscriptionLevel={this.state.subscriptionLevel}
