@@ -7,6 +7,7 @@ import HowToPronounce from './../components/HowToPronounce'
 import NewsStories from './../components/NewsStories'
 import MinimalPairs from './../components/MinimalPairs'
 import Movie from './../components/Movie'
+import Pending from './../components/Pending'
 import Phrases from './../components/Phrases'
 import SayTheSentences from './../components/SayTheSentences'
 import TongueTwisters from './../components/TongueTwisters'
@@ -151,6 +152,10 @@ const ExtractActivity = (params) => {
           userAuth={userAuth}
         />
       )
+      break
+
+    case 'sort the words':
+      activityComponent = <Pending />
       break
 
     case undefined:

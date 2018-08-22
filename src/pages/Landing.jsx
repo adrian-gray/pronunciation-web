@@ -54,7 +54,7 @@ const Landing = (props) => {
       </Typography>
       <Mailchimp />
       <Typography className={classes.headspace} gutterBottom>
-        {'We are currently running in a limited test. We aim to launch the early beta in September 2018.'}
+        {'We are currently running in a limited test. We aim to launch in late 2018.'}
       </Typography>
     </Paper>
   )
