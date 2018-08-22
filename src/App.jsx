@@ -72,7 +72,6 @@ class App extends React.Component {
 
   signout () {
     auth.signOut()
-    console.log('user is null')
     this.setState({
       user: null,
       subscriptionLevel: 0
