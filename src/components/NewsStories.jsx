@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import {
+  Paper,
   Typography,
   withStyles
 } from '@material-ui/core'
@@ -16,6 +17,12 @@ const styles = (theme) => ({
     paddingLeft: '1rem',
     paddingRight: '1rem',
     fontSize: '1.2rem'
+  },
+  red: {
+    color: 'maroon'
+  },
+  green: {
+    color: 'green'
   }
 })
 
@@ -135,7 +142,7 @@ class NewsStories extends Component {
   handleClick (index) {
     const newStateSelectedOption = this.state.selectedOption.slice()
     const selectedBgColour = []
-    newStateSelectedOption[index] = (this.state.selectedOption[index] + 1) % 3
+    newStateSelectedOption[index] = (this.state.selectedOption[index] + 1) % this.props.options.length
     if (newStateSelectedOption.every(val => val > 0)) {
       this.checkForCorrect(newStateSelectedOption).map((value, index) => {
         switch (value) {
@@ -164,6 +171,12 @@ class NewsStories extends Component {
   render () {
     const { classes, headline, title } = this.props
 
+    const content = (
+      <Paper>
+        {this.state.sentences}
+      </Paper>
+    )
+
     return (
       <div className={classes.headspace}>
         <Typography variant='display1' gutterBottom>
@@ -175,7 +188,7 @@ class NewsStories extends Component {
         <Typography variant='subheading' gutterBottom>
           <SplitHilite str={title} />
         </Typography>
-        <MemberGate content={this.state.sentences} {...this.props} />
+        <MemberGate content={content} {...this.props} />
       </div>
     )
   }

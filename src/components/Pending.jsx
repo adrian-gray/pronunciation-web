@@ -1,23 +1,28 @@
 import React from 'react'
+import { capitalise } from './../utils'
 
 import {
+  Paper,
   Typography,
   withStyles
 } from '@material-ui/core'
 
 const styles = (theme) => ({
   headspace: theme.headspace,
-  largeText: theme.largeText
+  largeText: theme.largeText,
+  personalSpace: theme.personalSpace
 })
 
 const Pending = (props) => {
-  const { classes } = props
+  const { classes, name } = props
 
   return (
     <div className={classes.headspace}>
-      <Typography variant='title' gutterBottom>
-        {'This activity is coming soon'}
-      </Typography>
+      <Paper>
+        <Typography variant='title' className={classes.personalSpace} gutterBottom>
+          {`${capitalise(name)} - activity coming soon`}
+        </Typography>
+      </Paper>
     </div>
   )
 }

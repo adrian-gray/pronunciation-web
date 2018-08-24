@@ -1,7 +1,6 @@
 import React from 'react'
 
 import {
-  Paper,
   Typography,
   withStyles
 } from '@material-ui/core'
@@ -27,11 +26,7 @@ const MemberGate = (props) => {
   let display
 
   if (props.userAuth) {
-    display = (
-      <Paper>
-        {props.content}
-      </Paper>
-    )
+    display = props.content
   } else {
     display = (
       <Typography variant='subheading' className={props.classes.headspace} gutterBottom>

@@ -16,10 +16,10 @@ const styles = (theme) => ({
     color: 'green'
   },
   member: {
-    color: 'maroon'
+    color: '#BBB'
   },
   pending: {
-    color: '#BBB'
+    color: 'maroon'
   },
   page: theme.page
 })
@@ -32,10 +32,16 @@ const toLink = (phoneme, activity) => {
 }
 
 const ActivityButton = (props) => {
-  const { classes, phoneme, activity, accessStatus } = props
+  const { accessStatus, activity, classes, phoneme, subscriptionLevel } = props
+
   const { title, link } = toLink(phoneme, activity)
 
-  const chipClasses = `${classes.chip} ${classes[accessStatus]}`
+  let chipClass = classes[accessStatus]
+  if (accessStatus === 'member' && subscriptionLevel) {
+    chipClass = classes['open']
+  }
+
+  const chipClasses = `${classes.chip} ${chipClass}`
 
   return (
     <Chip

@@ -60,5 +60,4 @@ export default createMuiTheme({
     padding: '1rem',
     margin: '1rem'
   }
-
 })

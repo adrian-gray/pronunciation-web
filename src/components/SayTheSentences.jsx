@@ -12,7 +12,10 @@ import {
 const styles = (theme) => ({
   headspace: theme.headspace,
   largeText: theme.largeText,
-  personalSpace: theme.personalSpace
+  personalSpace: {
+    padding: '1em',
+    margin: '1em'
+  }
 })
 
 const TongueTwisters = (props) => {
@@ -27,7 +30,7 @@ const TongueTwisters = (props) => {
   ))
 
   return (
-    <div className={classes.headspace}>
+    <div className={classes.personalSpace}>
       <Typography variant='title' gutterBottom>
         {'Say the '}<SplitHilite str={ipa} />{' sentences'}
       </Typography>

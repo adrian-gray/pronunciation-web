@@ -30,7 +30,7 @@ const meta = {
   },
   'sound short-a movie': {
     title: 'Movie demonstrating the correct pronunciation of short a - the æ sound.',
-    canonical: `${URL}/sound/short-ai/movie`
+    canonical: `${URL}/sound/short-a/movie`
   },
   'sound short-a words': {
     title: 'Common English words using æ, the short a sound, with phoenetic spelling',
@@ -72,8 +72,12 @@ const meta = {
     title: 'Beginner Identify the News Story sounds,  practice long and short a sounds',
     canonical: `${URL}/sound/short-a/beginner-news-stories`
   },
+  'sound short-a intermediate news stories': {
+    title: 'Intermediate Identify the News Story sounds,  practice long and short a sounds',
+    canonical: `${URL}/sound/short-a/intermediate-news-stories`
+  },
   'sound short-a words maze': {
-    title: 'Solve the Words Maze puzzle. Short practice English pronunciation with short a',
+    title: 'Solve the Words Maze puzzle - short a. Short practice English pronunciation with short a',
     canonical: `${URL}/sound/short-a/words-maze`
   },
 
@@ -121,10 +125,58 @@ const meta = {
     title: 'Intermediate Identify the News Story sounds, practice long and short e sounds',
     canonical: `${URL}/sound/long-e/intermediate-news-stories`
   },
-
   'sound long-e words maze': {
-    title: 'Solve the Words Maze puzzle. Short practice English pronunciation with long e sound',
+    title: 'Solve the Words Maze puzzle - long e. English pronunciation practice with long e sound',
     canonical: `${URL}/sound/long-e/words-maze`
+  },
+
+  'sound short-i none': {
+    title: 'How to pronounce short a in English. Lessons and interactive activities.',
+    canonical: `${URL}/sound/short-i`
+  },
+  'sound short-i how to pronounce': {
+    title: 'How to pronounce /i/, the short i sound in English. Description and images.',
+    canonical: `${URL}/sound/short-i/how-to-pronounce`
+  },
+  'sound short-i movie': {
+    title: 'Movie demonstrating the correct pronunciation of short i - the /i/ sound.',
+    canonical: `${URL}/sound/short-i/movie`
+  },
+  'sound short-i words': {
+    title: 'Common English words using /i/, the short i sound, with phoenetic spelling',
+    canonical: `${URL}/sound/short-i/words`
+  },
+  'sound short-i phrases': {
+    title: 'English language phrases using the short i, or phoenetic /i/ sound',
+    canonical: `${URL}/sound/short-i/phrases`
+  },
+  'sound short-i dialogues': {
+    title: 'Example English dialogues showing use of the short i, or /i/, sound',
+    canonical: `${URL}/sound/short-i/dialogues`
+  },
+  'sound short-i common words': {
+    title: 'A list of common English words using the short i sound, the IPA /i/ sound',
+    canonical: `${URL}/sound/short-i/common-words`
+  },
+  'sound short-i tongue twisters': {
+    title: 'English language tongue twisters featuring short i, or /i/ sounds',
+    canonical: `${URL}/sound/short-i/tongue-twisters`
+  },
+  'sound short-i minimal pairs': {
+    title: 'English language minimal pairs pronunciation practice with short i, or /i/ sounds',
+    canonical: `${URL}/sound/short-i/minimal-pairs`
+  },
+  'sound short-i beginner news stories': {
+    title: 'Beginner Identify the News Story sounds,  practice recognising the short i sound.',
+    canonical: `${URL}/sound/short-i/beginner-news-stories`
+  },
+  'sound short-i intermediate news stories': {
+    title: 'Intermediate Identify the News Story sounds,  practice recognising the short i sound.',
+    canonical: `${URL}/sound/short-i/intermediate-news-stories`
+  },
+  'sound short-i words maze': {
+    title: 'Solve the Words Maze puzzle - short i. Practice short i English pronunciation game.',
+    canonical: `${URL}/sound/short-i/words-maze`
   }
 }
 

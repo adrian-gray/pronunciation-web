@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://pronounceweb.com/sounds/</loc> </url>
-<url> <loc>https://pronounceweb.com/sound/short-a</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a</loc> <changefreq>daily</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/short-a/how-to-pronounce</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/short-a/movie</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/short-a/words</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -14,7 +14,9 @@
 <url> <loc>https://pronounceweb.com/sound/short-a/say-the-sentences</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/short-a/odd-one-out</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/short-a/beginner-news-stories</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-a/intermediate-news-stories</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/short-a/words-maze</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/long-e</loc> <changefreq>daily</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/long-e/how-to-pronounce</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/long-e/movie</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/long-e/words</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -26,4 +28,16 @@
 <url> <loc>https://pronounceweb.com/sound/long-e/beginner-news-stories</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/long-e/intermediate-news-stories</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://pronounceweb.com/sound/long-e/words-maze</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i/how-to-pronounce</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i/movie</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i/words</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-e/phrases</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i/dialogues</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i/common-words</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i/tongue-twisters</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i/minimal-pairs</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i/beginner-news-stories</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i/intermediate-news-stories</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://pronounceweb.com/sound/short-i/words-maze</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

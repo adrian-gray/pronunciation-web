@@ -8,8 +8,7 @@ const sitemap = sm.createSitemap({
   urls: [
     { url: '/sounds/' },
 
-    { url: '/sound/short-a', changefreq: 'daily', priority: 0.7 },
-
+    { url: '/sound/short-a', changefreq: 'daily', priority: 0.5 },
     { url: '/sound/short-a/how-to-pronounce', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/movie', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/words', changefreq: 'weekly', priority: 0.5 },
@@ -22,8 +21,10 @@ const sitemap = sm.createSitemap({
     { url: '/sound/short-a/say-the-sentences', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/odd-one-out', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/beginner-news-stories', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-a/intermediate-news-stories', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/words-maze', changefreq: 'weekly', priority: 0.5 },
 
+    { url: '/sound/long-e', changefreq: 'daily', priority: 0.5 },
     { url: '/sound/long-e/how-to-pronounce', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/movie', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/words', changefreq: 'weekly', priority: 0.5 },
@@ -34,7 +35,20 @@ const sitemap = sm.createSitemap({
     { url: '/sound/long-e/minimal-pairs', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/beginner-news-stories', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/intermediate-news-stories', changefreq: 'weekly', priority: 0.5 },
-    { url: '/sound/long-e/words-maze', changefreq: 'weekly', priority: 0.5 }
+    { url: '/sound/long-e/words-maze', changefreq: 'weekly', priority: 0.5 },
+
+    { url: '/sound/short-i', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/how-to-pronounce', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/movie', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/words', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-e/phrases', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/dialogues', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/common-words', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/tongue-twisters', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/minimal-pairs', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/beginner-news-stories', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/intermediate-news-stories', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/words-maze', changefreq: 'weekly', priority: 0.5 }
   ]
 })
 

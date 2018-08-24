@@ -8,7 +8,9 @@ const memberActivities = ['minimal pairs', 'find the words',
   'say the sentences', 'odd one out', 'beginner news stories',
   'intermediate news stories', 'words maze']
 const pendingActivities = ['hear the words', 'pronunciation journey',
-  'sort the words', 'four in a row', 'rhyming words', 'count the sounds']
+  'sort the words', 'four in a row', 'rhyming words', 'count the sounds',
+  'write the minimal pair', 'join to make words', 'listen to the sounds',
+  'minimal pairs dominos']
 
 const getStatus = (activity) => {
   if (openActivities.includes(activity)) return 'open'
@@ -18,11 +20,10 @@ const getStatus = (activity) => {
 }
 
 const ActivityButtons = (props) => {
-  const { phoneme, activityNames } = props
+  const { activityNames } = props
 
   return activityNames.map(activity => (
     <ActivityButton
-      phoneme={phoneme}
       activity={activity}
       key={activity}
       accessStatus={getStatus(activity)}

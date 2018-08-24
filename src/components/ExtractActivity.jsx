@@ -19,7 +19,7 @@ const ExtractActivity = (params) => {
 
   let activityComponent = null
   const activity = data.activities[activityName]
-  const requiredSubscriptionLevel = activity && activity['subscription level']
+  const requiredSubscriptionLevel = activity && activity['subscription']
   const userAuth = subscriptionLevel >= requiredSubscriptionLevel
 
   switch (activityName) {
@@ -160,7 +160,11 @@ const ExtractActivity = (params) => {
     case 'four in a row':
     case 'rhyming words':
     case 'count the sounds':
-      activityComponent = <Pending />
+    case 'write the minimal pair':
+    case 'join to make words':
+    case 'listen to the sounds':
+    case 'minimal pairs dominos':
+      activityComponent = <Pending name={activityName} />
       break
 
     case undefined:
