@@ -6,9 +6,10 @@ const sitemap = sm.createSitemap({
   hostname: 'https://pronounceweb.com',
   cacheTime: 600000,
   urls: [
-    { url: '/sounds/' },
+    { url: '/home', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sounds/', changefreq: 'weekly', priority: 0.5 },
 
-    { url: '/sound/short-a', changefreq: 'daily', priority: 0.5 },
+    { url: '/sound/short-a', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/how-to-pronounce', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/movie', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/words', changefreq: 'weekly', priority: 0.5 },
@@ -24,7 +25,7 @@ const sitemap = sm.createSitemap({
     { url: '/sound/short-a/intermediate-news-stories', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-a/words-maze', changefreq: 'weekly', priority: 0.5 },
 
-    { url: '/sound/long-e', changefreq: 'daily', priority: 0.5 },
+    { url: '/sound/long-e', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/how-to-pronounce', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/movie', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/words', changefreq: 'weekly', priority: 0.5 },

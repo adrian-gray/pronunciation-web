@@ -16,6 +16,10 @@ const meta = {
     description: `English pronunciation lessons and practice with Nicky Brookes, English language consultant. PronounceWeb.com has videos helping you learn how to improve English pronunciation, English pronunciation exercises, and English pronunciation activities.`,
     canonical: URL
   },
+  'home': {
+    title: 'English pronunciation activites home, select your sounds to practice',
+    cononical: `${URL}/home`
+  },
   'sounds': {
     title: `English sounds pronunciation practice. Phoenetic list of practice sounds.`,
     canonical: `${URL}/sounds`
