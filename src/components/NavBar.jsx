@@ -47,10 +47,12 @@ class NavBar extends React.Component {
     const { classes, user } = this.props
 
     let changeLoginStatus
+    let homeLink = '/'
     if (user) {
       changeLoginStatus = (
         <Button onClick={this.props.signout} color='inherit'>{'Sign Out'}</Button>
       )
+      homeLink = '/home'
     } else {
       changeLoginStatus = (
         <Button component={Link} to='/login' color='inherit'>{'Log In'}</Button>
@@ -65,7 +67,7 @@ class NavBar extends React.Component {
               variant='subheading'
               className={classes.flex}
             >
-              <Button component={Link} to='/home'>
+              <Button component={Link} to={homeLink}>
                 <span className={classes.white}>
                   {'Pronounce Web'}
                 </span>
