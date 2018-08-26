@@ -5,15 +5,6 @@ import 'firebase/database'
 // import 'firebase/messaging'
 // import 'firebase/functions'
 
-// const devConfig = {
-//   apiKey: '',
-//   authDomain: '',
-//   databaseURL: '',
-//   projectId: '',
-//   storageBucket: '',
-//   messagingSenderId: ''
-// }
-
 const prodConfig = {
   apiKey: 'AIzaSyAW6J-r9LGwEUkYGR4Zxmd9FXA1ySdKML8',
   authDomain: 'pronounceweb.firebaseapp.com',

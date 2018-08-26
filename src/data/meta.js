@@ -86,35 +86,35 @@ const meta = {
     canonical: `${URL}/sound/long-a`
   },
   'sound long-e how to pronounce': {
-    title: 'How to pronounce i!, the long e in English. Description and images.',
+    title: 'How to pronounce /i!/, the long e in English. Description and images.',
     canonical: `${URL}/sound/long-e/how-to-pronounce`
   },
   'sound long-e movie': {
-    title: 'Movie demonstrating the correct pronunciation of long e - the i! sound.',
+    title: 'Movie demonstrating the correct pronunciation of long e - the /i!/ sound.',
     canonical: `${URL}/sound/long-e/movie`
   },
   'sound long-e words': {
-    title: 'Common English words using i!, the long e sound, with phoenetic spelling',
+    title: 'Common English words using /i!/, the long e sound, with phoenetic spelling',
     canonical: `${URL}/sound/long-e/words`
   },
   'sound long-e phrases': {
-    title: 'English language phrases using the long e, or phoenetic i! sound',
+    title: 'English language phrases using the long e, or phoenetic /i!/ sound',
     canonical: `${URL}/sound/long-e/phrases`
   },
   'sound long-e dialogues': {
-    title: 'Example English dialogues showing use of the long e - the IPA i! sound',
+    title: 'Example English dialogues showing use of the long e - the IPA /i!/ sound',
     canonical: `${URL}/sound/long-e/dialogues`
   },
   'sound long-e common words': {
-    title: 'A list of common English words using the long e sound - IPA i! sound',
+    title: 'A list of common English words using the long e sound - IPA /i!/ sound',
     canonical: `${URL}/sound/long-e/common-words`
   },
   'sound long-e tongue twisters': {
-    title: 'English language tongue twisters featuring long e, or i! sound',
+    title: 'English language tongue twisters featuring long e, or /i!/ sound',
     canonical: `${URL}/sound/long-e/tongue-twisters`
   },
   'sound long-e minimal pairs': {
-    title: 'English language minimal pairs pronunciation practice with long e, or i! sound',
+    title: 'English language minimal pairs pronunciation practice with long e, or /i!/ sound',
     canonical: `${URL}/sound/long-e/minimal-pairs`
   },
   'sound long-e beginner news stories': {

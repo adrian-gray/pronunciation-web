@@ -41,7 +41,7 @@ const sitemap = sm.createSitemap({
     { url: '/sound/short-i/how-to-pronounce', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-i/movie', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-i/words', changefreq: 'weekly', priority: 0.5 },
-    { url: '/sound/short-e/phrases', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/short-i/phrases', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-i/dialogues', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-i/common-words', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/short-i/tongue-twisters', changefreq: 'weekly', priority: 0.5 },
