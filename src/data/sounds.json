@@ -400,7 +400,6 @@
           "subscription": 1,
           "example": ["deal", "dream", "deep", "~dead~"],
           "rows": [
-            ["deal", "dream", "deep", "dead"],
             ["bed", "breathe", "bead", "been"],
             ["week", "weak", "wheel", "when"],
             ["mean", "men", "meat", "meet"],

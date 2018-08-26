@@ -37,9 +37,9 @@ const countSelectors = (arr) => {
 
 class NewsStories extends Component {
   constructor (props) {
-    super(props)
-
     const other = {...props}
+
+    super(props)
 
     this.state = {
       other,
@@ -191,7 +191,7 @@ class NewsStories extends Component {
         <Typography variant='subheading' gutterBottom>
           <SplitHilite str={title} />
         </Typography>
-        <MemberGate content={content} userAuth={this.props.userAuth} {...this.other} />
+        <MemberGate content={content} userAuth={this.props.userAuth} {...this.props.other} />
       </div>
     )
   }
