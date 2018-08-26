@@ -39,7 +39,10 @@ class NewsStories extends Component {
   constructor (props) {
     super(props)
 
+    const other = {...props}
+
     this.state = {
+      other,
       sentences: [],
       selectedOption: [],
       selectedBgColour: []
@@ -188,7 +191,7 @@ class NewsStories extends Component {
         <Typography variant='subheading' gutterBottom>
           <SplitHilite str={title} />
         </Typography>
-        <MemberGate content={content} {...this.props} />
+        <MemberGate content={content} userAuth={this.props.userAuth} {...this.other} />
       </div>
     )
   }

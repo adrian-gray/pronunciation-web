@@ -398,6 +398,7 @@
         },
         "four in a row": {
           "subscription": 1,
+          "example": ["deal", "dream", "deep", "~dead~"],
           "rows": [
             ["deal", "dream", "deep", "dead"],
             ["bed", "breathe", "bead", "been"],

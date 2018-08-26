@@ -21,7 +21,10 @@ class Maze extends Component {
   constructor (props) {
     super(props)
 
+    const other = {...props}
+
     this.state = {
+      other,
       words: props.words,
       correct: props.correct
     }
@@ -98,7 +101,7 @@ class Maze extends Component {
         <Typography variant='title' gutterBottom>
           <SplitHilite str={title} />
         </Typography>
-        <MemberGate content={display} {...this.props} />
+        <MemberGate content={display} userAuth={this.props.userAuth} {...this.other} />
       </div>
     )
   }

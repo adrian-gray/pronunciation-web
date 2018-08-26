@@ -3,6 +3,7 @@ import React from 'react'
 import CommonWords from './../components/CommonWords'
 import Dialogues from './../components/Dialogues'
 import FindTheWords from './../components/FindTheWords'
+import FourInARow from './../components/FourInARow'
 import HowToPronounce from './../components/HowToPronounce'
 import NewsStories from './../components/NewsStories'
 import MinimalPairs from './../components/MinimalPairs'
@@ -23,57 +24,6 @@ const ExtractActivity = (params) => {
   const userAuth = subscriptionLevel >= requiredSubscriptionLevel
 
   switch (activityName) {
-    case 'how to pronounce':
-      activityComponent = (
-        <HowToPronounce
-          ipa={data.ipa}
-          arr={activity.text}
-          image={activity.image}
-          userAuth={userAuth}
-        />
-      )
-      break
-
-    case 'movie':
-      activityComponent = (
-        <Movie
-          ipa={data.ipa}
-          url={activity.url}
-          userAuth={userAuth}
-        />
-      )
-      break
-
-    case 'words':
-      activityComponent = (
-        <Words
-          ipa={data.ipa}
-          words={activity.words}
-          userAuth={userAuth}
-        />
-      )
-      break
-
-    case 'phrases':
-      activityComponent = (
-        <Phrases
-          phrases={activity.phrases}
-          ipa={data.ipa}
-          userAuth={userAuth}
-        />
-      )
-      break
-
-    case 'dialogues':
-      activityComponent = (
-        <Dialogues
-          ipa={data.ipa}
-          dialogues={activity.dialogues}
-          userAuth={userAuth}
-        />
-      )
-      break
-
     case 'common words':
       activityComponent = (
         <CommonWords
@@ -84,22 +34,11 @@ const ExtractActivity = (params) => {
       )
       break
 
-    case 'tongue twisters':
+    case 'dialogues':
       activityComponent = (
-        <TongueTwisters
+        <Dialogues
           ipa={data.ipa}
-          tongueTwisters={activity.twisters}
-          userAuth={userAuth}
-        />
-      )
-      break
-
-    case 'minimal pairs':
-      activityComponent = (
-        <MinimalPairs
-          ipa={data.ipa}
-          tag={data.tag}
-          pairs={activity.pairs}
+          dialogues={activity.dialogues}
           userAuth={userAuth}
         />
       )
@@ -119,6 +58,74 @@ const ExtractActivity = (params) => {
       )
       break
 
+    case 'four in a row':
+      activityComponent = (
+        <FourInARow
+          correct={activity.correct}
+          example={activity.example}
+          ipa={data.ipa}
+          rows={activity.rows}
+          tag={data.tag}
+          userAuth={userAuth}
+        />
+      )
+      break
+
+    case 'how to pronounce':
+      activityComponent = (
+        <HowToPronounce
+          ipa={data.ipa}
+          arr={activity.text}
+          image={activity.image}
+          userAuth={userAuth}
+        />
+      )
+      break
+
+    case 'minimal pairs':
+      activityComponent = (
+        <MinimalPairs
+          ipa={data.ipa}
+          tag={data.tag}
+          pairs={activity.pairs}
+          userAuth={userAuth}
+        />
+      )
+      break
+
+    case 'movie':
+      activityComponent = (
+        <Movie
+          ipa={data.ipa}
+          url={activity.url}
+          userAuth={userAuth}
+        />
+      )
+      break
+
+    case 'new stories': case 'beginner news stories': case 'intermediate news stories':
+      activityComponent = (
+        <NewsStories
+          title={activity.title}
+          headline={activity.headline}
+          options={activity.options}
+          sentences={activity.sentences}
+          answers={activity.answers}
+          userAuth={userAuth}
+        />
+      )
+      break
+
+    case 'phrases':
+      activityComponent = (
+        <Phrases
+          phrases={activity.phrases}
+          ipa={data.ipa}
+          userAuth={userAuth}
+        />
+      )
+      break
+
     case 'say the sentences':
       activityComponent = (
         <SayTheSentences
@@ -129,15 +136,21 @@ const ExtractActivity = (params) => {
       )
       break
 
-    case 'beginner news stories':
-    case 'intermediate news stories':
+    case 'tongue twisters':
       activityComponent = (
-        <NewsStories
-          title={activity.title}
-          headline={activity.headline}
-          options={activity.options}
-          sentences={activity.sentences}
-          answers={activity.answers}
+        <TongueTwisters
+          ipa={data.ipa}
+          tongueTwisters={activity.twisters}
+          userAuth={userAuth}
+        />
+      )
+      break
+
+    case 'words':
+      activityComponent = (
+        <Words
+          ipa={data.ipa}
+          words={activity.words}
           userAuth={userAuth}
         />
       )
@@ -157,7 +170,6 @@ const ExtractActivity = (params) => {
     case 'sort the words':
     case 'hear the words':
     case 'pronunciation journey':
-    case 'four in a row':
     case 'rhyming words':
     case 'count the sounds':
     case 'write the minimal pair':

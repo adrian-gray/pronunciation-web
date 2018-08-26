@@ -21,7 +21,10 @@ class FindTheWords extends Component {
   constructor (props) {
     super(props)
 
+    const {...other} = props
+
     this.state = {
+      other,
       isCorrect: Array(props.words.length).fill(undefined),
       wordTiles: [],
       allCorrect: false
@@ -102,7 +105,7 @@ class FindTheWords extends Component {
           <SplitHilite str={ipa} />
           {titleEnd}
         </Typography>
-        <MemberGate content={display} {...this.props} />
+        <MemberGate content={display} userAuth={this.props.userAuth} {...this.other} />
       </div>
     )
   }

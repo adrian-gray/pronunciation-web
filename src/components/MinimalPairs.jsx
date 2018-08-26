@@ -20,7 +20,7 @@ const styles = (theme) => ({
 })
 
 const MinimalPairs = (props) => {
-  const { classes, ipa, pairs, tag } = props
+  const { classes, ipa, pairs, tag, ...other } = props
 
   const rows = pairs.map((pair, key) => (
     <TableRow key={key}>
@@ -53,7 +53,7 @@ const MinimalPairs = (props) => {
         {`English  minimal pairs with ${tag} - `}
         <SplitHilite str={ipa} />
       </Typography>
-      <MemberGate content={display} {...props} />
+      <MemberGate content={display} {...other} />
     </div>
   )
 }

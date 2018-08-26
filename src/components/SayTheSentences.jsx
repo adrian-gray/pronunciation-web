@@ -19,7 +19,7 @@ const styles = (theme) => ({
 })
 
 const TongueTwisters = (props) => {
-  const { classes, ipa, sentences } = props
+  const { classes, ipa, sentences, ...other } = props
 
   const lines = sentences.map((line, index) => (
     <Paper className={classes.personalSpace} key={index}>
@@ -34,7 +34,7 @@ const TongueTwisters = (props) => {
       <Typography variant='title' gutterBottom>
         {'Say the '}<SplitHilite str={ipa} />{' sentences'}
       </Typography>
-      <MemberGate content={lines} {...props} />
+      <MemberGate content={lines} {...other} />
     </div>
   )
 }
