@@ -37,11 +37,12 @@ const countSelectors = (arr) => {
 
 class NewsStories extends Component {
   constructor (props) {
-    const other = {...props}
-
     super(props)
 
+    const { classes, ...other } = props
+
     this.state = {
+      classes,
       other,
       sentences: [],
       selectedOption: [],
@@ -86,6 +87,7 @@ class NewsStories extends Component {
               handleClick={this.handleClick}
               key={key}
               index={id}
+              {...this.state.other}
             />
           )
           id++
@@ -100,7 +102,7 @@ class NewsStories extends Component {
       } while (sentence.length)
 
       return (
-        <Typography key={index} className={this.props.classes.sentence}>
+        <Typography key={index} className={this.state.classes.sentence}>
           {fragments}
         </Typography>
       )
@@ -150,10 +152,10 @@ class NewsStories extends Component {
       this.checkForCorrect(newStateSelectedOption).map((value, index) => {
         switch (value) {
           case true:
-            selectedBgColour[index] = this.props.classes.green
+            selectedBgColour[index] = this.state.classes.green
             break
           case false:
-            selectedBgColour[index] = this.props.classes.red
+            selectedBgColour[index] = this.state.classes.red
             break
           default:
             selectedBgColour[index] = undefined
@@ -172,7 +174,8 @@ class NewsStories extends Component {
   }
 
   render () {
-    const { classes, headline, title } = this.props
+    const { headline, title } = this.props
+    const { classes } = this.state
 
     const content = (
       <Paper>

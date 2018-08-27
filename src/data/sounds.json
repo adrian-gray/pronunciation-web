@@ -398,7 +398,8 @@
         },
         "four in a row": {
           "subscription": 1,
-          "example": ["deal", "dream", "deep", "~dead~"],
+          "example": ["deal", "dream", "deep", "dead"],
+          "exampleHilite": 4,
           "rows": [
             ["bed", "breathe", "bead", "been"],
             ["week", "weak", "wheel", "when"],

@@ -63,6 +63,7 @@ const ExtractActivity = (params) => {
         <FourInARow
           correct={activity.correct}
           example={activity.example}
+          exampleHilite={activity.exampleHilite}
           ipa={data.ipa}
           rows={activity.rows}
           tag={data.tag}

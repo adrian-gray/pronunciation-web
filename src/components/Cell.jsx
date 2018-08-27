@@ -9,15 +9,17 @@ import {
 
 const styles = (theme) => ({
   cell: theme.cell,
+  cellHiliteBG: theme.cellHiliteBG,
   largeText: theme.largeText
 })
 
 const Cell = (props) => {
-  const { classes, key, str } = props
+  const { classes, hilite, key, str } = props
+  const cellClasses = hilite ? `${classes.cell} ${classes.cellHiliteBG}` : classes.cell
 
   return (
     <TableCell className={classes.cell} key={key}>
-      <Typography className={classes.largeText}>
+      <Typography className={cellClasses}>
         <SplitHilite str={str} />
       </Typography>
     </TableCell>

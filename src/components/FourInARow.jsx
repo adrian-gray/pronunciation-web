@@ -16,26 +16,27 @@ import {
 const styles = (theme) => ({
   largeText: theme.largeText,
   headspace: theme.headspace,
-  center: {
-    textAlign: 'center'
-  },
+  center: theme.center,
   cell: theme.cell,
   headBG: {
-    background: '#DDD'
+    background: '#EEE'
+  },
+  selectedBG: {
+    background: '#CCC'
   }
 })
 
 class FourInARow extends React.Component {
   constructor (props) {
-    const other = {...props}
-
     super(props)
 
+    const { classes, ...other } = props
     const title = `Select the words that ~DON'T~ have the ${props.tag} ${props.ipa} sound.`
 
     this.state = {
-      title,
+      classes,
       display: null,
+      title,
       other
     }
 
@@ -59,17 +60,17 @@ class FourInARow extends React.Component {
     })
 
     const guide = this.props.example.map((word, i) => (
-      <Cell str={word} key={i} {...this.state.other} />)
+      <Cell str={word} key={i} hilite={i + 1 === this.props.exampleHilite} {...this.state.other} />)
     )
     const tableHead = (
-      <TableHead className={this.props.classes.headBG}>
+      <TableHead className={this.state.classes.headBG}>
         <TableRow>
           {guide}
         </TableRow>
       </TableHead>
     )
 
-    const exHeadClass = `${this.props.classes.headBG} ${this.props.classes.center}`
+    const exHeadClass = `${this.state.classes.headBG} ${this.state.classes.center}`
     return (
       <div>
         <Typography variant='display1' className={exHeadClass}>
@@ -87,7 +88,7 @@ class FourInARow extends React.Component {
 
   render () {
     return (
-      <div className={this.props.classes.headspace} >
+      <div className={this.state.classes.headspace} >
         <Typography variant='title' gutterBottom>
           {`Four in a row using ${this.props.tag} - `}
           <SplitHilite str={this.props.ipa} />

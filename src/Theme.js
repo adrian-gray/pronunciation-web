@@ -40,6 +40,9 @@ export default createMuiTheme({
     paddingRight: 12,
     textAlign: 'center'
   },
+  cellHiliteBG: {
+    background: '#CCC'
+  },
   sentence: {
     padding: '0.5rem',
     paddingLeft: '1rem',
@@ -59,5 +62,8 @@ export default createMuiTheme({
   personalSpace: {
     padding: '1rem',
     margin: '1rem'
+  },
+  center: {
+    textAlign: 'center'
   }
 })
