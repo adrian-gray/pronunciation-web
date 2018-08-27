@@ -21,7 +21,7 @@ const MemberGate = (props) => {
     display = (
       <div>
         <Typography variant='subheading' className={props.classes.headspace} gutterBottom>
-          {'Sorry, the below activity is for members only.'}
+          {'Sorry, this interactive activity is for members only.'}
         </Typography>
         <div className={props.classes.blocked}>
           {props.content}

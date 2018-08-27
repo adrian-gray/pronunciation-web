@@ -113,6 +113,14 @@
             ["b~a~dge", "b~u~dge"]
           ]
         },
+        "say the sentences": {
+          "subscription": 1,
+          "sentences": [
+            "My uncle had a bad ankle.",
+            "Whatever you mutter doesn’t matter.",
+            "Just tap the top of the tape."
+          ]
+        },
         "find the words": {
           "subscription": 1,
           "words": [
@@ -153,14 +161,6 @@
             "pan",
             "tap",
             "ankle"
-          ]
-        },
-        "say the sentences": {
-          "subscription": 1,
-          "sentences": [
-            "My uncle had a bad ankle.",
-            "Whatever you mutter doesn’t matter.",
-            "Just tap the top of the tape."
           ]
         },
         "odd one out": {

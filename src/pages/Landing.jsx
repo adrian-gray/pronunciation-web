@@ -53,26 +53,26 @@ const Landing = (props) => {
       <Typography className={classes.para}>
         {'Take your English pronunciation to the next level'}
       </Typography>
-      <img
-        className={classes.fullWidth}
-        src='/assets/images/improve-english-pronounciation.jpg'
-        title='Learn to improve English pronunciation'
-        alt='Learn to improve English pronunciation'
-      />
       <hr className='my-4' />
       <Typography variant='headline' gutterBottom>
         {'Be in the know as soon as we launch'}
       </Typography>
-      <Mailchimp />
       <Typography className={classes.headspace} gutterBottom>
         {'We are currently adding sounds and activities multiple times a week and are eopn in a limited testing capacity. We aim to launch in late 2018.'}
       </Typography>
+      <Mailchimp />
       <hr className='my-4' />
       <div className={classes.center}>
         <Button variant='contained' size='large' className={classes.button} component={Link} to='/home'>
           {'Start Pronunciation Practice'}
         </Button>
       </div>
+      <img
+        className={classes.fullWidth}
+        src='/assets/images/improve-english-pronounciation.jpg'
+        title='Learn to improve English pronunciation'
+        alt='Learn to improve English pronunciation'
+      />
     </Paper>
   )
 }

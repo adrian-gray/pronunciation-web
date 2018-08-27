@@ -144,7 +144,6 @@ const ExtractActivity = (params) => {
         <SayTheSentences
           ipa={data.ipa}
           sentences={activity.sentences}
-          userAuth={userAuth}
         />
       )
       break
