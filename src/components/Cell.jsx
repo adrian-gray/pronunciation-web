@@ -33,8 +33,8 @@ class Cell extends React.Component {
     const cellClasses = hilite ? `${classes.cell} ${hilite}` : classes.cell
 
     return (
-      <TableCell className={classes.cell} key={key} onClick={this.handleClick}>
-        <Typography className={cellClasses}>
+      <TableCell className={cellClasses} key={key} onClick={this.handleClick}>
+        <Typography>
           <SplitHilite str={str} />
         </Typography>
       </TableCell>
