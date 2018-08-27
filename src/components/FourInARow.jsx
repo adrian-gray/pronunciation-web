@@ -114,6 +114,7 @@ class FourInARow extends React.Component {
   }
 
   handleClick (params) {
+    if (!this.state.userAuth) return
     const { column, row } = params
     const arr = this.state.selected.slice()
     arr[row] = column

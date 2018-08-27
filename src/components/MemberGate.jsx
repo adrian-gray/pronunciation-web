@@ -6,7 +6,10 @@ import {
 } from '@material-ui/core'
 
 const styles = (theme) => ({
-  headspace: theme.headspace
+  headspace: theme.headspace,
+  blocked: {
+    opacity: 0.2
+  }
 })
 
 const MemberGate = (props) => {
@@ -16,9 +19,14 @@ const MemberGate = (props) => {
     display = props.content
   } else {
     display = (
-      <Typography variant='subheading' className={props.classes.headspace} gutterBottom>
-        {'Sorry, this activity is for members only.'}
-      </Typography>
+      <div>
+        <Typography variant='subheading' className={props.classes.headspace} gutterBottom>
+          {'Sorry, the below activity is for members only.'}
+        </Typography>
+        <div className={props.classes.blocked}>
+          {props.content}
+        </div>
+      </div>
     )
   }
 

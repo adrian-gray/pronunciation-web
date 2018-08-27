@@ -62,7 +62,8 @@ class Maze extends Component {
     if (this && this.state) {
       wordsMaze.init({
         words: this.state.words,
-        correct: this.state.correct
+        correct: this.state.correct,
+        auth: this.props.userAuth
       })
     } else {
       console.log('Words Maze state no longer exists, move on without creating game')

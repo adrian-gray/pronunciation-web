@@ -21,6 +21,7 @@ class Cell extends React.Component {
 
   handleClick (e) {
     e.preventDefault()
+    if (!this.props.handleClick) return
     this.props.handleClick({
       column: this.props.column,
       row: this.props.row,

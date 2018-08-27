@@ -145,6 +145,7 @@ class NewsStories extends Component {
   }
 
   handleClick (index) {
+    if (!this.props.userAuth) return
     const newStateSelectedOption = this.state.selectedOption.slice()
     const selectedBgColour = []
     newStateSelectedOption[index] = (this.state.selectedOption[index] + 1) % this.props.options.length

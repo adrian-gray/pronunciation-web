@@ -47,6 +47,7 @@ Game.prototype = {
     $tiles.add(handleTileSignal, this)
 
     function handleTileSignal (e) {
+      if (!game.isAuth) return
       const { word, index, row, col } = e
       if (game.data.correct.includes(word)) {
         handleTileCorrect(index, row, col)

@@ -10,6 +10,7 @@ const WordsMaze = {
   init (params) {
     game = new Phaser.Game(750, 750, Phaser.AUTO, 'words-maze')
     game.data = params
+    game.isAuth = params.auth
     game.state.add('boot', Boot)
     game.state.add('game', Game)
     game.state.start('boot')
