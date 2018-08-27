@@ -12,8 +12,8 @@ const meta = {
     imageTW: `${URL}/assets/images/pronunciation-twitter.jpg`
   },
   'landing': {
-    title: `English pronunciation practice activities`,
-    description: `English pronunciation lessons and practice with Nicky Brookes, English language consultant. PronounceWeb.com has videos helping you learn how to improve English pronunciation, English pronunciation exercises, and English pronunciation activities.`,
+    title: `Pronunciation practice to improve your spoken English language`,
+    description: `English pronunciation practice and lessons with Nicky Brookes, English language consultant. We have videos helping you learn how to improve your spoken English, English pronunciation exercises, and English pronunciation activities.`,
     canonical: URL
   },
   'home': {

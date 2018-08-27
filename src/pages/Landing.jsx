@@ -39,16 +39,16 @@ const Landing = (props) => {
     <Paper className={classes.page}>
       <SEO meta='landing' />
       <Typography variant='display2' gutterBottom>
-        {'English Pronunciation Lessons'}
+        {'Pronunciation Practice'}
       </Typography>
       <Typography variant='display1' gutterBottom>
-        {'Improve English Pronunciation'}
+        {'Improve Your Spoken English'}
       </Typography>
       <Typography className={classes.para} gutterBottom>
-        {'Is poor English pronunciation holding you back in your career or studies? Do you want to improve English pronunciation, but are not sure how? We are here to help you.'}
+        {'Is poor English pronunciation holding you back in your career or studies? Do you want to improve your spoken English, but are not sure how? We are here to help you.'}
       </Typography>
       <Typography className={classes.para} gutterBottom>
-        {'We have English pronunciation video lessons from a registered English pronunciation instructor. The pronunciation lessons are followed by English pronunciation examples, recorded conversations, and interactive activities to help improve your pronunciation the right way. You will learn how to pronounce English clearly and professionally.'}
+        {'We have English pronunciation video lessons from a registered English pronunciation instructor. We follow the pronunciation lessons with English pronunciation examples, recorded conversations, and interactive activities to help improve your pronunciation the right way. Learn how to improve your English pronunciation to speak clearly and professionally.'}
       </Typography>
       <Typography className={classes.para}>
         {'Take your English pronunciation to the next level'}
@@ -65,12 +65,12 @@ const Landing = (props) => {
       </Typography>
       <Mailchimp />
       <Typography className={classes.headspace} gutterBottom>
-        {'We are currently running in a limited test. We aim to launch in late 2018.'}
+        {'We are currently adding sounds and activities multiple times a week and are eopn in a limited testing capacity. We aim to launch in late 2018.'}
       </Typography>
       <hr className='my-4' />
       <div className={classes.center}>
         <Button variant='contained' size='large' className={classes.button} component={Link} to='/home'>
-          {'Get Started with Pronunciation activities'}
+          {'Start Pronunciation Practice'}
         </Button>
       </div>
     </Paper>
