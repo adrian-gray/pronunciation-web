@@ -13,17 +13,34 @@ const styles = (theme) => ({
   largeText: theme.largeText
 })
 
-const Cell = (props) => {
-  const { classes, hilite, key, str } = props
-  const cellClasses = hilite ? `${classes.cell} ${classes.cellHiliteBG}` : classes.cell
+class Cell extends React.Component {
+  constructor (props) {
+    super(props)
 
-  return (
-    <TableCell className={classes.cell} key={key}>
-      <Typography className={cellClasses}>
-        <SplitHilite str={str} />
-      </Typography>
-    </TableCell>
-  )
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick (e) {
+    e.preventDefault()
+    this.props.handleClick({
+      column: this.props.column,
+      row: this.props.row,
+      str: this.props.str
+    })
+  }
+
+  render () {
+    const { classes, hilite, key, str } = this.props
+    const cellClasses = hilite ? `${classes.cell} ${classes.cellHiliteBG}` : classes.cell
+
+    return (
+      <TableCell className={classes.cell} key={key} onClick={this.handleClick}>
+        <Typography className={cellClasses}>
+          <SplitHilite str={str} />
+        </Typography>
+      </TableCell>
+    )
+  }
 }
 
 export default withStyles(styles)(Cell)

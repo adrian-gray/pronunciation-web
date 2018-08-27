@@ -30,30 +30,50 @@ class FourInARow extends React.Component {
   constructor (props) {
     super(props)
 
-    const { classes, ...other } = props
+    const { classes, userAuth, ...other } = props
     const title = `Select the words that ~DON'T~ have the ${props.tag} ${props.ipa} sound.`
 
     this.state = {
       classes,
-      display: null,
+      selected: new Array(props.rows.length).fill(-1),
       title,
+      userAuth: userAuth,
       other
     }
 
     this.buildTable = this.buildTable.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  componentDidMount () {
-    this.setState({ display: this.buildTable() })
+  shouldComponentUpdate (nextProps, nextState) {
+    if (nextProps.userAuth !== this.state.userAuth) {
+      this.setState({ userAuth: nextProps.userAuth })
+      return true
+    }
+    if (nextState.selected !== this.state.selected) {
+      return true
+    }
+    return false
   }
 
   buildTable () {
-    const displayRows = this.props.rows.map((row, key) => {
-      const cells = row.map((word, i) => (
-        <Cell str={word} key={i} {...this.state.other} />)
-      )
+    const displayRows = this.props.rows.map((arr, row) => {
+      const cells = arr.map((word, column) => {
+        const isSelected = this.state.selected[row] === column
+        return (
+          <Cell
+            str={word}
+            column={column}
+            row={row}
+            key={column}
+            handleClick={this.handleClick}
+            hilite={isSelected}
+            {...this.state.other}
+          />
+        )
+      })
       return (
-        <TableRow key={key}>
+        <TableRow key={row}>
           {cells}
         </TableRow>
       )
@@ -86,7 +106,23 @@ class FourInARow extends React.Component {
     )
   }
 
+  handleClick (params) {
+    const { column, row, str } = params
+    const arr = this.state.selected.slice()
+    arr[row] = column
+    this.setState({ selected: arr })
+
+    // If aray filled in, check for correct
+    if (this.props.correct.includes(str)) {
+      console.log('correct')
+    } else {
+      console.log('nope')
+    }
+  }
+
   render () {
+    const content = this.buildTable()
+
     return (
       <div className={this.state.classes.headspace} >
         <Typography variant='title' gutterBottom>
@@ -96,7 +132,7 @@ class FourInARow extends React.Component {
         <Typography variant='subheading'>
           <SplitHilite str={this.state.title} />
         </Typography>
-        <MemberGate content={this.state.display} userAuth={this.props.userAuth} {...this.state.other} />
+        <MemberGate content={content} userAuth={this.state.userAuth} {...this.state.other} />
       </div>
     )
   }
