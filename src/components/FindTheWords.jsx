@@ -13,8 +13,9 @@ import Tile from './Tile'
 const styles = (theme) => ({
   headspace: theme.headspace,
   clearFloat: theme.clearFloat,
-  correct: theme.correct,
-  greenBG: theme.greenBG
+  center: theme.center,
+  correctBG: theme.correctBG,
+  incorrectBG: theme.incorrectBG
 })
 
 class FindTheWords extends Component {
@@ -73,11 +74,11 @@ class FindTheWords extends Component {
 
     if (this.state.allCorrect) {
       result = (
-        <Typography className={classes.correct} variant='display3' gutterBottom>
+        <Typography className={classes.center} variant='display3' gutterBottom>
           {'Yes ✓'}
         </Typography>
       )
-      resultBG = classes.greenBG
+      resultBG = classes.correctBG
     }
 
     this.wordTiles = words.map((word, index) => (

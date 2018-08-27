@@ -9,7 +9,6 @@ import {
 
 const styles = (theme) => ({
   cell: theme.cell,
-  cellHiliteBG: theme.cellHiliteBG,
   largeText: theme.largeText
 })
 
@@ -31,7 +30,7 @@ class Cell extends React.Component {
 
   render () {
     const { classes, hilite, key, str } = this.props
-    const cellClasses = hilite ? `${classes.cell} ${classes.cellHiliteBG}` : classes.cell
+    const cellClasses = hilite ? `${classes.cell} ${hilite}` : classes.cell
 
     return (
       <TableCell className={classes.cell} key={key} onClick={this.handleClick}>

@@ -6,9 +6,9 @@ const openActivities = ['how to pronounce', 'movie', 'words', 'phrases',
   'dialogues', 'common words', 'tongue twisters']
 const memberActivities = ['minimal pairs', 'find the words',
   'say the sentences', 'odd one out', 'beginner news stories',
-  'intermediate news stories', 'words maze']
+  'intermediate news stories', 'words maze', 'four in a row']
 const pendingActivities = ['hear the words', 'pronunciation journey',
-  'sort the words', 'four in a row', 'rhyming words', 'count the sounds',
+  'sort the words', 'rhyming words', 'count the sounds',
   'write the minimal pair', 'join to make words', 'listen to the sounds',
   'minimal pairs dominos']
 

@@ -34,6 +34,7 @@ const sitemap = sm.createSitemap({
     { url: '/sound/long-e/common-words', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/tongue-twisters', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/minimal-pairs', changefreq: 'weekly', priority: 0.5 },
+    { url: '/sound/long-e/four-in-a-row', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/beginner-news-stories', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/intermediate-news-stories', changefreq: 'weekly', priority: 0.5 },
     { url: '/sound/long-e/words-maze', changefreq: 'weekly', priority: 0.5 },

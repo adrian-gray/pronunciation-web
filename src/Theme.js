@@ -43,6 +43,12 @@ export default createMuiTheme({
   cellHiliteBG: {
     background: '#CCC'
   },
+  correctBG: {
+    background: '#CFC'
+  },
+  incorrectBG: {
+    background: '#FCC'
+  },
   sentence: {
     padding: '0.5rem',
     paddingLeft: '1rem',
@@ -51,13 +57,6 @@ export default createMuiTheme({
   },
   clearFloat: {
     clear: 'both'
-  },
-  correct: {
-    textAlign: 'center',
-    color: '#AAEEAA'
-  },
-  greenBG: {
-    backgroundColor: '#EEFFEE'
   },
   personalSpace: {
     padding: '1rem',

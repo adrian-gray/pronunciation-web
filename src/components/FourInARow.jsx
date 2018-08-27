@@ -18,6 +18,9 @@ const styles = (theme) => ({
   headspace: theme.headspace,
   center: theme.center,
   cell: theme.cell,
+  cellHiliteBG: theme.cellHiliteBG,
+  correctBG: theme.correctBG,
+  incorrectBG: theme.incorrectBG,
   headBG: {
     background: '#EEE'
   },
@@ -36,6 +39,7 @@ class FourInARow extends React.Component {
     this.state = {
       classes,
       selected: new Array(props.rows.length).fill(-1),
+      rowHiliteColor: new Array(props.rows.length),
       title,
       userAuth: userAuth,
       other
@@ -43,6 +47,7 @@ class FourInARow extends React.Component {
 
     this.buildTable = this.buildTable.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    this.checkComplete = this.checkComplete.bind(this)
   }
 
   shouldComponentUpdate (nextProps, nextState) {
@@ -60,6 +65,7 @@ class FourInARow extends React.Component {
     const displayRows = this.props.rows.map((arr, row) => {
       const cells = arr.map((word, column) => {
         const isSelected = this.state.selected[row] === column
+        const cellBG = isSelected ? this.state.rowHiliteColor[row] : null
         return (
           <Cell
             str={word}
@@ -67,7 +73,7 @@ class FourInARow extends React.Component {
             row={row}
             key={column}
             handleClick={this.handleClick}
-            hilite={isSelected}
+            hilite={cellBG}
             {...this.state.other}
           />
         )
@@ -79,9 +85,10 @@ class FourInARow extends React.Component {
       )
     })
 
-    const guide = this.props.example.map((word, i) => (
-      <Cell str={word} key={i} hilite={i + 1 === this.props.exampleHilite} {...this.state.other} />)
-    )
+    const guide = this.props.example.map((word, i) => {
+      const hilite = (i + 1 === this.props.exampleHilite) ? this.state.selectedBG : null
+      return <Cell str={word} key={i} hilite={hilite} {...this.state.other} />
+    })
     const tableHead = (
       <TableHead className={this.state.classes.headBG}>
         <TableRow>
@@ -107,17 +114,27 @@ class FourInARow extends React.Component {
   }
 
   handleClick (params) {
-    const { column, row, str } = params
+    const { column, row } = params
     const arr = this.state.selected.slice()
     arr[row] = column
     this.setState({ selected: arr })
 
-    // If aray filled in, check for correct
-    if (this.props.correct.includes(str)) {
-      console.log('correct')
-    } else {
-      console.log('nope')
-    }
+    this.checkComplete(arr)
+  }
+
+  checkComplete (arr) {
+    const rowHiliteColor = this.state.rowHiliteColor.slice()
+    arr.forEach((column, row) => {
+      if (column > -1) {
+        const word = this.props.rows[row][column]
+        if (this.props.correct.includes(word)) {
+          rowHiliteColor[row] = this.state.classes.correctBG
+        } else {
+          rowHiliteColor[row] = this.state.classes.incorrectBG
+        }
+      }
+    })
+    this.setState({ rowHiliteColor })
   }
 
   render () {

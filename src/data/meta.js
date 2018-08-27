@@ -121,6 +121,10 @@ const meta = {
     title: 'English language minimal pairs pronunciation practice with long e, or /i!/ sound',
     canonical: `${URL}/sound/long-e/minimal-pairs`
   },
+  'sound long-e four in a row': {
+    title: 'Practice English pronuncition with long e Four in a Row activity, or /i!/ sound',
+    canonical: `${URL}/sound/long-e/four-ia-a-row`
+  },
   'sound long-e beginner news stories': {
     title: 'Beginner Identify the News Story sounds, practice long and short e sounds',
     canonical: `${URL}/sound/long-e/beginner-news-stories`

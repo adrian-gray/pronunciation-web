@@ -8,6 +8,8 @@ import {
 
 const styles = (theme) => ({
   largeText: theme.largeText,
+  correctBG: theme.correctBG,
+  incorrectBG: theme.incorrectBG,
   left: {
     ...theme.subCanvas,
     float: 'left',
@@ -16,12 +18,6 @@ const styles = (theme) => ({
   },
   clickable: {
     cursor: 'pointer'
-  },
-  correct: {
-    backgroundColor: '#CCFFCC'
-  },
-  incorrect: {
-    backgroundColor: '#FFCCCC'
   }
 })
 
@@ -42,9 +38,9 @@ class Tile extends Component {
 
     let correctStatus = null
     if (this.props.isCorrect) {
-      paperClasses.push(classes.correct)
+      paperClasses.push(classes.correctBG)
     } else if (this.props.isCorrect === false) {
-      paperClasses.push(classes.incorrect)
+      paperClasses.push(classes.incorrectBG)
     }
 
     return (

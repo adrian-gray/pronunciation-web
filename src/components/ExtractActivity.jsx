@@ -45,11 +45,23 @@ const ExtractActivity = (params) => {
       break
 
     case 'find the words':
-    case 'odd one out':
       activityComponent = (
         <FindTheWords
           ipa={data.ipa}
           titleStart='Select the words with an '
+          titleEnd='sound'
+          words={activity.words}
+          correct={activity.correct}
+          userAuth={userAuth}
+        />
+      )
+      break
+
+    case 'odd one out':
+      activityComponent = (
+        <FindTheWords
+          ipa={data.ipa}
+          titleStart="Select the words that DON'T have an "
           titleEnd='sound'
           words={activity.words}
           correct={activity.correct}
