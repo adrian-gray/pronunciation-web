@@ -86,7 +86,7 @@ class FourInARow extends React.Component {
     })
 
     const guide = this.props.example.map((word, i) => {
-      const hilite = (i + 1 === this.props.exampleHilite) ? this.state.selectedBG : null
+      const hilite = (i + 1 === this.props.exampleHilite) ? this.state.classes.selectedBG : null
       return <Cell str={word} key={i} hilite={hilite} {...this.state.other} />
     })
     const tableHead = (
