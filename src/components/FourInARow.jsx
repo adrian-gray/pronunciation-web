@@ -97,10 +97,10 @@ class FourInARow extends React.Component {
       </TableHead>
     )
 
-    const exHeadClass = `${this.state.classes.headBG} ${this.state.classes.center}`
+    const exHeadClass = `${this.state.classes.headspace} ${this.state.classes.center}`
     return (
       <div>
-        <Typography variant='display1' className={exHeadClass}>
+        <Typography variant='subheading' className={exHeadClass}>
           {'Example'}
         </Typography>
         <Table>
