@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core'
 
 import { auth } from './firebase'
+import { BrowserRouter } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Router from './Router'
 import SEO from './components/SEO'
@@ -82,19 +83,21 @@ class App extends React.Component {
     const { classes } = this.props
 
     return (
-      <div>
-        <CssBaseline />
-        <MuiThemeProvider theme={Theme}>
-          <div className={classes.root}>
-            <SEO />
-            <NavBar user={this.state.user} signout={this.signout} />
-            <Router
-              user={this.state.user}
-              subscriptionLevel={this.state.subscriptionLevel}
-            />
-          </div>
-        </MuiThemeProvider>
-      </div>
+      <BrowserRouter>
+        <div>
+          <CssBaseline />
+          <MuiThemeProvider theme={Theme}>
+            <div className={classes.root}>
+              <SEO />
+              <NavBar user={this.state.user} signout={this.signout} />
+              <Router
+                user={this.state.user}
+                subscriptionLevel={this.state.subscriptionLevel}
+              />
+            </div>
+          </MuiThemeProvider>
+        </div>
+      </BrowserRouter>
     )
   }
 }
