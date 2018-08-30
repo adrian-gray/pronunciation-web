@@ -20,6 +20,9 @@ const meta = {
     title: 'English pronunciation activites home, select your sounds to practice',
     cononical: `${URL}/home`
   },
+  '404': {
+    title: 'Oops, page not found - 404 error'
+  },
   'sounds': {
     title: `English sounds pronunciation practice. Phoenetic list of practice sounds.`,
     canonical: `${URL}/sounds`

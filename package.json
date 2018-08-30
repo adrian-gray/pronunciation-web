@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "yarn sitemap; webpack --config webpack.config.production.js",
+    "build": "yarn rimraf dist && yarn sitemap && webpack --config webpack.config.production.js",
     "dev": "webpack-dev-server --config webpack.config.development.js --watch",
     "postbuild": "react-snap",
     "deploy": "yarn firebase deploy",
@@ -40,6 +40,7 @@
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.2",
     "react-snap": "^1.10.1",
+    "rimraf": "^2.6.2",
     "sass-loader": "^7.0.3",
     "sitemap": "^1.13.0",
     "standard": "^11.0.1",

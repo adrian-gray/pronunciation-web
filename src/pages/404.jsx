@@ -1,4 +1,6 @@
 import React from 'react'
+
+import SEO from './../components/SEO'
 import { Link } from 'react-router-dom'
 
 import {
@@ -12,9 +14,11 @@ const styles = (theme) => ({
 
 const FourOhFour = (props) => {
   const { classes } = props
+  const SEOlocation = '404'
 
   return (
     <div className={classes.headspace}>
+      <SEO meta={SEOlocation} />
       <Typography variant='title' gutterBottom>
         {`Oops, that address is not a thing I understand.`}
       </Typography>
