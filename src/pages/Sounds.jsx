@@ -31,7 +31,7 @@ const Sounds = (props) => {
     <Paper className={classes.page}>
       <SEO meta='sounds' />
       <Typography variant='display1' gutterBottom>
-        {'Phoenetic English Pronunciation'}
+        {'English Pronunciation Sounds'}
       </Typography>
       {cards}
     </Paper>

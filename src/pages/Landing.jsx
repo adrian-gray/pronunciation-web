@@ -39,10 +39,10 @@ const Landing = (props) => {
   return (
     <Paper className={classes.page}>
       <SEO meta='landing' />
-      <Typography variant='display2' gutterBottom>
+      <Typography variant='display1' gutterBottom>
         {'Pronunciation Practice'}
       </Typography>
-      <Typography variant='display1' gutterBottom>
+      <Typography variant='title' gutterBottom>
         {'Improve Your Spoken English'}
       </Typography>
       <Typography className={classes.para} gutterBottom>
@@ -54,7 +54,7 @@ const Landing = (props) => {
       <Typography className={classes.para} gutterBottom>
         {'Following the pronunciation lessons are English pronunciation examples, recorded conversations, and interactive activities to help improve your pronunciation the right way. We are adding currently adding sounds and activities weekly. Improve your English pronunciation to speak clearly and professionally.'}
       </Typography>
-      <Typography variant='headline' gutterBottom>
+      <Typography variant='title' gutterBottom>
         {'Stay up to date as we add pronunciation activities'}
       </Typography>
       <Typography className={classes.headspace} gutterBottom>
@@ -63,7 +63,7 @@ const Landing = (props) => {
       <Mailchimp />
       <div className={classes.startBtn}>
         <Button variant='contained' size='large' className={classes.button} component={Link} to='/home'>
-          {'Start Pronunciation Practice'}
+          {'Start Practicing Pronunciation'}
         </Button>
       </div>
       <img
