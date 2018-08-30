@@ -18,7 +18,7 @@ const meta = {
   },
   'home': {
     title: 'English pronunciation activites home, select your sounds to practice',
-    cononical: `${URL}/home`
+    canonical: `${URL}/home`
   },
   '404': {
     title: 'Oops, page not found - 404 error'
@@ -90,7 +90,7 @@ const meta = {
 
   'sound long-e none': {
     title: 'How to pronounce long e in English. Lessons and interactive activities.',
-    canonical: `${URL}/sound/long-a`
+    canonical: `${URL}/sound/long-e`
   },
   'sound long-e how to pronounce': {
     title: 'How to pronounce /i!/, the long e in English. Description and images.',
