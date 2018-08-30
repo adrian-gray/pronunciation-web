@@ -6,6 +6,7 @@ const sitemap = sm.createSitemap({
   hostname: 'https://pronounceweb.com',
   cacheTime: 600000,
   urls: [
+    { url: '/', changefreq: 'weekly', priority: 0.5 },
     { url: '/home', changefreq: 'weekly', priority: 0.5 },
     { url: '/sounds', changefreq: 'weekly', priority: 0.5 },
 
