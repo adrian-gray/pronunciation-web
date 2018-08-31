@@ -3692,6 +3692,10 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
+firebase-encode@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/firebase-encode/-/firebase-encode-0.0.5.tgz#3184d2d53a8d9b41a3ee9f27274554156d750905"
+
 firebase-tools@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-4.1.2.tgz#7ce6718e15e2011120785891edd667c2e2cf206d"

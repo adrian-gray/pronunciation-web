@@ -36,7 +36,6 @@ const Sound = (props) => {
   }
 
   const SEOlocation = `sound ${phoneme} ${activity}`
-  console.log('---', SEOlocation)
 
   const activityComponent = ExtractActivity({
     activityName: activity,

@@ -55,7 +55,7 @@ class NavBar extends React.Component {
       homeLink = '/home'
     } else {
       changeLoginStatus = (
-        <Button component={Link} to='/login' color='inherit'>{'Log In'}</Button>
+        <Button component={Link} to='/login' color='inherit'>{'Sign In or Up'}</Button>
       )
     }
 
