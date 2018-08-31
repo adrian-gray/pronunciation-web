@@ -126,7 +126,7 @@ const meta = {
   },
   'sound long-e four in a row': {
     title: 'Practice English pronuncition with long e Four in a Row activity, or /i!/ sound',
-    canonical: `${URL}/sound/long-e/four-ia-a-row`
+    canonical: `${URL}/sound/long-e/four-in-a-row`
   },
   'sound long-e beginner news stories': {
     title: 'Beginner Identify the News Story sounds, practice long and short e sounds',
