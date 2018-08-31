@@ -13,14 +13,6 @@ const styles = (theme) => ({
     container: {
       display: 'flex',
       flexWrap: 'wrap'
-    },
-    textField: {
-      marginLeft: theme.spacing.unit,
-      marginRight: theme.spacing.unit,
-      width: 200
-    },
-    menu: {
-      width: 200
     }
   }
 })
@@ -143,7 +135,7 @@ class MailchimpForm extends React.Component {
       case 'success':
         status = (
           <Typography gutterBottom>
-            {`Thankyou for subscribing`}
+            {`Thanks for subscribing`}
           </Typography>
         )
     }
@@ -182,7 +174,7 @@ class MailchimpForm extends React.Component {
             variant='raised'
             color='secondary'
           >
-            Keep me updated!
+            {'Keep me updated!'}
           </Button>
         </form>
       </div>
