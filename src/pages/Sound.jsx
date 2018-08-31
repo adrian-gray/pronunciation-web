@@ -20,8 +20,9 @@ const styles = (theme) => ({
 const Sound = (props) => {
   const { classes } = props
   const phoneme = props.match.params.phoneme
-  const activity = props.match.params.activity &&
-                   props.match.params.activity.replace(/-/g, ' ')
+  const activity = (props.match.params.activity &&
+                    props.match.params.activity.replace(/-/g, ' ')) ||
+                    'none'
   const data = jsonData['phonemes'][phoneme]
 
   if (!data) {

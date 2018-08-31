@@ -195,7 +195,6 @@ const ExtractActivity = (params) => {
       break
 
     default:
-      console.log('Pending activity:', activityName)
       activityComponent = undefined
   }
 
