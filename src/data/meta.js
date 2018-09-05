@@ -2,7 +2,7 @@ const URL = 'https://pronounceweb.com'
 
 // title 65-75
 //  title: `##########**********##########**********##########**********@@@@@----------
-// description 50 - 300
+// description 150 - 170
 //  description: `##########**********##########**********##########++++`
 const meta = {
   'default': {
@@ -57,6 +57,7 @@ const meta = {
   },
   'sound short-a tongue twisters': {
     title: 'English language tongue twisters featuring short ‘a’, or æ sounds',
+    description: 'Enjoy the challenge of Tongue Twisters. Three tongue twisters to perfect the short ‘a’ sound. Try to say each one as many times as you can, no mistakes.',
     canonical: `${URL}/sound/short-a/tongue-twisters`
   },
   'sound short-a minimal pairs': {

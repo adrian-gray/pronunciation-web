@@ -151,7 +151,7 @@ const ExtractActivity = (params) => {
     case 'tongue twisters':
       activityComponent = (
         <TongueTwisters
-          ipa={data.ipa}
+          tag={data.tag}
           tongueTwisters={activity.twisters}
           userAuth={userAuth}
         />
