@@ -66,6 +66,7 @@ const meta = {
   },
   'sound short-a find the words': {
     title: 'English pronunciation activty for the short ‘a’ sound. Find The Words with æ',
+    description: 'Say words and select those with a short ‘a’ sound. Click on words to hear the pronunciation. Helps you recognise and pronounce common English words.',
     canonical: `${URL}/sound/short-a/find-the-words`
   },
   'sound short-a say the sentences': {

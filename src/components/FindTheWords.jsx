@@ -67,7 +67,7 @@ class FindTheWords extends Component {
   }
 
   render () {
-    const { classes, ipa, titleStart, titleEnd, words } = this.props
+    const { classes, ipa, tag, titleStart, titleEnd, words } = this.props
 
     let result = ''
     let resultBG = ''
@@ -105,6 +105,9 @@ class FindTheWords extends Component {
           {titleStart}
           <SplitHilite str={ipa} />
           {titleEnd}
+        </Typography>
+        <Typography>
+          {`Find the correct sound. Say the words and select those with the ${tag} sound. Once you get a word, it is replaced with a more challenging word. Can you find all the words before your time runs out? You can click on words to hear the pronunciation. Find the words helps you recognise and pronounce the vowel sounds of common English words.`}
         </Typography>
         <MemberGate content={display} userAuth={this.props.userAuth} {...this.other} />
       </div>

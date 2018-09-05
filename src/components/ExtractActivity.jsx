@@ -48,6 +48,7 @@ const ExtractActivity = (params) => {
       activityComponent = (
         <FindTheWords
           ipa={data.ipa}
+          tag={data.tag}
           titleStart='Select the words with an '
           titleEnd='sound'
           words={activity.words}
