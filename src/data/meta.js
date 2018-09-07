@@ -74,19 +74,23 @@ const meta = {
     canonical: `${URL}/sound/short-a/say-the-sentences`
   },
   'sound short-a odd one out': {
-    title: "Odd One Out English pronunciation practice. Which words don't have a short ‘a’?",
+    title: 'Odd One Out English pronunciation practice. Which words don\'t have a short ‘a’?',
+    description: 'Odd One Out helps you recognise and pronounce the short ‘a’ vowel sound of common English words. Can you find all the odd words before your time runs out?',
     canonical: `${URL}/sound/short-a/odd-one-out`
   },
   'sound short-a beginner news stories': {
     title: 'Beginner Identify the News Story sounds,  practice long and short ‘a’ sounds',
+    description: 'News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.',
     canonical: `${URL}/sound/short-a/beginner-news-stories`
   },
   'sound short-a intermediate news stories': {
     title: 'Intermediate Identify the News Story sounds,  practice long and short ‘a’ sounds',
+    description: 'News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.',
     canonical: `${URL}/sound/short-a/intermediate-news-stories`
   },
   'sound short-a words maze': {
     title: 'Solve the Words Maze puzzle - short ‘a’. Short practice English pronunciation with short ‘a’',
+    description: 'Maze is an interactive pronunciation game that helps you become familiar with common English words so you can speak with confidence.',
     canonical: `${URL}/sound/short-a/words-maze`
   },
 
@@ -120,6 +124,7 @@ const meta = {
   },
   'sound long-e tongue twisters': {
     title: 'English language tongue twisters featuring long ‘e’, or /i!/ sound',
+    description: 'Enjoy the challenge of Tongue Twisters. Three tongue twisters to perfect the long ‘e’ sound. Try to say each one as many times as you can, no mistakes.',
     canonical: `${URL}/sound/long-e/tongue-twisters`
   },
   'sound long-e minimal pairs': {
@@ -128,18 +133,22 @@ const meta = {
   },
   'sound long-e four in a row': {
     title: 'Practice English pronuncition with long ‘e’ Four in a Row activity, or /i!/ sound',
+    description: 'Four in a Row helps you identify differences between similar sounding vowels. Three with the long ‘e’ vowel sound and one different sound.',
     canonical: `${URL}/sound/long-e/four-in-a-row`
   },
   'sound long-e beginner news stories': {
     title: 'Beginner Identify the News Story sounds, practice long and short e sounds',
+    description: 'News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.',
     canonical: `${URL}/sound/long-e/beginner-news-stories`
   },
   'sound long-e intermediate news stories': {
     title: 'Intermediate Identify the News Story sounds, practice long and short e sounds',
+    description: 'News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.',
     canonical: `${URL}/sound/long-e/intermediate-news-stories`
   },
   'sound long-e words maze': {
     title: 'Solve the Words Maze puzzle - long ‘e’. English pronunciation practice with long ‘e’ sound',
+    description: 'Maze is an interactive pronunciation game that helps you become familiar with common English words so you can speak with confidence.',
     canonical: `${URL}/sound/long-e/words-maze`
   },
 
@@ -173,6 +182,7 @@ const meta = {
   },
   'sound short-i tongue twisters': {
     title: 'English language tongue twisters featuring short ‘i’ , or /i/ sounds',
+    description: 'Enjoy the challenge of Tongue Twisters. Three tongue twisters to perfect the short ‘i’ sound. Try to say each one as many times as you can, no mistakes.',
     canonical: `${URL}/sound/short-i/tongue-twisters`
   },
   'sound short-i minimal pairs': {
@@ -181,14 +191,17 @@ const meta = {
   },
   'sound short-i beginner news stories': {
     title: 'Beginner Identify the News Story sounds,  practice recognising the short ‘i’  sound.',
+    description: 'News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.',
     canonical: `${URL}/sound/short-i/beginner-news-stories`
   },
   'sound short-i intermediate news stories': {
     title: 'Intermediate Identify the News Story sounds,  practice recognising the short ‘i’  sound.',
+    description: 'News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.',
     canonical: `${URL}/sound/short-i/intermediate-news-stories`
   },
   'sound short-i words maze': {
     title: 'Solve the Words Maze puzzle - short ‘i’ . Practice short ‘i’  English pronunciation game.',
+    description: 'Maze is an interactive pronunciation game that helps you become familiar with common English words so you can speak with confidence.',
     canonical: `${URL}/sound/short-i/words-maze`
   }
 }

@@ -49,8 +49,6 @@ const ExtractActivity = (params) => {
         <FindTheWords
           ipa={data.ipa}
           tag={data.tag}
-          titleStart='Select the words with an '
-          titleEnd='sound'
           words={activity.words}
           correct={activity.correct}
           userAuth={userAuth}
@@ -62,8 +60,8 @@ const ExtractActivity = (params) => {
       activityComponent = (
         <FindTheWords
           ipa={data.ipa}
-          titleStart="Select the words that DON'T have an "
-          titleEnd='sound'
+          tag={data.tag}
+          isOddOneOut
           words={activity.words}
           correct={activity.correct}
           userAuth={userAuth}
@@ -78,8 +76,8 @@ const ExtractActivity = (params) => {
           example={activity.example}
           exampleHilite={activity.exampleHilite}
           ipa={data.ipa}
-          rows={activity.rows}
           tag={data.tag}
+          rows={activity.rows}
           userAuth={userAuth}
         />
       )
@@ -172,6 +170,7 @@ const ExtractActivity = (params) => {
     case 'words maze':
       activityComponent = (
         <WordsMaze
+          ipa={data.ipa}
           tag={data.tag}
           words={activity.words}
           correct={activity.correct}

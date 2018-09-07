@@ -67,10 +67,12 @@ class FindTheWords extends Component {
   }
 
   render () {
-    const { classes, ipa, tag, titleStart, titleEnd, words } = this.props
+    const { classes, ipa, isOddOneOut, tag, words } = this.props
 
+    let description = ''
     let result = ''
     let resultBG = ''
+    let title = ''
 
     if (this.state.allCorrect) {
       result = (
@@ -91,6 +93,26 @@ class FindTheWords extends Component {
       />
     ))
 
+    if (isOddOneOut) {
+      title = (
+        <Typography variant='title' gutterBottom>
+          {`Select the words that DON'T have an `}
+          <SplitHilite str={ipa} />
+          {`sound`}
+        </Typography>
+      )
+      description = `Find the different sounds. Say the words and select those without the ${tag} vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the odd words before your time runs out? You can click on words to hear the pronunciation. Odd One Out helps you recognise and pronounce the vowel sounds of common English words.`
+    } else {
+      title = (
+        <Typography variant='title' gutterBottom>
+          {`Select the words with an `}
+          <SplitHilite str={ipa} />
+          {`sound`}
+        </Typography>
+      )
+      description = `Find the correct sound. Say the words and select those with the ${tag} vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the words before your time runs out? You can click on words to hear the pronunciation. Find the words helps you recognise and pronounce the vowel sounds of common English words.`
+    }
+
     const display = (
       <Paper className={resultBG}>
         {this.wordTiles}
@@ -101,13 +123,9 @@ class FindTheWords extends Component {
 
     return (
       <div className={classes.headspace}>
-        <Typography variant='title' gutterBottom>
-          {titleStart}
-          <SplitHilite str={ipa} />
-          {titleEnd}
-        </Typography>
-        <Typography>
-          {`Find the correct sound. Say the words and select those with the ${tag} sound. Once you get a word, it is replaced with a more challenging word. Can you find all the words before your time runs out? You can click on words to hear the pronunciation. Find the words helps you recognise and pronounce the vowel sounds of common English words.`}
+        {title}
+        <Typography gutterBottom>
+          {description}
         </Typography>
         <MemberGate content={display} userAuth={this.props.userAuth} {...this.other} />
       </div>

@@ -83,9 +83,9 @@ class Maze extends Component {
     const width = `${this.state.width}px`
     const height = `${this.state.height}px`
     const style = { width, height }
-    const title = `From the yellow square pick an adjacent square with
-     a short ~/æ/~ sound. Keep going until you reach the blue square.`
-
+    const title = `Words Maze ${this.props.tag} sound – ${this.props.ipa}`
+    const description = `Discover your way through the maze. Find the words that share the ${this.props.tag} sound and travel along the path of the maze from one word to the next until you discover the way out. Master each level and advance to the next – more complex words, more twists and turns. Maze is an interactive pronunciation game that helps you become familiar with common English words so you can speak with confidence.`
+    const instructions = `From the yellow square pick an adjacent square with a ${this.props.ipa} sound. Keep going until you reach the blue square.`
     const display = (
       <div>
         <Script
@@ -101,6 +101,12 @@ class Maze extends Component {
       <div className={this.props.classes.headspace}>
         <Typography variant='title' gutterBottom>
           <SplitHilite str={title} />
+        </Typography>
+        <Typography variant='body2' gutterBottom>
+          {description}
+        </Typography>
+        <Typography variant='body2' gutterBottom>
+          {instructions}
         </Typography>
         <MemberGate content={display} userAuth={this.props.userAuth} {...this.other} />
       </div>

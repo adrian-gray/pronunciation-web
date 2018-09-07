@@ -34,7 +34,7 @@ class FourInARow extends React.Component {
     super(props)
 
     const { classes, userAuth, ...other } = props
-    const title = `Select the words that ~DON'T~ have the ${props.tag} ${props.ipa} sound.`
+    const title = `Select the words that ~DON'T~ have the ${props.tag} – ${props.ipa} sound.`
 
     this.state = {
       classes,
@@ -147,8 +147,12 @@ class FourInARow extends React.Component {
           {`Four in a row using ${this.props.tag} - `}
           <SplitHilite str={this.props.ipa} />
         </Typography>
-        <Typography variant='subheading'>
+        <Typography variant='subheading' gutterBottom>
           <SplitHilite str={this.state.title} />
+        </Typography>
+        <br />
+        <Typography variant='body1' gutterBottom>
+          {`Can you spot the difference? In each group of words there are three with the ${this.props.tag} vowel sound and one with a different vowel sound. Say the words and choose the one that doesn’t sound the same as the others. Advance to the next level with more challenging words. Four in a Row encourages you to identify the differences between words with similar sounding vowels.`}
         </Typography>
         <MemberGate content={content} userAuth={this.state.userAuth} {...this.state.other} />
       </div>

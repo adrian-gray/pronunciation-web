@@ -184,10 +184,15 @@ class NewsStories extends Component {
       </Paper>
     )
 
+    const description = `Extra! Extra! Read all about it! News Stories is a collection of interesting and feel-good stories from around the world.  Each story is written in two levels – beginners and intermediate. All you need to do is identify the highlighted sounds and choose the correct phoneme that represents that sound. News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.`
+
     return (
       <div className={classes.headspace}>
         <Typography variant='display1' gutterBottom>
           {'News Stories'}
+        </Typography>
+        <Typography variant='body2' gutterBottom>
+          {description}
         </Typography>
         <Typography variant='headline' gutterBottom>
           {headline}
