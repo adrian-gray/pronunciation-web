@@ -96,12 +96,12 @@ class FindTheWords extends Component {
     if (isOddOneOut) {
       title = (
         <Typography variant='title' gutterBottom>
-          {`Select the words that DON'T have an `}
+          {`Odd One Out - select words that DON'T have an `}
           <SplitHilite str={ipa} />
           {`sound`}
         </Typography>
       )
-      description = `Find the different sounds. Say the words and select those without the ${tag} vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the odd words before your time runs out? You can click on words to hear the pronunciation. Odd One Out helps you recognise and pronounce the vowel sounds of common English words.`
+      description = `Find the Odd One Out. Say the words and select those without the ${tag} vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the odd words before your time runs out? You can click on words to hear the pronunciation. Odd One Out helps you recognise and pronounce the vowel sounds of common English words.`
     } else {
       title = (
         <Typography variant='title' gutterBottom>

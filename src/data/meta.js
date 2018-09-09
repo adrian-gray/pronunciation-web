@@ -74,7 +74,7 @@ const meta = {
     canonical: `${URL}/sound/short-a/say-the-sentences`
   },
   'sound short-a odd one out': {
-    title: 'Odd One Out English pronunciation practice. Which words don\'t have a short ‘a’?',
+    title: 'Odd One Out pronunciation practice. Which words don\'t have a short ‘a’?',
     description: 'Odd One Out helps you recognise and pronounce the short ‘a’ vowel sound of common English words. Can you find all the odd words before your time runs out?',
     canonical: `${URL}/sound/short-a/odd-one-out`
   },

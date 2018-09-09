@@ -63,7 +63,7 @@ const Landing = (props) => {
       <Mailchimp />
       <div className={classes.startBtn}>
         <Button variant='contained' size='large' className={classes.button} component={Link} to='/home'>
-          {'Start Practicing Pronunciation'}
+          {'Start Pronunciation Practice'}
         </Button>
       </div>
       <img
