@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 import {
   Paper,
@@ -8,18 +8,18 @@ import {
   TableRow,
   Typography,
   withStyles
-} from '@material-ui/core'
+} from "@material-ui/core";
 
-import SplitHilite from './SplitHilite'
+import SplitHilite from "./SplitHilite";
 
-const styles = (theme) => ({
+const styles = theme => ({
   headspace: theme.headspace,
   largeText: theme.largeText,
   subCanvas: theme.subCanvas
-})
+});
 
-const Words = (props) => {
-  const { classes, ipa, words } = props
+const Words = props => {
+  const { classes, ipa, words } = props;
   const list = Object.entries(words).map((arr, index) => {
     return (
       <TableRow key={index}>
@@ -34,25 +34,23 @@ const Words = (props) => {
           </Typography>
         </TableCell>
       </TableRow>
-    )
-  })
+    );
+  });
 
   return (
     <div className={classes.headspace}>
-      <Typography variant='title' gutterBottom>
+      <Typography variant="title" gutterBottom>
         {`Words using `}
         <SplitHilite str={ipa} />
       </Typography>
 
       <Paper className={classes.subCanvas}>
         <Table className={classes.root}>
-          <TableBody>
-            {list}
-          </TableBody>
+          <TableBody>{list}</TableBody>
         </Table>
       </Paper>
     </div>
-  )
-}
+  );
+};
 
-export default withStyles(styles)(Words)
+export default withStyles(styles)(Words);

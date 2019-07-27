@@ -1,36 +1,30 @@
-import React from 'react'
+import React from "react";
 
-import { capitalise } from './../utils'
+import { capitalise } from "./../utils";
 
-import {
-  Paper,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import { Paper, Typography, withStyles } from "@material-ui/core";
 
-const styles = (theme) => ({
+const styles = theme => ({
   headspace: theme.headspace,
   largeText: theme.largeText,
   spacing: {
-    padding: '1rem',
-    margin: '1rem'
+    padding: "1rem",
+    margin: "1rem"
   }
-})
+});
 
-const TongueTwisters = (props) => {
-  const { classes, tag, tongueTwisters } = props
+const TongueTwisters = props => {
+  const { classes, tag, tongueTwisters } = props;
 
   const twisters = tongueTwisters.map((line, index) => (
     <Paper className={classes.spacing} key={index}>
-      <Typography>
-        {line}
-      </Typography>
+      <Typography>{line}</Typography>
     </Paper>
-  ))
+  ));
 
   return (
     <div className={classes.headspace}>
-      <Typography variant='title' gutterBottom>
+      <Typography variant="title" gutterBottom>
         {`${capitalise(tag)} Tongue Twisters`}
       </Typography>
       <Typography>
@@ -38,7 +32,7 @@ const TongueTwisters = (props) => {
       </Typography>
       {twisters}
     </div>
-  )
-}
+  );
+};
 
-export default withStyles(styles)(TongueTwisters)
+export default withStyles(styles)(TongueTwisters);

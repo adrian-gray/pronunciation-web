@@ -1,60 +1,54 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import {
-  Paper,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import { Paper, Typography, withStyles } from "@material-ui/core";
 
-const styles = (theme) => ({
+const styles = theme => ({
   largeText: theme.largeText,
   correctBG: theme.correctBG,
   incorrectBG: theme.incorrectBG,
   left: {
     ...theme.subCanvas,
-    float: 'left',
-    margin: '2rem',
-    padding: '1rem'
+    float: "left",
+    margin: "2rem",
+    padding: "1rem"
   },
   clickable: {
-    cursor: 'pointer'
+    cursor: "pointer"
   }
-})
+});
 
 class Tile extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick (e) {
-    this.props.handleClick(this.props.index)
+  handleClick(e) {
+    this.props.handleClick(this.props.index);
   }
 
-  render () {
-    const { classes } = this.props
-    const paperClasses = [classes.left]
+  render() {
+    const { classes } = this.props;
+    const paperClasses = [classes.left];
 
-    let correctStatus = null
+    let correctStatus = null;
     if (this.props.isCorrect) {
-      paperClasses.push(classes.correctBG)
+      paperClasses.push(classes.correctBG);
     } else if (this.props.isCorrect === false) {
-      paperClasses.push(classes.incorrectBG)
+      paperClasses.push(classes.incorrectBG);
     }
 
     return (
       <div className={classes.clickable} onClick={this.handleClick}>
-        <Paper className={paperClasses.join(' ')}>
+        <Paper className={paperClasses.join(" ")}>
           <Typography className={classes.largeText}>
-            <span className={classes[correctStatus]}>
-              {this.props.word}
-            </span>
+            <span className={classes[correctStatus]}>{this.props.word}</span>
           </Typography>
         </Paper>
       </div>
-    )
+    );
   }
 }
 
-export default withStyles(styles)(Tile)
+export default withStyles(styles)(Tile);

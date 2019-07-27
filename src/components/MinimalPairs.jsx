@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 import {
   Paper,
@@ -8,18 +8,18 @@ import {
   TableRow,
   Typography,
   withStyles
-} from '@material-ui/core'
+} from "@material-ui/core";
 
-import SplitHilite from './SplitHilite'
+import SplitHilite from "./SplitHilite";
 
-const styles = (theme) => ({
+const styles = theme => ({
   largeText: theme.largeText,
   headspace: theme.headspace,
   cell: theme.cell
-})
+});
 
-const MinimalPairs = (props) => {
-  const { classes, ipa, pairs, tag } = props
+const MinimalPairs = props => {
+  const { classes, ipa, pairs, tag } = props;
 
   const rows = pairs.map((pair, key) => (
     <TableRow key={key}>
@@ -34,23 +34,21 @@ const MinimalPairs = (props) => {
         </Typography>
       </TableCell>
     </TableRow>
-  ))
+  ));
 
   return (
-    <div className={classes.headspace} >
-      <Typography variant='title' gutterBottom>
+    <div className={classes.headspace}>
+      <Typography variant="title" gutterBottom>
         {`English  minimal pairs with ${tag} - `}
         <SplitHilite str={ipa} />
       </Typography>
       <Paper>
         <Table>
-          <TableBody>
-            {rows}
-          </TableBody>
+          <TableBody>{rows}</TableBody>
         </Table>
       </Paper>
     </div>
-  )
-}
+  );
+};
 
-export default withStyles(styles)(MinimalPairs)
+export default withStyles(styles)(MinimalPairs);

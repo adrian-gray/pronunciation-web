@@ -1,12 +1,12 @@
-import { createMuiTheme } from '@material-ui/core/styles'
-import { orange } from '@material-ui/core/colors'
+import { createMuiTheme } from "@material-ui/core/styles";
+import { orange } from "@material-ui/core/colors";
 
-const defaultTheme = createMuiTheme()
+const defaultTheme = createMuiTheme();
 
 export default createMuiTheme({
   palette: {
     primary: {
-      main: '#b71c1c'
+      main: "#b71c1c"
     },
     secondary: orange
   },
@@ -24,45 +24,45 @@ export default createMuiTheme({
     marginBottom: defaultTheme.spacing.unit * 2
   },
   largeText: {
-    fontSize: '1.25rem'
+    fontSize: "1.25rem"
   },
   headspace: {
     paddingTop: defaultTheme.spacing.unit * 2
   },
   fullWidth: {
-    width: '100%'
+    width: "100%"
   },
   hilite: {
-    color: '#CC0000'
+    color: "#CC0000"
   },
   cell: {
     paddingLeft: 12,
     paddingRight: 12,
-    textAlign: 'center'
+    textAlign: "center"
   },
   cellHiliteBG: {
-    background: '#CCC'
+    background: "#CCC"
   },
   correctBG: {
-    background: '#CFC'
+    background: "#CFC"
   },
   incorrectBG: {
-    background: '#FCC'
+    background: "#FCC"
   },
   sentence: {
-    padding: '0.5rem',
-    paddingLeft: '1rem',
-    paddingRight: '1rem',
-    fontSize: '1.2rem'
+    padding: "0.5rem",
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
+    fontSize: "1.2rem"
   },
   clearFloat: {
-    clear: 'both'
+    clear: "both"
   },
   personalSpace: {
-    padding: '1rem',
-    margin: '1rem'
+    padding: "1rem",
+    margin: "1rem"
   },
   center: {
-    textAlign: 'center'
+    textAlign: "center"
   }
-})
+});

@@ -1,143 +1,130 @@
-import React from 'react'
+import React from "react";
 
-import {
-  Button,
-  TextField,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import { Button, TextField, Typography, withStyles } from "@material-ui/core";
 
-const styles = (theme) => ({
+const styles = theme => ({
   root: {
     padding: 20,
     container: {
-      display: 'flex',
-      flexWrap: 'wrap'
+      display: "flex",
+      flexWrap: "wrap"
     }
   }
-})
+});
 
 class MailchimpForm extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
-      name: '',
+      name: "",
       nameError: null,
-      nameErrorMsg: '',
-      email: '',
+      nameErrorMsg: "",
+      email: "",
       emailError: null,
-      emailErrorMsg: ''
-    }
+      emailErrorMsg: ""
+    };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.submit = this.submit.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.submit = this.submit.bind(this);
   }
 
-  handleChange (name) {
+  handleChange(name) {
     return event => {
       this.setState({
         [name]: event.target.value
-      })
-    }
+      });
+    };
   }
 
-  submit () {
+  submit() {
     this.setState({
       emailError: null,
-      emalErrorMsg: '',
+      emalErrorMsg: "",
       nameError: null,
-      nameErrorMsg: ''
-    })
+      nameErrorMsg: ""
+    });
     if (!this.state.name) {
       this.setState({
         nameEror: true,
-        nameErrorMsg: 'Oops, you forgot your name.'
-      })
-      return
+        nameErrorMsg: "Oops, you forgot your name."
+      });
+      return;
     }
     if (!this.state.email) {
       this.setState({
         emailError: true,
-        emailErrorMsg: 'Oops, you forgot your email.'
-      })
-      return
+        emailErrorMsg: "Oops, you forgot your email."
+      });
+      return;
     }
     this.props.onValidated({
       EMAIL: this.state.email,
       FNAME: this.state.name
-    })
+    });
   }
 
-  componentDidUpdate (prevProps, prevState, snapshot) {
+  componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.status !== prevProps.status) {
-      if (this.props.status === 'error') {
-        const message = this.props.message
+      if (this.props.status === "error") {
+        const message = this.props.message;
         switch (true) {
-          case (message === '0 - An email address must contain a single @'):
+          case message === "0 - An email address must contain a single @":
             this.setState({
               emailError: true,
-              emailErrorMsg: 'An email address must contain a single @'
-            })
-            break
-          case (message === '0 - The username portion of the email address is empty'):
+              emailErrorMsg: "An email address must contain a single @"
+            });
+            break;
+          case message === "0 - The username portion of the email address is empty":
             this.setState({
               emailError: true,
-              emailErrorMsg: 'The username portion of the email is empty'
-            })
-            break
-          case (message.includes('0 - The domain portion of the email address is invalid')):
+              emailErrorMsg: "The username portion of the email is empty"
+            });
+            break;
+          case message.includes("0 - The domain portion of the email address is invalid"):
             this.setState({
               emailError: true,
-              emailErrorMsg: 'The domain portion of the email is invalid'
-            })
-            break
-          case (message.includes('0 - The username portion of the email address is invalid')):
+              emailErrorMsg: "The domain portion of the email is invalid"
+            });
+            break;
+          case message.includes("0 - The username portion of the email address is invalid"):
             this.setState({
               emailError: true,
-              emailErrorMsg: 'The username portion of the email is invalid'
-            })
-            break
-          case (message.includes('This email address looks fake or invalid')):
+              emailErrorMsg: "The username portion of the email is invalid"
+            });
+            break;
+          case message.includes("This email address looks fake or invalid"):
             this.setState({
               emailError: true,
-              emailErrorMsg: 'This email address looks fake or invalid'
-            })
-            break
-          case (message.includes('has too many recent signup requests')):
+              emailErrorMsg: "This email address looks fake or invalid"
+            });
+            break;
+          case message.includes("has too many recent signup requests"):
             this.setState({
               emailError: true,
-              emailErrorMsg: 'This email has too many recent signup requests'
-            })
-            break
+              emailErrorMsg: "This email has too many recent signup requests"
+            });
+            break;
           default:
             this.setState({
               nameError: true,
-              nameErrorMsg: 'Something went wrong, please check your details'
-            })
+              nameErrorMsg: "Something went wrong, please check your details"
+            });
         }
       }
     }
   }
 
-  render () {
-    const { classes } = this.props
+  render() {
+    const { classes } = this.props;
 
-    let status
+    let status;
     switch (this.props.status) {
-      case 'sending':
-        status = (
-          <Typography gutterBottom>
-            {`Sending subscription`}
-          </Typography>
-        )
-        break
-      case 'success':
-        status = (
-          <Typography gutterBottom>
-            {`Thanks for subscribing`}
-          </Typography>
-        )
+      case "sending":
+        status = <Typography gutterBottom>{`Sending subscription`}</Typography>;
+        break;
+      case "success":
+        status = <Typography gutterBottom>{`Thanks for subscribing`}</Typography>;
     }
 
     return (
@@ -147,39 +134,35 @@ class MailchimpForm extends React.Component {
           <TextField
             error={this.state.nameError}
             helperText={this.state.nameErrorMsg}
-            id='name'
-            label='Your first name'
-            className='form-control'
+            id="name"
+            label="Your first name"
+            className="form-control"
             value={this.state.name}
-            onChange={this.handleChange('name')}
-            margin='normal'
+            onChange={this.handleChange("name")}
+            margin="normal"
           />
           <TextField
             error={this.state.emailError}
             helperText={this.state.emailErrorMsg}
-            id='email'
-            label='Your Email'
-            className='form-control'
+            id="email"
+            label="Your Email"
+            className="form-control"
             value={this.state.email}
-            onChange={this.handleChange('email')}
-            margin='normal'
+            onChange={this.handleChange("email")}
+            margin="normal"
           />
           <br />
           <Typography gutterBottom>
             {`We hate spam and will never share your details with anyone else.`}
           </Typography>
           <br />
-          <Button
-            onClick={this.submit}
-            variant='raised'
-            color='secondary'
-          >
-            {'Keep me updated!'}
+          <Button onClick={this.submit} variant="raised" color="secondary">
+            {"Keep me updated!"}
           </Button>
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default withStyles(styles)(MailchimpForm)
+export default withStyles(styles)(MailchimpForm);

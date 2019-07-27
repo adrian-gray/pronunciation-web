@@ -1,17 +1,10 @@
-import React from 'react'
-import { Redirect } from 'react-router-dom'
-import { auth } from './../firebase'
+import React from "react";
+import { Redirect } from "react-router-dom";
+import { auth } from "./../firebase";
 
-import {
-  Button,
-  Divider,
-  Paper,
-  TextField,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import { Button, Divider, Paper, TextField, Typography, withStyles } from "@material-ui/core";
 
-const styles = (theme) => ({
+const styles = theme => ({
   page: theme.page,
   headspace: theme.headspace,
   personalSpace: theme.personalSpace,
@@ -19,52 +12,52 @@ const styles = (theme) => ({
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit
   }
-})
+});
 
 class Login extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
-      signupName: '',
-      signupEmail: '',
-      signinEmail: '',
-      signupPassword: '',
-      signinPassword: ''
-    }
+      signupName: "",
+      signupEmail: "",
+      signinEmail: "",
+      signupPassword: "",
+      signinPassword: ""
+    };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.signIn = this.signIn.bind(this)
-    this.signUp = this.signUp.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.signIn = this.signIn.bind(this);
+    this.signUp = this.signUp.bind(this);
   }
 
-  handleChange (name) {
-    return (e) => {
+  handleChange(name) {
+    return e => {
       this.setState({
         [name]: e.target.value
-      })
-    }
+      });
+    };
   }
 
-  signUp () {
+  signUp() {
     auth.signUpWithEmail({
       name: this.state.signupName,
       email: this.state.signupEmail,
       password: this.state.signupPassword
-    })
+    });
   }
 
-  signIn () {
+  signIn() {
     auth.signInWithEmail({
       email: this.state.signinEmail,
       password: this.state.signinPassword
-    })
+    });
   }
 
-  render () {
-    const { classes, user } = this.props
+  render() {
+    const { classes, user } = this.props;
     if (user) {
-      return <Redirect to='/home' />
+      return <Redirect to="/home" />;
     }
 
     return (
@@ -73,9 +66,10 @@ class Login extends React.Component {
           <Paper className={classes.personalSpace}>
             <Button
               onClick={auth.handleGoogleLogin}
-              variant='contained'
-              color='primary'
-              className={classes.button}>
+              variant="contained"
+              color="primary"
+              className={classes.button}
+            >
               {`Login with Google`}
             </Button>
           </Paper>
@@ -87,27 +81,24 @@ class Login extends React.Component {
             </Typography>
             <form>
               <TextField
-                id='signin_email'
-                label='Your email'
-                className='form-control'
+                id="signin_email"
+                label="Your email"
+                className="form-control"
                 value={this.state.signinEmail}
-                onChange={this.handleChange('signinEmail')}
-                margin='normal'
+                onChange={this.handleChange("signinEmail")}
+                margin="normal"
               />
               <TextField
-                id='signin_password'
-                label='Password'
-                className='form-control'
-                type='password'
+                id="signin_password"
+                label="Password"
+                className="form-control"
+                type="password"
                 value={this.state.signinPassword}
-                onChange={this.handleChange('signinPassword')}
-                margin='normal'
+                onChange={this.handleChange("signinPassword")}
+                margin="normal"
               />
-              <Button
-                onClick={this.signIn}
-                variant='raised'
-              >
-                {'Sign in'}
+              <Button onClick={this.signIn} variant="raised">
+                {"Sign in"}
               </Button>
             </form>
           </Paper>
@@ -119,41 +110,38 @@ class Login extends React.Component {
           </Typography>
           <form>
             <TextField
-              id='signup_name'
-              label='Your name'
-              className='form-control'
+              id="signup_name"
+              label="Your name"
+              className="form-control"
               value={this.state.signupName}
-              onChange={this.handleChange('signupName')}
-              margin='normal'
+              onChange={this.handleChange("signupName")}
+              margin="normal"
             />
             <TextField
-              id='signup_email'
-              label='Your email'
-              className='form-control'
+              id="signup_email"
+              label="Your email"
+              className="form-control"
               value={this.state.signupEmail}
-              onChange={this.handleChange('signupEmail')}
-              margin='normal'
+              onChange={this.handleChange("signupEmail")}
+              margin="normal"
             />
             <TextField
-              id='signup_password'
-              label='Password'
-              className='form-control'
-              type='password'
+              id="signup_password"
+              label="Password"
+              className="form-control"
+              type="password"
               value={this.state.signupPassword}
-              onChange={this.handleChange('signupPassword')}
-              margin='normal'
+              onChange={this.handleChange("signupPassword")}
+              margin="normal"
             />
-            <Button
-              onClick={this.signUp}
-              variant='raised'
-            >
-              {'Sign up'}
+            <Button onClick={this.signUp} variant="raised">
+              {"Sign up"}
             </Button>
           </form>
         </Paper>
       </Paper>
-    )
+    );
   }
 }
 
-export default withStyles(styles)(Login)
+export default withStyles(styles)(Login);

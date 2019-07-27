@@ -1,41 +1,37 @@
-import React from 'react'
+import React from "react";
 
-import SplitHilite from './SplitHilite'
+import SplitHilite from "./SplitHilite";
 
-import {
-  Paper,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import { Paper, Typography, withStyles } from "@material-ui/core";
 
-const styles = (theme) => ({
+const styles = theme => ({
   headspace: theme.headspace,
   largeText: theme.largeText,
   personalSpace: {
-    padding: '1em',
-    margin: '1em'
+    padding: "1em",
+    margin: "1em"
   }
-})
+});
 
-const TongueTwisters = (props) => {
-  const { classes, ipa, sentences } = props
+const TongueTwisters = props => {
+  const { classes, ipa, sentences } = props;
 
   const lines = sentences.map((line, index) => (
     <Paper className={classes.personalSpace} key={index}>
-      <Typography>
-        {line}
-      </Typography>
+      <Typography>{line}</Typography>
     </Paper>
-  ))
+  ));
 
   return (
     <div className={classes.personalSpace}>
-      <Typography variant='title' gutterBottom>
-        {'Say the '}<SplitHilite str={ipa} />{' sentences'}
+      <Typography variant="title" gutterBottom>
+        {"Say the "}
+        <SplitHilite str={ipa} />
+        {" sentences"}
       </Typography>
       {lines}
     </div>
-  )
-}
+  );
+};
 
-export default withStyles(styles)(TongueTwisters)
+export default withStyles(styles)(TongueTwisters);

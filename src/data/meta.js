@@ -93,7 +93,6 @@ const meta = {
     description: 'Maze is an interactive pronunciation game that helps you become familiar with common English words so you can speak with confidence.',
     canonical: `${URL}/sound/short-a/words-maze`
   },
-
   'sound long-e none': {
     title: 'How to pronounce long ‘e’ in English. Lessons and interactive activities.',
     canonical: `${URL}/sound/long-e`
