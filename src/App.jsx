@@ -1,8 +1,12 @@
 import React from "react";
 import firebase from "firebase/app";
 import ReactGA from "react-ga";
+import "core-js";
 
-import { CssBaseline, MuiThemeProvider, withStyles, withTheme } from "@material-ui/core";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import ThemeProvider from "@material-ui/styles";
+import withStyles from "@material-ui/styles/withStyles";
+import withTheme from "@material-ui/styles/withTheme";
 
 import { auth } from "./firebase";
 import { BrowserRouter } from "react-router-dom";
@@ -80,13 +84,13 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <CssBaseline />
-          <MuiThemeProvider theme={Theme}>
+          <ThemeProvider theme={Theme}>
             <div className={classes.root}>
               <SEO />
               <NavBar user={this.state.user} signout={this.signout} />
               <Router user={this.state.user} subscriptionLevel={this.state.subscriptionLevel} />
             </div>
-          </MuiThemeProvider>
+          </ThemeProvider>
         </div>
       </BrowserRouter>
     );

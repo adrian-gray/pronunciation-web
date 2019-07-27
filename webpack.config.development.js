@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const CompressionPlugin = require("compression-webpack-plugin");
 
 const publicPath = "dist";
@@ -43,7 +43,7 @@ module.exports = {
       template: path.join(__dirname, "/src/index.html")
     }),
     new CopyWebpackPlugin([{ from: "./src/assets", to: "assets" }]),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new CompressionPlugin({ algorithm: "gzip" })
   ]
 };

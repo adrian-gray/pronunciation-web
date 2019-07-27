@@ -1,17 +1,16 @@
 {
   "presets": [
-    "react",
-    ["env", {
-      "targets": {
-        "browsers": "last 2 versions"
-      },
-      "exclude": ["transform-async-to-generator"],
-      "loose": true,
-      "modules": "commonjs"
-    }]
+    [
+      "@babel/preset-env",
+      {
+        "exclude": ["transform-async-to-generator"],
+        "loose": true,
+        "modules": "commonjs",
+        "useBuiltIns": "entry",
+        "corejs": 3
+      }
+    ],
+    "@babel/preset-react"
   ],
-  "plugins": [
-    "transform-object-rest-spread",
-    "add-module-exports"
-  ]
+  "plugins": ["@babel/plugin-proposal-object-rest-spread"]
 }

@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Button, Paper, Typography, withStyles } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 import Mailchimp from "./../components/Mailchimp";
 import SEO from "./../components/SEO";

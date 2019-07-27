@@ -5,7 +5,8 @@ import MemberGate from "./MemberGate";
 import SplitHilite from "./SplitHilite";
 import WordsMaze from "./WordsMaze/index";
 
-import { Typography, withStyles } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
   headspace: theme.headspace

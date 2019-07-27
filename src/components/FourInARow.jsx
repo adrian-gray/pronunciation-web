@@ -4,7 +4,12 @@ import Cell from "./Cell";
 import MemberGate from "./MemberGate";
 import SplitHilite from "./SplitHilite";
 
-import { Table, TableBody, TableHead, TableRow, Typography, withStyles } from "@material-ui/core";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
   largeText: theme.largeText,

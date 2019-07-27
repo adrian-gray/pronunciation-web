@@ -1,14 +1,12 @@
 import React from "react";
 
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
-  Typography,
-  withStyles
-} from "@material-ui/core";
+import Paper from "@material-ui/core/Paper";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableRow from "@material-ui/core/TableRow";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 import SplitHilite from "./SplitHilite";
 

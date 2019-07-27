@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 import { capitalise } from "./../utils";
 
-import { Chip, withStyles } from "@material-ui/core";
+import Chip from "@material-ui/core/Chip";
+import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
   chip: {

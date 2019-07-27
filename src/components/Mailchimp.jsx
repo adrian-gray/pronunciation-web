@@ -1,7 +1,8 @@
 import React from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
-import { Paper, withStyles } from "@material-ui/core";
+import Paper from "@material-ui/core/Paper";
+import withStyles from "@material-ui/styles/withStyles";
 
 import MailchimpCustom from "./MailchimpCustom";
 

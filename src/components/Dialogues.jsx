@@ -1,6 +1,11 @@
 import React from "react";
 
-import { List, ListItem, ListItemText, Paper, Typography, withStyles } from "@material-ui/core";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 import SplitHilite from "./SplitHilite";
 

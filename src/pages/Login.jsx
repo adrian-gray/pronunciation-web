@@ -2,7 +2,12 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import { auth } from "./../firebase";
 
-import { Button, Divider, Paper, TextField, Typography, withStyles } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
+import Divider from "@material-ui/core/Divider";
+import Paper from "@material-ui/core/Paper";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
   page: theme.page,

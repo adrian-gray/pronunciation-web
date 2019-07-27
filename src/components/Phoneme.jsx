@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SplitHilite from "./SplitHilite";
 
-import { Paper, Typography, withStyles } from "@material-ui/core";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
   root: {

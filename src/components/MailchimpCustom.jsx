@@ -1,6 +1,9 @@
 import React from "react";
 
-import { Button, TextField, Typography, withStyles } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
   root: {

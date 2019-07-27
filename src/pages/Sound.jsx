@@ -1,6 +1,9 @@
 import React from "react";
 
-import { Divider, Paper, Typography, withStyles } from "@material-ui/core";
+import Divider from "@material-ui/core/Divider";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 import jsonData from "./../data/sounds";
 import ActivityButtons from "./../components/ActivityButtons";

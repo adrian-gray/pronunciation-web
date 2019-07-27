@@ -3,7 +3,8 @@ import React from "react";
 import SEO from "./../components/SEO";
 import { Link } from "react-router-dom";
 
-import { Typography, withStyles } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
   headspace: theme.headspace
