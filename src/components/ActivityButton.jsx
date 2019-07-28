@@ -8,7 +8,7 @@ import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
   chip: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   open: {
     color: "green"

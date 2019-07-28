@@ -1,5 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import { orange } from "@material-ui/core/colors";
+import orange from "@material-ui/core/colors/orange";
 
 const defaultTheme = createMuiTheme();
 
@@ -15,19 +15,19 @@ export default createMuiTheme({
   },
   page: {
     ...defaultTheme.mixins.gutters(),
-    paddingTop: defaultTheme.spacing.unit * 2,
-    paddingBottom: defaultTheme.spacing.unit * 2,
+    paddingTop: defaultTheme.spacing(2),
+    paddingBottom: defaultTheme.spacing(2),
     flexGrow: 1
   },
   subCanvas: {
-    marginTop: defaultTheme.spacing.unit * 2,
-    marginBottom: defaultTheme.spacing.unit * 2
+    marginTop: defaultTheme.spacing(2),
+    marginBottom: defaultTheme.spacing(2)
   },
   largeText: {
     fontSize: "1.25rem"
   },
   headspace: {
-    paddingTop: defaultTheme.spacing.unit * 2
+    paddingTop: defaultTheme.spacing(2)
   },
   fullWidth: {
     width: "100%"

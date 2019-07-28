@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const classes = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
@@ -24,58 +24,45 @@ const styles = theme => ({
   white: {
     color: "#FFFFFF"
   }
-});
+}));
 
-class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
+export default function NavBar(props) {
+  const [open, setOpen] = useState(false);
 
-    this.state = {
-      open: false
-    };
-
-    this.handleToggle = this.handleToggle.bind(this);
+  function handleToggle() {
+    setOpen(!open);
   }
 
-  handleToggle() {
-    this.setState({ open: !this.state.open });
-  }
+  let homeLink = "/";
+  let changeLoginStatus;
 
-  render() {
-    const { classes, user } = this.props;
-
-    let changeLoginStatus;
-    let homeLink = "/";
-    if (user) {
-      changeLoginStatus = (
-        <Button onClick={this.props.signout} color="inherit">
-          {"Sign Out"}
-        </Button>
-      );
-      homeLink = "/home";
-    } else {
-      changeLoginStatus = (
-        <Button component={Link} to="/login" color="inherit">
-          {"Sign In or Up"}
-        </Button>
-      );
-    }
-
-    return (
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <Typography variant="subheading" className={classes.flex}>
-              <Button component={Link} to={homeLink}>
-                <span className={classes.white}>{"Pronounce Web"}</span>
-              </Button>
-            </Typography>
-            {changeLoginStatus}
-          </Toolbar>
-        </AppBar>
-      </div>
+  if (props.user) {
+    changeLoginStatus = (
+      <Button onClick={props.signout} color="inherit">
+        {"Sign Out"}
+      </Button>
+    );
+    homeLink = "/home";
+  } else {
+    changeLoginStatus = (
+      <Button component={Link} to="/login" color="inherit">
+        {"Sign In or Up"}
+      </Button>
     );
   }
-}
 
-export default withStyles(styles)(NavBar);
+  return (
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="subtitle1" className={classes.flex}>
+            <Button component={Link} to={homeLink}>
+              <span className={classes.white}>{"Pronounce Web"}</span>
+            </Button>
+          </Typography>
+          {changeLoginStatus}
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
+}

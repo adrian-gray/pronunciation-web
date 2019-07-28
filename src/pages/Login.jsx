@@ -14,8 +14,8 @@ const styles = theme => ({
   headspace: theme.headspace,
   personalSpace: theme.personalSpace,
   textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1)
   }
 });
 

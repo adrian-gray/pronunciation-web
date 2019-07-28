@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import firebase from "firebase/app";
 import ReactGA from "react-ga";
 import "core-js";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
-import ThemeProvider from "@material-ui/styles";
-import withStyles from "@material-ui/styles/withStyles";
-import withTheme from "@material-ui/styles/withTheme";
+import { ThemeProvider } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 import { auth } from "./firebase";
 import { BrowserRouter } from "react-router-dom";
@@ -15,7 +14,7 @@ import Router from "./Router";
 import SEO from "./components/SEO";
 import Theme from "./Theme";
 
-const styles = theme => ({
+const classes = makeStyles(theme => ({
   root: {
     marginTop: 0,
     marginLeft: "auto",
@@ -32,69 +31,68 @@ const styles = theme => ({
       paddingLeft: 20
     }
   }
-});
+}));
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+export default function App() {
+  const [user, setUser] = useState(null);
+  const [subscriptionLevel, setSubscriptionLevel] = useState(null);
 
-    this.state = {
-      user: null,
-      subscriptionLevel: null
-    };
-
-    this.initFirebaseAuth = this.initFirebaseAuth.bind(this);
-    this.signout = this.signout.bind(this);
-    this.handleAuthChange = this.handleAuthChange.bind(this);
+  function initFirebaseAuth() {
+    firebase.auth().onAuthStateChanged(handleAuthChange);
   }
 
-  componentDidMount() {
-    if (window && window.location.href.includes("pronounceweb.com")) {
-      ReactGA.initialize("UA-122566851-1");
-      ReactGA.pageview(window.location.pathname + window.location.search);
-    }
-    this.initFirebaseAuth();
-  }
-
-  initFirebaseAuth() {
-    firebase.auth().onAuthStateChanged(this.handleAuthChange);
-  }
-
-  handleAuthChange(user) {
+  function handleAuthChange(user) {
     if (user) {
       auth.getUserData().then(val => {
-        this.setState({ subscriptionLevel: val });
+        setSubscriptionLevel(val);
       });
     }
-    this.setState({ user });
+    setUser(user);
   }
 
-  signout() {
+  function signout() {
     auth.signOut();
-    this.setState({
-      user: null,
-      subscriptionLevel: 0
-    });
+    setUser(null);
+    setSubscriptionLevel(null);
   }
 
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <BrowserRouter>
-        <div>
-          <CssBaseline />
-          <ThemeProvider theme={Theme}>
-            <div className={classes.root}>
-              <SEO />
-              <NavBar user={this.state.user} signout={this.signout} />
-              <Router user={this.state.user} subscriptionLevel={this.state.subscriptionLevel} />
-            </div>
-          </ThemeProvider>
-        </div>
-      </BrowserRouter>
-    );
+  if (window && window.location.href.includes("pronounceweb.com")) {
+    ReactGA.initialize("UA-122566851-1");
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
+
+  initFirebaseAuth();
+
+  // return (
+  //   <BrowserRouter>
+  //     <div>
+  //       <CssBaseline />
+  //       <ThemeProvider theme={Theme}>
+  //         <div className={classes.root}>
+  //           <SEO />
+  //           <NavBar user={this.state.user} signout={this.signout} />
+  //           <Router
+  //             user={this.state.user}
+  //             subscriptionLevel={this.state.subscriptionLevel}
+  //           />
+  //         </div>
+  //       </ThemeProvider>
+  //     </div>
+  //   </BrowserRouter>
+  // );
+
+  return (
+    <BrowserRouter>
+      <div>
+        <CssBaseline />
+        <ThemeProvider theme={Theme}>
+          <div className={classes.root}>
+            <SEO />
+            <NavBar user={user} signout={signout} />
+            <Router user={user} subscriptionLevel={subscriptionLevel} />
+          </div>
+        </ThemeProvider>
+      </div>
+    </BrowserRouter>
+  );
 }
-
-export default withTheme()(withStyles(styles)(App));

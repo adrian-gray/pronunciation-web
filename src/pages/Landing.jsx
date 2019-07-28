@@ -11,8 +11,8 @@ import SEO from "./../components/SEO";
 
 const styles = theme => ({
   button: {
-    marginTop: theme.spacing.unit,
-    marginBottom: 2 * theme.spacing.unit,
+    marginTop: theme.spacing(1),
+    marginBottom: 2 * theme.spacing(1),
     marginLeft: "auto",
     marginRight: "auto"
   },
