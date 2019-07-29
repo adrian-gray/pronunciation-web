@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Chip from "@material-ui/core/Chip";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
+
 import { capitalise } from "./../utils";
 
-import Chip from "@material-ui/core/Chip";
-import withStyles from "@material-ui/styles/withStyles";
-
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   chip: {
     margin: theme.spacing(1)
   },
@@ -20,7 +21,7 @@ const styles = theme => ({
     color: "maroon"
   },
   page: theme.page
-});
+}));
 
 const toLink = (phoneme, activity) => {
   const title = capitalise(activity);
@@ -29,8 +30,10 @@ const toLink = (phoneme, activity) => {
   return { title, link };
 };
 
-const ActivityButton = props => {
-  const { accessStatus, activity, classes, phoneme, subscriptionLevel } = props;
+function ActivityButton(props) {
+  const classes = useStyles(props);
+
+  const { accessStatus, activity, phoneme, subscriptionLevel } = props;
 
   const { title, link } = toLink(phoneme, activity);
 
@@ -42,8 +45,15 @@ const ActivityButton = props => {
   const chipClasses = `${classes.chip} ${chipClass}`;
 
   return (
-    <Chip label={title} className={chipClasses} component={Link} to={link} clickable key={title} />
+    <Chip
+      label={title}
+      className={chipClasses}
+      component={Link}
+      to={link}
+      clickable
+      key={title}
+    />
   );
-};
+}
 
-export default withStyles(styles)(ActivityButton);
+export default withTheme(ActivityButton);

@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   clickable: {
     cursor: "pointer",
     backgroundColor: "#CCC",
@@ -17,27 +18,21 @@ const styles = theme => ({
   incorrect: {
     backgroundColor: "#FFCCCC"
   }
-});
+}));
 
-class Picker extends Component {
-  constructor(props) {
-    super(props);
+function Picker(props) {
+  const classes = useStyles(props);
+  const myClasses = `${classes.clickable} ${props.colour}`;
 
-    this.handleClick = this.handleClick.bind(this);
-  }
+  const handleClick = e => {
+    props.handleClick(props.index);
+  };
 
-  handleClick(e) {
-    this.props.handleClick(this.props.index);
-  }
-
-  render() {
-    const classes = `${this.props.classes.clickable} ${this.props.colour}`;
-    return (
-      <span className={classes} onClick={this.handleClick}>
-        {`${this.props.options[this.props.selected]}`}
-      </span>
-    );
-  }
+  return (
+    <span className={myClasses} onClick={handleClick}>
+      {`${props.options[props.selected]}`}
+    </span>
+  );
 }
 
-export default withStyles(styles)(Picker);
+export default withTheme(Picker);

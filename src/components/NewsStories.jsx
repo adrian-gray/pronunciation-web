@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -37,30 +37,49 @@ const countSelectors = arr => {
 function NewsStories(props) {
   const classes = useStyles(props);
 
-  let sentences = [];
-  const selectedOption = [];
-  let selectedBgColour = [];
+  const handleClick = index => {
+    if (!props.userAuth) return;
+    const newSelectedOptions = selectedOptions.slice();
+    const newSelectedBgColours = selectedBgColours.slice();
+    newSelectedOptions[index] =
+      (selectedOptions[index] + 1) % props.options.length;
+    if (newSelectedOptions.every(val => val > 0)) {
+      checkForCorrect(newSelectedOptions).forEach((value, index) => {
+        switch (value) {
+          case true:
+            newSelectedBgColours[index] = classes.green;
+            break;
+          case false:
+            newSelectedBgColours[index] = classes.red;
+            break;
+          default:
+            newSelectedBgColours[index] = undefined;
+        }
+      });
+    }
 
-  addNewSentences(props.sentences);
+    setSelectedOptions(newSelectedOptions);
+    setSelectedBgColours(newSelectedBgColours);
+  };
 
-  function parseSentences(sentences, selectedOption, selectedBgColour) {
+  function parseSentences() {
     let id = 0;
     let selectorId = 0;
 
-    const parsedSentences = sentences.map((sentence, index) => {
+    const parsedSentences = props.sentences.map((displaySentence, index) => {
       const fragments = [];
       let key = 0;
       do {
-        const idx = sentence.indexOf("OPTION");
+        const idx = displaySentence.indexOf("OPTION");
         if (idx === -1) {
-          fragments.push(sentence);
+          fragments.push(displaySentence);
           break;
         } else if (idx === 0) {
           fragments.push(
             <Picker
               options={props.options}
-              selected={selectedOption[selectorId]}
-              colour={selectedBgColour[selectorId]}
+              selected={selectedOptions[selectorId]}
+              colour={selectedBgColours[selectorId]}
               handleClick={handleClick}
               key={key}
               index={id}
@@ -68,14 +87,14 @@ function NewsStories(props) {
           );
           id++;
           selectorId++;
-          sentence = sentence.substr(6, sentence.length);
+          displaySentence = displaySentence.substr(6, displaySentence.length);
         } else {
-          const substr = sentence.slice(0, idx);
+          const substr = displaySentence.slice(0, idx);
           fragments.push(<SplitHilite str={substr} key={key} />);
-          sentence = sentence.slice(substr.length);
+          displaySentence = displaySentence.slice(substr.length);
         }
         key++;
-      } while (sentence.length);
+      } while (displaySentence.length);
 
       return (
         <Typography key={index} className={classes.sentence}>
@@ -87,56 +106,22 @@ function NewsStories(props) {
     return parsedSentences;
   }
 
-  function addNewSentences(newSentences) {
-    const numSelectors = countSelectors(newSentences);
-    const selectedOption = Array(numSelectors).fill(0);
-    selectedBgColour = Array(numSelectors).fill(undefined);
-    sentences = parseSentences(newSentences, selectedOption, selectedBgColour);
-  }
-
-  function updateSentences(params) {
-    const newSentences = params.sentences;
-    const selectedOption = params.selectedOption || selectedOption;
-    selectedBgColour = params.selectedBgColour || selectedBgColour;
-
-    sentences = parseSentences(newSentences, selectedOption, selectedBgColour);
-  }
-
   function checkForCorrect(values) {
     return values.map((value, index) => {
       return props.options[value] === props.answers[index];
     });
   }
 
-  function handleClick(index) {
-    if (!props.userAuth) return;
-    const newStateSelectedOption = selectedOption.slice();
-    newStateSelectedOption[index] =
-      (selectedOption[index] + 1) % props.options.length;
-    if (newStateSelectedOption.every(val => val > 0)) {
-      checkForCorrect(newStateSelectedOption).map((value, index) => {
-        switch (value) {
-          case true:
-            selectedBgColour[index] = classes.green;
-            break;
-          case false:
-            selectedBgColour[index] = classes.red;
-            break;
-          default:
-            selectedBgColour[index] = undefined;
-        }
-      });
-    }
-    tsetState({
-      selectedOption: newStateSelectedOption,
-      selectedBgColour
-    });
-    updateSentences({
-      sentences: props.sentences,
-      selectedOption: newStateSelectedOption,
-      selectedBgColour
-    });
-  }
+  const numSelectors = countSelectors(props.sentences);
+  const [selectedOptions, setSelectedOptions] = useState(
+    Array(numSelectors).fill(0)
+  );
+  const [selectedBgColours, setSelectedBgColours] = useState(
+    Array(numSelectors).fill(undefined)
+  );
+  const [sentences, setSentences] = useState(parseSentences());
+
+  useEffect(() => setSentences(parseSentences()));
 
   const { headline, title } = props;
   const content = <Paper>{sentences}</Paper>;
