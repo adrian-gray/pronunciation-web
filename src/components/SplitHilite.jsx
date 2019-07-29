@@ -1,17 +1,20 @@
 import React from "react";
 
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   hilite: theme.hilite
-});
+}));
 
-export function SplitHilite(props) {
-  const { classes, str } = props;
+function SplitHilite(props) {
+  const classes = useStyles(props);
+
+  const { str } = props;
   const elements = str.split(/(~)/);
-
   const arr = [];
   let index = 0;
+
   do {
     let el = elements.shift();
     if (el === "~") {
@@ -32,4 +35,4 @@ export function SplitHilite(props) {
   return arr;
 }
 
-export default withStyles(styles)(SplitHilite);
+export default withTheme(SplitHilite);

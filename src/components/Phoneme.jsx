@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SplitHilite from "./SplitHilite";
 
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-const styles = theme => ({
+import SplitHilite from "./SplitHilite";
+
+const useStyles = makeStyles(theme => ({
   root: {
     margin: 20,
     padding: 20,
@@ -25,22 +27,26 @@ const styles = theme => ({
   links: {
     textDecoration: "none"
   }
-});
+}));
 
-const Phoneme = props => {
-  const { classes, phoneme, ipa, tag, title, words } = props;
+function Phoneme(props) {
+  const classes = useStyles(props);
+
+  const { phoneme, ipa, tag, title, words } = props;
   const displayTitle = (
     <span>
       <SplitHilite str={ipa} /> – <SplitHilite str={title} />
     </span>
   );
-  const wordList = words.slice(0, 6).map(word => <SplitHilite str={word} key={word} />);
+  const wordList = words
+    .slice(0, 6)
+    .map(word => <SplitHilite str={word} key={word} />);
 
   return (
     <Paper className={classes.root}>
       <Link to={{ pathname: `/sound/${phoneme}` }} className={classes.links}>
         <div>
-          <Typography variant="headline" gutterBottom>
+          <Typography variant="h5" gutterBottom>
             {displayTitle}
           </Typography>
           <Typography variant="body2" gutterBottom>
@@ -49,13 +55,13 @@ const Phoneme = props => {
           <Typography className={classes.words} variant="body2" gutterBottom>
             {wordList}
           </Typography>
-          <Typography variant="subheading" gutterBottom>
+          <Typography variant="subtitle1" gutterBottom>
             {`Click to learn more about the ${tag} sound`}
           </Typography>
         </div>
       </Link>
     </Paper>
   );
-};
+}
 
-export default withStyles(styles)(Phoneme);
+export default withTheme(Phoneme);

@@ -6,21 +6,24 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
 import SplitHilite from "./SplitHilite";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   headspace: theme.headspace,
   fullWidth: theme.fullWidth,
   subCanvas: theme.subCanvas,
   padded: {
     padding: "1em"
   }
-});
+}));
 
-const HowToPronounce = props => {
-  const { arr, classes, image, ipa } = props;
+function HowToPronounce(props) {
+  const classes = useStyles(props);
+
+  const { arr, image, ipa } = props;
   const { url, alt, title } = image;
 
   const list = arr.map((el, i) => (
@@ -31,17 +34,22 @@ const HowToPronounce = props => {
 
   return (
     <div className={classes.headspace}>
-      <Typography variant="title" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         {"How to pronounce "}
         <SplitHilite str={ipa} />
       </Typography>
 
       <Paper className={classes.subCanvas}>
-        <Grid container spacing={24}>
+        <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <div className={classes.padded}>
-              <img className={classes.fullWidth} src={url} title={title} alt={alt} />
-              <Typography variant="subheading">{title}</Typography>
+              <img
+                className={classes.fullWidth}
+                src={url}
+                title={title}
+                alt={alt}
+              />
+              <Typography variant="h6">{title}</Typography>
             </div>
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -51,6 +59,6 @@ const HowToPronounce = props => {
       </Paper>
     </div>
   );
-};
+}
 
-export default withStyles(styles)(HowToPronounce);
+export default withTheme(HowToPronounce);

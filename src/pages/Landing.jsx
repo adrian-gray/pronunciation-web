@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
 import Mailchimp from "./../components/Mailchimp";
 import SEO from "./../components/SEO";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   button: {
     marginTop: theme.spacing(1),
     marginBottom: 2 * theme.spacing(1),
@@ -29,18 +30,18 @@ const styles = theme => ({
     textAlign: "center",
     padding: "2em"
   }
-});
+}));
 
-const Landing = props => {
-  const { classes } = props;
+function Landing(props) {
+  const classes = useStyles(props);
 
   return (
     <Paper className={classes.page}>
       <SEO meta="landing" />
-      <Typography variant="display1" gutterBottom>
+      <Typography variant="h4" gutterBottom>
         {"Pronunciation Practice"}
       </Typography>
-      <Typography variant="title" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         {"Improve Your Spoken English"}
       </Typography>
       <Typography className={classes.para} gutterBottom>
@@ -58,12 +59,12 @@ const Landing = props => {
           "Following the pronunciation lessons are English pronunciation examples, recorded conversations, and interactive activities to help improve your pronunciation the right way. We are adding currently adding sounds and activities weekly. Improve your English pronunciation to speak clearly and professionally."
         }
       </Typography>
-      <Typography variant="title" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         {"Stay up to date as we add pronunciation activities"}
       </Typography>
       <Typography className={classes.headspace} gutterBottom>
         {
-          "We are currently adding sounds and activities multiple times a week and are open in a limited testing capacity. We aim to launch in late 2018."
+          "We are currently adding sounds and activities multiple times a week and are open in a limited testing capacity. We aim to launch in late 2019."
         }
       </Typography>
       <Mailchimp />
@@ -86,6 +87,6 @@ const Landing = props => {
       />
     </Paper>
   );
-};
+}
 
-export default withStyles(styles)(Landing);
+export default withTheme(Landing);

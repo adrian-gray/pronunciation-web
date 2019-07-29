@@ -2,13 +2,14 @@ import React, { Component } from "react";
 
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
 import SplitHilite from "./SplitHilite";
 import MemberGate from "./MemberGate";
 import Picker from "./Picker";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   headspace: theme.headspace,
   sentence: {
     padding: "0.5rem",
@@ -22,7 +23,7 @@ const styles = theme => ({
   green: {
     color: "green"
   }
-});
+}));
 
 const countSelectors = arr => {
   let count = 0;
@@ -33,38 +34,16 @@ const countSelectors = arr => {
   return count;
 };
 
-class NewsStories extends Component {
-  constructor(props) {
-    super(props);
+function NewsStories(props) {
+  const classes = useStyles(props);
 
-    const { classes, ...other } = props;
+  let sentences = [];
+  const selectedOption = [];
+  let selectedBgColour = [];
 
-    this.state = {
-      classes,
-      other,
-      sentences: [],
-      selectedOption: [],
-      selectedBgColour: []
-    };
+  addNewSentences(props.sentences);
 
-    this.handleClick = this.handleClick.bind(this);
-    this.parseSentences = this.parseSentences.bind(this);
-    this.addNewSentences = this.addNewSentences.bind(this);
-    this.updateSentences = this.updateSentences.bind(this);
-    this.checkForCorrect = this.checkForCorrect.bind(this);
-  }
-
-  componentDidMount() {
-    this.addNewSentences(this.props.sentences);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.sentences !== this.props.sentences) {
-      this.addNewSentences(nextProps.sentences);
-    }
-  }
-
-  parseSentences(sentences, selectedOption, selectedBgColour) {
+  function parseSentences(sentences, selectedOption, selectedBgColour) {
     let id = 0;
     let selectorId = 0;
 
@@ -79,13 +58,12 @@ class NewsStories extends Component {
         } else if (idx === 0) {
           fragments.push(
             <Picker
-              options={this.props.options}
+              options={props.options}
               selected={selectedOption[selectorId]}
               colour={selectedBgColour[selectorId]}
-              handleClick={this.handleClick}
+              handleClick={handleClick}
               key={key}
               index={id}
-              {...this.state.other}
             />
           );
           id++;
@@ -100,7 +78,7 @@ class NewsStories extends Component {
       } while (sentence.length);
 
       return (
-        <Typography key={index} className={this.state.classes.sentence}>
+        <Typography key={index} className={classes.sentence}>
           {fragments}
         </Typography>
       );
@@ -109,92 +87,78 @@ class NewsStories extends Component {
     return parsedSentences;
   }
 
-  addNewSentences(newSentences) {
+  function addNewSentences(newSentences) {
     const numSelectors = countSelectors(newSentences);
     const selectedOption = Array(numSelectors).fill(0);
-    const selectedBgColour = Array(numSelectors).fill(undefined);
-    const sentences = this.parseSentences(newSentences, selectedOption, selectedBgColour);
-
-    this.setState({
-      selectedOption,
-      selectedBgColour,
-      sentences
-    });
+    selectedBgColour = Array(numSelectors).fill(undefined);
+    sentences = parseSentences(newSentences, selectedOption, selectedBgColour);
   }
 
-  updateSentences(params) {
+  function updateSentences(params) {
     const newSentences = params.sentences;
-    const selectedOption = params.selectedOption || this.state.selectedOption;
-    const selectedBgColour = params.selectedBgColour || this.state.selectedBgColour;
+    const selectedOption = params.selectedOption || selectedOption;
+    selectedBgColour = params.selectedBgColour || selectedBgColour;
 
-    const sentences = this.parseSentences(newSentences, selectedOption, selectedBgColour);
-
-    this.setState({ sentences });
+    sentences = parseSentences(newSentences, selectedOption, selectedBgColour);
   }
 
-  checkForCorrect(values) {
+  function checkForCorrect(values) {
     return values.map((value, index) => {
-      return this.props.options[value] === this.props.answers[index];
+      return props.options[value] === props.answers[index];
     });
   }
 
-  handleClick(index) {
-    if (!this.props.userAuth) return;
-    const newStateSelectedOption = this.state.selectedOption.slice();
-    const selectedBgColour = [];
+  function handleClick(index) {
+    if (!props.userAuth) return;
+    const newStateSelectedOption = selectedOption.slice();
     newStateSelectedOption[index] =
-      (this.state.selectedOption[index] + 1) % this.props.options.length;
+      (selectedOption[index] + 1) % props.options.length;
     if (newStateSelectedOption.every(val => val > 0)) {
-      this.checkForCorrect(newStateSelectedOption).map((value, index) => {
+      checkForCorrect(newStateSelectedOption).map((value, index) => {
         switch (value) {
           case true:
-            selectedBgColour[index] = this.state.classes.green;
+            selectedBgColour[index] = classes.green;
             break;
           case false:
-            selectedBgColour[index] = this.state.classes.red;
+            selectedBgColour[index] = classes.red;
             break;
           default:
             selectedBgColour[index] = undefined;
         }
       });
     }
-    this.setState({
+    tsetState({
       selectedOption: newStateSelectedOption,
       selectedBgColour
     });
-    this.updateSentences({
-      sentences: this.props.sentences,
+    updateSentences({
+      sentences: props.sentences,
       selectedOption: newStateSelectedOption,
       selectedBgColour
     });
   }
 
-  render() {
-    const { headline, title } = this.props;
-    const { classes } = this.state;
+  const { headline, title } = props;
+  const content = <Paper>{sentences}</Paper>;
+  const description = `Extra! Extra! Read all about it! News Stories is a collection of interesting and feel-good stories from around the world.  Each story is written in two levels – beginners and intermediate. All you need to do is identify the highlighted sounds and choose the correct phoneme that represents that sound. News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.`;
 
-    const content = <Paper>{this.state.sentences}</Paper>;
-
-    const description = `Extra! Extra! Read all about it! News Stories is a collection of interesting and feel-good stories from around the world.  Each story is written in two levels – beginners and intermediate. All you need to do is identify the highlighted sounds and choose the correct phoneme that represents that sound. News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.`;
-
-    return (
-      <div className={classes.headspace}>
-        <Typography variant="display1" gutterBottom>
-          {"News Stories"}
-        </Typography>
-        <Typography variant="body2" gutterBottom>
-          {description}
-        </Typography>
-        <Typography variant="headline" gutterBottom>
-          {headline}
-        </Typography>
-        <Typography variant="subheading" gutterBottom>
-          <SplitHilite str={title} />
-        </Typography>
-        <MemberGate content={content} userAuth={this.props.userAuth} {...this.props.other} />
-      </div>
-    );
-  }
+  return (
+    <div className={classes.headspace}>
+      <Typography variant="h5" gutterBottom>
+        {"News Stories"}
+      </Typography>
+      <Typography variant="body2" gutterBottom>
+        {description}
+      </Typography>
+      <Typography variant="h5" gutterBottom>
+        {headline}
+      </Typography>
+      <Typography variant="h6" gutterBottom>
+        <SplitHilite str={title} />
+      </Typography>
+      <MemberGate content={content} userAuth={props.userAuth} />
+    </div>
+  );
 }
 
-export default withStyles(styles)(NewsStories);
+export default withTheme(NewsStories);

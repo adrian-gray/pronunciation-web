@@ -5,11 +5,12 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
 import SplitHilite from "./SplitHilite";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   headspace: theme.headspace,
   largeText: theme.largeText,
   subCanvas: theme.subCanvas,
@@ -24,10 +25,11 @@ const styles = theme => ({
     paddingBottom: 0,
     borderBottom: "1px solid #EEE"
   }
-});
+}));
 
-const Dialogues = props => {
-  const { classes, dialogues, ipa } = props;
+function Dialogues(props) {
+  const classes = useStyles(props);
+  const { dialogues, ipa } = props;
 
   const extractLines = (dialogue, index) => {
     return dialogue.map((line, index) => {
@@ -54,13 +56,13 @@ const Dialogues = props => {
 
   return (
     <div className={classes.headspace}>
-      <Typography variant="title" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         {"Short dialogues using "}
         <SplitHilite str={ipa} />
       </Typography>
       {lines}
     </div>
   );
-};
+}
 
-export default withStyles(styles)(Dialogues);
+export default withTheme(Dialogues);

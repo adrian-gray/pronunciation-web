@@ -21,16 +21,27 @@ const ExtractActivity = params => {
   let activityComponent = null;
   const activity = data.activities[activityName];
   const requiredSubscriptionLevel = activity && activity["subscription"];
-  const userAuth = subscriptionLevel >= requiredSubscriptionLevel;
+  // const userAuth = subscriptionLevel >= requiredSubscriptionLevel;
+  const userAuth = true; // TODO
 
   switch (activityName) {
     case "common words":
-      activityComponent = <CommonWords ipa={data.ipa} words={activity.words} userAuth={userAuth} />;
+      activityComponent = (
+        <CommonWords
+          ipa={data.ipa}
+          words={activity.words}
+          userAuth={userAuth}
+        />
+      );
       break;
 
     case "dialogues":
       activityComponent = (
-        <Dialogues ipa={data.ipa} dialogues={activity.dialogues} userAuth={userAuth} />
+        <Dialogues
+          ipa={data.ipa}
+          dialogues={activity.dialogues}
+          userAuth={userAuth}
+        />
       );
       break;
 
@@ -86,12 +97,19 @@ const ExtractActivity = params => {
 
     case "minimal pairs":
       activityComponent = (
-        <MinimalPairs ipa={data.ipa} tag={data.tag} pairs={activity.pairs} userAuth={userAuth} />
+        <MinimalPairs
+          ipa={data.ipa}
+          tag={data.tag}
+          pairs={activity.pairs}
+          userAuth={userAuth}
+        />
       );
       break;
 
     case "movie":
-      activityComponent = <Movie ipa={data.ipa} url={activity.url} userAuth={userAuth} />;
+      activityComponent = (
+        <Movie ipa={data.ipa} url={activity.url} userAuth={userAuth} />
+      );
       break;
 
     case "new stories":
@@ -110,21 +128,35 @@ const ExtractActivity = params => {
       break;
 
     case "phrases":
-      activityComponent = <Phrases phrases={activity.phrases} ipa={data.ipa} userAuth={userAuth} />;
+      activityComponent = (
+        <Phrases
+          phrases={activity.phrases}
+          ipa={data.ipa}
+          userAuth={userAuth}
+        />
+      );
       break;
 
     case "say the sentences":
-      activityComponent = <SayTheSentences ipa={data.ipa} sentences={activity.sentences} />;
+      activityComponent = (
+        <SayTheSentences ipa={data.ipa} sentences={activity.sentences} />
+      );
       break;
 
     case "tongue twisters":
       activityComponent = (
-        <TongueTwisters tag={data.tag} tongueTwisters={activity.twisters} userAuth={userAuth} />
+        <TongueTwisters
+          tag={data.tag}
+          tongueTwisters={activity.twisters}
+          userAuth={userAuth}
+        />
       );
       break;
 
     case "words":
-      activityComponent = <Words ipa={data.ipa} words={activity.words} userAuth={userAuth} />;
+      activityComponent = (
+        <Words ipa={data.ipa} words={activity.words} userAuth={userAuth} />
+      );
       break;
 
     case "words maze":

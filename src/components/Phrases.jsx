@@ -6,18 +6,21 @@ import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
 import SplitHilite from "./SplitHilite";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   headspace: theme.headspace,
   subCanvas: theme.subCanvas,
   largeText: theme.largeText
-});
+}));
 
 const Phrases = props => {
-  const { classes, ipa, phrases } = props;
+  const classes = useStyles(props);
+
+  const { ipa, phrases } = props;
 
   const list = Object.entries(phrases).map((arr, index) => {
     return (
@@ -38,7 +41,7 @@ const Phrases = props => {
 
   return (
     <div className={classes.headspace}>
-      <Typography variant="title" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         {`Phrases using `}
         <SplitHilite str={ipa} />
       </Typography>
@@ -52,4 +55,4 @@ const Phrases = props => {
   );
 };
 
-export default withStyles(styles)(Phrases);
+export default withTheme(Phrases);

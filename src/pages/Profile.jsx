@@ -3,15 +3,17 @@ import { Redirect } from "react-router-dom";
 
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   page: theme.page,
   headspace: theme.headspace
-});
+}));
 
-const Profile = props => {
-  const { classes, user } = props;
+function Profile(props) {
+  const classes = useStyles(props);
+  const { user } = props;
 
   if (!user) {
     return <Redirect to="/" />;
@@ -30,6 +32,6 @@ const Profile = props => {
       </div>
     </Paper>
   );
-};
+}
 
-export default withStyles(styles)(Profile);
+export default withTheme(Profile);

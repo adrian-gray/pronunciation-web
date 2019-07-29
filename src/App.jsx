@@ -1,22 +1,24 @@
 import React, { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+
 import firebase from "firebase/app";
+import { auth } from "./firebase";
+
 import ReactGA from "react-ga";
-import "core-js";
+import "core-js"; // TODO what is this?
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/styles";
 import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-import { auth } from "./firebase";
-import { BrowserRouter } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Router from "./Router";
 import SEO from "./components/SEO";
 import Theme from "./Theme";
 
-const classes = makeStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: 0,
     marginLeft: "auto",
     marginBottom: 0,
     marginRight: "auto",
@@ -33,13 +35,11 @@ const classes = makeStyles(theme => ({
   }
 }));
 
-export default function App() {
+function App(props) {
+  const classes = useStyles(props);
+
   const [user, setUser] = useState(null);
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
-
-  function initFirebaseAuth() {
-    firebase.auth().onAuthStateChanged(handleAuthChange);
-  }
 
   function handleAuthChange(user) {
     if (user) {
@@ -61,29 +61,11 @@ export default function App() {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
-  initFirebaseAuth();
-
-  // return (
-  //   <BrowserRouter>
-  //     <div>
-  //       <CssBaseline />
-  //       <ThemeProvider theme={Theme}>
-  //         <div className={classes.root}>
-  //           <SEO />
-  //           <NavBar user={this.state.user} signout={this.signout} />
-  //           <Router
-  //             user={this.state.user}
-  //             subscriptionLevel={this.state.subscriptionLevel}
-  //           />
-  //         </div>
-  //       </ThemeProvider>
-  //     </div>
-  //   </BrowserRouter>
-  // );
+  firebase.auth().onAuthStateChanged(handleAuthChange);
 
   return (
     <BrowserRouter>
-      <div>
+      <div className="outer">
         <CssBaseline />
         <ThemeProvider theme={Theme}>
           <div className={classes.root}>
@@ -96,3 +78,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default withTheme(App);

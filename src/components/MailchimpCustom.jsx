@@ -78,19 +78,24 @@ class MailchimpForm extends React.Component {
               emailErrorMsg: "An email address must contain a single @"
             });
             break;
-          case message === "0 - The username portion of the email address is empty":
+          case message ===
+            "0 - The username portion of the email address is empty":
             this.setState({
               emailError: true,
               emailErrorMsg: "The username portion of the email is empty"
             });
             break;
-          case message.includes("0 - The domain portion of the email address is invalid"):
+          case message.includes(
+            "0 - The domain portion of the email address is invalid"
+          ):
             this.setState({
               emailError: true,
               emailErrorMsg: "The domain portion of the email is invalid"
             });
             break;
-          case message.includes("0 - The username portion of the email address is invalid"):
+          case message.includes(
+            "0 - The username portion of the email address is invalid"
+          ):
             this.setState({
               emailError: true,
               emailErrorMsg: "The username portion of the email is invalid"
@@ -127,7 +132,9 @@ class MailchimpForm extends React.Component {
         status = <Typography gutterBottom>{`Sending subscription`}</Typography>;
         break;
       case "success":
-        status = <Typography gutterBottom>{`Thanks for subscribing`}</Typography>;
+        status = (
+          <Typography gutterBottom>{`Thanks for subscribing`}</Typography>
+        );
     }
 
     return (
@@ -159,7 +166,7 @@ class MailchimpForm extends React.Component {
             {`We hate spam and will never share your details with anyone else.`}
           </Typography>
           <br />
-          <Button onClick={this.submit} variant="raised" color="secondary">
+          <Button onClick={this.submit} variant="contained" color="secondary">
             {"Keep me updated!"}
           </Button>
         </form>

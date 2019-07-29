@@ -6,18 +6,20 @@ import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
 import SplitHilite from "./SplitHilite";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   largeText: theme.largeText,
   headspace: theme.headspace,
   cell: theme.cell
-});
+}));
 
-const MinimalPairs = props => {
-  const { classes, ipa, pairs, tag } = props;
+function MinimalPairs(props) {
+  const classes = useStyles(props);
+  const { ipa, pairs, tag } = props;
 
   const rows = pairs.map((pair, key) => (
     <TableRow key={key}>
@@ -36,7 +38,7 @@ const MinimalPairs = props => {
 
   return (
     <div className={classes.headspace}>
-      <Typography variant="title" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         {`English  minimal pairs with ${tag} - `}
         <SplitHilite str={ipa} />
       </Typography>
@@ -47,6 +49,6 @@ const MinimalPairs = props => {
       </Paper>
     </div>
   );
-};
+}
 
-export default withStyles(styles)(MinimalPairs);
+export default withTheme(MinimalPairs);
