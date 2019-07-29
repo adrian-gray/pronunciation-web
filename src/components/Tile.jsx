@@ -2,9 +2,10 @@ import React, { Component } from "react";
 
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import withStyles from "@material-ui/styles/withStyles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   largeText: theme.largeText,
   correctBG: theme.correctBG,
   incorrectBG: theme.incorrectBG,
@@ -17,40 +18,36 @@ const styles = theme => ({
   clickable: {
     cursor: "pointer"
   }
-});
+}));
 
-class Tile extends Component {
-  constructor(props) {
-    super(props);
+function Tile(props) {
+  const classes = useStyles(props);
 
-    this.handleClick = this.handleClick.bind(this);
+  const handleClick = e => {
+    props.handleClick(props.index);
+  };
+
+  const paperClasses = [classes.left];
+
+  let correctStatus = null;
+  if (props.isCorrect) {
+    paperClasses.push(classes.correctBG);
+    correctStatus = "correctBG";
+  } else if (props.isCorrect === false) {
+    paperClasses.push(classes.incorrectBG);
+    correctStatus = "incorrectBG";
+    console.log("DERP");
   }
 
-  handleClick(e) {
-    this.props.handleClick(this.props.index);
-  }
-
-  render() {
-    const { classes } = this.props;
-    const paperClasses = [classes.left];
-
-    let correctStatus = null;
-    if (this.props.isCorrect) {
-      paperClasses.push(classes.correctBG);
-    } else if (this.props.isCorrect === false) {
-      paperClasses.push(classes.incorrectBG);
-    }
-
-    return (
-      <div className={classes.clickable} onClick={this.handleClick}>
-        <Paper className={paperClasses.join(" ")}>
-          <Typography className={classes.largeText}>
-            <span className={classes[correctStatus]}>{this.props.word}</span>
-          </Typography>
-        </Paper>
-      </div>
-    );
-  }
+  return (
+    <div className={classes.clickable} onClick={handleClick}>
+      <Paper className={paperClasses.join(" ")}>
+        <Typography className={classes.largeText}>
+          <span className={classes[correctStatus]}>{props.word}</span>
+        </Typography>
+      </Paper>
+    </div>
+  );
 }
 
-export default withStyles(styles)(Tile);
+export default withTheme(Tile);
