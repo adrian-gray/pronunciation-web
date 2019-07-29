@@ -4,6 +4,7 @@
     "dev": "webpack-dev-server --config webpack.config.development.js --watch",
     "postbuild": "react-snap",
     "deploy": "yarn firebase deploy",
+    "json": "node ./bin/generate-json.js",
     "sitemap": "node ./bin/generate-sitemap.js"
   },
   "reactSnap": {

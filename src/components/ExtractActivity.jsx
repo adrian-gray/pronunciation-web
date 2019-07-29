@@ -21,8 +21,7 @@ const ExtractActivity = params => {
   let activityComponent = null;
   const activity = data.activities[activityName];
   const requiredSubscriptionLevel = activity && activity["subscription"];
-  // const userAuth = subscriptionLevel >= requiredSubscriptionLevel;
-  const userAuth = true; // TODO
+  const userAuth = subscriptionLevel >= requiredSubscriptionLevel;
 
   switch (activityName) {
     case "common words":
