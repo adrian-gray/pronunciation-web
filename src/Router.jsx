@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import FourOhFour from "./pages/404";
@@ -10,6 +10,12 @@ import Sound from "./pages/Sound";
 import Profile from "./pages/Profile";
 
 function Router(props) {
+  const [subscriptionLevel, setSubscriptionLevel] = useState(null);
+
+  useEffect(() => {
+    setSubscriptionLevel(props.subscriptionLevel);
+  });
+
   return (
     <Switch>
       <Route exact path="/" component={Landing} />
@@ -28,10 +34,15 @@ function Router(props) {
       <Route
         path="/sound/:phoneme/:activity?"
         render={props => (
-          <Sound subscriptionLevel={props.subscriptionLevel} {...props} />
+          <Sound subscriptionLevel={subscriptionLevel} {...props} />
         )}
       />
-      <Route path="/sound/:phoneme" compoment={Sound} />
+      <Route
+        path="/sound/:phoneme"
+        render={props => (
+          <Sound subscriptionLevel={subscriptionLevel} {...props} />
+        )}
+      />
       <Route default component={FourOhFour} />
     </Switch>
   );

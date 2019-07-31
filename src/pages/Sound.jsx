@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Divider from "@material-ui/core/Divider";
 import Paper from "@material-ui/core/Paper";
@@ -26,6 +26,12 @@ function Sound(props) {
     "none";
   const data = jsonData["phonemes"][phoneme];
 
+  const [subscriptionLevel, setSubscriptionLevel] = useState(null);
+
+  useEffect(() => {
+    setSubscriptionLevel(props.subscriptionLevel);
+  });
+
   if (!data) {
     return (
       <Paper className={classes.page}>
@@ -40,8 +46,7 @@ function Sound(props) {
 
   const activityComponent = ExtractActivity({
     activityName: activity,
-    data,
-    subscriptionLevel: props.subscriptionLevel
+    data
   });
 
   return (

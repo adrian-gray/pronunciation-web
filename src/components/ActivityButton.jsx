@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Chip from "@material-ui/core/Chip";
@@ -33,16 +33,23 @@ const toLink = (phoneme, activity) => {
 function ActivityButton(props) {
   const classes = useStyles(props);
 
-  const { accessStatus, activity, phoneme, subscriptionLevel } = props;
-
+  const { accessStatus, activity, phoneme } = props;
   const { title, link } = toLink(phoneme, activity);
 
-  let chipClass = classes[accessStatus];
-  if (accessStatus === "member" && subscriptionLevel) {
-    chipClass = classes["open"];
-  }
+  let subscriptionLevel = props.subscriptionLevel;
 
-  const chipClasses = `${classes.chip} ${chipClass}`;
+  let chipClass = classes[accessStatus];
+
+  const [chipClasses, setChipClasses] = useState(
+    `${classes.chip} ${chipClass}`
+  );
+
+  useEffect(() => {
+    if (accessStatus === "member" && subscriptionLevel) {
+      chipClass = classes["open"];
+      setChipClasses(`${classes.chip} ${chipClass}`);
+    }
+  });
 
   return (
     <Chip

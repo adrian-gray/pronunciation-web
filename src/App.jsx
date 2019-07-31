@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import firebase from "firebase/app";
@@ -41,11 +41,12 @@ function App(props) {
   const [user, setUser] = useState(null);
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
 
+  firebase.auth().onAuthStateChanged(handleAuthChange);
   function handleAuthChange(user) {
     if (user) {
-      auth.getUserData().then(val => {
-        setSubscriptionLevel(val);
-      });
+      auth.getUserData().then(val => setSubscriptionLevel(val));
+    } else {
+      setSubscriptionLevel(null);
     }
     setUser(user);
   }
@@ -60,8 +61,6 @@ function App(props) {
     ReactGA.initialize("UA-122566851-1");
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
-
-  firebase.auth().onAuthStateChanged(handleAuthChange);
 
   return (
     <BrowserRouter>
