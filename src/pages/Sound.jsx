@@ -46,7 +46,8 @@ function Sound(props) {
 
   const activityComponent = ExtractActivity({
     activityName: activity,
-    data
+    data,
+    subscriptionLevel
   });
 
   return (

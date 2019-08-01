@@ -1,6 +1,6 @@
 import React from "react";
 
-import { capitalise } from "./../utils";
+import { capitalise } from "./../utils/utils";
 
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";

@@ -11,9 +11,11 @@ import Profile from "./pages/Profile";
 
 function Router(props) {
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     setSubscriptionLevel(props.subscriptionLevel);
+    setUser(props.user);
   });
 
   return (
@@ -23,12 +25,12 @@ function Router(props) {
       <Route
         exact
         path="/login"
-        render={props => <Login user={props.user} {...props} />}
+        render={props => <Login user={user} {...props} />}
       />
       <Route
         exact
         path="/profile"
-        render={props => <Profile user={props.user} {...props} />}
+        render={props => <Profile user={user} {...props} />}
       />
       <Route exact path="/sounds" component={Sounds} />
       <Route

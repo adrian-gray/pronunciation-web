@@ -23,22 +23,18 @@ const useStyles = makeStyles(theme => ({
 function Login(props) {
   const classes = useStyles(props);
 
-  if (props.user) {
-    return <Redirect to="/home" />;
-  }
-
-  // useEffect(() => {
-  //   // TODO redirect to home/profile on login
-  //   // if (props.user) {
-  //   //   return <Redirect to="/home" />;
-  //   // }
-  // });
-
   const [signupName, setSignupName] = useState("");
   const [signupEmail, setSignupEmail] = useState("");
   const [signinEmail, setSigninEmail] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
   const [signinPassword, setSigninPassword] = useState("");
+  const [redirectToHome, setRedirectToHome] = useState(false);
+
+  useEffect(() => {
+    if (props.user) {
+      setRedirectToHome(true);
+    }
+  });
 
   const handleChange = property => {
     return e => {
@@ -81,6 +77,7 @@ function Login(props) {
 
   return (
     <Paper className={classes.page}>
+      {redirectToHome ? <Redirect to="/home" /> : null}
       <div>
         <Paper className={classes.personalSpace}>
           <Button
@@ -106,6 +103,7 @@ function Login(props) {
               value={signinEmail}
               onChange={handleChange("signinEmail")}
               margin="normal"
+              autoComplete="username"
             />
             <TextField
               id="signin_password"
@@ -144,6 +142,7 @@ function Login(props) {
             value={signupEmail}
             onChange={handleChange("signupEmail")}
             margin="normal"
+            autoComplete="username"
           />
           <TextField
             autoComplete="current-password"
