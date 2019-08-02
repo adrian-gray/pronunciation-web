@@ -10,7 +10,7 @@ import MailchimpCustom from "./MailchimpCustom";
 const url =
   "//endual.us8.list-manage.com/subscribe/post?u=5cfcc43825365c2c32230cdde&id=f0489cd39a";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   mailchimp: {
     backgroundColor: "#fff8f0"
   }

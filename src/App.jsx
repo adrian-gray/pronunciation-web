@@ -5,7 +5,6 @@ import firebase from "firebase/app";
 import { auth } from "./firebase";
 
 import ReactGA from "react-ga";
-import "core-js"; // TODO what is this?
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/styles";
