@@ -46,7 +46,7 @@ function FindTheWords(props) {
     setIsCorrect(newStateIsCorrect);
   };
 
-  const { ipa, isOddOneOut, tag, words } = props;
+  const { ipa, isHearTheDifference, tag, words } = props;
 
   let description = "";
   let result = "";
@@ -72,7 +72,7 @@ function FindTheWords(props) {
     />
   ));
 
-  if (isOddOneOut) {
+  if (isHearTheDifference) {
     title = (
       <Typography variant="h5" gutterBottom>
         {`Odd One Out - select words that DON'T have an `}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import AppBar from "@material-ui/core/AppBar";
@@ -29,12 +29,6 @@ const useStyles = makeStyles(theme => ({
 
 function NavBar(props) {
   const classes = useStyles(props);
-
-  const [open, setOpen] = useState(false);
-
-  function handleToggle() {
-    setOpen(!open);
-  }
 
   let homeLink = "/";
   let changeLoginStatus;

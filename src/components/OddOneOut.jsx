@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function FourInARow(props) {
+function OddOneOut(props) {
   const classes = useStyles(props);
 
   const title = `Select the words that ~DON'T~ have the ${props.tag} – ${
@@ -115,7 +115,7 @@ function FourInARow(props) {
   return (
     <div className={classes.headspace}>
       <Typography variant="h5" gutterBottom>
-        {`Four in a row using ${props.tag} - `}
+        {`The Odd One Out using ${props.tag} - `}
         <SplitHilite str={props.ipa} />
       </Typography>
       <Typography variant="h6" gutterBottom>
@@ -125,11 +125,11 @@ function FourInARow(props) {
       <Typography variant="body1" gutterBottom>
         {`Can you spot the difference? In each group of words there are three with the ${
           props.tag
-        } vowel sound and one with a different vowel sound. Say the words and choose the one that doesn’t sound the same as the others. Advance to the next level with more challenging words. Four in a Row encourages you to identify the differences between words with similar sounding vowels.`}
+        } vowel sound and one with a different vowel sound. Say the words and choose the one that doesn’t sound the same as the others. Advance to the next level with more challenging words. Odd One Out encourages you to identify the differences between words with similar sounding vowels.`}
       </Typography>
       <MemberGate content={content} userAuth={props.userAuth} />
     </div>
   );
 }
 
-export default withTheme(FourInARow);
+export default withTheme(OddOneOut);

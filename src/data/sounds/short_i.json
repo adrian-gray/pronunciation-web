@@ -146,6 +146,7 @@
         ]
       },
       "beginner news stories": {
+        "level": "beginner",
         "subscription": 1,
         "title": "Choose the correct sound: ~/ɪ/~ (the short ‘i’ sound); ~/e/~ (the short ‘e’ sound), or '~0~' (not the short 'i' sound; not the short 'e' sound)",
         "headline": "From riches to rags",
@@ -180,6 +181,7 @@
         ]
       },
       "intermediate news stories": {
+        "level": "intermediate",
         "subscription": 1,
         "title": "Choose the correct sound: ~/ɪ/~ (the short ‘i’ sound); ~/e/~ (the short ‘e’ sound), or '~0~' (not the short 'i' sound; not the short 'e' sound)",
         "headline": "From riches to rags",

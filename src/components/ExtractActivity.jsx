@@ -3,7 +3,7 @@ import React from "react";
 import CommonWords from "./../components/CommonWords";
 import Dialogues from "./../components/Dialogues";
 import FindTheWords from "./../components/FindTheWords";
-import FourInARow from "./../components/FourInARow";
+import OddOneOut from "./../components/OddOneOut";
 import HowToPronounce from "./../components/HowToPronounce";
 import NewsStories from "./../components/NewsStories";
 import MinimalPairs from "./../components/MinimalPairs";
@@ -16,7 +16,7 @@ import Words from "./../components/Words";
 import WordsMaze from "./../components/WordsMaze";
 
 const ExtractActivity = params => {
-  const { activityName, data, subscriptionLevel } = params;
+  const { props, activityName, data, subscriptionLevel } = params;
 
   let activityComponent = null;
   const activity = data.activities[activityName];
@@ -56,12 +56,12 @@ const ExtractActivity = params => {
       );
       break;
 
-    case "odd one out":
+    case "odd one out1":
       activityComponent = (
         <FindTheWords
           ipa={data.ipa}
           tag={data.tag}
-          isOddOneOut
+          OddOneOut
           words={activity.words}
           correct={activity.correct}
           userAuth={userAuth}
@@ -69,9 +69,9 @@ const ExtractActivity = params => {
       );
       break;
 
-    case "four in a row":
+    case "odd one out":
       activityComponent = (
-        <FourInARow
+        <OddOneOut
           correct={activity.correct}
           example={activity.example}
           exampleHilite={activity.exampleHilite}
@@ -116,12 +116,14 @@ const ExtractActivity = params => {
     case "intermediate news stories":
       activityComponent = (
         <NewsStories
+          level={activity.level}
           title={activity.title}
           headline={activity.headline}
           options={activity.options}
           sentences={activity.sentences}
           answers={activity.answers}
           userAuth={userAuth}
+          {...props}
         />
       );
       break;

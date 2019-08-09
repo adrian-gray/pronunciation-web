@@ -168,6 +168,7 @@
         "correct": ["start", "all", "table", "name"]
       },
       "beginner news stories": {
+        "level": "beginner",
         "subscription": 1,
         "title": "Choose the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)",
         "headline": "Snake Eats Tongs",
@@ -180,6 +181,7 @@
         ]
       },
       "intermediate news stories": {
+        "level": "intermediate",
         "subscription": 1,
         "title": "Choose the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)",
         "headline": "Snake Eats Tongs",

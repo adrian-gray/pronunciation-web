@@ -45,6 +45,7 @@ function Sound(props) {
   const SEOlocation = `sound ${phoneme} ${activity}`;
 
   const activityComponent = ExtractActivity({
+    props,
     activityName: activity,
     data,
     subscriptionLevel

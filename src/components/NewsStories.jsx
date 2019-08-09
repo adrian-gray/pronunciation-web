@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -38,13 +38,12 @@ function NewsStories(props) {
   const classes = useStyles(props);
 
   const handleClick = index => {
-    if (!props.userAuth) return;
+    if (!authRef.current) return;
     const newSelectedOptions = selectedOptions.slice();
     const newSelectedBgColours = selectedBgColours.slice();
-    newSelectedOptions[index] =
-      (selectedOptions[index] + 1) % props.options.length;
+    newSelectedOptions[index] = (selectedOptions[index] + 1) % options.length;
     if (newSelectedOptions.every(val => val > 0)) {
-      checkForCorrect(newSelectedOptions).forEach((value, index) => {
+      checkForCorrect(newSelectedOptions.current).forEach((value, index) => {
         switch (value) {
           case true:
             newSelectedBgColours[index] = classes.green;
@@ -58,15 +57,16 @@ function NewsStories(props) {
       });
     }
 
-    setSelectedOptions(newSelectedOptions);
-    setSelectedBgColours(newSelectedBgColours);
+    selectedOptions = newSelectedOptions;
+    console.log("after click selectedOptions:", selectedOptions);
+    selectedBgColours = newSelectedBgColours;
   };
 
   function parseSentences() {
     let id = 0;
     let selectorId = 0;
 
-    const parsedSentences = props.sentences.map((displaySentence, index) => {
+    const parsedSentences = sentences.map((displaySentence, index) => {
       const fragments = [];
       let key = 0;
       do {
@@ -77,7 +77,7 @@ function NewsStories(props) {
         } else if (idx === 0) {
           fragments.push(
             <Picker
-              options={props.options}
+              options={optionsRef.current}
               selected={selectedOptions[selectorId]}
               colour={selectedBgColours[selectorId]}
               handleClick={handleClick}
@@ -112,19 +112,35 @@ function NewsStories(props) {
     });
   }
 
-  const numSelectors = countSelectors(props.sentences);
-  const [selectedOptions, setSelectedOptions] = useState(
-    Array(numSelectors).fill(0)
-  );
-  const [selectedBgColours, setSelectedBgColours] = useState(
-    Array(numSelectors).fill(undefined)
-  );
-  const [sentences, setSentences] = useState(parseSentences());
+  const { options, sentences, userAuth } = props;
+  let numSelectors = countSelectors(sentences);
 
-  useEffect(() => setSentences(parseSentences()));
+  const { url, setUrl } = useState(props.match.url);
+  const authRef = useRef(userAuth);
+  const sentencesRef = useRef(sentences);
+  const optionsRef = useRef(options);
+
+  // TODO why are these not updating in the component?
+  let selectedOptions = Array(numSelectors).fill(0);
+  let selectedBgColours = Array(numSelectors).fill(undefined);
+  // TODO END
+
+  const parsedSentences = parseSentences();
+
+  useEffect(() => {
+    console.log("==== UYPDATE ====");
+    authRef.current = userAuth;
+    sentencesRef.current = sentences;
+    optionsRef.current = options;
+    if (url && url !== props.match.url) {
+      setUrl(props.match.url);
+      selectedOptions = Array(numSelectors).fill(0);
+      selectedBgColours = Array(numSelectors).fill(undefined);
+    }
+  });
 
   const { headline, title } = props;
-  const content = <Paper>{sentences}</Paper>;
+  const content = <Paper>{parsedSentences}</Paper>;
   const description = `Extra! Extra! Read all about it! News Stories is a collection of interesting and feel-good stories from around the world.  Each story is written in two levels – beginners and intermediate. All you need to do is identify the highlighted sounds and choose the correct phoneme that represents that sound. News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.`;
 
   return (
@@ -141,7 +157,7 @@ function NewsStories(props) {
       <Typography variant="h6" gutterBottom>
         <SplitHilite str={title} />
       </Typography>
-      <MemberGate content={content} userAuth={props.userAuth} />
+      <MemberGate content={content} userAuth={userAuth} />
     </div>
   );
 }

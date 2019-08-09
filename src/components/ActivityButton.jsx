@@ -33,10 +33,8 @@ const toLink = (phoneme, activity) => {
 function ActivityButton(props) {
   const classes = useStyles(props);
 
-  const { accessStatus, activity, phoneme } = props;
+  const { accessStatus, activity, phoneme, subscriptionLevel } = props;
   const { title, link } = toLink(phoneme, activity);
-
-  let subscriptionLevel = props.subscriptionLevel;
 
   let chipClass = classes[accessStatus];
 

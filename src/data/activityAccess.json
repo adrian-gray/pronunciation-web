@@ -16,17 +16,19 @@
     "beginner news stories",
     "intermediate news stories",
     "words maze",
-    "four in a row"
+    "odd one out"
   ],
   "pendingActivities": [
-    "hear the words",
-    "pronunciation journey",
-    "sort the words",
-    "rhyming words",
+    "choose the sound",
     "count the sounds",
-    "write the minimal pair",
+    "fill in the spaces",
+    "hear the words",
     "join to make words",
     "listen to the sounds",
-    "minimal pairs dominos"
+    "minimal pairs dominos",
+    "pronunciation journey",
+    "rhyming words",
+    "sort the words",
+    "write the minimal pair"
   ]
 }

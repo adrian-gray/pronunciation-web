@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function Picker(props) {
+  console.log("props.selected", props.selected);
   const classes = useStyles(props);
   const myClasses = `${classes.clickable} ${props.colour}`;
 
