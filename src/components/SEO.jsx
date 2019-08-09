@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import meta from "./../data/meta";
+import meta from "./../data/seo/meta";
 
 function SEO(props) {
   const content = Object.assign({}, meta["default"], meta[props.meta]);
