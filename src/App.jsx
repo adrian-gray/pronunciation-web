@@ -1,105 +1,80 @@
-import React from 'react'
-import firebase from 'firebase/app'
-import ReactGA from 'react-ga'
+import React, { useState, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
 
-import {
-  CssBaseline,
-  MuiThemeProvider,
-  withStyles,
-  withTheme
-} from '@material-ui/core'
+import firebase from "firebase/app";
+import { auth } from "./firebase";
 
-import { auth } from './firebase'
-import { BrowserRouter } from 'react-router-dom'
-import NavBar from './components/NavBar'
-import Router from './Router'
-import SEO from './components/SEO'
-import Theme from './Theme'
+import ReactGA from "react-ga";
 
-const styles = (theme) => ({
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { ThemeProvider } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
+
+import NavBar from "./components/NavBar";
+import Router from "./Router";
+import SEO from "./components/SEO";
+import Theme from "./Theme";
+
+const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: 0,
-    marginLeft: 'auto',
+    marginLeft: "auto",
     marginBottom: 0,
-    marginRight: 'auto',
+    marginRight: "auto",
     padding: 0,
     maxWidth: 1024,
-    [theme.breakpoints.up('xs')]: {
+    [theme.breakpoints.up("xs")]: {
       paddingRight: 0,
       paddingLeft: 0
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       paddingRight: 20,
       paddingLeft: 20
     }
   }
-})
+}));
 
-class App extends React.Component {
-  constructor (props) {
-    super(props)
+function App(props) {
+  const classes = useStyles(props);
 
-    this.state = {
-      user: null,
-      subscriptionLevel: null
-    }
+  const [user, setUser] = useState(null);
+  const [subscriptionLevel, setSubscriptionLevel] = useState(null);
 
-    this.initFirebaseAuth = this.initFirebaseAuth.bind(this)
-    this.signout = this.signout.bind(this)
-    this.handleAuthChange = this.handleAuthChange.bind(this)
-  }
-
-  componentDidMount () {
-    if (window && window.location.href.includes('pronounceweb.com')) {
-      ReactGA.initialize('UA-122566851-1')
-      ReactGA.pageview(window.location.pathname + window.location.search)
-    }
-    this.initFirebaseAuth()
-  }
-
-  initFirebaseAuth () {
-    firebase.auth().onAuthStateChanged(this.handleAuthChange)
-  }
-
-  handleAuthChange (user) {
+  firebase.auth().onAuthStateChanged(handleAuthChange);
+  function handleAuthChange(user) {
     if (user) {
-      auth.getUserData()
-        .then(val => {
-          this.setState({ subscriptionLevel: val })
-        })
+      auth.getUserData().then(val => setSubscriptionLevel(val));
+    } else {
+      setSubscriptionLevel(null);
     }
-    this.setState({ user })
+    setUser(user);
   }
 
-  signout () {
-    auth.signOut()
-    this.setState({
-      user: null,
-      subscriptionLevel: 0
-    })
+  function signout() {
+    auth.signOut();
+    setUser(null);
+    setSubscriptionLevel(null);
   }
 
-  render () {
-    const { classes } = this.props
-
-    return (
-      <BrowserRouter>
-        <div>
-          <CssBaseline />
-          <MuiThemeProvider theme={Theme}>
-            <div className={classes.root}>
-              <SEO />
-              <NavBar user={this.state.user} signout={this.signout} />
-              <Router
-                user={this.state.user}
-                subscriptionLevel={this.state.subscriptionLevel}
-              />
-            </div>
-          </MuiThemeProvider>
-        </div>
-      </BrowserRouter>
-    )
+  if (window && window.location.href.includes("pronounceweb.com")) {
+    ReactGA.initialize("UA-122566851-1");
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
+
+  return (
+    <BrowserRouter>
+      <div className="outer">
+        <CssBaseline />
+        <ThemeProvider theme={Theme}>
+          <div className={classes.root}>
+            <SEO />
+            <NavBar user={user} signout={signout} />
+            <Router user={user} subscriptionLevel={subscriptionLevel} />
+          </div>
+        </ThemeProvider>
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default withTheme()(withStyles(styles)(App))
+export default withTheme(App);

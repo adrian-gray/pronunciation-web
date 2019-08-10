@@ -1,36 +1,35 @@
-import React from 'react'
+import React from "react";
 
-import {
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-const styles = (theme) => ({
+const useStyles = makeStyles(theme => ({
   headspace: theme.headspace,
   blocked: {
     opacity: 0.2
   }
-})
+}));
 
-const MemberGate = (props) => {
-  let display
+function MemberGate(props) {
+  const classes = useStyles(props);
+
+  let display;
 
   if (props.userAuth) {
-    display = props.content
+    display = props.content;
   } else {
     display = (
       <div>
-        <Typography variant='subheading' className={props.classes.headspace} gutterBottom>
-          {'Sorry, this interactive activity is for members only.'}
+        <Typography variant="h6" className={classes.headspace} gutterBottom>
+          {"Sorry, this interactive activity is for members only."}
         </Typography>
-        <div className={props.classes.blocked}>
-          {props.content}
-        </div>
+        <div className={classes.blocked}>{props.content}</div>
       </div>
-    )
+    );
   }
 
-  return display
+  return display;
 }
 
-export default withStyles(styles)(MemberGate)
+export default withTheme(MemberGate);

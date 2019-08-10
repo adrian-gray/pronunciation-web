@@ -1,30 +1,30 @@
-import React from 'react'
-import { capitalise } from './../utils'
+import React from "react";
+import { capitalise } from "./../utils/utils";
 
-import {
-  Paper,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-const styles = (theme) => ({
+const useStyles = makeStyles(theme => ({
   headspace: theme.headspace,
   largeText: theme.largeText,
   personalSpace: theme.personalSpace
-})
+}));
 
-const Pending = (props) => {
-  const { classes, name } = props
+function Pending(props) {
+  const classes = useStyles(props);
+  const { name } = props;
 
   return (
     <div className={classes.headspace}>
       <Paper>
-        <Typography variant='title' className={classes.personalSpace} gutterBottom>
+        <Typography variant="h5" className={classes.personalSpace} gutterBottom>
           {`${capitalise(name)} - activity coming soon`}
         </Typography>
       </Paper>
     </div>
-  )
+  );
 }
 
-export default withStyles(styles)(Pending)
+export default withTheme(Pending);

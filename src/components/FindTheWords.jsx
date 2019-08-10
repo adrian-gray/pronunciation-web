@@ -1,136 +1,112 @@
-import React, {Component } from 'react'
+import React, { useState } from "react";
 
-import {
-  Paper,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-import MemberGate from './MemberGate'
-import SplitHilite from './SplitHilite'
-import Tile from './Tile'
+import MemberGate from "./MemberGate";
+import SplitHilite from "./SplitHilite";
+import Tile from "./Tile";
 
-const styles = (theme) => ({
+const useStyles = makeStyles(theme => ({
   headspace: theme.headspace,
   clearFloat: theme.clearFloat,
   center: theme.center,
   correctBG: theme.correctBG,
   incorrectBG: theme.incorrectBG
-})
+}));
 
-class FindTheWords extends Component {
-  constructor (props) {
-    super(props)
+function FindTheWords(props) {
+  const classes = useStyles(props);
+  const [isCorrect, setIsCorrect] = useState(
+    Array(props.words.length).fill(undefined)
+  );
+  const [allCorrect, setAllCorrect] = useState(false);
 
-    const {...other} = props
+  function checkAllCorrect(correct) {
+    let numRemaining = props.correct.length;
 
-    this.state = {
-      other,
-      isCorrect: Array(props.words.length).fill(undefined),
-      wordTiles: [],
-      allCorrect: false
-    }
-
-    this.checkAllCorrect = this.checkAllCorrect.bind(this)
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  checkAllCorrect (correct) {
-    let numRemaining = this.props.correct.length
-
-    for (let i = 0; i < this.props.words.length; i++) {
+    for (let i = 0; i < props.words.length; i++) {
       if (correct[i] === true) {
-        numRemaining--
+        numRemaining--;
       } else if (correct[i] === false) {
-        return false
+        return false;
       }
     }
-    return numRemaining === 0
+    return numRemaining === 0;
   }
 
-  handleClick (index) {
-    const isCorrect = this.props.correct.includes(this.props.words[index])
-    const newStateIsCorrect = this.state.isCorrect.slice()
+  const handleClick = index => {
+    const isWordCorrect = props.correct.includes(props.words[index]);
+    const newStateIsCorrect = isCorrect.slice();
 
-    let status = this.state.isCorrect[index]
-    if (status === undefined) {
-      newStateIsCorrect[index] = isCorrect
-    } else {
-      newStateIsCorrect[index] = undefined
-    }
+    newStateIsCorrect[index] = isWordCorrect;
+    setAllCorrect(checkAllCorrect(newStateIsCorrect));
+    setIsCorrect(newStateIsCorrect);
+  };
 
-    const allCorrect = this.checkAllCorrect(newStateIsCorrect)
-    this.setState({
-      isCorrect: newStateIsCorrect,
-      allCorrect
-    })
+  const { ipa, isHearTheDifference, tag, words } = props;
+
+  let description = "";
+  let result = "";
+  let resultBG = "";
+  let title = "";
+
+  if (allCorrect) {
+    result = (
+      <Typography className={classes.center} variant="display3" gutterBottom>
+        {"Yes ✓"}
+      </Typography>
+    );
+    resultBG = classes.correctBG;
   }
 
-  render () {
-    const { classes, ipa, isOddOneOut, tag, words } = this.props
+  const wordTiles = words.map((word, index) => (
+    <Tile
+      word={word}
+      key={index}
+      index={index}
+      isCorrect={isCorrect[index]}
+      handleClick={handleClick}
+    />
+  ));
 
-    let description = ''
-    let result = ''
-    let resultBG = ''
-    let title = ''
-
-    if (this.state.allCorrect) {
-      result = (
-        <Typography className={classes.center} variant='display3' gutterBottom>
-          {'Yes ✓'}
-        </Typography>
-      )
-      resultBG = classes.correctBG
-    }
-
-    this.wordTiles = words.map((word, index) => (
-      <Tile
-        word={word}
-        key={index}
-        index={index}
-        isCorrect={this.state.isCorrect[index]}
-        handleClick={this.handleClick}
-      />
-    ))
-
-    if (isOddOneOut) {
-      title = (
-        <Typography variant='title' gutterBottom>
-          {`Odd One Out - select words that DON'T have an `}
-          <SplitHilite str={ipa} />
-          {`sound`}
-        </Typography>
-      )
-      description = `Find the Odd One Out. Say the words and select those without the ${tag} vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the odd words before your time runs out? You can click on words to hear the pronunciation. Odd One Out helps you recognise and pronounce the vowel sounds of common English words.`
-    } else {
-      title = (
-        <Typography variant='title' gutterBottom>
-          {`Select the words with an `}
-          <SplitHilite str={ipa} />
-          {`sound`}
-        </Typography>
-      )
-      description = `Find the correct sound. Say the words and select those with the ${tag} vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the words before your time runs out? You can click on words to hear the pronunciation. Find the words helps you recognise and pronounce the vowel sounds of common English words.`
-    }
-
-    const display = (
-      <Paper className={resultBG}>
-        {this.wordTiles}
-        <div className={classes.clearFloat} />
-        {result}
-      </Paper>
-    )
-
-    return (
-      <div className={classes.headspace}>
-        {title}
-        <Typography gutterBottom>
-          {description}
-        </Typography>
-        <MemberGate content={display} userAuth={this.props.userAuth} {...this.other} />
-      </div>
-    )
+  if (isHearTheDifference) {
+    title = (
+      <Typography variant="h5" gutterBottom>
+        {`Odd One Out - select words that DON'T have an `}
+        <SplitHilite str={ipa} />
+        {`sound`}
+      </Typography>
+    );
+    description = `Find the Odd One Out. Say the words and select those without the ${tag} vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the odd words before your time runs out? You can click on words to hear the pronunciation. Odd One Out helps you recognise and pronounce the vowel sounds of common English words.`;
+  } else {
+    title = (
+      <Typography variant="h5" gutterBottom>
+        {`Select the words with an `}
+        <SplitHilite str={ipa} />
+        {`sound`}
+      </Typography>
+    );
+    description = `Find the correct sound. Say the words and select those with the ${tag} vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the words before your time runs out? You can click on words to hear the pronunciation. Find the words helps you recognise and pronounce the vowel sounds of common English words.`;
   }
+
+  const display = (
+    <Paper className={resultBG}>
+      {wordTiles}
+      <div className={classes.clearFloat} />
+      {result}
+    </Paper>
+  );
+
+  return (
+    <div className={classes.headspace}>
+      {title}
+      <Typography gutterBottom>{description}</Typography>
+      <MemberGate content={display} userAuth={props.userAuth} />
+    </div>
+  );
 }
 
-export default withStyles(styles)(FindTheWords)
+export default withTheme(FindTheWords);

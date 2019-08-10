@@ -1,27 +1,24 @@
-require('babel-polyfill')
+require("babel-polyfill");
 
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const CompressionPlugin = require('compression-webpack-plugin')
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
-const publicPath = 'dist'
+const publicPath = "dist";
 
 module.exports = {
   context: __dirname,
-  mode: 'production',
-  entry: [
-    'babel-polyfill',
-    './src/Index.jsx'
-  ],
+  mode: "production",
+  entry: ["babel-polyfill", "./src/Index.jsx"],
   output: {
     path: path.join(__dirname, publicPath),
-    publicPath: '/',
-    filename: 'bundle.js'
+    publicPath: "/",
+    filename: "bundle.js"
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: [".js", ".jsx", ".json"]
   },
   stats: {
     colors: true,
@@ -31,25 +28,17 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
         test: /\.jsx?$/,
-        loader: 'standard-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, '/src/index.html')
+      template: path.join(__dirname, "/src/index.html")
     }),
-    new CopyWebpackPlugin([
-      { from: './src/assets', to: 'assets' }
-    ]),
+    new CopyWebpackPlugin([{ from: "./src/assets", to: "assets" }]),
     new UglifyJsPlugin({
       uglifyOptions: {
         output: {
@@ -68,6 +57,6 @@ module.exports = {
         }
       }
     }),
-    new CompressionPlugin({ algorithm: 'gzip' })
+    new CompressionPlugin({ algorithm: "gzip" })
   ]
-}
+};

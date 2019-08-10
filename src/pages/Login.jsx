@@ -1,159 +1,166 @@
-import React from 'react'
-import { Redirect } from 'react-router-dom'
-import { auth } from './../firebase'
+import React, { useState, useEffect } from "react";
+import { Redirect } from "react-router-dom";
+import { auth } from "./../firebase";
 
-import {
-  Button,
-  Divider,
-  Paper,
-  TextField,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import Button from "@material-ui/core/Button";
+import Divider from "@material-ui/core/Divider";
+import Paper from "@material-ui/core/Paper";
+import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-const styles = (theme) => ({
+const useStyles = makeStyles(theme => ({
   page: theme.page,
   headspace: theme.headspace,
   personalSpace: theme.personalSpace,
   textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1)
   }
-})
+}));
 
-class Login extends React.Component {
-  constructor (props) {
-    super(props)
+function Login(props) {
+  const classes = useStyles(props);
 
-    this.state = {
-      signupName: '',
-      signupEmail: '',
-      signinEmail: '',
-      signupPassword: '',
-      signinPassword: ''
+  const [signupName, setSignupName] = useState("");
+  const [signupEmail, setSignupEmail] = useState("");
+  const [signinEmail, setSigninEmail] = useState("");
+  const [signupPassword, setSignupPassword] = useState("");
+  const [signinPassword, setSigninPassword] = useState("");
+  const [redirectToHome, setRedirectToHome] = useState(false);
+
+  useEffect(() => {
+    if (props.user) {
+      setRedirectToHome(true);
     }
+  });
 
-    this.handleChange = this.handleChange.bind(this)
-    this.signIn = this.signIn.bind(this)
-    this.signUp = this.signUp.bind(this)
-  }
+  const handleChange = property => {
+    return e => {
+      switch (property) {
+        case "signupName":
+          setSignupName(e.target.value);
+          break;
+        case "signupEmail":
+          setSignupEmail(e.target.value);
+          break;
+        case "signinEmail":
+          setSigninEmail(e.target.value);
+          break;
+        case "signupPassword":
+          setSignupPassword(e.target.value);
+          break;
+        case "signinPassword":
+          setSigninPassword(e.target.value);
+          break;
+        default:
+          console.log(`Erm. what's a ${property}?`);
+      }
+    };
+  };
 
-  handleChange (name) {
-    return (e) => {
-      this.setState({
-        [name]: e.target.value
-      })
-    }
-  }
-
-  signUp () {
+  const signUp = () => {
     auth.signUpWithEmail({
-      name: this.state.signupName,
-      email: this.state.signupEmail,
-      password: this.state.signupPassword
-    })
-  }
+      name: signupName,
+      email: signupEmail,
+      password: signupPassword
+    });
+  };
 
-  signIn () {
+  const signIn = () => {
     auth.signInWithEmail({
-      email: this.state.signinEmail,
-      password: this.state.signinPassword
-    })
-  }
+      email: signinEmail,
+      password: signinPassword
+    });
+  };
 
-  render () {
-    const { classes, user } = this.props
-    if (user) {
-      return <Redirect to='/home' />
-    }
-
-    return (
-      <Paper className={classes.page}>
-        <div>
-          <Paper className={classes.personalSpace}>
-            <Button
-              onClick={auth.handleGoogleLogin}
-              variant='contained'
-              color='primary'
-              className={classes.button}>
-              {`Login with Google`}
-            </Button>
-          </Paper>
-        </div>
-        <div>
-          <Paper className={classes.personalSpace}>
-            <Typography className={classes.headSpace} gutterBottom>
-              {`Sign in with email`}
-            </Typography>
-            <form>
-              <TextField
-                id='signin_email'
-                label='Your email'
-                className='form-control'
-                value={this.state.signinEmail}
-                onChange={this.handleChange('signinEmail')}
-                margin='normal'
-              />
-              <TextField
-                id='signin_password'
-                label='Password'
-                className='form-control'
-                type='password'
-                value={this.state.signinPassword}
-                onChange={this.handleChange('signinPassword')}
-                margin='normal'
-              />
-              <Button
-                onClick={this.signIn}
-                variant='raised'
-              >
-                {'Sign in'}
-              </Button>
-            </form>
-          </Paper>
-          <Divider />
-        </div>
+  return (
+    <Paper className={classes.page}>
+      {redirectToHome ? <Redirect to="/home" /> : null}
+      <div>
         <Paper className={classes.personalSpace}>
-          <Typography className={classes.headspace} gutterBottom>
-            {`Or, sign up with email `}
+          <Button
+            onClick={auth.handleGoogleLogin}
+            variant="contained"
+            color="primary"
+            className={classes.button}
+          >
+            {`Login with Google`}
+          </Button>
+        </Paper>
+      </div>
+      <div>
+        <Paper className={classes.personalSpace}>
+          <Typography className={classes.headSpace} gutterBottom>
+            {`Sign in with email`}
           </Typography>
           <form>
             <TextField
-              id='signup_name'
-              label='Your name'
-              className='form-control'
-              value={this.state.signupName}
-              onChange={this.handleChange('signupName')}
-              margin='normal'
+              id="signin_email"
+              label="Your email"
+              className="form-control"
+              value={signinEmail}
+              onChange={handleChange("signinEmail")}
+              margin="normal"
+              autoComplete="username"
             />
             <TextField
-              id='signup_email'
-              label='Your email'
-              className='form-control'
-              value={this.state.signupEmail}
-              onChange={this.handleChange('signupEmail')}
-              margin='normal'
+              id="signin_password"
+              label="Password"
+              className="form-control"
+              type="password"
+              value={signinPassword}
+              onChange={handleChange("signinPassword")}
+              margin="normal"
+              autoComplete="current-password"
             />
-            <TextField
-              id='signup_password'
-              label='Password'
-              className='form-control'
-              type='password'
-              value={this.state.signupPassword}
-              onChange={this.handleChange('signupPassword')}
-              margin='normal'
-            />
-            <Button
-              onClick={this.signUp}
-              variant='raised'
-            >
-              {'Sign up'}
+            <Button onClick={signIn} variant="contained">
+              {"Sign in"}
             </Button>
           </form>
         </Paper>
+        <Divider />
+      </div>
+      <Paper className={classes.personalSpace}>
+        <Typography className={classes.headspace} gutterBottom>
+          {`Or, sign up with email `}
+        </Typography>
+        <form>
+          <TextField
+            id="signup_name"
+            label="Your name"
+            className="form-control"
+            value={signupName}
+            onChange={handleChange("signupName")}
+            margin="normal"
+          />
+          <TextField
+            id="signup_email"
+            label="Your email"
+            className="form-control"
+            value={signupEmail}
+            onChange={handleChange("signupEmail")}
+            margin="normal"
+            autoComplete="username"
+          />
+          <TextField
+            autoComplete="current-password"
+            id="signup_password"
+            label="Password"
+            className="form-control"
+            type="password"
+            value={signupPassword}
+            onChange={handleChange("signupPassword")}
+            margin="normal"
+          />
+          <Button onClick={signUp} variant="contained">
+            {"Sign up"}
+          </Button>
+        </form>
       </Paper>
-    )
-  }
+    </Paper>
+  );
 }
 
-export default withStyles(styles)(Login)
+export default withTheme(Login);

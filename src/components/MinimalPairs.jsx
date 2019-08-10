@@ -1,25 +1,25 @@
-import React from 'react'
+import React from "react";
 
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import Paper from "@material-ui/core/Paper";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableRow from "@material-ui/core/TableRow";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-import SplitHilite from './SplitHilite'
+import SplitHilite from "./SplitHilite";
 
-const styles = (theme) => ({
+const useStyles = makeStyles(theme => ({
   largeText: theme.largeText,
   headspace: theme.headspace,
   cell: theme.cell
-})
+}));
 
-const MinimalPairs = (props) => {
-  const { classes, ipa, pairs, tag } = props
+function MinimalPairs(props) {
+  const classes = useStyles(props);
+  const { ipa, pairs, tag } = props;
 
   const rows = pairs.map((pair, key) => (
     <TableRow key={key}>
@@ -34,23 +34,21 @@ const MinimalPairs = (props) => {
         </Typography>
       </TableCell>
     </TableRow>
-  ))
+  ));
 
   return (
-    <div className={classes.headspace} >
-      <Typography variant='title' gutterBottom>
+    <div className={classes.headspace}>
+      <Typography variant="h5" gutterBottom>
         {`English  minimal pairs with ${tag} - `}
         <SplitHilite str={ipa} />
       </Typography>
       <Paper>
         <Table>
-          <TableBody>
-            {rows}
-          </TableBody>
+          <TableBody>{rows}</TableBody>
         </Table>
       </Paper>
     </div>
-  )
+  );
 }
 
-export default withStyles(styles)(MinimalPairs)
+export default withTheme(MinimalPairs);

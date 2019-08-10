@@ -1,50 +1,50 @@
-import React from 'react'
+import React from "react";
 
-import CommonWords from './../components/CommonWords'
-import Dialogues from './../components/Dialogues'
-import FindTheWords from './../components/FindTheWords'
-import FourInARow from './../components/FourInARow'
-import HowToPronounce from './../components/HowToPronounce'
-import NewsStories from './../components/NewsStories'
-import MinimalPairs from './../components/MinimalPairs'
-import Movie from './../components/Movie'
-import Pending from './../components/Pending'
-import Phrases from './../components/Phrases'
-import SayTheSentences from './../components/SayTheSentences'
-import TongueTwisters from './../components/TongueTwisters'
-import Words from './../components/Words'
-import WordsMaze from './../components/WordsMaze'
+import CommonWords from "./../components/CommonWords";
+import Dialogues from "./../components/Dialogues";
+import FindTheWords from "./../components/FindTheWords";
+import OddOneOut from "./../components/OddOneOut";
+import HowToPronounce from "./../components/HowToPronounce";
+import NewsStories from "./../components/NewsStories";
+import MinimalPairs from "./../components/MinimalPairs";
+import Movie from "./../components/Movie";
+import Pending from "./../components/Pending";
+import Phrases from "./../components/Phrases";
+import SayTheSentences from "./../components/SayTheSentences";
+import TongueTwisters from "./../components/TongueTwisters";
+import Words from "./../components/Words";
+import WordsMaze from "./../components/WordsMaze";
 
-const ExtractActivity = (params) => {
-  const { activityName, data, subscriptionLevel } = params
+const ExtractActivity = params => {
+  const { props, activityName, data, subscriptionLevel } = params;
 
-  let activityComponent = null
-  const activity = data.activities[activityName]
-  const requiredSubscriptionLevel = activity && activity['subscription']
-  const userAuth = subscriptionLevel >= requiredSubscriptionLevel
+  let activityComponent = null;
+  const activity = data.activities[activityName];
+  const requiredSubscriptionLevel = activity && activity["subscription"];
+  const userAuth = subscriptionLevel >= requiredSubscriptionLevel;
 
   switch (activityName) {
-    case 'common words':
+    case "common words":
       activityComponent = (
         <CommonWords
           ipa={data.ipa}
           words={activity.words}
           userAuth={userAuth}
         />
-      )
-      break
+      );
+      break;
 
-    case 'dialogues':
+    case "dialogues":
       activityComponent = (
         <Dialogues
           ipa={data.ipa}
           dialogues={activity.dialogues}
           userAuth={userAuth}
         />
-      )
-      break
+      );
+      break;
 
-    case 'find the words':
+    case "find the words":
       activityComponent = (
         <FindTheWords
           ipa={data.ipa}
@@ -53,25 +53,25 @@ const ExtractActivity = (params) => {
           correct={activity.correct}
           userAuth={userAuth}
         />
-      )
-      break
+      );
+      break;
 
-    case 'odd one out':
+    case "odd one out1":
       activityComponent = (
         <FindTheWords
           ipa={data.ipa}
           tag={data.tag}
-          isOddOneOut
+          OddOneOut
           words={activity.words}
           correct={activity.correct}
           userAuth={userAuth}
         />
-      )
-      break
+      );
+      break;
 
-    case 'four in a row':
+    case "odd one out":
       activityComponent = (
-        <FourInARow
+        <OddOneOut
           correct={activity.correct}
           example={activity.example}
           exampleHilite={activity.exampleHilite}
@@ -80,10 +80,10 @@ const ExtractActivity = (params) => {
           rows={activity.rows}
           userAuth={userAuth}
         />
-      )
-      break
+      );
+      break;
 
-    case 'how to pronounce':
+    case "how to pronounce":
       activityComponent = (
         <HowToPronounce
           ipa={data.ipa}
@@ -91,10 +91,10 @@ const ExtractActivity = (params) => {
           image={activity.image}
           userAuth={userAuth}
         />
-      )
-      break
+      );
+      break;
 
-    case 'minimal pairs':
+    case "minimal pairs":
       activityComponent = (
         <MinimalPairs
           ipa={data.ipa}
@@ -102,72 +102,65 @@ const ExtractActivity = (params) => {
           pairs={activity.pairs}
           userAuth={userAuth}
         />
-      )
-      break
+      );
+      break;
 
-    case 'movie':
+    case "movie":
       activityComponent = (
-        <Movie
-          ipa={data.ipa}
-          url={activity.url}
-          userAuth={userAuth}
-        />
-      )
-      break
+        <Movie ipa={data.ipa} url={activity.url} userAuth={userAuth} />
+      );
+      break;
 
-    case 'new stories': case 'beginner news stories': case 'intermediate news stories':
+    case "new stories":
+    case "beginner news stories":
+    case "intermediate news stories":
       activityComponent = (
         <NewsStories
+          level={activity.level}
           title={activity.title}
           headline={activity.headline}
           options={activity.options}
           sentences={activity.sentences}
           answers={activity.answers}
           userAuth={userAuth}
+          {...props}
         />
-      )
-      break
+      );
+      break;
 
-    case 'phrases':
+    case "phrases":
       activityComponent = (
         <Phrases
           phrases={activity.phrases}
           ipa={data.ipa}
           userAuth={userAuth}
         />
-      )
-      break
+      );
+      break;
 
-    case 'say the sentences':
+    case "say the sentences":
       activityComponent = (
-        <SayTheSentences
-          ipa={data.ipa}
-          sentences={activity.sentences}
-        />
-      )
-      break
+        <SayTheSentences ipa={data.ipa} sentences={activity.sentences} />
+      );
+      break;
 
-    case 'tongue twisters':
+    case "tongue twisters":
       activityComponent = (
         <TongueTwisters
           tag={data.tag}
           tongueTwisters={activity.twisters}
           userAuth={userAuth}
         />
-      )
-      break
+      );
+      break;
 
-    case 'words':
+    case "words":
       activityComponent = (
-        <Words
-          ipa={data.ipa}
-          words={activity.words}
-          userAuth={userAuth}
-        />
-      )
-      break
+        <Words ipa={data.ipa} words={activity.words} userAuth={userAuth} />
+      );
+      break;
 
-    case 'words maze':
+    case "words maze":
       activityComponent = (
         <WordsMaze
           ipa={data.ipa}
@@ -176,29 +169,29 @@ const ExtractActivity = (params) => {
           correct={activity.correct}
           userAuth={userAuth}
         />
-      )
-      break
+      );
+      break;
 
-    case 'sort the words':
-    case 'hear the words':
-    case 'pronunciation journey':
-    case 'rhyming words':
-    case 'count the sounds':
-    case 'write the minimal pair':
-    case 'join to make words':
-    case 'listen to the sounds':
-    case 'minimal pairs dominos':
-      activityComponent = <Pending name={activityName} />
-      break
+    case "sort the words":
+    case "hear the words":
+    case "pronunciation journey":
+    case "rhyming words":
+    case "count the sounds":
+    case "write the minimal pair":
+    case "join to make words":
+    case "listen to the sounds":
+    case "minimal pairs dominos":
+      activityComponent = <Pending name={activityName} />;
+      break;
 
     case undefined:
-      break
+      break;
 
     default:
-      activityComponent = undefined
+      activityComponent = undefined;
   }
 
-  return activityComponent
-}
+  return activityComponent;
+};
 
-export default ExtractActivity
+export default ExtractActivity;

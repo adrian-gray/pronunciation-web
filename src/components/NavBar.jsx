@@ -1,15 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import {
-  AppBar,
-  Button,
-  Toolbar,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import AppBar from "@material-ui/core/AppBar";
+import Button from "@material-ui/core/Button";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-const styles = (theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
@@ -24,61 +23,45 @@ const styles = (theme) => ({
     width: 250
   },
   white: {
-    color: '#FFFFFF'
+    color: "#FFFFFF"
   }
-})
+}));
 
-class NavBar extends React.Component {
-  constructor (props) {
-    super(props)
+function NavBar(props) {
+  const classes = useStyles(props);
 
-    this.state = {
-      open: false
-    }
+  let homeLink = "/";
+  let changeLoginStatus;
 
-    this.handleToggle = this.handleToggle.bind(this)
+  if (props.user) {
+    changeLoginStatus = (
+      <Button onClick={props.signout} color="inherit">
+        {"Sign Out"}
+      </Button>
+    );
+    homeLink = "/home";
+  } else {
+    changeLoginStatus = (
+      <Button component={Link} to="/login" color="inherit">
+        {"Sign In or Up"}
+      </Button>
+    );
   }
 
-  handleToggle () {
-    this.setState({ open: !this.state.open })
-  }
-
-  render () {
-    const { classes, user } = this.props
-
-    let changeLoginStatus
-    let homeLink = '/'
-    if (user) {
-      changeLoginStatus = (
-        <Button onClick={this.props.signout} color='inherit'>{'Sign Out'}</Button>
-      )
-      homeLink = '/home'
-    } else {
-      changeLoginStatus = (
-        <Button component={Link} to='/login' color='inherit'>{'Sign In or Up'}</Button>
-      )
-    }
-
-    return (
-      <div className={classes.root}>
-        <AppBar position='static'>
-          <Toolbar>
-            <Typography
-              variant='subheading'
-              className={classes.flex}
-            >
-              <Button component={Link} to={homeLink}>
-                <span className={classes.white}>
-                  {'Pronounce Web'}
-                </span>
-              </Button>
-            </Typography>
-            {changeLoginStatus}
-          </Toolbar>
-        </AppBar>
-      </div>
-    )
-  }
+  return (
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="subtitle1" className={classes.flex}>
+            <Button component={Link} to={homeLink}>
+              <span className={classes.white}>{"Pronounce Web"}</span>
+            </Button>
+          </Typography>
+          {changeLoginStatus}
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
 
-export default withStyles(styles)(NavBar)
+export default withTheme(NavBar);

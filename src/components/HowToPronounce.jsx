@@ -1,47 +1,46 @@
-import React from 'react'
+import React from "react";
 
-import {
-  Grid,
-  Paper,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-  withStyles
-} from '@material-ui/core'
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-import SplitHilite from './SplitHilite'
+import SplitHilite from "./SplitHilite";
 
-const styles = (theme) => ({
+const useStyles = makeStyles(theme => ({
   headspace: theme.headspace,
   fullWidth: theme.fullWidth,
   subCanvas: theme.subCanvas,
   padded: {
-    padding: '1em'
+    padding: "1em"
   }
-})
+}));
 
-const HowToPronounce = (props) => {
-  const { arr, classes, image, ipa } = props
-  const { url, alt, title } = image
+function HowToPronounce(props) {
+  const classes = useStyles(props);
+
+  const { arr, image, ipa } = props;
+  const { url, alt, title } = image;
 
   const list = arr.map((el, i) => (
     <ListItem key={i}>
-      <ListItemText>
-        {el}
-      </ListItemText>
+      <ListItemText>{el}</ListItemText>
     </ListItem>
-  ))
+  ));
 
   return (
     <div className={classes.headspace}>
-      <Typography variant='title' gutterBottom>
-        {'How to pronounce '}
+      <Typography variant="h5" gutterBottom>
+        {"How to pronounce "}
         <SplitHilite str={ipa} />
       </Typography>
 
       <Paper className={classes.subCanvas}>
-        <Grid container spacing={24}>
+        <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <div className={classes.padded}>
               <img
@@ -50,20 +49,16 @@ const HowToPronounce = (props) => {
                 title={title}
                 alt={alt}
               />
-              <Typography variant='subheading'>
-                {title}
-              </Typography>
+              <Typography variant="h6">{title}</Typography>
             </div>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <List>
-              {list}
-            </List>
+            <List>{list}</List>
           </Grid>
         </Grid>
       </Paper>
     </div>
-  )
+  );
 }
 
-export default withStyles(styles)(HowToPronounce)
+export default withTheme(HowToPronounce);

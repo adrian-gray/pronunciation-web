@@ -1,47 +1,53 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import { capitalise } from './../utils'
+import Chip from "@material-ui/core/Chip";
+import { makeStyles } from "@material-ui/core/styles";
+import { withTheme } from "@material-ui/styles";
 
-import {
-  Chip,
-  withStyles
-} from '@material-ui/core'
+import { capitalise } from "./../utils/utils";
 
-const styles = (theme) => ({
+const useStyles = makeStyles(theme => ({
   chip: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   open: {
-    color: 'green'
+    color: "green"
   },
   member: {
-    color: '#BBB'
+    color: "#BBB"
   },
   pending: {
-    color: 'maroon'
+    color: "maroon"
   },
   page: theme.page
-})
+}));
 
 const toLink = (phoneme, activity) => {
-  const title = capitalise(activity)
-  const websafe = activity.split(' ').join('-')
-  const link = `/sound/${phoneme}/${websafe}`
-  return { title, link }
-}
+  const title = capitalise(activity);
+  const websafe = activity.split(" ").join("-");
+  const link = `/sound/${phoneme}/${websafe}`;
+  return { title, link };
+};
 
-const ActivityButton = (props) => {
-  const { accessStatus, activity, classes, phoneme, subscriptionLevel } = props
+function ActivityButton(props) {
+  const classes = useStyles(props);
 
-  const { title, link } = toLink(phoneme, activity)
+  const { accessStatus, activity, phoneme, subscriptionLevel } = props;
+  const { title, link } = toLink(phoneme, activity);
 
-  let chipClass = classes[accessStatus]
-  if (accessStatus === 'member' && subscriptionLevel) {
-    chipClass = classes['open']
-  }
+  let chipClass = classes[accessStatus];
 
-  const chipClasses = `${classes.chip} ${chipClass}`
+  const [chipClasses, setChipClasses] = useState(
+    `${classes.chip} ${chipClass}`
+  );
+
+  useEffect(() => {
+    if (accessStatus === "member" && subscriptionLevel) {
+      chipClass = classes["open"];
+      setChipClasses(`${classes.chip} ${chipClass}`);
+    }
+  });
 
   return (
     <Chip
@@ -52,7 +58,7 @@ const ActivityButton = (props) => {
       clickable
       key={title}
     />
-  )
+  );
 }
 
-export default withStyles(styles)(ActivityButton)
+export default withTheme(ActivityButton);
