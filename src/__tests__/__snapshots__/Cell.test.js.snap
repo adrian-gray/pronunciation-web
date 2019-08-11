@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="MuiTableCell-root makeStyles-cell-1 true"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1"
+        >
+          <span>
+            rabbit
+          </span>
+           
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Cell with hilite 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        class="MuiTableCell-root makeStyles-cell-45"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1"
+        >
+          <span>
+            rabbit
+          </span>
+           
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
