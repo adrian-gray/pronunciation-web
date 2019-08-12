@@ -1,7 +1,7 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
 
-import SplitHilite from "./../components/SplitHilite";
+import SplitHilite from "./SplitHilite";
 
 afterEach(cleanup);
 

@@ -1,11 +1,9 @@
 import React from "react";
-import Adapter from "enzyme-adapter-react-16";
-import { configure, shallow } from "enzyme";
+import { mount } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
-import Cell from "./../components/Cell";
+import Cell from "./Cell";
 
-configure({ adapter: new Adapter() });
 afterEach(cleanup);
 
 test("Cell", async () => {
@@ -45,12 +43,13 @@ test("Cell with hilite", async () => {
 
 test("Cell click callback", async () => {
   const hilite = true;
-  const mockCallback = jest.fn(x => x);
-  const container = shallow(
+  const mockCallback = jest.fn();
+  const container = mount(
     <table>
       <tbody>
         <tr>
           <Cell
+            className="bob"
             hilite={hilite}
             key="dog"
             str="rabbit"
@@ -61,8 +60,29 @@ test("Cell click callback", async () => {
     </table>
   );
 
-  const cell = container.find("tr");
-  expect(cell.length).toEqual(1);
-  cell.simulate("click");
-  expect(mockCallback.mock.calls.length).toBe(1);
+  const td = container.find("td");
+  expect(td).toHaveLength(1);
+
+  td.simulate("click");
+  expect(mockCallback).toHaveBeenCalled();
+});
+
+test("Cell click no callback", async () => {
+  const hilite = true;
+  const mockCallback = jest.fn();
+  const container = mount(
+    <table>
+      <tbody>
+        <tr>
+          <Cell className="bob" hilite={hilite} key="dog" str="rabbit" />
+        </tr>
+      </tbody>
+    </table>
+  );
+
+  const td = container.find("td");
+  expect(td).toHaveLength(1);
+
+  td.simulate("click");
+  expect(mockCallback).not.toHaveBeenCalled();
 });

@@ -7748,7 +7748,7 @@ react-snap@^1.10.1:
     serve-static "1.13.2"
     sourcemapped-stacktrace-node "2.1.8"
 
-react-test-renderer@^16.0.0-0:
+react-test-renderer@^16.0.0-0, react-test-renderer@^16.9.0:
   version "16.9.0"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/react-test-renderer/-/react-test-renderer-16.9.0.tgz#7ed657a374af47af88f66f33a3ef99c9610c8ae9"
   dependencies:
