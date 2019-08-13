@@ -4,6 +4,7 @@
     "prettier",
     "prettier/react",
     "plugin:import/errors",
+    "plugin:import/react",Ú
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended"
   ],
@@ -27,6 +28,11 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js",".jsx"]
+      }
     }
   }
 }
