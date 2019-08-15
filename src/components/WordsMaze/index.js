@@ -1,7 +1,6 @@
 /* global Phaser */
 
 import Boot from "./states/boot";
-// import Preload from './states/preload'
 import Game from "./states/game";
 
 let game;
