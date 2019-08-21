@@ -4,7 +4,7 @@
     "prettier",
     "prettier/react",
     "plugin:import/errors",
-    "plugin:import/react",Ú
+    "plugin:import/react",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended"
   ],
@@ -31,7 +31,7 @@
     },
     "import/resolver": {
       "node": {
-        "extensions": [".js",".jsx"]
+        "extensions": [".js", ".jsx", ".tsx", ".json"]
       }
     }
   }

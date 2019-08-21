@@ -6,8 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { withTheme } from "@material-ui/styles";
 
 import data from "./../data/sounds";
-import SEO from "./../components/SEO";
-import Phoneme from "./../components/Phoneme";
+import SEO from "../components/SEO";
+import Phoneme from "../components/Phoneme";
 
 const useStyles = makeStyles(theme => ({
   page: theme.page

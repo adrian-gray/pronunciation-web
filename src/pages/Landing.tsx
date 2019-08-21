@@ -7,8 +7,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { withTheme } from "@material-ui/styles";
 
-import Mailchimp from "./../components/Mailchimp";
-import SEO from "./../components/SEO";
+import Mailchimp from "../components/Mailchimp";
+import SEO from "../components/SEO";
 
 const useStyles = makeStyles(theme => ({
   button: {

@@ -7,10 +7,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import { withTheme } from "@material-ui/styles";
 
 import jsonData from "./../data/sounds";
-import ActivityButtons from "./../components/ActivityButtons";
-import ExtractActivity from "./../components/ExtractActivity";
-import SEO from "./../components/SEO";
-import SoundTitle from "./../components/SoundTitle";
+import ActivityButtons from "../components/ActivityButtons";
+import ExtractActivity from "../components/ExtractActivity";
+import SEO from "../components/SEO";
+import SoundTitle from "../components/SoundTitle";
 
 const useStyles = makeStyles(theme => ({
   page: theme.page

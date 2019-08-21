@@ -11,7 +11,7 @@ const publicPath = "dist";
 module.exports = {
   context: __dirname,
   mode: "production",
-  entry: ["babel-polyfill", "./src/Index.jsx"],
+  entry: ["babel-polyfill", "./src/Index.tsx"],
   output: {
     path: path.join(__dirname, publicPath),
     publicPath: "/",

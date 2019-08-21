@@ -9,7 +9,7 @@ const publicPath = "dist";
 module.exports = {
   context: __dirname,
   mode: "development",
-  entry: ["./src/Index.jsx"],
+  entry: ["./src/Index.tsx"],
   devtool: "source-map",
   output: {
     path: path.join(__dirname, publicPath),
@@ -22,7 +22,7 @@ module.exports = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json"]
+    extensions: [".js", ".jsx", ".tsx", ".json"]
   },
   stats: {
     colors: true,
@@ -31,6 +31,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        loader: "babel-loader"
+      },
       {
         test: /\.jsx?$/,
         loader: "babel-loader",

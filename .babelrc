@@ -5,17 +5,18 @@
     }
   },
   "presets": [
+    "@babel/preset-react",
+    "@babel/typescript",
     [
       "@babel/preset-env",
       {
         "exclude": ["transform-async-to-generator"],
         "loose": true,
-        "modules": "commonjs",
+        "modules": "false",
         "useBuiltIns": "entry",
         "corejs": 3
       }
-    ],
-    "@babel/preset-react"
+    ]
   ],
   "plugins": ["@babel/plugin-proposal-object-rest-spread"]
 }
