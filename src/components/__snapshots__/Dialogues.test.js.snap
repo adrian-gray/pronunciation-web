@@ -1,3 +1,163 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dialogues 1`] = `undefined`;
+exports[`Dialogues 1`] = `
+<div>
+  <div
+    class="makeStyles-headspace-1"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      Short dialogues using 
+      <span>
+        a:
+      </span>
+       
+    </h5>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-subCanvas-3 MuiPaper-rounded"
+    >
+      <ul
+        class="MuiList-root MuiList-padding"
+      >
+        <li
+          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+        >
+          <div
+            class="MuiListItemText-root makeStyles-left-4"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+            >
+              <span>
+                foo
+              </span>
+               
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+        >
+          <div
+            class="MuiListItemText-root makeStyles-right-5"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+            >
+              <span>
+                bar
+              </span>
+               
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+        >
+          <div
+            class="MuiListItemText-root makeStyles-left-4"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+            >
+              <span>
+                baz
+              </span>
+               
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+        >
+          <div
+            class="MuiListItemText-root makeStyles-right-5"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+            >
+              <span>
+                quox
+              </span>
+               
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-subCanvas-3 MuiPaper-rounded"
+    >
+      <ul
+        class="MuiList-root MuiList-padding"
+      >
+        <li
+          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+        >
+          <div
+            class="MuiListItemText-root makeStyles-left-4"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+            >
+              <span>
+                apple
+              </span>
+               
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+        >
+          <div
+            class="MuiListItemText-root makeStyles-right-5"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+            >
+              <span>
+                banana
+              </span>
+               
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+        >
+          <div
+            class="MuiListItemText-root makeStyles-left-4"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+            >
+              <span>
+                chad
+              </span>
+               
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+        >
+          <div
+            class="MuiListItemText-root makeStyles-right-5"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+            >
+              <span>
+                elle
+              </span>
+               
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

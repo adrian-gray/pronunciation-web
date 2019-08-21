@@ -1,6 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
-import { cleanup } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
+
+import { render, cleanup } from "@testing-library/react";
 
 import ActivityButtons from "./ActivityButtons";
 
@@ -20,7 +21,11 @@ test("ActivityButtons", async () => {
     ]
   };
 
-  const container = shallow(<ActivityButtons {...props} />);
+  const output = render(
+    <BrowserRouter>
+      <ActivityButtons {...props} />
+    </BrowserRouter>
+  );
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(output.container).toMatchSnapshot();
 });

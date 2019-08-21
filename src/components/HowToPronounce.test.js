@@ -1,5 +1,4 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
 import HowToPronounce from "./HowToPronounce";
@@ -17,7 +16,7 @@ test("HowToPronounce", async () => {
     }
   };
 
-  const container = shallow(<HowToPronounce {...props} />);
+  const { container } = render(<HowToPronounce {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

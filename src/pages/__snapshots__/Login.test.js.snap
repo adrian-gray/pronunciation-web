@@ -1,3 +1,199 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login 1`] = `undefined`;
+exports[`Login 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation1 makeStyles-page-1 MuiPaper-rounded"
+  >
+    <div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation1 makeStyles-personalSpace-3 MuiPaper-rounded"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Login with Google
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation1 makeStyles-personalSpace-3 MuiPaper-rounded"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          Sign in with email
+        </p>
+        <form>
+          <div
+            class="MuiFormControl-root MuiTextField-root form-control MuiFormControl-marginNormal"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink="false"
+              for="signin_email"
+            >
+              Your email
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="username"
+                class="MuiInputBase-input MuiInput-input"
+                id="signin_email"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root form-control MuiFormControl-marginNormal"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink="false"
+              for="signin_password"
+            >
+              Password
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="current-password"
+                class="MuiInputBase-input MuiInput-input"
+                id="signin_password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Sign in
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </form>
+      </div>
+      <hr
+        class="MuiDivider-root"
+      />
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-personalSpace-3 MuiPaper-rounded"
+    >
+      <p
+        class="MuiTypography-root makeStyles-headspace-2 MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        Or, sign up with email 
+      </p>
+      <form>
+        <div
+          class="MuiFormControl-root MuiTextField-root form-control MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink="false"
+            for="signup_name"
+          >
+            Your name
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input"
+              id="signup_name"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root form-control MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink="false"
+            for="signup_email"
+          >
+            Your email
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              autocomplete="username"
+              class="MuiInputBase-input MuiInput-input"
+              id="signup_email"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root form-control MuiFormControl-marginNormal"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink="false"
+            for="signup_password"
+          >
+            Password
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              autocomplete="current-password"
+              class="MuiInputBase-input MuiInput-input"
+              id="signup_password"
+              type="password"
+              value=""
+            />
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Sign up
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;

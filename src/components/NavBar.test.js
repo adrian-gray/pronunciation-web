@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { BrowserRouter } from "react-router-dom";
+
 import { render, cleanup } from "@testing-library/react";
 
 import NavBar from "./NavBar";
@@ -9,7 +10,11 @@ afterEach(cleanup);
 test("NavBar", async () => {
   const props = {};
 
-  const container = shallow(<NavBar {...props} />);
+  const { container } = render(
+    <BrowserRouter>
+      <NavBar {...props} />
+    </BrowserRouter>
+  );
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

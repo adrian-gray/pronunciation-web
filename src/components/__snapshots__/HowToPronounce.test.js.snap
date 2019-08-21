@@ -1,3 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HowToPronounce 1`] = `undefined`;
+exports[`HowToPronounce 1`] = `
+<div>
+  <div
+    class="makeStyles-headspace-1"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      How to pronounce 
+      <span>
+        a:
+      </span>
+       
+    </h5>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-subCanvas-3 MuiPaper-rounded"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <div
+            class="makeStyles-padded-4"
+          >
+            <img
+              alt="image"
+              class="makeStyles-fullWidth-2"
+              src="foo.com"
+              title="image"
+            />
+            <h6
+              class="MuiTypography-root MuiTypography-h6"
+            >
+              image
+            </h6>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <ul
+            class="MuiList-root MuiList-padding"
+          >
+            <li
+              class="MuiListItem-root MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+                >
+                  foo
+                </span>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root MuiListItem-gutters"
+            >
+              <div
+                class="MuiListItemText-root"
+              >
+                <span
+                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+                >
+                  bar
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

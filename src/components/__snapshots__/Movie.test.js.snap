@@ -1,3 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Movie 1`] = `undefined`;
+exports[`Movie 1`] = `
+<div>
+  <div
+    class="makeStyles-headspace-1"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      English Pronuniciation movie for 
+      <span>
+        a:
+      </span>
+       
+    </h5>
+    <img
+      alt="Pronouncing a:"
+      class="makeStyles-fullWidth-2"
+      src="https://foo.com/movie.mpg"
+    />
+  </div>
+</div>
+`;

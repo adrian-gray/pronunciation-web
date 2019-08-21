@@ -1,3 +1,531 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home 1`] = `undefined`;
+exports[`Home 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation1 makeStyles-page-1 MuiPaper-rounded"
+  >
+    <h4
+      class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
+    >
+      Phoenetic English Pronunciation
+    </h4>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-root-59 MuiPaper-rounded"
+    >
+      <a
+        class="makeStyles-links-61"
+        href="/sound/long-e"
+      >
+        <div>
+          <h5
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            <span>
+              <span />
+              <span
+                class="makeStyles-hilite-62"
+              >
+                /i:/
+              </span>
+              <span />
+               
+               – 
+              <span>
+                long 
+              </span>
+              <span
+                class="makeStyles-hilite-62"
+              >
+                e
+              </span>
+              <span>
+                 ‘s
+              </span>
+              <span
+                class="makeStyles-hilite-62"
+              >
+                ee
+              </span>
+              <span>
+                ’
+              </span>
+               
+            </span>
+          </h5>
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
+          >
+            Example words containing short ‘a’
+          </p>
+          <p
+            class="MuiTypography-root makeStyles-words-60 MuiTypography-body2 MuiTypography-gutterBottom"
+          >
+            <span>
+              pl
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              ea
+            </span>
+            <span>
+              se
+            </span>
+             
+            <span>
+              k
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              ey
+            </span>
+            <span />
+             
+            <span>
+              tr
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              ee
+            </span>
+            <span />
+             
+            <span>
+              n
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              ee
+            </span>
+            <span>
+              d
+            </span>
+             
+            <span>
+              sl
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              ee
+            </span>
+            <span>
+              p
+            </span>
+             
+            <span />
+            <span
+              class="makeStyles-hilite-62"
+            >
+              ea
+            </span>
+            <span>
+              st
+            </span>
+             
+          </p>
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom"
+          >
+            Click to learn more about the long ‘e’ sound
+          </h6>
+        </div>
+      </a>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-root-59 MuiPaper-rounded"
+    >
+      <a
+        class="makeStyles-links-61"
+        href="/sound/long-u"
+      >
+        <div>
+          <h5
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            <span>
+              <span />
+              <span
+                class="makeStyles-hilite-62"
+              >
+                /u:/
+              </span>
+              <span />
+               
+               – 
+              <span>
+                long 
+              </span>
+              <span
+                class="makeStyles-hilite-62"
+              >
+                u
+              </span>
+              <span>
+                 ‘bl
+              </span>
+              <span
+                class="makeStyles-hilite-62"
+              >
+                ue
+              </span>
+              <span>
+                ’
+              </span>
+               
+            </span>
+          </h5>
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
+          >
+            Example words containing short ‘a’
+          </p>
+          <p
+            class="MuiTypography-root makeStyles-words-60 MuiTypography-body2 MuiTypography-gutterBottom"
+          >
+            <span>
+              st
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              u
+            </span>
+            <span>
+              dent
+            </span>
+             
+            <span>
+              J
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              u
+            </span>
+            <span>
+              ne
+            </span>
+             
+            <span>
+              j
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              ew
+            </span>
+            <span>
+              ellery (jewelry)
+            </span>
+             
+            <span>
+              m
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              u
+            </span>
+            <span>
+              sic
+            </span>
+             
+            <span>
+              n
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              ew
+            </span>
+            <span />
+             
+            <span>
+              f
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              ew
+            </span>
+            <span />
+             
+          </p>
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom"
+          >
+            Click to learn more about the long ‘u’ sound
+          </h6>
+        </div>
+      </a>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-root-59 MuiPaper-rounded"
+    >
+      <a
+        class="makeStyles-links-61"
+        href="/sound/short-a"
+      >
+        <div>
+          <h5
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            <span>
+              <span />
+              <span
+                class="makeStyles-hilite-62"
+              >
+                /æ/
+              </span>
+              <span />
+               
+               – 
+              <span>
+                short 
+              </span>
+              <span
+                class="makeStyles-hilite-62"
+              >
+                a
+              </span>
+              <span>
+                 ‘b
+              </span>
+              <span
+                class="makeStyles-hilite-62"
+              >
+                a
+              </span>
+              <span>
+                d’
+              </span>
+               
+            </span>
+          </h5>
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
+          >
+            Example words containing short ‘a’
+          </p>
+          <p
+            class="MuiTypography-root makeStyles-words-60 MuiTypography-body2 MuiTypography-gutterBottom"
+          >
+            <span>
+              c
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              a
+            </span>
+            <span>
+              sh
+            </span>
+             
+            <span>
+              tr
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              a
+            </span>
+            <span>
+              sh
+            </span>
+             
+            <span>
+              tr
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              a
+            </span>
+            <span>
+              nsfer
+            </span>
+             
+            <span>
+              st
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              a
+            </span>
+            <span>
+              nd
+            </span>
+             
+            <span>
+              ch
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              a
+            </span>
+            <span>
+              t
+            </span>
+             
+            <span>
+              tr
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              a
+            </span>
+            <span>
+              ffic
+            </span>
+             
+          </p>
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom"
+          >
+            Click to learn more about the short ‘a’ sound
+          </h6>
+        </div>
+      </a>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-root-59 MuiPaper-rounded"
+    >
+      <a
+        class="makeStyles-links-61"
+        href="/sound/short-i"
+      >
+        <div>
+          <h5
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+          >
+            <span>
+              <span />
+              <span
+                class="makeStyles-hilite-62"
+              >
+                /ɪ/
+              </span>
+              <span />
+               
+               – 
+              <span>
+                short 
+              </span>
+              <span
+                class="makeStyles-hilite-62"
+              >
+                i
+              </span>
+              <span>
+                 ‘s
+              </span>
+              <span
+                class="makeStyles-hilite-62"
+              >
+                i
+              </span>
+              <span>
+                t’
+              </span>
+               
+            </span>
+          </h5>
+          <p
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
+          >
+            Example words containing short ‘a’
+          </p>
+          <p
+            class="MuiTypography-root makeStyles-words-60 MuiTypography-body2 MuiTypography-gutterBottom"
+          >
+            <span>
+              th
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              i
+            </span>
+            <span>
+              nk
+            </span>
+             
+            <span />
+            <span
+              class="makeStyles-hilite-62"
+            >
+              i
+            </span>
+            <span>
+              nternet
+            </span>
+             
+            <span>
+              m
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              i
+            </span>
+            <span>
+              nutes
+            </span>
+             
+            <span>
+              g
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              i
+            </span>
+            <span>
+              ve
+            </span>
+             
+            <span>
+              qu
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              i
+            </span>
+            <span>
+              ck
+            </span>
+             
+            <span>
+              br
+            </span>
+            <span
+              class="makeStyles-hilite-62"
+            >
+              i
+            </span>
+            <span>
+              dge
+            </span>
+             
+          </p>
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom"
+          >
+            Click to learn more about the short ‘i’ sound
+          </h6>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;

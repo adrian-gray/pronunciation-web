@@ -12,7 +12,7 @@ test("CommonWords", async () => {
     words: ["foo", "bar", "baz", "quox", "apple", "banana", "chad", "elle"]
   };
 
-  const container = shallow(<CommonWords {...props} />);
+  const { container } = render(<CommonWords {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

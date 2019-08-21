@@ -1,3 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActivityButtons 1`] = `undefined`;
+exports[`ActivityButtons 1`] = `
+<div>
+  <a
+    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
+    href="/sound/undefined/foo"
+    role="button"
+    tabindex="0"
+  >
+    <span
+      class="MuiChip-label"
+    >
+      Foo
+    </span>
+  </a>
+  <a
+    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
+    href="/sound/undefined/bar"
+    role="button"
+    tabindex="0"
+  >
+    <span
+      class="MuiChip-label"
+    >
+      Bar
+    </span>
+  </a>
+  <a
+    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
+    href="/sound/undefined/baz"
+    role="button"
+    tabindex="0"
+  >
+    <span
+      class="MuiChip-label"
+    >
+      Baz
+    </span>
+  </a>
+  <a
+    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
+    href="/sound/undefined/quox"
+    role="button"
+    tabindex="0"
+  >
+    <span
+      class="MuiChip-label"
+    >
+      Quox
+    </span>
+  </a>
+  <a
+    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
+    href="/sound/undefined/apple"
+    role="button"
+    tabindex="0"
+  >
+    <span
+      class="MuiChip-label"
+    >
+      Apple
+    </span>
+  </a>
+  <a
+    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
+    href="/sound/undefined/banana"
+    role="button"
+    tabindex="0"
+  >
+    <span
+      class="MuiChip-label"
+    >
+      Banana
+    </span>
+  </a>
+  <a
+    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
+    href="/sound/undefined/chad"
+    role="button"
+    tabindex="0"
+  >
+    <span
+      class="MuiChip-label"
+    >
+      Chad
+    </span>
+  </a>
+  <a
+    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
+    href="/sound/undefined/elle"
+    role="button"
+    tabindex="0"
+  >
+    <span
+      class="MuiChip-label"
+    >
+      Elle
+    </span>
+  </a>
+</div>
+`;

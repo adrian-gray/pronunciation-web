@@ -1,3 +1,139 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CommonWords 1`] = `undefined`;
+exports[`CommonWords 1`] = `
+<div>
+  <div
+    class="makeStyles-headspace-3"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      Common words with 
+      <span>
+        a:
+      </span>
+       
+    </h5>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <table
+        class="MuiTable-root"
+      >
+        <tbody
+          class="MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root makeStyles-cell-1 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+              >
+                <span>
+                  foo
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root makeStyles-cell-1 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+              >
+                <span>
+                  bar
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root makeStyles-cell-1 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+              >
+                <span>
+                  baz
+                </span>
+                 
+              </p>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root makeStyles-cell-1 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+              >
+                <span>
+                  quox
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root makeStyles-cell-1 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+              >
+                <span>
+                  apple
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root makeStyles-cell-1 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+              >
+                <span>
+                  banana
+                </span>
+                 
+              </p>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root makeStyles-cell-1 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+              >
+                <span>
+                  chad
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root makeStyles-cell-1 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+              >
+                <span>
+                  elle
+                </span>
+                 
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

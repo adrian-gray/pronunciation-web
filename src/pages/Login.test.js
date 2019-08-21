@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { BrowserRouter } from "react-router-dom";
+
 import { render, cleanup } from "@testing-library/react";
 
 import Login from "./Login";
@@ -9,7 +10,11 @@ afterEach(cleanup);
 test("Login", async () => {
   const props = {};
 
-  const container = shallow(<Login {...props} />);
+  const { container } = render(
+    <BrowserRouter>
+      <Login {...props} />
+    </BrowserRouter>
+  );
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

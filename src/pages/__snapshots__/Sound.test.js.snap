@@ -1,3 +1,236 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Sound 1`] = `undefined`;
+exports[`Sound 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation1 makeStyles-page-1 MuiPaper-rounded"
+  >
+    <h3
+      class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
+    >
+      <span />
+      <span
+        class="makeStyles-hilite-59"
+      >
+        /i:/
+      </span>
+      <span />
+       
+       - 
+      <span>
+        long 
+      </span>
+      <span
+        class="makeStyles-hilite-59"
+      >
+        e
+      </span>
+      <span>
+         ‘s
+      </span>
+      <span
+        class="makeStyles-hilite-59"
+      >
+        ee
+      </span>
+      <span>
+        ’
+      </span>
+       
+    </h3>
+    <hr
+      class="MuiDivider-root"
+    />
+    <h4
+      class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
+    >
+      Pronunciation activities for long ‘e’
+    </h4>
+    <div>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-open-66 MuiChip-clickable"
+        href="/sound/long-e/how-to-pronounce"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          How to pronounce
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-open-66 MuiChip-clickable"
+        href="/sound/long-e/movie"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Movie
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-open-66 MuiChip-clickable"
+        href="/sound/long-e/words"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Words
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-open-66 MuiChip-clickable"
+        href="/sound/long-e/phrases"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Phrases
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-open-66 MuiChip-clickable"
+        href="/sound/long-e/dialogues"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Dialogues
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-open-66 MuiChip-clickable"
+        href="/sound/long-e/common-words"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Common words
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-open-66 MuiChip-clickable"
+        href="/sound/long-e/tongue-twisters"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Tongue twisters
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-open-66 MuiChip-clickable"
+        href="/sound/long-e/minimal-pairs"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Minimal pairs
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-pending-68 MuiChip-clickable"
+        href="/sound/long-e/sort-the-words"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Sort the words
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-member-67 MuiChip-clickable"
+        href="/sound/long-e/odd-one-out"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Odd one out
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-pending-68 MuiChip-clickable"
+        href="/sound/long-e/rhyming-words"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Rhyming words
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-pending-68 MuiChip-clickable"
+        href="/sound/long-e/count-the-sounds"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Count the sounds
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-member-67 MuiChip-clickable"
+        href="/sound/long-e/beginner-news-stories"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Beginner news stories
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-member-67 MuiChip-clickable"
+        href="/sound/long-e/intermediate-news-stories"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Intermediate news stories
+        </span>
+      </a>
+      <a
+        class="MuiChip-root makeStyles-chip-65 makeStyles-member-67 MuiChip-clickable"
+        href="/sound/long-e/words-maze"
+        role="button"
+        tabindex="0"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          Words maze
+        </span>
+      </a>
+    </div>
+    <hr
+      class="MuiDivider-root"
+    />
+  </div>
+</div>
+`;

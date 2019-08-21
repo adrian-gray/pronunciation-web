@@ -1,3 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActivityButton 1`] = `undefined`;
+exports[`ActivityButton 1`] = `
+<div>
+  <a
+    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
+    href="/sound/a:/harry"
+    role="button"
+    tabindex="0"
+  >
+    <span
+      class="MuiChip-label"
+    >
+      Harry
+    </span>
+  </a>
+</div>
+`;

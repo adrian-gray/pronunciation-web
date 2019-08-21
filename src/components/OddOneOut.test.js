@@ -1,5 +1,4 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
 import OddOneOut from "./OddOneOut";
@@ -7,9 +6,14 @@ import OddOneOut from "./OddOneOut";
 afterEach(cleanup);
 
 test("OddOneOut", async () => {
-  const props = {};
+  const props = {
+    ips: "a:",
+    rows: [["the", "cat", "sat"], ["on", "the", "mat"]],
+    example: ["three", "blind", "moice"],
+    exampleHilite: "three"
+  };
 
-  const container = shallow(<OddOneOut {...props} />);
+  const { container } = render(<OddOneOut {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

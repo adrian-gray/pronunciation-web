@@ -1,12 +1,11 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
-import FindTheWOrds from "./FindTheWOrds";
+import FindTheWords from "./FindTheWords";
 
 afterEach(cleanup);
 
-test("FindTheWOrds", async () => {
+test("FindTheWords", async () => {
   const props = {
     ipa: "a:",
     words: ["foo", "bar", "baz", "quox", "apple", "banana", "chad", "elle"],
@@ -14,7 +13,7 @@ test("FindTheWOrds", async () => {
     userAuth: 1
   };
 
-  const container = shallow(<FindTheWOrds {...props} />);
+  const { container } = render(<FindTheWords {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

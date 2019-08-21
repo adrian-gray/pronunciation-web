@@ -13,11 +13,11 @@ const useStyles = makeStyles(theme => ({
 
 function FourOhFour(props) {
   const classes = useStyles(props);
-  const SEOlocation = "404";
+  const SeoLocation = "404";
 
   return (
     <div className={classes.headspace}>
-      <SEO meta={SEOlocation} />
+      <SEO meta={SeoLocation} />
       <Typography variant="h5" gutterBottom>
         {`Oops, that address is not a thing I understand.`}
       </Typography>

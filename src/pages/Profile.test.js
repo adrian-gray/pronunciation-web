@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { BrowserRouter } from "react-router-dom";
+
 import { render, cleanup } from "@testing-library/react";
 
 import Profile from "./Profile";
@@ -7,9 +8,18 @@ import Profile from "./Profile";
 afterEach(cleanup);
 
 test("Profile", async () => {
-  const props = {};
+  const props = {
+    user: {
+      displayName: "Bob",
+      photoURL: "foo.com/biteMe.jpg"
+    }
+  };
 
-  const container = shallow(<Profile {...props} />);
+  const { container } = render(
+    <BrowserRouter>
+      <Profile {...props} />
+    </BrowserRouter>
+  );
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

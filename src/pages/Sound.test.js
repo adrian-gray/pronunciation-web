@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { BrowserRouter } from "react-router-dom";
+
 import { render, cleanup } from "@testing-library/react";
 
 import Sound from "./Sound";
@@ -7,9 +8,19 @@ import Sound from "./Sound";
 afterEach(cleanup);
 
 test("Sound", async () => {
-  const props = {};
+  const props = {
+    match: {
+      params: {
+        phoneme: "long-e"
+      }
+    }
+  };
 
-  const container = shallow(<Sound {...props} />);
+  const { container } = render(
+    <BrowserRouter>
+      <Sound {...props} />
+    </BrowserRouter>
+  );
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

@@ -1,3 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FourOhFour 1`] = `undefined`;
+exports[`FourOhFour 1`] = `
+<div>
+  <div
+    class="makeStyles-headspace-1"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      Oops, that address is not a thing I understand.
+    </h5>
+    <p
+      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    >
+      <a
+        href="/"
+      >
+        Head to the homepage and try again.
+      </a>
+    </p>
+  </div>
+</div>
+`;

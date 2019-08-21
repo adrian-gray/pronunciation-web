@@ -22,7 +22,7 @@ function Profile(props) {
   return (
     <Paper className={classes.page}>
       <div className={classes.headspace}>
-        <Typography variant="title" gutterBottom>
+        <Typography variant="h5" gutterBottom>
           {`Your profile`}
         </Typography>
         <Typography>{user.displayName}</Typography>

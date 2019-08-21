@@ -1,5 +1,4 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
 import Movie from "./Movie";
@@ -7,9 +6,12 @@ import Movie from "./Movie";
 afterEach(cleanup);
 
 test("Movie", async () => {
-  const props = {};
+  const props = {
+    ipa: "a:",
+    url: "https://foo.com/movie.mpg"
+  };
 
-  const container = shallow(<Movie {...props} />);
+  const { container } = render(<Movie {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

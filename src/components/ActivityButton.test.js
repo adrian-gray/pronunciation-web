@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { BrowserRouter } from "react-router-dom";
+
 import { render, cleanup } from "@testing-library/react";
 
 import ActivityButton from "./ActivityButton";
@@ -14,7 +15,11 @@ test("ActivityButton", async () => {
     phoneme: "a:"
   };
 
-  const container = shallow(<ActivityButton {...props} />);
+  const output = render(
+    <BrowserRouter>
+      <ActivityButton {...props} />
+    </BrowserRouter>
+  );
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(output.container).toMatchSnapshot();
 });

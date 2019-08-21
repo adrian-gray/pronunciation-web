@@ -1,3 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Profile 1`] = `undefined`;
+exports[`Profile 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation1 makeStyles-page-1 MuiPaper-rounded"
+  >
+    <div
+      class="makeStyles-headspace-2"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+      >
+        Your profile
+      </h5>
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        Bob
+      </p>
+      <div>
+        <img
+          src="foo.com/biteMe.jpg"
+          width="100px"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

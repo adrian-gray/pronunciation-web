@@ -1,3 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MailChimp 1`] = `undefined`;
+exports[`MailChimp 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation1 makeStyles-mailchimp-1 MuiPaper-rounded"
+  >
+    <div
+      class="mailchimp-subscribe"
+    >
+      <div
+        class="makeStyles-root-29"
+      >
+        <form>
+          <div
+            class="MuiFormControl-root MuiTextField-root form-control MuiFormControl-marginNormal"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink="false"
+              for="name"
+            >
+              Your first name
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            >
+              <input
+                class="MuiInputBase-input MuiInput-input"
+                id="name"
+                type="text"
+                value=""
+              />
+            </div>
+            
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root form-control MuiFormControl-marginNormal"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink="false"
+              for="email"
+            >
+              Your Email
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            >
+              <input
+                class="MuiInputBase-input MuiInput-input"
+                id="email"
+                type="text"
+                value=""
+              />
+            </div>
+            
+          </div>
+          <br />
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+          >
+            We hate spam and will never share your details with anyone else.
+          </p>
+          <br />
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Keep me updated!
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

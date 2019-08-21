@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FindTheWords 1`] = `
+<div>
+  <div
+    class="makeStyles-headspace-1"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      Select the words with an 
+      <span>
+        a:
+      </span>
+       
+      sound
+    </h5>
+    <p
+      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    >
+      Find the correct sound. Say the words and select those with the undefined vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the words before your time runs out? You can click on words to hear the pronunciation. Find the words helps you recognise and pronounce the vowel sounds of common English words.
+    </p>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <div
+        class="makeStyles-clickable-70"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+        >
+          <p
+            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+          >
+            <span>
+              foo
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="makeStyles-clickable-70"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+        >
+          <p
+            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+          >
+            <span>
+              bar
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="makeStyles-clickable-70"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+        >
+          <p
+            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+          >
+            <span>
+              baz
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="makeStyles-clickable-70"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+        >
+          <p
+            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+          >
+            <span>
+              quox
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="makeStyles-clickable-70"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+        >
+          <p
+            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+          >
+            <span>
+              apple
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="makeStyles-clickable-70"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+        >
+          <p
+            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+          >
+            <span>
+              banana
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="makeStyles-clickable-70"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+        >
+          <p
+            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+          >
+            <span>
+              chad
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="makeStyles-clickable-70"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+        >
+          <p
+            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+          >
+            <span>
+              elle
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="makeStyles-clearFloat-2"
+      />
+      
+    </div>
+  </div>
+</div>
+`;

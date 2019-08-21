@@ -1,5 +1,4 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
 import ExtractActivity from "./ExtractActivity";
@@ -31,7 +30,7 @@ test("ExtractActivity", async () => {
     activityName: "common words"
   };
 
-  const container = shallow(<ExtractActivity {...props} />);
+  const { container } = render(<ExtractActivity {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

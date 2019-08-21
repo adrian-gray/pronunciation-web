@@ -1,3 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NewsStories 1`] = `undefined`;
+exports[`NewsStories 1`] = `
+<div>
+  <div
+    class="NewsStories-headspace-1"
+  >
+    <h4
+      class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
+    >
+      News Stories
+    </h4>
+    <p
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
+    >
+      Extra! Extra! Read all about it! News Stories is a collection of interesting and feel-good stories from around the world.  Each story is written in two levels – beginners and intermediate. All you need to do is identify the highlighted sounds and choose the correct phoneme that represents that sound. News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.
+    </p>
+    <h4
+      class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
+    >
+      A story
+    </h4>
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      <span>
+        About a boy
+      </span>
+       
+    </h5>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <p
+        class="MuiTypography-root NewsStories-sentence-2 MuiTypography-body1"
+      >
+        <span>
+          the cat 
+        </span>
+         
+        <span
+          class="makeStyles-clickable-65 undefined"
+        >
+          foo
+        </span>
+         had a rat
+      </p>
+    </div>
+  </div>
+</div>
+`;
