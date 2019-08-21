@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   page: theme.page
 }));
 
-function Sound(props) {
+const Sound = props => {
   const classes = useStyles(props);
 
   const phoneme = props.match.params.phoneme;
@@ -73,6 +73,6 @@ function Sound(props) {
       {activityComponent}
     </Paper>
   );
-}
+};
 
 export default withTheme(Sound);

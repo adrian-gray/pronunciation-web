@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
   hilite: theme.hilite
 }));
 
-function SplitHilite(props) {
+const SplitHilite = props => {
   const classes = useStyles(props);
 
   const { str } = props;
@@ -33,6 +33,6 @@ function SplitHilite(props) {
   arr.push(" ");
 
   return arr;
-}
+};
 
 export default withTheme(SplitHilite);

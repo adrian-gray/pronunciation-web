@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   headspace: theme.headspace
 }));
 
-function CommonWords(props) {
+const CommonWords = props => {
   const classes = useStyles(props);
   const { ipa, words } = props;
   const cells = words.map((el, index) => (
@@ -58,6 +58,6 @@ function CommonWords(props) {
       </Paper>
     </div>
   );
-}
+};
 
 export default withTheme(CommonWords);

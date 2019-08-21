@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   incorrectBG: theme.incorrectBG
 }));
 
-function FindTheWords(props) {
+const FindTheWords = props => {
   const classes = useStyles(props);
   const [isCorrect, setIsCorrect] = useState(
     Array(props.words.length).fill(undefined)
@@ -107,6 +107,6 @@ function FindTheWords(props) {
       <MemberGate content={display} userAuth={props.userAuth} />
     </div>
   );
-}
+};
 
 export default withTheme(FindTheWords);

@@ -30,7 +30,7 @@ const toLink = (phoneme, activity) => {
   return { title, link };
 };
 
-function ActivityButton(props) {
+const ActivityButton = props => {
   const classes = useStyles(props);
 
   const { accessStatus, activity, phoneme, subscriptionLevel } = props;
@@ -59,6 +59,6 @@ function ActivityButton(props) {
       key={title}
     />
   );
-}
+};
 
 export default withTheme(ActivityButton);

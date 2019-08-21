@@ -1,3 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SayTheSentences 1`] = `undefined`;
+exports[`SayTheSentences 1`] = `
+<div>
+  <div
+    class="makeStyles-personalSpace-3"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      Say the 
+      <span>
+        c
+      </span>
+      <span
+        class="makeStyles-hilite-34"
+      >
+        a
+      </span>
+      <span>
+        t
+      </span>
+       
+       sentences
+    </h5>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-personalSpace-3 MuiPaper-rounded"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        my ~hat~ has ears
+      </p>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-personalSpace-3 MuiPaper-rounded"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        My ~ca~t does not
+      </p>
+    </div>
+  </div>
+</div>
+`;

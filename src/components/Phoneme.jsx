@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Phoneme(props) {
+const Phoneme = props => {
   const classes = useStyles(props);
 
   const { phoneme, ipa, tag, title, words } = props;
@@ -62,6 +62,6 @@ function Phoneme(props) {
       </Link>
     </Paper>
   );
-}
+};
 
 export default withTheme(Phoneme);

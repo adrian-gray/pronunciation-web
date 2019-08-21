@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Login(props) {
+const Login = props => {
   const classes = useStyles(props);
 
   const [signupName, setSignupName] = useState("");
@@ -161,6 +161,6 @@ function Login(props) {
       </Paper>
     </Paper>
   );
-}
+};
 
 export default withTheme(Login);

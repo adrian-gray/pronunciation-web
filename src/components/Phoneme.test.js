@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { BrowserRouter } from "react-router-dom";
+
 import { render, cleanup } from "@testing-library/react";
 
 import Phoneme from "./Phoneme";
@@ -7,9 +8,19 @@ import Phoneme from "./Phoneme";
 afterEach(cleanup);
 
 test("Phoneme", async () => {
-  const props = {};
+  const props = {
+    phoneme: "long-z",
+    ipa: "z:!",
+    tag: "zzzz",
+    title: "Long Zorro",
+    words: ["zoo", "zork", "zorb"]
+  };
 
-  const container = shallow(<Phoneme {...props} />);
+  const { container } = render(
+    <BrowserRouter>
+      <Phoneme {...props} />
+    </BrowserRouter>
+  );
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

@@ -1,3 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WordsMaze 1`] = `undefined`;
+exports[`WordsMaze 1`] = `
+<div>
+  <div
+    class="makeStyles-headspace-1"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      <span>
+        Words Maze bob sound – b
+      </span>
+      <span
+        class="makeStyles-hilite-32"
+      />
+       
+    </h5>
+    <p
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
+    >
+      Discover your way through the maze. Find the words that share the bob sound and travel along the path of the maze from one word to the next until you discover the way out. Master each level and advance to the next – more complex words, more twists and turns. Maze is an interactive pronunciation game that helps you become familiar with common English words so you can speak with confidence.
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
+    >
+      From the yellow square pick an adjacent square with a b~ sound. Keep going until you reach the blue square.
+    </p>
+    <div>
+      <div
+        id="words-maze"
+        style="width: 750px; height: 750px;"
+      />
+    </div>
+  </div>
+</div>
+`;

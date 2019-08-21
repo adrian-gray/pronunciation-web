@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function HowToPronounce(props) {
+const HowToPronounce = props => {
   const classes = useStyles(props);
 
   const { arr, image, ipa } = props;
@@ -59,6 +59,6 @@ function HowToPronounce(props) {
       </Paper>
     </div>
   );
-}
+};
 
 export default withTheme(HowToPronounce);

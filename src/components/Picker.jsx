@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Picker(props) {
+const Picker = props => {
   const classes = useStyles(props);
   const myClasses = `${classes.clickable} ${props.colour}`;
 
@@ -33,6 +33,6 @@ function Picker(props) {
       {`${props.options[props.selected]}`}
     </span>
   );
-}
+};
 
 export default withTheme(Picker);

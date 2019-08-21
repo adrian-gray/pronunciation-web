@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Dialogues(props) {
+const Dialogues = props => {
   const classes = useStyles(props);
   const { dialogues, ipa } = props;
 
@@ -63,6 +63,6 @@ function Dialogues(props) {
       {lines}
     </div>
   );
-}
+};
 
 export default withTheme(Dialogues);

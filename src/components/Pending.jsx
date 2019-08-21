@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   personalSpace: theme.personalSpace
 }));
 
-function Pending(props) {
+const Pending = props => {
   const classes = useStyles(props);
   const { name } = props;
 
@@ -25,6 +25,6 @@ function Pending(props) {
       </Paper>
     </div>
   );
-}
+};
 
 export default withTheme(Pending);

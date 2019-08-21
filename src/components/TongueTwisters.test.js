@@ -1,5 +1,4 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
 import TongueTwisters from "./TongueTwisters";
@@ -7,9 +6,15 @@ import TongueTwisters from "./TongueTwisters";
 afterEach(cleanup);
 
 test("TongueTwisters", async () => {
-  const props = {};
+  const props = {
+    tag: "B!",
+    tongueTwisters: [
+      "The cat can't cope crying",
+      "My mum must make melon molasses"
+    ]
+  };
 
-  const container = shallow(<TongueTwisters {...props} />);
+  const { container } = render(<TongueTwisters {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

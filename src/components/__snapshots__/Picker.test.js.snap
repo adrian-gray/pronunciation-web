@@ -1,3 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Picker 1`] = `undefined`;
+exports[`Picker 1`] = `
+<div>
+  <span
+    class="makeStyles-clickable-1 red"
+  >
+    dog
+  </span>
+</div>
+`;

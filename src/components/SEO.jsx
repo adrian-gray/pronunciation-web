@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 import meta from "./../data/seo/meta";
 
-function SEO(props) {
+const SEO = props => {
   const content = Object.assign({}, meta["default"], meta[props.meta]);
   const { canonical, description, title, imageFB, imageTW } = content;
 
@@ -26,6 +26,6 @@ function SEO(props) {
       <meta name="twitter:image" content={imageTW} />
     </Helmet>
   );
-}
+};
 
 export default SEO;

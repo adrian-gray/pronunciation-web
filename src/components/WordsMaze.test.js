@@ -1,5 +1,4 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
 import WordsMaze from "./WordsMaze";
@@ -7,9 +6,15 @@ import WordsMaze from "./WordsMaze";
 afterEach(cleanup);
 
 test("WordsMaze", async () => {
-  const props = {};
+  const props = {
+    userAuth: 1,
+    tag: "bob",
+    ipa: "b~",
+    words: ["cat", "dog", "mouse", "bunny", "shoe"],
+    correct: ["dog"]
+  };
 
-  const container = shallow(<WordsMaze {...props} />);
+  const { container } = render(<WordsMaze {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

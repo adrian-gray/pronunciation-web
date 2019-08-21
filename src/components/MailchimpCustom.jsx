@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function MailchimpForm(props) {
+const MailchimpForm = props => {
   const classes = useStyles(props);
 
   const [status, setStatus] = useState(null);
@@ -167,6 +167,6 @@ function MailchimpForm(props) {
       </form>
     </div>
   );
-}
+};
 
 export default withTheme(MailchimpForm);

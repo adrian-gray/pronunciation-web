@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   headspace: theme.headspace
 }));
 
-function FourOhFour(props) {
+const FourOhFour = props => {
   const classes = useStyles(props);
   const SeoLocation = "404";
 
@@ -26,6 +26,6 @@ function FourOhFour(props) {
       </Typography>
     </div>
   );
-}
+};
 
 export default withTheme(FourOhFour);

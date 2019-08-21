@@ -28,12 +28,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function OddOneOut(props) {
+const OddOneOut = props => {
   const classes = useStyles(props);
 
-  const title = `Select the words that ~DON'T~ have the ${props.tag} – ${
-    props.ipa
-  } sound.`;
+  const title = `Select the words that ~DON'T~ have the ${props.tag} – ${props.ipa} sound.`;
 
   const [rowHiliteColor, setRowHiliteColor] = useState(
     new Array(props.rows.length)
@@ -123,13 +121,11 @@ function OddOneOut(props) {
       </Typography>
       <br />
       <Typography variant="body1" gutterBottom>
-        {`Can you spot the difference? In each group of words there are three with the ${
-          props.tag
-        } vowel sound and one with a different vowel sound. Say the words and choose the one that doesn’t sound the same as the others. Advance to the next level with more challenging words. Odd One Out encourages you to identify the differences between words with similar sounding vowels.`}
+        {`Can you spot the difference? In each group of words there are three with the ${props.tag} vowel sound and one with a different vowel sound. Say the words and choose the one that doesn’t sound the same as the others. Advance to the next level with more challenging words. Odd One Out encourages you to identify the differences between words with similar sounding vowels.`}
       </Typography>
       <MemberGate content={content} userAuth={props.userAuth} />
     </div>
   );
-}
+};
 
 export default withTheme(OddOneOut);

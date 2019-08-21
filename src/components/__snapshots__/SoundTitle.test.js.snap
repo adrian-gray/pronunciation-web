@@ -1,3 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SoundTitle 1`] = `undefined`;
+exports[`SoundTitle 1`] = `
+Object {
+  "container": <div>
+    <h3
+      class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
+    >
+      <span>
+        Bob
+      </span>
+       
+       - 
+      <span>
+        The cat in the hat
+      </span>
+       
+    </h3>
+  </div>,
+}
+`;

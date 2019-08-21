@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function TongueTwisters(props) {
+const TongueTwisters = props => {
   const classes = useStyles(props);
   const { ipa, sentences } = props;
 
@@ -36,6 +36,6 @@ function TongueTwisters(props) {
       {lines}
     </div>
   );
-}
+};
 
 export default withTheme(TongueTwisters);

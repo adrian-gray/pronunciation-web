@@ -1,3 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tile 1`] = `undefined`;
+exports[`Tile 1`] = `
+<div>
+  <div
+    class="makeStyles-clickable-5"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-4 makeStyles-correctBG-2 MuiPaper-rounded"
+    >
+      <p
+        class="MuiTypography-root makeStyles-largeText-1 MuiTypography-body1"
+      >
+        <span
+          class="makeStyles-correctBG-2"
+        >
+          Grease
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+`;

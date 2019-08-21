@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Landing(props) {
+const Landing = props => {
   const classes = useStyles(props);
 
   return (
@@ -87,6 +87,6 @@ function Landing(props) {
       />
     </Paper>
   );
-}
+};
 
 export default withTheme(Landing);

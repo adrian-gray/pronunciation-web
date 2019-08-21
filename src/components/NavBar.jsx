@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function NavBar(props) {
+const NavBar = props => {
   const classes = useStyles(props);
 
   let homeLink = "/";
@@ -62,6 +62,6 @@ function NavBar(props) {
       </AppBar>
     </div>
   );
-}
+};
 
 export default withTheme(NavBar);

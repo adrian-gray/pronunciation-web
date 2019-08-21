@@ -1,3 +1,183 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OddOneOut 1`] = `undefined`;
+exports[`OddOneOut 1`] = `
+<div>
+  <div
+    class="makeStyles-headspace-2"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      The Odd One Out using long-a - 
+      <span>
+        a:
+      </span>
+       
+    </h5>
+    <h6
+      class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
+    >
+      <span>
+        Select the words that 
+      </span>
+      <span
+        class="makeStyles-hilite-40"
+      >
+        DON'T
+      </span>
+      <span>
+         have the long-a – a: sound.
+      </span>
+       
+    </h6>
+    <br />
+    <p
+      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+    >
+      Can you spot the difference? In each group of words there are three with the long-a vowel sound and one with a different vowel sound. Say the words and choose the one that doesn’t sound the same as the others. Advance to the next level with more challenging words. Odd One Out encourages you to identify the differences between words with similar sounding vowels.
+    </p>
+    <div>
+      <h6
+        class="MuiTypography-root makeStyles-headspace-2 makeStyles-center-3 MuiTypography-h6"
+      >
+        Example
+      </h6>
+      <table
+        class="MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root makeStyles-headBG-8"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head"
+          >
+            <th
+              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-head"
+              scope="col"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+              >
+                <span>
+                  three
+                </span>
+                 
+              </p>
+            </th>
+            <th
+              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-head"
+              scope="col"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+              >
+                <span>
+                  blind
+                </span>
+                 
+              </p>
+            </th>
+            <th
+              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-head"
+              scope="col"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+              >
+                <span>
+                  moice
+                </span>
+                 
+              </p>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+              >
+                <span>
+                  the
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+              >
+                <span>
+                  cat
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+              >
+                <span>
+                  sat
+                </span>
+                 
+              </p>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+              >
+                <span>
+                  on
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+              >
+                <span>
+                  the
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+              >
+                <span>
+                  mat
+                </span>
+                 
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

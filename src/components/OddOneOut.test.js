@@ -7,10 +7,13 @@ afterEach(cleanup);
 
 test("OddOneOut", async () => {
   const props = {
-    ips: "a:",
+    ipa: "a:",
+    tag: "long-a",
     rows: [["the", "cat", "sat"], ["on", "the", "mat"]],
+    correct: ["the", "on"],
     example: ["three", "blind", "moice"],
-    exampleHilite: "three"
+    exampleHilite: "three",
+    userAuth: 1
   };
 
   const { container } = render(<OddOneOut {...props} />);

@@ -13,7 +13,7 @@ const classes = makeStyles(theme => ({
   page: theme.page
 }));
 
-function Sounds(props) {
+const Sounds = props => {
   const phonemes = data.phonemes;
   const list = Object.keys(phonemes);
   const cards = list.map(phoneme => {
@@ -42,6 +42,6 @@ function Sounds(props) {
       {cards}
     </Paper>
   );
-}
+};
 
 export default withTheme(Sounds);

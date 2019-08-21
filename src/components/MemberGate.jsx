@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function MemberGate(props) {
+const MemberGate = props => {
   const classes = useStyles(props);
 
   let display;
@@ -30,6 +30,6 @@ function MemberGate(props) {
   }
 
   return display;
-}
+};
 
 export default withTheme(MemberGate);

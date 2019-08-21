@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   largeText: theme.largeText
 }));
 
-function Cell(props) {
+const Cell = props => {
   const classes = useStyles(props);
 
   const handleClick = e => {
@@ -34,6 +34,6 @@ function Cell(props) {
       </Typography>
     </TableCell>
   );
-}
+};
 
 export default withTheme(Cell);

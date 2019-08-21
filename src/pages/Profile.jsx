@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   headspace: theme.headspace
 }));
 
-function Profile(props) {
+const Profile = props => {
   const classes = useStyles(props);
   const { user } = props;
 
@@ -32,6 +32,6 @@ function Profile(props) {
       </div>
     </Paper>
   );
-}
+};
 
 export default withTheme(Profile);

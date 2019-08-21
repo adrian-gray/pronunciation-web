@@ -1,5 +1,4 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
 import Pending from "./Pending";
@@ -7,9 +6,9 @@ import Pending from "./Pending";
 afterEach(cleanup);
 
 test("Pending", async () => {
-  const props = {};
+  const props = { name: "Bob's Burgers" };
 
-  const container = shallow(<Pending {...props} />);
+  const { container } = render(<Pending {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

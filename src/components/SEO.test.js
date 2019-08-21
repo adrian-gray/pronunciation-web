@@ -1,15 +1,23 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
 import SEO from "./SEO";
 
 afterEach(cleanup);
 
+// TODO how to I test this?
 test("SEO", async () => {
-  const props = {};
+  const props = {
+    meta: {
+      canonical: "www.google.com",
+      description: "A lonely lighthouse",
+      title: "apple",
+      imageFB: "appleFB.jpg",
+      imageTW: "appleTW"
+    }
+  };
 
-  const container = shallow(<SEO {...props} />);
+  const { container } = render(<SEO {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

@@ -1,7 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SplitHilite 1`] = `
-<span>
-  pl
-</span>
+<div>
+  <span>
+    pl
+  </span>
+  <span
+    class="makeStyles-hilite-1"
+  >
+    i
+  </span>
+  <span>
+    zzz
+  </span>
+  <span
+    class="makeStyles-hilite-1"
+  >
+    i
+  </span>
+  <span>
+    sed
+  </span>
+   
+</div>
 `;

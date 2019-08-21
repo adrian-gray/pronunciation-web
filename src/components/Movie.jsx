@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   fullWidth: theme.fullWidth
 }));
 
-function Movie(props) {
+const Movie = props => {
   const classes = useStyles(props);
   const { ipa, url } = props;
 
@@ -25,6 +25,6 @@ function Movie(props) {
       <img className={classes.fullWidth} src={url} alt={`Pronouncing ${ipa}`} />
     </div>
   );
-}
+};
 
 export default withTheme(Movie);

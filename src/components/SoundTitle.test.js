@@ -1,5 +1,4 @@
 import React from "react";
-import { shallow } from "enzyme";
 import { render, cleanup } from "@testing-library/react";
 
 import SoundTitle from "./SoundTitle";
@@ -7,9 +6,12 @@ import SoundTitle from "./SoundTitle";
 afterEach(cleanup);
 
 test("SoundTitle", async () => {
-  const props = {};
+  const props = {
+    phoneme: "Bob",
+    str: "The cat in the hat"
+  };
 
-  const container = shallow(<SoundTitle {...props} />);
+  const { container } = render(<SoundTitle {...props} />);
 
-  expect(container.firstChild).toMatchSnapshot();
+  expect({ container }).toMatchSnapshot();
 });

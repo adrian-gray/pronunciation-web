@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   cell: theme.cell
 }));
 
-function MinimalPairs(props) {
+const MinimalPairs = props => {
   const classes = useStyles(props);
   const { ipa, pairs, tag } = props;
 
@@ -49,6 +49,6 @@ function MinimalPairs(props) {
       </Paper>
     </div>
   );
-}
+};
 
 export default withTheme(MinimalPairs);

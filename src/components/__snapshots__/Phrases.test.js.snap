@@ -1,3 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Phrases 1`] = `undefined`;
+exports[`Phrases 1`] = `
+<div>
+  <div
+    class="makeStyles-headspace-1"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      Phrases using 
+      <span>
+        z!
+      </span>
+       
+    </h5>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-subCanvas-2 MuiPaper-rounded"
+    >
+      <table
+        class="MuiTable-root"
+      >
+        <tbody
+          class="MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-3 MuiTypography-body1"
+              >
+                <span>
+                  0
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-3 MuiTypography-body1"
+              >
+                <span>
+                  Zork my fork
+                </span>
+                 
+              </p>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-3 MuiTypography-body1"
+              >
+                <span>
+                  1
+                </span>
+                 
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body"
+            >
+              <p
+                class="MuiTypography-root makeStyles-largeText-3 MuiTypography-body1"
+              >
+                <span>
+                  Zoinks, who three that?
+                </span>
+                 
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

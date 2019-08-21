@@ -7,5 +7,5 @@ afterEach(cleanup);
 
 test("SplitHilite", async () => {
   const { container } = render(<SplitHilite str="pl~i~zzz~i~sed" />);
-  expect(container.firstChild).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

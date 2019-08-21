@@ -1,3 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TongueTwisters 1`] = `undefined`;
+exports[`TongueTwisters 1`] = `
+<div>
+  <div
+    class="makeStyles-headspace-1"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+    >
+      B! Tongue Twisters
+    </h5>
+    <p
+      class="MuiTypography-root MuiTypography-body1"
+    >
+      Enjoy the challenge of Tongue Twisters. There are three tongue twisters to perfect the B! sound. Each tongue twister consists of commonly used English words and phrases for you to practice the B! sound. How fast can you say each B! tongue twister? Try to say each one as many times as you can, no mistakes. Record yourself and post your attempt to enter the challenge.
+    </p>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-spacing-3 MuiPaper-rounded"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        The cat can't cope crying
+      </p>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation1 makeStyles-spacing-3 MuiPaper-rounded"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        My mum must make melon molasses
+      </p>
+    </div>
+  </div>
+</div>
+`;
