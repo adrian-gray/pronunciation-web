@@ -6,6 +6,7 @@
     "deploy": "yarn firebase deploy",
     "sounds": "node ./bin/generate-json.js",
     "sitemap": "node ./bin/generate-sitemap.js",
+    "types": "tsc",
     "test": "jest --watch",
     "test:update": "jest -u",
     "test:coverage": "jest --coverage"

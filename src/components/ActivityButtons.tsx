@@ -5,7 +5,7 @@ import {
   openActivities,
   memberActivities,
   pendingActivities
-} from "./../data/activityAccess";
+} from "./../data/activityAccess.json";
 
 const getStatus = activity => {
   if (openActivities.includes(activity)) return "open";

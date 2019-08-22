@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { withTheme } from "@material-ui/styles";
 
-import jsonData from "./../data/sounds";
+import * as jsonData from "./../data/sounds.json";
 import ActivityButtons from "../components/ActivityButtons";
 import ExtractActivity from "../components/ExtractActivity";
 import SEO from "../components/SEO";

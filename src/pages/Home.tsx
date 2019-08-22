@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { withTheme } from "@material-ui/styles";
 
-import data from "./../data/sounds";
+import data from "./../data/sounds.json";
 import SEO from "../components/SEO";
 import Phoneme from "../components/Phoneme";
 
