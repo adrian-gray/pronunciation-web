@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "sourceMap": true,
+    "target": "esnext",
+    "moduleResolution": "node",
     "allowJs": true,
     "checkJs": true,
     "noEmit": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "isolatedModules": true,
     "module": "commonjs",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "jsx": "react"
+    "resolveJsonModule": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "**/*.test.js"]
+  "exclude": ["node_modules"]
 }

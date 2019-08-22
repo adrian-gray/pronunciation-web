@@ -1,68 +1,19 @@
-import { createMuiTheme } from "@material-ui/core/styles";
-import orange from "@material-ui/core/colors/orange";
-
-const defaultTheme = createMuiTheme();
-
-export default createMuiTheme({
-  palette: {
-    primary: {
-      main: "#b71c1c"
+"use strict";
+exports.__esModule = true;
+var styles_1 = require("@material-ui/core/styles");
+var orange_1 = require("@material-ui/core/colors/orange");
+var defaultTheme = styles_1.createMuiTheme();
+exports["default"] = styles_1.createMuiTheme({
+    palette: {
+        primary: {
+            main: "#b71c1c"
+        },
+        secondary: orange_1["default"]
     },
-    secondary: orange
-  },
-  typography: {
-    fontSize: 16
-  },
-  page: {
-    ...defaultTheme.mixins.gutters(),
-    paddingTop: defaultTheme.spacing(2),
-    paddingBottom: defaultTheme.spacing(2),
-    flexGrow: 1
-  },
-  subCanvas: {
-    marginTop: defaultTheme.spacing(2),
-    marginBottom: defaultTheme.spacing(2)
-  },
-  largeText: {
-    fontSize: "1.25rem"
-  },
-  headspace: {
-    paddingTop: defaultTheme.spacing(2)
-  },
-  fullWidth: {
-    width: "100%"
-  },
-  hilite: {
-    color: "#CC0000"
-  },
-  cell: {
-    paddingLeft: 12,
-    paddingRight: 12,
-    textAlign: "center"
-  },
-  cellHiliteBG: {
-    background: "#CCC"
-  },
-  correctBG: {
-    background: "#CFC"
-  },
-  incorrectBG: {
-    background: "#FCC"
-  },
-  sentence: {
-    padding: "0.5rem",
-    paddingLeft: "1rem",
-    paddingRight: "1rem",
-    fontSize: "1.2rem"
-  },
-  clearFloat: {
-    clear: "both"
-  },
-  personalSpace: {
-    padding: "1rem",
-    margin: "1rem"
-  },
-  center: {
-    textAlign: "center"
-  }
+    typography: {
+        fontSize: 16
+    },
+    largeText: {
+        fontSize: "1.25rem"
+    }
 });
