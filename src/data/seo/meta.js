@@ -2,8 +2,6 @@ import short_a from "./short_a.js";
 import long_e from "./long_e.js";
 import short_i from "./short_i.js";
 
-export default Object.assign({}, base, short_a, long_e, short_i);
-
 const URL = "https://pronounceweb.com";
 
 // title 65-75
@@ -35,3 +33,5 @@ const base = {
     canonical: `${URL}/sounds`
   }
 };
+
+export default Object.assign({}, base, short_a, long_e, short_i);
