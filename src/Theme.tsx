@@ -8,10 +8,10 @@ declare module "@material-ui/core/styles/createMuiTheme" {
   interface Theme {
     page: {
       "flex-grow": 1;
-      "padding-top": 16;
-      "padding-left": 16;
-      "padding-right": 16;
-      "padding-bottom": 16;
+      "padding-top": "1rem";
+      "padding-left": "1rem";
+      "padding-right": "1rem";
+      "padding-bottom": "1rem";
     };
     subCanvas: {
       marginTop: 16;
@@ -44,7 +44,7 @@ declare module "@material-ui/core/styles/createMuiTheme" {
       background: "#FCC";
     };
     sentence: {
-      padding: "0.5rem";
+      padding: "5rem";
       paddingLeft: "1rem";
       paddingRight: "1rem";
       fontSize: "1.2rem";
@@ -64,10 +64,10 @@ declare module "@material-ui/core/styles/createMuiTheme" {
   interface ThemeOptions {
     page?: {
       "flex-grow": 1;
-      "padding-top": 16;
-      "padding-left": 16;
-      "padding-right": 16;
-      "padding-bottom": 16;
+      "padding-top": "1rem";
+      "padding-left": "1rem";
+      "padding-right": "1rem";
+      "padding-bottom": "1rem";
     };
     subCanvas?: {
       marginTop: 16;
@@ -100,7 +100,7 @@ declare module "@material-ui/core/styles/createMuiTheme" {
       background: "#FCC";
     };
     sentence?: {
-      padding: "0.5rem";
+      padding: "5rem";
       paddingLeft: "1rem";
       paddingRight: "1rem";
       fontSize: "1.2rem";
