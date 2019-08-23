@@ -2,27 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { auth } from "./../firebase";
 
-import Button from "@material-ui/core/Button";
-import Divider from "@material-ui/core/Divider";
-import Paper from "@material-ui/core/Paper";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 
-const useStyles = makeStyles(theme => ({
-  page: theme.page,
-  headspace: theme.headspace,
-  personalSpace: theme.personalSpace,
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1)
-  }
-}));
-
-const Login = props => {
-  const classes = useStyles(props);
-
+export default props => {
   const [signupName, setSignupName] = useState("");
   const [signupEmail, setSignupEmail] = useState("");
   const [signinEmail, setSigninEmail] = useState("");
@@ -76,91 +60,81 @@ const Login = props => {
   };
 
   return (
-    <Paper className={classes.page}>
+    <Container>
       {redirectToHome ? <Redirect to="/home" /> : null}
       <div>
-        <Paper className={classes.personalSpace}>
-          <Button
-            onClick={auth.handleGoogleLogin}
-            variant="contained"
-            color="primary"
-            className={classes.button}
-          >
+        <Container className="personal-space">
+          <Button variant="primary" onClick={auth.handleGoogleLogin}>
             {`Login with Google`}
           </Button>
-        </Paper>
+        </Container>
       </div>
       <div>
-        <Paper className={classes.personalSpace}>
-          <Typography className={classes.headSpace} gutterBottom>
-            {`Sign in with email`}
-          </Typography>
-          <form>
-            <TextField
-              id="signin_email"
-              label="Your email"
+        <Container className="personal-space">
+          <p className="head-space">{`Sign in with email`}</p>
+          <Form>
+            <Form.Row>
+              <Form.Label>Your email</Form.Label>
+              <Form.Control
+                id="signin_email"
+                className="form-control"
+                value={signinEmail}
+                onChange={handleChange("signinEmail")}
+                autoComplete="username"
+              />
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                id="signin_password"
+                className="form-control"
+                type="password"
+                value={signinPassword}
+                onChange={handleChange("signinPassword")}
+                autoComplete="current-password"
+              />
+              <Button onClick={signIn}>{"Sign in"}</Button>
+            </Form.Row>
+          </Form>
+        </Container>
+        <hr />
+      </div>
+      <Container className="personal-space">
+        <p className="head-space">{`Or, sign up with email `}</p>
+        <Form>
+          <Form.Row>
+            <Form.Label>Your name</Form.Label>
+            <Form.Control
+              id="signup_name"
               className="form-control"
-              value={signinEmail}
-              onChange={handleChange("signinEmail")}
-              margin="normal"
+              value={signupName}
+              onChange={handleChange("signupName")}
+            />
+          </Form.Row>
+          <Form.Row>
+            <Form.Label>Your email</Form.Label>
+            <Form.Control
+              id="signup_email"
+              className="form-control"
+              value={signupEmail}
+              onChange={handleChange("signupEmail")}
               autoComplete="username"
             />
-            <TextField
-              id="signin_password"
-              label="Password"
+          </Form.Row>
+          <Form.Row>
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              autoComplete="current-password"
+              id="signup_password"
               className="form-control"
               type="password"
-              value={signinPassword}
-              onChange={handleChange("signinPassword")}
-              margin="normal"
-              autoComplete="current-password"
+              value={signupPassword}
+              onChange={handleChange("signupPassword")}
             />
-            <Button onClick={signIn} variant="contained">
-              {"Sign in"}
-            </Button>
-          </form>
-        </Paper>
-        <Divider />
-      </div>
-      <Paper className={classes.personalSpace}>
-        <Typography className={classes.headspace} gutterBottom>
-          {`Or, sign up with email `}
-        </Typography>
-        <form>
-          <TextField
-            id="signup_name"
-            label="Your name"
-            className="form-control"
-            value={signupName}
-            onChange={handleChange("signupName")}
-            margin="normal"
-          />
-          <TextField
-            id="signup_email"
-            label="Your email"
-            className="form-control"
-            value={signupEmail}
-            onChange={handleChange("signupEmail")}
-            margin="normal"
-            autoComplete="username"
-          />
-          <TextField
-            autoComplete="current-password"
-            id="signup_password"
-            label="Password"
-            className="form-control"
-            type="password"
-            value={signupPassword}
-            onChange={handleChange("signupPassword")}
-            margin="normal"
-          />
-          <Button onClick={signUp} variant="contained">
-            {"Sign up"}
-          </Button>
-        </form>
-      </Paper>
-    </Paper>
+          </Form.Row>
+          <Form.Row>
+            <Button onClick={signUp}>{"Sign up"}</Button>
+          </Form.Row>
+        </Form>
+      </Container>
+    </Container>
   );
 };
-
-export default withTheme(Login);
