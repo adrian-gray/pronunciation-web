@@ -1,26 +1,10 @@
 import React, { Component } from "react";
 
-import { Paper, Typography, withStyles } from "@material-ui/core";
+import Container from "react-bootstrap/Container";
 
 import SplitHilite from "./SplitHilite";
 import MemberGate from "./MemberGate";
 import Picker from "./Picker";
-
-const styles = theme => ({
-  headspace: theme.headspace,
-  sentence: {
-    padding: "0.5rem",
-    paddingLeft: "1rem",
-    paddingRight: "1rem",
-    fontSize: "1.2rem"
-  },
-  red: {
-    color: "maroon"
-  },
-  green: {
-    color: "green"
-  }
-});
 
 const countSelectors = arr => {
   let count = 0;
@@ -31,18 +15,38 @@ const countSelectors = arr => {
   return count;
 };
 
-class NewsStories extends Component {
+interface NewsStoriesCustomProps {
+  title: string;
+  headline: string;
+  sentences: string[];
+  options: string[];
+  selectOption: string;
+  answers: string[];
+  userAuth: number;
+  other: any[];
+}
+
+interface NewsStoriesCustomState {
+  sentences: string[];
+  selectedOption: number[];
+  selectedBgColour: string[];
+  other: any[];
+}
+
+class NewsStories extends Component<
+  NewsStoriesCustomProps,
+  NewsStoriesCustomState
+> {
   constructor(props) {
     super(props);
 
-    const { classes, ...other } = props;
+    const { ...other } = props;
 
     this.state = {
-      classes,
-      other,
       sentences: [],
       selectedOption: [],
-      selectedBgColour: []
+      selectedBgColour: [],
+      other: []
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -97,11 +101,7 @@ class NewsStories extends Component {
         key++;
       } while (sentence.length);
 
-      return (
-        <Typography key={index} className={this.state.classes.sentence}>
-          {fragments}
-        </Typography>
-      );
+      return <p key={index}>{fragments}</p>;
     });
 
     return parsedSentences;
@@ -155,10 +155,10 @@ class NewsStories extends Component {
       this.checkForCorrect(newStateSelectedOption).map((value, index) => {
         switch (value) {
           case true:
-            selectedBgColour[index] = this.state.classes.green;
+            selectedBgColour[index] = "#99BB99"; // TODO
             break;
           case false:
-            selectedBgColour[index] = this.state.classes.red;
+            selectedBgColour[index] = "#BB9999"; // TODO
             break;
           default:
             selectedBgColour[index] = undefined;
@@ -178,34 +178,27 @@ class NewsStories extends Component {
 
   render() {
     const { headline, title } = this.props;
-    const { classes } = this.state;
 
-    const content = <Paper>{this.state.sentences}</Paper>;
+    const content = <Container>{this.state.sentences}</Container>;
 
     const description = `Extra! Extra! Read all about it! News Stories is a collection of interesting and feel-good stories from around the world.  Each story is written in two levels – beginners and intermediate. All you need to do is identify the highlighted sounds and choose the correct phoneme that represents that sound. News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.`;
 
     return (
-      <div className={classes.headspace}>
-        <Typography variant="h4" gutterBottom>
-          {"News Stories"}
-        </Typography>
-        <Typography variant="body2" gutterBottom>
-          {description}
-        </Typography>
-        <Typography variant="h4" gutterBottom>
-          {headline}
-        </Typography>
-        <Typography variant="h5" gutterBottom>
+      <Container className="headspace">
+        <h2>{"News Stories"}</h2>
+        <p>{description}</p>
+        <h3>{headline}</h3>
+        <h5>
           <SplitHilite str={title} />
-        </Typography>
+        </h5>
         <MemberGate
           content={content}
           userAuth={this.props.userAuth}
           {...this.props.other}
         />
-      </div>
+      </Container>
     );
   }
 }
 
-export default withStyles(styles)(NewsStories);
+export default NewsStories;

@@ -10,7 +10,8 @@
     "sourceMap": true,
     "isolatedModules": true,
     "module": "commonjs",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types", "@types"]
   },
   "include": ["src"],
   "exclude": ["node_modules"]

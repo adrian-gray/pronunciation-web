@@ -6,37 +6,13 @@ import { auth } from "./firebase";
 
 import ReactGA from "react-ga";
 
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { ThemeProvider } from "@material-ui/styles";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Container from "react-bootstrap/Container";
 
 import NavBar from "./components/NavBar";
 import Router from "./Router";
 import SEO from "./components/SEO";
-import Theme from "./Theme";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    marginLeft: "auto",
-    marginBottom: 0,
-    marginRight: "auto",
-    padding: 0,
-    maxWidth: 1024,
-    [theme.breakpoints.up("xs")]: {
-      paddingRight: 0,
-      paddingLeft: 0
-    },
-    [theme.breakpoints.up("sm")]: {
-      paddingRight: 20,
-      paddingLeft: 20
-    }
-  }
-}));
-
-function App(props) {
-  const classes = useStyles(props);
-
+export default props => {
   const [user, setUser] = useState(null);
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
 
@@ -63,18 +39,13 @@ function App(props) {
 
   return (
     <BrowserRouter>
-      <div className="outer">
-        <CssBaseline />
-        <ThemeProvider theme={Theme}>
-          <div className={classes.root}>
-            <SEO />
-            <NavBar user={user} signout={signout} />
-            <Router user={user} subscriptionLevel={subscriptionLevel} />
-          </div>
-        </ThemeProvider>
-      </div>
+      <Container>
+        <Container>
+          <SEO />
+          <NavBar user={user} signout={signout} />
+          <Router user={user} subscriptionLevel={subscriptionLevel} />
+        </Container>
+      </Container>
     </BrowserRouter>
   );
-}
-
-export default withTheme(App);
+};

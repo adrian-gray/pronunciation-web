@@ -15,6 +15,7 @@
     "source": "dist"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "@material-ui/core": "^4.3.3",
     "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.3.3",
@@ -22,6 +23,7 @@
     "firebase": "^6.3.3",
     "firebase-encode": "^0.0.5",
     "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.11",
     "react-dom": "^16.9.0",
     "react-ga": "^2.5.3",
     "react-helmet": "^5.2.1",
@@ -61,6 +63,7 @@
     "loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.9.2",
+    "phaser": "2.6.2",
     "prettier": "^1.18.2",
     "prop-types": "15.7.2",
     "react-snap": "^1.10.1",
