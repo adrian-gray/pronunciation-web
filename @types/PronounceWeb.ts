@@ -1,4 +1,4 @@
-export interface NewsStoriesCustomProps {
+export interface INewsStoriesCustomProps {
   title: string;
   headline: string;
   sentences: string[];
@@ -8,7 +8,7 @@ export interface NewsStoriesCustomProps {
   other: any[];
 }
 
-export interface NewsStoriesCustomState {
+export interface INewsStoriesCustomState {
   sentences: string[];
   selectedOption: number[];
   selectedBgColour: string[];

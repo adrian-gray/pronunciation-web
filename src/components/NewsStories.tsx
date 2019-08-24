@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {
-  NewsStoriesCustomProps,
-  NewsStoriesCustomState
+  INewsStoriesCustomProps,
+  INewsStoriesCustomState
 } from "./../../@types/PronounceWeb";
 
 import Container from "react-bootstrap/Container";
@@ -20,8 +20,8 @@ const countSelectors = arr => {
 };
 
 class NewsStories extends Component<
-  NewsStoriesCustomProps,
-  NewsStoriesCustomState
+  INewsStoriesCustomProps,
+  INewsStoriesCustomState
 > {
   constructor(props) {
     super(props);
