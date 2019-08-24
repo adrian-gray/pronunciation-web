@@ -11,7 +11,7 @@
     "isolatedModules": true,
     "module": "commonjs",
     "resolveJsonModule": true,
-    "typeRoots": ["./node_modules/@types", "@types"]
+    "typeRoots": ["./node_modules/@types", "./@types"]
   },
   "include": ["src"],
   "exclude": ["node_modules"]

@@ -1,24 +1,12 @@
 import React, { useState } from "react";
 
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Container from "react-bootstrap/Container";
 
 import MemberGate from "./MemberGate";
 import SplitHilite from "./SplitHilite";
 import Tile from "./Tile";
 
-const useStyles = makeStyles(theme => ({
-  headspace: theme.headspace,
-  clearFloat: theme.clearFloat,
-  center: theme.center,
-  correctBG: theme.correctBG,
-  incorrectBG: theme.incorrectBG
-}));
-
-const FindTheWords = props => {
-  const classes = useStyles(props);
+export default props => {
   const [isCorrect, setIsCorrect] = useState(
     Array(props.words.length).fill(undefined)
   );
@@ -49,17 +37,13 @@ const FindTheWords = props => {
   const { ipa, isHearTheDifference, tag, words } = props;
 
   let description = "";
-  let result = "";
-  let resultBG = "";
-  let title = "";
+  let result;
+  let resultBG = false;
+  let title;
 
   if (allCorrect) {
-    result = (
-      <Typography className={classes.center} variant="display3" gutterBottom>
-        {"Yes ✓"}
-      </Typography>
-    );
-    resultBG = classes.correctBG;
+    result = <h3 className="text-center">Yes ✓</h3>;
+    resultBG = true;
   }
 
   const wordTiles = words.map((word, index) => (
@@ -74,39 +58,37 @@ const FindTheWords = props => {
 
   if (isHearTheDifference) {
     title = (
-      <Typography variant="h5" gutterBottom>
+      <h3>
         {`Odd One Out - select words that DON'T have an `}
         <SplitHilite str={ipa} />
         {`sound`}
-      </Typography>
+      </h3>
     );
     description = `Find the Odd One Out. Say the words and select those without the ${tag} vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the odd words before your time runs out? You can click on words to hear the pronunciation. Odd One Out helps you recognise and pronounce the vowel sounds of common English words.`;
   } else {
     title = (
-      <Typography variant="h5" gutterBottom>
+      <h3>
         {`Select the words with an `}
         <SplitHilite str={ipa} />
         {`sound`}
-      </Typography>
+      </h3>
     );
     description = `Find the correct sound. Say the words and select those with the ${tag} vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the words before your time runs out? You can click on words to hear the pronunciation. Find the words helps you recognise and pronounce the vowel sounds of common English words.`;
   }
 
   const display = (
-    <Paper className={resultBG}>
+    <Container className={resultBG ? "correct" : "incorrect"}>
       {wordTiles}
-      <div className={classes.clearFloat} />
+      <div className="clear-float" />
       {result}
-    </Paper>
+    </Container>
   );
 
   return (
-    <div className={classes.headspace}>
+    <Container>
       {title}
-      <Typography gutterBottom>{description}</Typography>
+      <p>{description}</p>
       <MemberGate content={display} userAuth={props.userAuth} />
-    </div>
+    </Container>
   );
 };
-
-export default withTheme(FindTheWords);

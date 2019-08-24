@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import {
+  NewsStoriesCustomProps,
+  NewsStoriesCustomState
+} from "./../../@types/PronounceWeb";
 
 import Container from "react-bootstrap/Container";
 
@@ -14,24 +18,6 @@ const countSelectors = arr => {
   });
   return count;
 };
-
-interface NewsStoriesCustomProps {
-  title: string;
-  headline: string;
-  sentences: string[];
-  options: string[];
-  selectOption: string;
-  answers: string[];
-  userAuth: number;
-  other: any[];
-}
-
-interface NewsStoriesCustomState {
-  sentences: string[];
-  selectedOption: number[];
-  selectedBgColour: string[];
-  other: any[];
-}
 
 class NewsStories extends Component<
   NewsStoriesCustomProps,

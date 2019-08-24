@@ -34,5 +34,10 @@
         "extensions": [".js", ".tsx"]
       }
     }
+  },
+  "globals": {
+    "expect": "readonly",
+    "test": "readonly",
+    "afterEach": "readonly"
   }
 }
