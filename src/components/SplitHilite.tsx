@@ -1,15 +1,6 @@
 import React from "react";
 
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
-
-const useStyles = makeStyles(theme => ({
-  hilite: theme.hilite
-}));
-
-const SplitHilite = props => {
-  const classes = useStyles(props);
-
+export default props => {
   const { str } = props;
   const elements = str.split(/(~)/);
   const arr = [];
@@ -20,7 +11,7 @@ const SplitHilite = props => {
     if (el === "~") {
       const txt = elements.shift();
       arr.push(
-        <span className={classes.hilite} key={`${txt}${index}`}>
+        <span className="hilite" key={`${txt}${index}`}>
           {txt}
         </span>
       );
@@ -32,7 +23,5 @@ const SplitHilite = props => {
   } while (elements.length);
   arr.push(" ");
 
-  return arr;
+  return <>{arr}</>;
 };
-
-export default withTheme(SplitHilite);

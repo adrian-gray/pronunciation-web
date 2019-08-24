@@ -3,7 +3,7 @@
 import Boot from "./states/boot";
 import Game from "./states/game";
 
-let game;
+let game: Phaser.Game;
 
 const WordsMaze = {
   init(params) {

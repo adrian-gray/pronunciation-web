@@ -35,7 +35,7 @@ export default props => {
         }
       </p>
       <Mailchimp />
-      <div className="text-center max-width pad2">
+      <div className="text-center full-width pad2">
         <Link to="/home">
           <Button variant="warning" className="btn btn-lg">
             {"Start Pronunciation Practice Now"}
@@ -43,7 +43,7 @@ export default props => {
         </Link>
       </div>
       <img
-        className="max-width"
+        className="full-width"
         src="/assets/images/improve-english-pronounciation.jpg"
         title="Learn to improve English pronunciation"
         alt="Learn to improve English pronunciation"

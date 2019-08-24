@@ -22,8 +22,6 @@ function Maze(props) {
   let screenWidth = NATIVE_WIDTH;
   let screenHeight = NATIVE_HEIGHT;
 
-  window.addEventListener("resize", _handleResize);
-
   const handleScriptLoad = () => {
     const wordsMaze = Object.create(WordsMaze);
     wordsMaze.init({
@@ -34,23 +32,20 @@ function Maze(props) {
   };
 
   const _handleResize = () => {
-    const padding = "30px";
+    const padding = 30;
     const w = window.innerWidth - padding;
     const scale = w / NATIVE_WIDTH;
     screenWidth = Math.round(scale * NATIVE_WIDTH);
     screenHeight = Math.round(scale * NATIVE_HEIGHT);
   };
+  window.addEventListener("resize", _handleResize);
 
   const width = `${screenWidth}px`;
   const height = `${screenHeight}px`;
   const style = { width, height };
   const title = `Words Maze ${props.tag} sound – ${props.ipa}`;
-  const description = `Discover your way through the maze. Find the words that share the ${
-    props.tag
-  } sound and travel along the path of the maze from one word to the next until you discover the way out. Master each level and advance to the next – more complex words, more twists and turns. Maze is an interactive pronunciation game that helps you become familiar with common English words so you can speak with confidence.`;
-  const instructions = `From the yellow square pick an adjacent square with a ${
-    props.ipa
-  } sound. Keep going until you reach the blue square.`;
+  const description = `Discover your way through the maze. Find the words that share the ${props.tag} sound and travel along the path of the maze from one word to the next until you discover the way out. Master each level and advance to the next – more complex words, more twists and turns. Maze is an interactive pronunciation game that helps you become familiar with common English words so you can speak with confidence.`;
+  const instructions = `From the yellow square pick an adjacent square with a ${props.ipa} sound. Keep going until you reach the blue square.`;
   const display = (
     <div>
       <Script

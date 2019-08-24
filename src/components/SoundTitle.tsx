@@ -1,18 +1,13 @@
 import React from "react";
 
-import Typography from "@material-ui/core/Typography";
-import { withTheme } from "@material-ui/styles";
-
 import SplitHilite from "./SplitHilite";
 
-const SoundTitle = props => {
+export default props => {
   const { phoneme, str } = props;
 
   return (
-    <Typography variant="h3" gutterBottom>
+    <h3>
       <SplitHilite str={phoneme} /> - <SplitHilite str={str} />
-    </Typography>
+    </h3>
   );
 };
-
-export default withTheme(SoundTitle);

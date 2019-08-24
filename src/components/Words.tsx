@@ -1,56 +1,41 @@
 import React from "react";
 
-import Paper from "@material-ui/core/Paper";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableRow from "@material-ui/core/TableRow";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Container from "react-bootstrap/Container";
+import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
 
-const useStyles = makeStyles(theme => ({
-  headspace: theme.headspace,
-  largeText: theme.largeText,
-  subCanvas: theme.subCanvas
-}));
-
-function Words(props) {
-  const classes = useStyles(props);
+export default props => {
   const { ipa, words } = props;
   const list = Object.entries(words).map((arr, index) => {
     return (
-      <TableRow key={index}>
-        <TableCell>
-          <Typography className={classes.largeText}>
+      <tr key={index}>
+        <td>
+          <p className="large-text">
             <SplitHilite str={arr[0]} />
-          </Typography>
-        </TableCell>
-        <TableCell>
-          <Typography className={classes.largeText}>
+          </p>
+        </td>
+        <td>
+          <p className="large-text">
             <SplitHilite str={arr[1]} />
-          </Typography>
-        </TableCell>
-      </TableRow>
+          </p>
+        </td>
+      </tr>
     );
   });
 
   return (
-    <div className={classes.headspace}>
-      <Typography variant="h5" gutterBottom>
+    <Container className="headspace">
+      <h4>
         {`Words using `}
         <SplitHilite str={ipa} />
-      </Typography>
+      </h4>
 
-      <Paper className={classes.subCanvas}>
-        <Table className={classes.root}>
-          <TableBody>{list}</TableBody>
+      <Container>
+        <Table>
+          <tbody>{list}</tbody>
         </Table>
-      </Paper>
-    </div>
+      </Container>
+    </Container>
   );
-}
-
-export default withTheme(Words);
+};

@@ -22,7 +22,7 @@ module.exports = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: [".js", ".tsx"]
+    extensions: [".js", ".ts", ".tsx"]
   },
   stats: {
     colors: true,
