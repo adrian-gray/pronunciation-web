@@ -101,16 +101,26 @@
 .activity-pending {
   color: #bbb;
 }
+.activity-pending:hover {
+  color: #999;
+}
 .activity-open {
   color: green;
+}
+.activity-open:hover {
+  color: #00b600;
 }
 .activity-locked {
   color: maroon;
 }
-.chip {
+.activity-locked:hover {
+  color: rgb(87, 0, 0);
+}
+.chip,
+.chip:hover {
+  cursor: pointer;
   padding: 0 1rem;
   margin: 8px;
-  cursor: pointer;
   height: 32px;
   display: inline-flex;
   align-items: center;
