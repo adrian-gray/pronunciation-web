@@ -1,24 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
 
-const useStyles = makeStyles(() => ({
-  root: {
-    padding: 20,
-    container: {
-      display: "flex",
-      flexWrap: "wrap"
-    }
-  }
-}));
-
-const MailchimpForm = props => {
-  const classes = useStyles(props);
-
+export default props => {
   const [status, setStatus] = useState(null);
   const [message, setMessage] = useState(null);
   const [name, setName] = useState("");
@@ -120,53 +106,53 @@ const MailchimpForm = props => {
 
     switch (props.status) {
       case "sending":
-        setFormStatus(
-          <Typography gutterBottom>{`Sending subscription`}</Typography>
-        );
+        setFormStatus(<p gutterBottom>{`Sending subscription`}</p>);
         break;
       case "success":
-        setFormStatus(
-          <Typography gutterBottom>{`Thanks for subscribing`}</Typography>
-        );
+        setFormStatus(<p gutterBottom>{`Thanks for subscribing`}</p>);
         break;
     }
   });
 
   return (
-    <div className={classes.root}>
-      <form>
+    <Container className="mailchip-root">
+      <Form>
         {formStatus}
-        <TextField
-          error={nameError}
-          helperText={nameErrorMsg}
-          id="name"
-          label="Your first name"
-          className="form-control"
-          value={name}
-          onChange={handleChange("name")}
-          margin="normal"
-        />
-        <TextField
-          error={emailError}
-          helperText={emailErrorMsg}
-          id="email"
-          label="Your Email"
-          className="form-control"
-          value={email}
-          onChange={handleChange("email")}
-          margin="normal"
-        />
-        <br />
-        <Typography gutterBottom>
-          {`We hate spam and will never share your details with anyone else.`}
-        </Typography>
-        <br />
-        <Button onClick={submit} variant="contained" color="secondary">
-          {"Keep me updated!"}
-        </Button>
-      </form>
-    </div>
+        <Form.Row>
+          <Form.Label>Your first name</Form.Label>
+          <Form.Control
+            id="signin_email"
+            placeholder="Your first name"
+            className="form-control"
+            value={name}
+            onChange={handleChange("fname")}
+            autoComplete="name"
+          />
+        </Form.Row>
+
+        <Form.Row>
+          <Form.Label>Your Email</Form.Label>
+          <Form.Control
+            id="email"
+            placeholder="Your Email"
+            className="form-control"
+            value={name}
+            onChange={handleChange("email")}
+            autoComplete="email"
+          />
+        </Form.Row>
+        <Form.Row>
+          <br />
+          <p>
+            {`We hate spam and will never share your details with anyone else.`}
+          </p>
+          <br />
+          <Button variant="warning" onClick={submit}>
+            {"Keep me updated!"}
+          </Button>
+        </Form.Row>
+      </Form>
+      <br />
+    </Container>
   );
 };
-
-export default withTheme(MailchimpForm);

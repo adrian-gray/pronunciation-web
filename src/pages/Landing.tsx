@@ -37,7 +37,7 @@ export default props => {
       <Mailchimp />
       <div className="text-center full-width pad2">
         <Link to="/home">
-          <Button variant="warning" className="btn btn-lg">
+          <Button variant="success" className="btn btn-lg">
             {"Start Pronunciation Practice Now"}
           </Button>
         </Link>
