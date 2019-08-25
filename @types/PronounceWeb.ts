@@ -1,5 +1,10 @@
 import { RouteComponentProps } from "react-router-dom";
 
+export interface IGame extends Phaser.Game {
+  data?: any;
+  isAuth?: boolean;
+}
+
 export interface INewsStoriesCustomProps {
   title: string;
   headline: string;

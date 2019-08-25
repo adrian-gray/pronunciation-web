@@ -1,6 +1,6 @@
-/* globals Phaser */
+import Tile from "../entities/Tile";
 
-import Tile from "./../entities/Tile";
+import { IGame } from "../../../../@types/PronounceWeb";
 
 const Game = function Game() {};
 const TILE_SIZE = 250;
@@ -12,7 +12,7 @@ const DOWN = 3;
 let NUM_ROWS = 12;
 let NUM_COLS = 6;
 let state;
-let game;
+let game: IGame;
 
 Game.prototype = {
   create() {
@@ -67,12 +67,20 @@ Game.prototype = {
 
       if (col > activePos.col && col > 1 && col < NUM_COLS - 1) {
         moveBoard(RIGHT);
-      } else if (col < activePos.col && col > 0 && activePos.col < NUM_COLS - 1) {
+      } else if (
+        col < activePos.col &&
+        col > 0 &&
+        activePos.col < NUM_COLS - 1
+      ) {
         moveBoard(LEFT);
       }
       if (row > activePos.row && row > 1 && row < NUM_ROWS - 1) {
         moveBoard(DOWN);
-      } else if (row < activePos.row && row > 0 && activePos.row < NUM_ROWS - 1) {
+      } else if (
+        row < activePos.row &&
+        row > 0 &&
+        activePos.row < NUM_ROWS - 1
+      ) {
         moveBoard(UP);
       }
       activePos = { row, col };
@@ -83,22 +91,42 @@ Game.prototype = {
         case LEFT:
           game.add
             .tween(board)
-            .to({ x: board.x + TILE_SIZE }, 500, Phaser.Easing.Quadratic.InOut, true);
+            .to(
+              { x: board.x + TILE_SIZE },
+              500,
+              Phaser.Easing.Quadratic.InOut,
+              true
+            );
           break;
         case RIGHT:
           game.add
             .tween(board)
-            .to({ x: board.x - TILE_SIZE }, 500, Phaser.Easing.Quadratic.InOut, true);
+            .to(
+              { x: board.x - TILE_SIZE },
+              500,
+              Phaser.Easing.Quadratic.InOut,
+              true
+            );
           break;
         case UP:
           game.add
             .tween(board)
-            .to({ y: board.y + TILE_SIZE }, 500, Phaser.Easing.Quadratic.InOut, true);
+            .to(
+              { y: board.y + TILE_SIZE },
+              500,
+              Phaser.Easing.Quadratic.InOut,
+              true
+            );
           break;
         case DOWN:
           game.add
             .tween(board)
-            .to({ y: board.y - TILE_SIZE }, 500, Phaser.Easing.Quadratic.InOut, true);
+            .to(
+              { y: board.y - TILE_SIZE },
+              500,
+              Phaser.Easing.Quadratic.InOut,
+              true
+            );
           break;
       }
     }

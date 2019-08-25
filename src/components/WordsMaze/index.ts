@@ -1,12 +1,7 @@
-/* global Phaser */
-
 import Boot from "./states/boot";
 import Game from "./states/game";
 
-interface IGame extends Phaser.Game {
-  data?: any;
-  isAuth?: boolean;
-}
+import { IGame } from "./../../../@types/PronounceWeb";
 
 let game: IGame;
 

@@ -1,9 +1,11 @@
 /* global Phaser, document */
 
+import { IGame } from "../../../../@types/PronounceWeb";
+
 const Boot = function boot() {};
 
 let state;
-let game;
+let game: IGame;
 
 Boot.prototype = {
   init: function bootInit() {
