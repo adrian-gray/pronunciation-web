@@ -106,10 +106,10 @@ export default props => {
 
     switch (props.status) {
       case "sending":
-        setFormStatus(<p gutterBottom>{`Sending subscription`}</p>);
+        setFormStatus(<p>{`Sending subscription`}</p>);
         break;
       case "success":
-        setFormStatus(<p gutterBottom>{`Thanks for subscribing`}</p>);
+        setFormStatus(<p>{`Thanks for subscribing`}</p>);
         break;
     }
   });

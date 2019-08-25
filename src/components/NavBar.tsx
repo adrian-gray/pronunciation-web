@@ -1,67 +1,40 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import AppBar from "@material-ui/core/AppBar";
-import Button from "@material-ui/core/Button";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1
-  },
-  flex: {
-    flexGrow: 1
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20
-  },
-  list: {
-    width: 250
-  },
-  white: {
-    color: "#FFFFFF"
-  }
-}));
-
-const NavBar = props => {
-  const classes = useStyles(props);
-
+export default props => {
   let homeLink = "/";
   let changeLoginStatus;
 
   if (props.user) {
     changeLoginStatus = (
-      <Button onClick={props.signout} color="inherit">
-        {"Sign Out"}
-      </Button>
+      <Form inline>
+        <Button variant="outline-info" onClick={props.signout} color="inherit">
+          {"Sign Out"}
+        </Button>
+      </Form>
     );
     homeLink = "/home";
   } else {
     changeLoginStatus = (
-      <Button component={Link} to="/login" color="inherit">
-        {"Sign In or Up"}
-      </Button>
+      <Form inline>
+        <Button href="/login" color="inherit">
+          {"Sign In or Up"}
+        </Button>
+      </Form>
     );
   }
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="subtitle1" className={classes.flex}>
-            <Button component={Link} to={homeLink}>
-              <span className={classes.white}>{"Pronounce Web"}</span>
-            </Button>
-          </Typography>
-          {changeLoginStatus}
-        </Toolbar>
-      </AppBar>
-    </div>
+    <Navbar bg="dark" variant="dark" className="justify-content-between">
+      <Navbar.Brand href={homeLink}>Pronounce Web</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse className="justify-content-end">
+        <Nav>{changeLoginStatus}</Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
-
-export default withTheme(NavBar);

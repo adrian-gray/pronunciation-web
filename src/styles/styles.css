@@ -130,6 +130,9 @@
   text-decoration: none;
   background-color: #e0e0e0;
 }
+.mailchimp-root {
+  padding: 1rem;
+}
 .mailchimp-bg {
   background-color: #fff8f0;
 }
