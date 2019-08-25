@@ -3,7 +3,12 @@
 import Boot from "./states/boot";
 import Game from "./states/game";
 
-let game: Phaser.Game;
+interface IGame extends Phaser.Game {
+  data?: any;
+  isAuth?: boolean;
+}
+
+let game: IGame;
 
 const WordsMaze = {
   init(params) {
