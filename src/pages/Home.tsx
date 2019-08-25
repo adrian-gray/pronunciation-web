@@ -1,21 +1,12 @@
 import React from "react";
 
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Container from "react-bootstrap/Container";
 
 import data from "./../data/sounds.json";
 import SEO from "../components/SEO";
 import Phoneme from "../components/Phoneme";
 
-const useStyles = makeStyles(theme => ({
-  page: theme.page
-}));
-
-const Sounds = props => {
-  const classes = useStyles(props);
-
+export default props => {
   const phonemes = data.phonemes;
   const list = Object.keys(phonemes);
   const cards = list.map(phoneme => {
@@ -36,14 +27,10 @@ const Sounds = props => {
   });
 
   return (
-    <Paper className={classes.page}>
+    <Container className="page">
       <SEO meta="sounds" />
-      <Typography variant="h4" gutterBottom>
-        {"Phoenetic English Pronunciation"}
-      </Typography>
+      <h1>{"Phoenetic English Pronunciation"}</h1>
       {cards}
-    </Paper>
+    </Container>
   );
 };
-
-export default withTheme(Sounds);

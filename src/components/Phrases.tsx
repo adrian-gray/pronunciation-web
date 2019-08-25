@@ -1,58 +1,42 @@
 import React from "react";
 
-import Paper from "@material-ui/core/Paper";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableRow from "@material-ui/core/TableRow";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Container from "react-bootstrap/Container";
+import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
 
-const useStyles = makeStyles(theme => ({
-  headspace: theme.headspace,
-  subCanvas: theme.subCanvas,
-  largeText: theme.largeText
-}));
-
-const Phrases = props => {
-  const classes = useStyles(props);
-
+export default props => {
   const { ipa, phrases } = props;
 
   const list = Object.entries(phrases).map((arr, index) => {
     return (
-      <TableRow key={index}>
-        <TableCell>
-          <Typography className={classes.largeText}>
+      <tr key={index}>
+        <td>
+          <p className="large-text">
             <SplitHilite str={arr[0]} />
-          </Typography>
-        </TableCell>
-        <TableCell>
-          <Typography className={classes.largeText}>
+          </p>
+        </td>
+        <td>
+          <p className="large-text">
             <SplitHilite str={arr[1]} />
-          </Typography>
-        </TableCell>
-      </TableRow>
+          </p>
+        </td>
+      </tr>
     );
   });
 
   return (
-    <div className={classes.headspace}>
-      <Typography variant="h5" gutterBottom>
+    <div className="head-space">
+      <h3>
         {`Phrases using `}
         <SplitHilite str={ipa} />
-      </Typography>
+      </h3>
 
-      <Paper className={classes.subCanvas}>
+      <Container className="sub-canvas">
         <Table>
-          <TableBody>{list}</TableBody>
+          <tbody>{list}</tbody>
         </Table>
-      </Paper>
+      </Container>
     </div>
   );
 };
-
-export default withTheme(Phrases);

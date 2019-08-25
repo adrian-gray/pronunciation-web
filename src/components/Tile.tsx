@@ -1,53 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
-
-const useStyles = makeStyles(theme => ({
-  largeText: theme.largeText,
-  correctBG: theme.correctBG,
-  incorrectBG: theme.incorrectBG,
-  left: {
-    ...theme.subCanvas,
-    float: "left",
-    margin: "2rem",
-    padding: "1rem"
-  },
-  clickable: {
-    cursor: "pointer"
-  }
-}));
-
-function Tile(props) {
-  const classes = useStyles(props);
-
+export default props => {
   const handleClick = e => {
     props.handleClick(props.index);
   };
 
-  const paperClasses = [classes.left];
+  const paperClasses = ["tile"];
 
   let correctStatus = null;
   if (props.isCorrect) {
-    paperClasses.push(classes.correctBG);
-    correctStatus = "correctBG";
+    paperClasses.push("correct-bg");
+    correctStatus = "correct-bg";
   } else if (props.isCorrect === false) {
-    paperClasses.push(classes.incorrectBG);
-    correctStatus = "incorrectBG";
-    console.log("DERP");
+    paperClasses.push("incorrect-bg");
+    correctStatus = "incorrect-bg";
   }
 
   return (
-    <div className={classes.clickable} onClick={handleClick}>
-      <Paper className={paperClasses.join(" ")}>
-        <Typography className={classes.largeText}>
-          <span className={classes[correctStatus]}>{props.word}</span>
-        </Typography>
-      </Paper>
+    <div className="cursor-pointer" onClick={handleClick}>
+      <div className={paperClasses.join(" ")}>
+        <p className="large-text">
+          <span className={correctStatus}>{props.word}</span>
+        </p>
+      </div>
     </div>
   );
-}
-
-export default withTheme(Tile);
+};

@@ -1,37 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Container from "react-bootstrap/Container";
 
 import SplitHilite from "./SplitHilite";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    margin: 20,
-    padding: 20,
-    container: {
-      display: "flex",
-      flexWrap: "wrap"
-    },
-    "&:hover": {
-      background: "#F3F3FF"
-    }
-  },
-  words: {
-    fontSize: "1.1em",
-    wordSpacing: "1.1em"
-  },
-  links: {
-    textDecoration: "none"
-  }
-}));
-
-const Phoneme = props => {
-  const classes = useStyles(props);
-
+export default props => {
   const { phoneme, ipa, tag, title, words } = props;
   const displayTitle = (
     <span>
@@ -43,25 +17,15 @@ const Phoneme = props => {
     .map(word => <SplitHilite str={word} key={word} />);
 
   return (
-    <Paper className={classes.root}>
-      <Link to={{ pathname: `/sound/${phoneme}` }} className={classes.links}>
+    <Container>
+      <Link to={{ pathname: `/sound/${phoneme}` }} className="undecorated">
         <div>
-          <Typography variant="h5" gutterBottom>
-            {displayTitle}
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            {"Example words containing short ‘a’"}
-          </Typography>
-          <Typography className={classes.words} variant="body2" gutterBottom>
-            {wordList}
-          </Typography>
-          <Typography variant="subtitle1" gutterBottom>
-            {`Click to learn more about the ${tag} sound`}
-          </Typography>
+          <h3>{displayTitle}</h3>
+          <p>{"Example words containing short ‘a’"}</p>
+          <p className="larger-text">{wordList}</p>
+          <h5>{`Click to learn more about the ${tag} sound`}</h5>
         </div>
       </Link>
-    </Paper>
+    </Container>
   );
 };
-
-export default withTheme(Phoneme);

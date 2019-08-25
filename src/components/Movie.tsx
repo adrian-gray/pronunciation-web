@@ -2,29 +2,17 @@ import React from "react";
 
 import SplitHilite from "./SplitHilite";
 
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
-
-const useStyles = makeStyles(theme => ({
-  headspace: theme.headspace,
-  fullWidth: theme.fullWidth
-}));
-
-const Movie = props => {
-  const classes = useStyles(props);
+export default props => {
   const { ipa, url } = props;
 
   return (
-    <div className={classes.headspace}>
-      <Typography variant="h5" gutterBottom>
+    <div className="head-space">
+      <h3>
         {`English Pronuniciation movie for `}
         <SplitHilite str={ipa} />
-      </Typography>
+      </h3>
 
-      <img className={classes.fullWidth} src={url} alt={`Pronouncing ${ipa}`} />
+      <img className="full-width" src={url} alt={`Pronouncing ${ipa}`} />
     </div>
   );
 };
-
-export default withTheme(Movie);

@@ -42,7 +42,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "/src/index.html")
     }),
-    new CopyWebpackPlugin([{ from: "./src/assets", to: "assets" }]),
+    new CopyWebpackPlugin([
+      { from: "./src/assets", to: "assets" },
+      { from: "./src/styles", to: "styles" }
+    ]),
     // new BundleAnalyzerPlugin(),
     new CompressionPlugin({ algorithm: "gzip" })
   ]

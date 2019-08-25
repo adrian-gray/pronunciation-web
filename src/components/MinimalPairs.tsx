@@ -1,54 +1,39 @@
 import React from "react";
 
-import Paper from "@material-ui/core/Paper";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableRow from "@material-ui/core/TableRow";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Container from "react-bootstrap/Container";
+import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
 
-const useStyles = makeStyles(theme => ({
-  largeText: theme.largeText,
-  headspace: theme.headspace,
-  cell: theme.cell
-}));
-
-const MinimalPairs = props => {
-  const classes = useStyles(props);
+export default props => {
   const { ipa, pairs, tag } = props;
 
   const rows = pairs.map((pair, key) => (
-    <TableRow key={key}>
-      <TableCell className={classes.cell} key={0}>
-        <Typography className={classes.largeText}>
+    <tr key={key}>
+      <td className="cell" key={0}>
+        <p className="largeText">
           <SplitHilite str={pair[0]} />
-        </Typography>
-      </TableCell>
-      <TableCell className={classes.cell} key={1}>
-        <Typography className={classes.largeText}>
+        </p>
+      </td>
+      <td className="cell" key={1}>
+        <p className="largeText">
           <SplitHilite str={pair[1]} />
-        </Typography>
-      </TableCell>
-    </TableRow>
+        </p>
+      </td>
+    </tr>
   ));
 
   return (
-    <div className={classes.headspace}>
-      <Typography variant="h5" gutterBottom>
+    <div className="headspace">
+      <h3>
         {`English  minimal pairs with ${tag} - `}
         <SplitHilite str={ipa} />
-      </Typography>
-      <Paper>
+      </h3>
+      <Container>
         <Table>
-          <TableBody>{rows}</TableBody>
+          <tbody>{rows}</tbody>
         </Table>
-      </Paper>
+      </Container>
     </div>
   );
 };
-
-export default withTheme(MinimalPairs);

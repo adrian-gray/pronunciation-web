@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Divider from "@material-ui/core/Divider";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Container from "react-bootstrap/Container";
 
 import * as jsonData from "./../data/sounds.json";
 import ActivityButtons from "../components/ActivityButtons";
@@ -12,13 +8,7 @@ import ExtractActivity from "../components/ExtractActivity";
 import SEO from "../components/SEO";
 import SoundTitle from "../components/SoundTitle";
 
-const useStyles = makeStyles(theme => ({
-  page: theme.page
-}));
-
-const Sound = props => {
-  const classes = useStyles(props);
-
+export default props => {
   const phoneme = props.match.params.phoneme;
   const activity =
     (props.match.params.activity &&
@@ -34,11 +24,9 @@ const Sound = props => {
 
   if (!data) {
     return (
-      <Paper className={classes.page}>
-        <Typography variant="h4" gutterBottom>
-          {"Oops, not a valid sound"}
-        </Typography>
-      </Paper>
+      <Container>
+        <h4>{"Oops, not a valid sound"}</h4>
+      </Container>
     );
   }
 
@@ -52,14 +40,12 @@ const Sound = props => {
   });
 
   return (
-    <Paper className={classes.page}>
+    <Container>
       <SEO meta={SEOlocation} />
       <SoundTitle phoneme={data.ipa} str={data.title} />
-      <Divider />
+      <hr />
 
-      <Typography variant="h4" gutterBottom>
-        {`Pronunciation activities for ${data.tag}`}
-      </Typography>
+      <h3>{`Pronunciation activities for ${data.tag}`}</h3>
 
       <div>
         <ActivityButtons
@@ -68,11 +54,9 @@ const Sound = props => {
           {...props}
         />
       </div>
-      <Divider />
+      <hr />
 
       {activityComponent}
-    </Paper>
+    </Container>
   );
 };
-
-export default withTheme(Sound);

@@ -1,19 +1,6 @@
 import React from "react";
 
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
-
-const useStyles = makeStyles(theme => ({
-  headspace: theme.headspace,
-  blocked: {
-    opacity: 0.2
-  }
-}));
-
-const MemberGate = props => {
-  const classes = useStyles(props);
-
+export default props => {
   let display;
 
   if (props.userAuth) {
@@ -21,15 +8,13 @@ const MemberGate = props => {
   } else {
     display = (
       <div>
-        <Typography variant="h6" className={classes.headspace} gutterBottom>
+        <h4 className="head-space">
           {"Sorry, this interactive activity is for members only."}
-        </Typography>
-        <div className={classes.blocked}>{props.content}</div>
+        </h4>
+        <div className="blocked">{props.content}</div>
       </div>
     );
   }
 
   return display;
 };
-
-export default withTheme(MemberGate);

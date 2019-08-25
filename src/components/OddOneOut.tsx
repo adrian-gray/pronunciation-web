@@ -1,36 +1,12 @@
 import React, { useState } from "react";
 
+import Table from "react-bootstrap/Table";
+
 import Cell from "./Cell";
 import MemberGate from "./MemberGate";
 import SplitHilite from "./SplitHilite";
 
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
-
-const useStyles = makeStyles(theme => ({
-  largeText: theme.largeText,
-  headspace: theme.headspace,
-  center: theme.center,
-  cell: theme.cell,
-  cellHiliteBG: theme.cellHiliteBG,
-  correctBG: theme.correctBG,
-  incorrectBG: theme.incorrectBG,
-  headBG: {
-    background: "#EEE"
-  },
-  selectedBG: {
-    background: "#CCC"
-  }
-}));
-
-const OddOneOut = props => {
-  const classes = useStyles(props);
-
+export default props => {
   const title = `Select the words that ~DON'T~ have the ${props.tag} – ${props.ipa} sound.`;
 
   const [rowHiliteColor, setRowHiliteColor] = useState(
@@ -50,34 +26,27 @@ const OddOneOut = props => {
             str={word}
             column={column}
             row={row}
-            key={column}
             handleClick={handleClick}
             hilite={cellBG}
           />
         );
       });
-      return <TableRow key={row}>{cells}</TableRow>;
+      return <tr key={row}>{cells}</tr>;
     });
 
     const guide = props.example.map((word, i) => {
-      const hilite = i + 1 === props.exampleHilite ? classes.selectedBG : null;
+      const hilite = i + 1 === props.exampleHilite ? "selected-bg" : null;
       return <Cell str={word} key={i} hilite={hilite} />;
     });
-    const tableHead = (
-      <TableHead className={classes.headBG}>
-        <TableRow>{guide}</TableRow>
-      </TableHead>
-    );
 
-    const exHeadClass = `${classes.headspace} ${classes.center}`;
     return (
       <div>
-        <Typography variant="h6" className={exHeadClass}>
-          {"Example"}
-        </Typography>
+        <h4 className="head=space text-center">{"Example"}</h4>
         <Table>
-          {tableHead}
-          <TableBody>{displayRows}</TableBody>
+          <thead className="th-bg">
+            <tr>{guide}</tr>
+          </thead>
+          <tbody>{displayRows}</tbody>
         </Table>
       </div>
     );
@@ -99,9 +68,9 @@ const OddOneOut = props => {
       if (column > -1) {
         const word = props.rows[row][column];
         if (props.correct.includes(word)) {
-          hiliteColor[row] = classes.correctBG;
+          hiliteColor[row] = "correct-bg";
         } else {
-          hiliteColor[row] = classes.incorrectBG;
+          hiliteColor[row] = "incorrect-bg";
         }
       }
     });
@@ -111,21 +80,19 @@ const OddOneOut = props => {
   const content = buildTable();
 
   return (
-    <div className={classes.headspace}>
-      <Typography variant="h5" gutterBottom>
+    <div className="head-space">
+      <h3>
         {`The Odd One Out using ${props.tag} - `}
         <SplitHilite str={props.ipa} />
-      </Typography>
-      <Typography variant="h6" gutterBottom>
+      </h3>
+      <h4>
         <SplitHilite str={title} />
-      </Typography>
+      </h4>
       <br />
-      <Typography variant="body1" gutterBottom>
+      <p>
         {`Can you spot the difference? In each group of words there are three with the ${props.tag} vowel sound and one with a different vowel sound. Say the words and choose the one that doesn’t sound the same as the others. Advance to the next level with more challenging words. Odd One Out encourages you to identify the differences between words with similar sounding vowels.`}
-      </Typography>
+      </p>
       <MemberGate content={content} userAuth={props.userAuth} />
     </div>
   );
 };
-
-export default withTheme(OddOneOut);

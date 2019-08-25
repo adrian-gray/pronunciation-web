@@ -1,19 +1,7 @@
 import React from "react";
 import SplitHilite from "./SplitHilite";
 
-import TableCell from "@material-ui/core/TableCell";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
-
-const useStyles = makeStyles(theme => ({
-  cell: theme.cell,
-  largeText: theme.largeText
-}));
-
-const Cell = props => {
-  const classes = useStyles(props);
-
+export default props => {
   const handleClick = e => {
     e.preventDefault();
     if (!props.handleClick) return;
@@ -24,16 +12,14 @@ const Cell = props => {
     });
   };
 
-  const { hilite, key, str } = props;
-  const cellClasses = hilite ? `${classes.cell} ${hilite}` : classes.cell;
+  const { hilite, str } = props;
+  const cellClasses = hilite ? `cell hilite` : "cell";
 
   return (
-    <TableCell className={cellClasses} key={key} onClick={handleClick}>
-      <Typography>
+    <td className={cellClasses} key={props.column} onClick={handleClick}>
+      <p>
         <SplitHilite str={str} />
-      </Typography>
-    </TableCell>
+      </p>
+    </td>
   );
 };
-
-export default withTheme(Cell);

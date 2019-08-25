@@ -2,40 +2,25 @@ import React from "react";
 
 import SplitHilite from "./SplitHilite";
 
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Container from "react-bootstrap/Container";
 
-const useStyles = makeStyles(theme => ({
-  headspace: theme.headspace,
-  largeText: theme.largeText,
-  personalSpace: {
-    padding: "1em",
-    margin: "1em"
-  }
-}));
-
-const TongueTwisters = props => {
-  const classes = useStyles(props);
+export default props => {
   const { ipa, sentences } = props;
 
   const lines = sentences.map((line, index) => (
-    <Paper className={classes.personalSpace} key={index}>
-      <Typography>{line}</Typography>
-    </Paper>
+    <Container className="sub-canvas personal-space" key={index}>
+      <p>{line}</p>
+    </Container>
   ));
 
   return (
-    <div className={classes.personalSpace}>
-      <Typography variant="h5" gutterBottom>
+    <div className="personal-space">
+      <h3>
         {"Say the "}
         <SplitHilite str={ipa} />
         {" sentences"}
-      </Typography>
+      </h3>
       {lines}
     </div>
   );
 };
-
-export default withTheme(TongueTwisters);

@@ -1,0 +1,100 @@
+.page {
+  flex-grow: 1;
+  padding: 1rem;
+}
+.sub-canvas {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.25rem !important;
+}
+.tile {
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.25rem !important;
+  float: left;
+}
+.larger-text {
+  font-size: 1rem;
+  word-spacing: 1rem;
+}
+.large-text {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+.headspace {
+  padding-top: 1rem;
+}
+.full-width {
+  width: 100%;
+}
+.hilite {
+  color: #c00;
+}
+.th-bg {
+  background: #eeeeee;
+}
+.cell {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+.cell-hilite-bg {
+  background: #ccc;
+}
+.correct-bg {
+  background: #cfc;
+}
+.incorrect-bg {
+  background: #fcc;
+}
+.selected-bg {
+  background: #ccc;
+}
+.sentence {
+  padding: 1rem 5rem;
+  font-size: 1.2rem;
+}
+.clear-float {
+  clear: both;
+}
+.pad1 {
+  padding: 1rem;
+}
+.pad2 {
+  padding: 2rem;
+}
+.personal-space {
+  padding: 1rem;
+  margin: 1rem;
+}
+.text-tight {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: "1px solid #EEE";
+}
+.padded-cell {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.padded {
+  padding: 1rem;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.blocked {
+  opacity: 0.2;
+}
+.clickable {
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 4px;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.undecorated {
+  text-decoration: none;
+}

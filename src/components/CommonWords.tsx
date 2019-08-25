@@ -1,34 +1,18 @@
 import React from "react";
 
-import Paper from "@material-ui/core/Paper";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableRow from "@material-ui/core/TableRow";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
+import Container from "react-bootstrap/Container";
+import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
 
-const useStyles = makeStyles(theme => ({
-  cell: {
-    paddingLeft: 12,
-    paddingRight: 12
-  },
-  largeText: theme.largeText,
-  headspace: theme.headspace
-}));
-
-const CommonWords = props => {
-  const classes = useStyles(props);
+export default props => {
   const { ipa, words } = props;
   const cells = words.map((el, index) => (
-    <TableCell className={classes.cell} key={index}>
-      <Typography className={classes.largeText}>
+    <td className="cell padded-cell" key={index}>
+      <p className="large-text">
         <SplitHilite str={el} key={el} />
-      </Typography>
-    </TableCell>
+      </p>
+    </td>
   ));
 
   let currentRow = 0;
@@ -36,28 +20,26 @@ const CommonWords = props => {
   const rows = [];
   do {
     rows[currentRow] = (
-      <TableRow key={currentRow}>
+      <tr key={currentRow}>
         {cells[cellCount++]}
         {cells[cellCount] ? cells[cellCount++] : null}
         {cells[cellCount] ? cells[cellCount++] : null}
-      </TableRow>
+      </tr>
     );
     currentRow++;
   } while (cellCount < cells.length);
 
   return (
-    <div className={classes.headspace}>
-      <Typography variant="h5" gutterBottom>
+    <Container className="headspace">
+      <h3>
         {"Common words with "}
         <SplitHilite str={ipa} />
-      </Typography>
-      <Paper>
+      </h3>
+      <div className="sub-canvas">
         <Table>
-          <TableBody>{rows}</TableBody>
+          <tbody>{rows}</tbody>
         </Table>
-      </Paper>
-    </div>
+      </div>
+    </Container>
   );
 };
-
-export default withTheme(CommonWords);

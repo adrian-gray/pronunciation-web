@@ -5,7 +5,6 @@ import FourOhFour from "./pages/404";
 import Home from "./pages/Home";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
-import Sounds from "./pages/Sounds";
 import Sound from "./pages/Sound";
 import Profile from "./pages/Profile";
 
@@ -32,7 +31,6 @@ function Router(props) {
         path="/profile"
         render={props => <Profile user={user} {...props} />}
       />
-      <Route exact path="/sounds" component={Sounds} />
       <Route
         path="/sound/:phoneme/:activity?"
         render={props => (
