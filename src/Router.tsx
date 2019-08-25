@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
+import { RouteComponentProps } from "react-router-dom";
+
+interface IProps extends RouteComponentProps {
+  subscriptionLevel: number;
+  user: firebase.User;
+}
+
 import FourOhFour from "./pages/404";
 import Home from "./pages/Home";
 import Landing from "./pages/Landing";
@@ -8,7 +15,7 @@ import Login from "./pages/Login";
 import Sound from "./pages/Sound";
 import Profile from "./pages/Profile";
 
-function Router(props) {
+export default (props: IProps) => {
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
   const [user, setUser] = useState(null);
 
@@ -46,6 +53,4 @@ function Router(props) {
       <Route default component={FourOhFour} />
     </Switch>
   );
-}
-
-export default Router;
+};

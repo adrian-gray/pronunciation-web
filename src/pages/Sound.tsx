@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import { SoundProps } from "./../../@types/PronounceWeb";
+
 import Container from "react-bootstrap/Container";
 
 import * as jsonData from "./../data/sounds.json";
@@ -8,7 +10,7 @@ import ExtractActivity from "../components/ExtractActivity";
 import SEO from "../components/SEO";
 import SoundTitle from "../components/SoundTitle";
 
-export default props => {
+export default (props: SoundProps) => {
   const phoneme = props.match.params.phoneme;
   const activity =
     (props.match.params.activity &&

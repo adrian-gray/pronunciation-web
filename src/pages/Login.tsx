@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { auth } from "./../firebase";
 
+import { ILoginProps } from "./../../@types/PronounceWeb";
+
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 
-export default props => {
+export default (props: ILoginProps) => {
   const [signupName, setSignupName] = useState("");
   const [signupEmail, setSignupEmail] = useState("");
   const [signinEmail, setSigninEmail] = useState("");
@@ -20,8 +22,9 @@ export default props => {
     }
   });
 
-  const handleChange = property => {
-    return e => {
+  const handleChange = (property: string) => {
+    return (e: React.FormEvent) => {
+      console.log(">e", e);
       switch (property) {
         case "signupName":
           setSignupName(e.target.value);

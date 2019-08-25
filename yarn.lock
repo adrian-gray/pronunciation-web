@@ -689,7 +689,7 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@firebase/app-types@0.4.3":
+"@firebase/app-types@0.4.3", "@firebase/app-types@0.x":
   version "0.4.3"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/app-types/-/app-types-0.4.3.tgz#80d2b6e5ee43ac99892329ab02301ee7ed82da45"
   integrity sha1-gNK25e5DrJmJIymrAjAe5+2C2kU=
@@ -702,6 +702,18 @@
     "@firebase/app-types" "0.4.3"
     "@firebase/logger" "0.1.22"
     "@firebase/util" "0.2.25"
+    dom-storage "2.1.0"
+    tslib "1.10.0"
+    xmlhttprequest "1.8.0"
+
+"@firebase/app@0.4.15":
+  version "0.4.15"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/app/-/app-0.4.15.tgz#2ed75ec785530f1e54ceb0239a1975e2e273afe9"
+  integrity sha1-Ltdex4VTDx5UzrAjmhl14uJzr+k=
+  dependencies:
+    "@firebase/app-types" "0.4.3"
+    "@firebase/logger" "0.1.23"
+    "@firebase/util" "0.2.26"
     dom-storage "2.1.0"
     tslib "1.10.0"
     xmlhttprequest "1.8.0"
@@ -723,6 +735,13 @@
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/database-types/-/database-types-0.4.2.tgz#7bb2e605b914ad5cca7b1f4f5d8e7940fa37a708"
   integrity sha1-e7LmBbkUrVzKex9PXY55QPo3pwg=
 
+"@firebase/database-types@0.4.3":
+  version "0.4.3"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/database-types/-/database-types-0.4.3.tgz#4ee4ada5544f3629fb451e216da8f917a80ae8cd"
+  integrity sha1-TuStpVRPNin7RR4hbaj5F6gK6M0=
+  dependencies:
+    "@firebase/app-types" "0.x"
+
 "@firebase/database@0.5.0":
   version "0.5.0"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/database/-/database-0.5.0.tgz#588561369f56f907a06f097871c76e7a837e1b6f"
@@ -731,6 +750,17 @@
     "@firebase/database-types" "0.4.2"
     "@firebase/logger" "0.1.22"
     "@firebase/util" "0.2.25"
+    faye-websocket "0.11.3"
+    tslib "1.10.0"
+
+"@firebase/database@0.5.1":
+  version "0.5.1"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/database/-/database-0.5.1.tgz#8730efd869ab8d9d592128ed07bb67bbf3f0c286"
+  integrity sha1-hzDv2GmrjZ1ZISjtB7tnu/PwwoY=
+  dependencies:
+    "@firebase/database-types" "0.4.3"
+    "@firebase/logger" "0.1.23"
+    "@firebase/util" "0.2.26"
     faye-websocket "0.11.3"
     tslib "1.10.0"
 
@@ -752,6 +782,19 @@
     grpc "1.22.2"
     tslib "1.10.0"
 
+"@firebase/firestore@1.4.12":
+  version "1.4.12"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/firestore/-/firestore-1.4.12.tgz#3e0dba9e17a673c67ad0b01824e7df000ffcc53d"
+  integrity sha1-Pg26nhemc8Z60LAYJOffAA/8xT0=
+  dependencies:
+    "@firebase/firestore-types" "1.4.4"
+    "@firebase/logger" "0.1.23"
+    "@firebase/util" "0.2.26"
+    "@firebase/webchannel-wrapper" "0.2.25"
+    "@grpc/proto-loader" "^0.5.0"
+    grpc "1.22.2"
+    tslib "1.10.0"
+
 "@firebase/functions-types@0.3.8":
   version "0.3.8"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/functions-types/-/functions-types-0.3.8.tgz#c01f670bbca04365e680d048b0fe5770a946f643"
@@ -761,6 +804,16 @@
   version "0.4.15"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/functions/-/functions-0.4.15.tgz#d3b3491f0fd5401f5c5f4f8a2ddce94fb174013e"
   integrity sha1-07NJHw/VQB9cX0+KLdzpT7F0AT4=
+  dependencies:
+    "@firebase/functions-types" "0.3.8"
+    "@firebase/messaging-types" "0.3.2"
+    isomorphic-fetch "2.2.1"
+    tslib "1.10.0"
+
+"@firebase/functions@0.4.16":
+  version "0.4.16"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/functions/-/functions-0.4.16.tgz#9e4bb139c9fbb15a0e5ca5ac839148fe789b6535"
+  integrity sha1-nkuxOcn7sVoOXKWsg5FI/nibZTU=
   dependencies:
     "@firebase/functions-types" "0.3.8"
     "@firebase/messaging-types" "0.3.2"
@@ -782,10 +835,25 @@
     idb "3.0.2"
     tslib "1.10.0"
 
+"@firebase/installations@0.2.5":
+  version "0.2.5"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/installations/-/installations-0.2.5.tgz#af4f0fe7c2e7b1fc15914fc6e34a11d670c5ddc0"
+  integrity sha1-r08P58LnsfwVkU/G40oR1nDF3cA=
+  dependencies:
+    "@firebase/installations-types" "0.1.2"
+    "@firebase/util" "0.2.26"
+    idb "3.0.2"
+    tslib "1.10.0"
+
 "@firebase/logger@0.1.22":
   version "0.1.22"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/logger/-/logger-0.1.22.tgz#678b1fc0dba533d74d0ec0fe893a9cd53053d235"
   integrity sha1-Z4sfwNulM9dNDsD+iTqc1TBT0jU=
+
+"@firebase/logger@0.1.23":
+  version "0.1.23"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/logger/-/logger-0.1.23.tgz#32d7ff4d407f784ffdcc4c9081c11c9c6f01d9a0"
+  integrity sha1-Mtf/TUB/eE/9zEyQgcEcnG8B2aA=
 
 "@firebase/messaging-types@0.3.2":
   version "0.3.2"
@@ -799,6 +867,15 @@
   dependencies:
     "@firebase/messaging-types" "0.3.2"
     "@firebase/util" "0.2.25"
+    tslib "1.10.0"
+
+"@firebase/messaging@0.4.9":
+  version "0.4.9"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/messaging/-/messaging-0.4.9.tgz#24a4206fb40f164f97a7ceb1a8c65117313fec27"
+  integrity sha1-JKQgb7QPFk+Xp86xqMZRFzE/7Cc=
+  dependencies:
+    "@firebase/messaging-types" "0.3.2"
+    "@firebase/util" "0.2.26"
     tslib "1.10.0"
 
 "@firebase/performance-types@0.0.3":
@@ -817,6 +894,17 @@
     "@firebase/util" "0.2.25"
     tslib "1.10.0"
 
+"@firebase/performance@0.2.17":
+  version "0.2.17"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/performance/-/performance-0.2.17.tgz#b97d7986f76b40ce98d42576b19acd94bfa6fc6e"
+  integrity sha1-uX15hvdrQM6Y1CV2sZrNlL+m/G4=
+  dependencies:
+    "@firebase/installations" "0.2.5"
+    "@firebase/logger" "0.1.23"
+    "@firebase/performance-types" "0.0.3"
+    "@firebase/util" "0.2.26"
+    tslib "1.10.0"
+
 "@firebase/polyfill@0.3.19":
   version "0.3.19"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/polyfill/-/polyfill-0.3.19.tgz#f49774707c9a8689b92d977da1c9967ff2b25f5a"
@@ -826,10 +914,28 @@
     promise-polyfill "8.1.3"
     whatwg-fetch "2.0.4"
 
+"@firebase/polyfill@0.3.20":
+  version "0.3.20"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/polyfill/-/polyfill-0.3.20.tgz#c5d51a11b042cfa7184c8f8040d80f57560fac15"
+  integrity sha1-xdUaEbBCz6cYTI+AQNgPV1YPrBU=
+  dependencies:
+    core-js "3.2.1"
+    promise-polyfill "8.1.3"
+    whatwg-fetch "2.0.4"
+
 "@firebase/storage-types@0.3.3":
   version "0.3.3"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/storage-types/-/storage-types-0.3.3.tgz#179ad38485d450023406cf9731560d690ef39d19"
   integrity sha1-F5rThIXUUAI0Bs+XMVYNaQ7znRk=
+
+"@firebase/storage@0.3.10":
+  version "0.3.10"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/storage/-/storage-0.3.10.tgz#1f5e4354fd0ee18fe0f14d771373cab007247c86"
+  integrity sha1-H15DVP0O4Y/g8U13E3PKsAckfIY=
+  dependencies:
+    "@firebase/storage-types" "0.3.3"
+    "@firebase/util" "0.2.26"
+    tslib "1.10.0"
 
 "@firebase/storage@0.3.9":
   version "0.3.9"
@@ -847,10 +953,22 @@
   dependencies:
     tslib "1.10.0"
 
+"@firebase/util@0.2.26":
+  version "0.2.26"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/util/-/util-0.2.26.tgz#d55d767134fd9da033f7f5d639fb4b1ac6a80e92"
+  integrity sha1-1V12cTT9naAz9/XWOftLGsaoDpI=
+  dependencies:
+    tslib "1.10.0"
+
 "@firebase/webchannel-wrapper@0.2.24":
   version "0.2.24"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.24.tgz#e3457399710951829f3276b52f27a56f11554768"
   integrity sha1-40VzmXEJUYKfMna1LyelbxFVR2g=
+
+"@firebase/webchannel-wrapper@0.2.25":
+  version "0.2.25"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.25.tgz#b8362a4847e5e4dd0aa79be65246c4b8b0df2abc"
+  integrity sha1-uDYqSEfl5N0Kp5vmUkbEuLDfKrw=
 
 "@grpc/proto-loader@^0.5.0":
   version "0.5.1"
@@ -1147,6 +1265,13 @@
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
   integrity sha1-KGLz9Yqaf3w+eNefEw3U1xwlwqc=
 
+"@types/firebase@^3.2.1":
+  version "3.2.1"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/@types/firebase/-/firebase-3.2.1.tgz#17c1c8fee7485ab09668d2461e34540bdf44b3b1"
+  integrity sha1-F8HI/udIWrCWaNJGHjRUC99Es7E=
+  dependencies:
+    firebase "*"
+
 "@types/glob@^7.1.1":
   version "7.1.1"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@types/glob/-/glob-7.1.1.tgz#aa59a1c6e3fbc421e07ccd31a944c30eba521575"
@@ -1238,7 +1363,7 @@
     "@types/react" "*"
     "@types/react-router" "*"
 
-"@types/react-router@*":
+"@types/react-router@*", "@types/react-router@^5.0.3":
   version "5.0.3"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@types/react-router/-/react-router-5.0.3.tgz#855a1606e62de3f4d69ea34fb3c0e50e98e964d5"
   integrity sha1-hVoWBuYt4/TWnqNPs8DlDpjpZNU=
@@ -1249,14 +1374,6 @@
 "@types/react@*":
   version "16.8.23"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/@types/react/-/react-16.8.23.tgz#ec6be3ceed6353a20948169b6cb4c97b65b97ad2"
-  dependencies:
-    "@types/prop-types" "*"
-    csstype "^2.2.0"
-
-"@types/react@^16.9.2":
-  version "16.9.2"
-  resolved "https://chu.jfrog.io/chu/api/npm/npm/@types/react/-/react-16.9.2.tgz#6d1765431a1ad1877979013906731aae373de268"
-  integrity sha1-bRdlQxoa0Yd5eQE5BnMarjc94mg=
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -2952,7 +3069,7 @@ core-js-pure@3.1.4:
   version "3.1.4"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/core-js-pure/-/core-js-pure-3.1.4.tgz#5fa17dc77002a169a3566cc48dc774d2e13e3769"
 
-core-js@3:
+core-js@3, core-js@3.2.1:
   version "3.2.1"
   resolved "https://chu.jfrog.io/chu/api/npm/npm/core-js/-/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
   integrity sha1-zUHzhTTabMWffbBQ/mcwfemGiwk=
@@ -4498,6 +4615,24 @@ firebase-tools@^7.2.1:
     update-notifier "^2.5.0"
     uuid "^3.0.0"
     winston "^1.0.1"
+
+firebase@*:
+  version "6.4.2"
+  resolved "https://chu.jfrog.io/chu/api/npm/npm/firebase/-/firebase-6.4.2.tgz#bcb5da227d64ea1ca4421db8e405473f2306e93e"
+  integrity sha1-vLXaIn1k6hykQh245AVHPyMG6T4=
+  dependencies:
+    "@firebase/app" "0.4.15"
+    "@firebase/app-types" "0.4.3"
+    "@firebase/auth" "0.11.8"
+    "@firebase/database" "0.5.1"
+    "@firebase/firestore" "1.4.12"
+    "@firebase/functions" "0.4.16"
+    "@firebase/installations" "0.2.5"
+    "@firebase/messaging" "0.4.9"
+    "@firebase/performance" "0.2.17"
+    "@firebase/polyfill" "0.3.20"
+    "@firebase/storage" "0.3.10"
+    "@firebase/util" "0.2.26"
 
 firebase@^6.3.3:
   version "6.4.0"

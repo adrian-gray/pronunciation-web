@@ -12,12 +12,12 @@ import NavBar from "./components/NavBar";
 import Router from "./Router";
 import SEO from "./components/SEO";
 
-export default props => {
+export default () => {
   const [user, setUser] = useState(null);
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
 
   firebase.auth().onAuthStateChanged(handleAuthChange);
-  function handleAuthChange(user) {
+  function handleAuthChange(user: any) {
     if (user) {
       auth.getUserData().then(val => setSubscriptionLevel(val));
     } else {
