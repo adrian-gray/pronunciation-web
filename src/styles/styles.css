@@ -98,3 +98,25 @@
 .undecorated {
   text-decoration: none;
 }
+.activity-pending {
+  color: #bbb;
+}
+.activity-open {
+  color: green;
+}
+.activity-locked {
+  color: maroon;
+}
+.chip {
+  padding: 0 1rem;
+  margin: 8px;
+  cursor: pointer;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #e0e0e0;
+}

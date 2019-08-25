@@ -1,27 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import Chip from "@material-ui/core/Chip";
-import { makeStyles } from "@material-ui/core/styles";
-import { withTheme } from "@material-ui/styles";
-
 import { capitalise } from "./../utils/utils";
-
-const useStyles = makeStyles(theme => ({
-  chip: {
-    margin: theme.spacing(1)
-  },
-  open: {
-    color: "green"
-  },
-  member: {
-    color: "#BBB"
-  },
-  pending: {
-    color: "maroon"
-  },
-  page: theme.page
-}));
 
 const toLink = (phoneme, activity) => {
   const title = capitalise(activity);
@@ -30,35 +10,27 @@ const toLink = (phoneme, activity) => {
   return { title, link };
 };
 
-const ActivityButton = props => {
-  const classes = useStyles(props);
-
+export default props => {
   const { accessStatus, activity, phoneme, subscriptionLevel } = props;
   const { title, link } = toLink(phoneme, activity);
 
-  let chipClass = classes[accessStatus];
-
   const [chipClasses, setChipClasses] = useState(
-    `${classes.chip} ${chipClass}`
+    `chip activity-${accessStatus}`
   );
 
   useEffect(() => {
-    if (accessStatus === "member" && subscriptionLevel) {
-      chipClass = classes["open"];
-      setChipClasses(`${classes.chip} ${chipClass}`);
+    if (accessStatus === "member") {
+      if (subscriptionLevel) {
+        setChipClasses(`chip activity-open`);
+      } else {
+        setChipClasses(`chip activity-locked`);
+      }
     }
   });
 
   return (
-    <Chip
-      label={title}
-      className={chipClasses}
-      component={Link}
-      to={link}
-      clickable
-      key={title}
-    />
+    <Link title={title} className={chipClasses} to={link} key={title}>
+      {title}
+    </Link>
   );
 };
-
-export default withTheme(ActivityButton);
