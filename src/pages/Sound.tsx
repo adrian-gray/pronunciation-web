@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from "react";
 
-import { SoundProps } from "./../../@types/PronounceWeb";
+import { ISoundData, ISoundProps } from "./../../@types/PronounceWeb";
 
 import Container from "react-bootstrap/Container";
 
-import * as jsonData from "./../data/sounds.json";
+import jsonData from "./../data/sounds.json";
 import ActivityButtons from "../components/ActivityButtons";
 import ExtractActivity from "../components/ExtractActivity";
 import SEO from "../components/SEO";
 import SoundTitle from "../components/SoundTitle";
 
-export default (props: SoundProps) => {
+export default (props: ISoundProps) => {
   const phoneme = props.match.params.phoneme;
   const activity =
     (props.match.params.activity &&
       props.match.params.activity.replace(/-/g, " ")) ||
     "none";
-  const data = jsonData["phonemes"][phoneme];
+
+  // TODO WTF?
+  const data: ISoundData = jsonData.phonemes[phoneme];
+  console.log(">", data);
+  debugger;
 
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
 

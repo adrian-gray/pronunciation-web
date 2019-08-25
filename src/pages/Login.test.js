@@ -8,7 +8,9 @@ import Login from "./Login";
 afterEach(cleanup);
 
 test("Login", async () => {
-  const props = {};
+  const props = {
+    user: {}
+  };
 
   const { container } = render(
     <BrowserRouter>

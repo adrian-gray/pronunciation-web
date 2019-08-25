@@ -24,22 +24,23 @@ export default (props: ILoginProps) => {
 
   const handleChange = (property: string) => {
     return (e: React.FormEvent) => {
-      console.log(">e", e);
+      const element = e.target as HTMLInputElement;
+      const value = element.value;
       switch (property) {
         case "signupName":
-          setSignupName(e.target.value);
+          setSignupName(value);
           break;
         case "signupEmail":
-          setSignupEmail(e.target.value);
+          setSignupEmail(value);
           break;
         case "signinEmail":
-          setSigninEmail(e.target.value);
+          setSigninEmail(value);
           break;
         case "signupPassword":
-          setSignupPassword(e.target.value);
+          setSignupPassword(value);
           break;
         case "signinPassword":
-          setSigninPassword(e.target.value);
+          setSigninPassword(value);
           break;
         default:
           console.log(`Erm. what's a ${property}?`);

@@ -18,13 +18,20 @@ export interface INewsStoriesCustomState {
 }
 
 export interface ILoginProps {
-  user: firebase.User | null;
+  user: any;
 }
 
 interface SoundMatchParams {
   phoneme: string;
   activity: string;
 }
-export interface SoundProps extends RouteComponentProps<SoundMatchParams> {
+export interface ISoundProps extends RouteComponentProps<SoundMatchParams> {
   subscriptionLevel: number;
+}
+
+export interface ISoundData {
+  ipa: string;
+  title: string;
+  tag: string;
+  activities: any;
 }
