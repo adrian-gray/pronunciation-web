@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import { RouteComponentProps } from "react-router-dom";
-
-interface IProps extends RouteComponentProps {
-  subscriptionLevel: number;
-  user: firebase.User;
-}
+import { IProps } from "./../@types/PronounceWeb";
 
 import FourOhFour from "./pages/404";
 import Home from "./pages/Home";

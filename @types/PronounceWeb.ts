@@ -1,5 +1,15 @@
 import { RouteComponentProps } from "react-router-dom";
 
+export interface IUser {
+  id?: string;
+  email?: string;
+}
+
+export interface IProps extends RouteComponentProps {
+  subscriptionLevel: number;
+  user: IUser;
+}
+
 export interface IGame extends Phaser.Game {
   data?: any;
   isAuth?: boolean;
