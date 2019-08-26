@@ -33,7 +33,7 @@ class NewsStories extends Component<
       selectedOption: [],
       selectedBgColour: [],
       other: []
-    };
+    } as INewsStoriesCustomState;
 
     this.handleClick = this.handleClick.bind(this);
     this.parseSentences = this.parseSentences.bind(this);
@@ -111,10 +111,10 @@ class NewsStories extends Component<
       selectedOption,
       selectedBgColour,
       sentences
-    });
+    } as INewsStoriesCustomState);
   }
 
-  updateSentences(params) {
+  updateSentences(params: INewsStoriesCustomState) {
     const newSentences = params.sentences;
     const selectedOption = params.selectedOption || this.state.selectedOption;
     const selectedBgColour =

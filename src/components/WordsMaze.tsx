@@ -8,7 +8,15 @@ import WordsMaze from "./WordsMaze/index";
 const NATIVE_WIDTH = 750;
 const NATIVE_HEIGHT = 750;
 
-export default props => {
+interface IWordsMaze {
+  tag: string;
+  ipa: string;
+  userAuth: number;
+  words: string[];
+  correct: string[];
+}
+
+export default (props: IWordsMaze) => {
   let screenWidth = NATIVE_WIDTH;
   let screenHeight = NATIVE_HEIGHT;
 

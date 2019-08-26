@@ -22,7 +22,7 @@ Game.prototype = {
     const $tiles = new Phaser.Signal();
 
     const board = state.add.group();
-    let tiles = [];
+    let tiles: any[] = [];
     let index = 0;
     NUM_COLS = game.data.words[0].length;
     NUM_ROWS = game.data.words.length;
@@ -48,7 +48,12 @@ Game.prototype = {
 
     $tiles.add(handleTileSignal, this);
 
-    function handleTileSignal(e) {
+    function handleTileSignal(e: {
+      word: string;
+      index: number;
+      row: number;
+      col: number;
+    }) {
       if (!game.isAuth) return;
       const { word, index, row, col } = e;
       if (game.data.correct.includes(word)) {
@@ -58,11 +63,11 @@ Game.prototype = {
       }
     }
 
-    function handleTileIncorrect(index) {
+    function handleTileIncorrect(index: number) {
       tiles[index].incorrect();
     }
 
-    function handleTileCorrect(index, row, col) {
+    function handleTileCorrect(index: number, row: number, col: number) {
       tiles[index].correct();
 
       if (col > activePos.col && col > 1 && col < NUM_COLS - 1) {
@@ -86,7 +91,7 @@ Game.prototype = {
       activePos = { row, col };
     }
 
-    function moveBoard(direction) {
+    function moveBoard(direction: number) {
       switch (direction) {
         case LEFT:
           game.add

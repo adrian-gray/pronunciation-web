@@ -36,7 +36,7 @@ export default function Tile(params) {
     return g;
   }
 
-  function addText({ str, size }) {
+  function addText({ str, size }: { str: string; size: number }) {
     const style = { font: `normal ${size}px ${STACK}` };
     const posX = col * TILE_SIZE + TILE_SIZE / 2;
     const posY = row * TILE_SIZE + TILE_SIZE / 2;

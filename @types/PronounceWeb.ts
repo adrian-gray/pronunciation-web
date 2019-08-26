@@ -45,7 +45,7 @@ export interface INewsStoriesCustomProps {
 }
 
 export interface INewsStoriesCustomState {
-  sentences: string[] | Element[];
+  sentences: any[];
   selectedOption: number[];
   selectedBgColour: string[];
   other?: any[];
