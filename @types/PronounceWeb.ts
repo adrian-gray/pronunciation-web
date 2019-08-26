@@ -45,10 +45,10 @@ export interface INewsStoriesCustomProps {
 }
 
 export interface INewsStoriesCustomState {
-  sentences: string[];
+  sentences: string[] | Element[];
   selectedOption: number[];
   selectedBgColour: string[];
-  other: any[];
+  other?: any[];
 }
 
 export interface IOddOneOutProps {

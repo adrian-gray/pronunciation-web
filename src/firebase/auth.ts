@@ -2,9 +2,9 @@ import firebase from "firebase/app";
 import { encode } from "firebase-encode";
 import { auth } from "./firebase";
 
-let _name;
+let _name: string;
 
-const setupNewUser = user => {
+const setupNewUser = (user: firebase.User) => {
   firebase
     .database()
     .ref(`users/${user.uid}`)
@@ -14,20 +14,24 @@ const setupNewUser = user => {
     });
 };
 
-const checkForAssignNewRecord = e => {
+const checkForAssignNewRecord = (e: any) => {
   if (e.additionalUserInfo.isNewUser) {
     setupNewUser(e.user);
   }
 };
 
-const signIn = provider => {
+const signIn = (provider: any) => {
   auth.signInWithPopup(provider).then(checkForAssignNewRecord);
 };
 
-export const signUpWithEmail = params => {
+export const signUpWithEmail = (params: {
+  name: string;
+  email: string;
+  password: string;
+}) => {
   const name = encode(params.name);
   const email = encode(params.email);
-  const { password } = params;
+  const password = params.password;
   _name = name;
 
   auth
@@ -38,7 +42,10 @@ export const signUpWithEmail = params => {
     });
 };
 
-export const signInWithEmail = params => {
+export const signInWithEmail = (params: {
+  email: string;
+  password: string;
+}) => {
   const email = encode(params.email);
   const { password } = params;
 

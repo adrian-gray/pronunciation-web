@@ -10,9 +10,9 @@ import SplitHilite from "./SplitHilite";
 import MemberGate from "./MemberGate";
 import Picker from "./Picker";
 
-const countSelectors = arr => {
+const countSelectors = (arr: string[]) => {
   let count = 0;
-  arr.forEach(sentence => {
+  arr.forEach((sentence: string) => {
     const num = (sentence.match(/OPTION/g) || []).length;
     count += num;
   });
@@ -23,7 +23,7 @@ class NewsStories extends Component<
   INewsStoriesCustomProps,
   INewsStoriesCustomState
 > {
-  constructor(props) {
+  constructor(props: INewsStoriesCustomProps) {
     super(props);
 
     const { ...other } = props;
@@ -46,13 +46,17 @@ class NewsStories extends Component<
     this.addNewSentences(this.props.sentences);
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: INewsStoriesCustomProps) {
     if (nextProps.sentences !== this.props.sentences) {
       this.addNewSentences(nextProps.sentences);
     }
   }
 
-  parseSentences(sentences, selectedOption, selectedBgColour) {
+  parseSentences(
+    sentences: string[],
+    selectedOption: number[],
+    selectedBgColour: string[]
+  ) {
     let id = 0;
     let selectorId = 0;
 
@@ -93,10 +97,10 @@ class NewsStories extends Component<
     return parsedSentences;
   }
 
-  addNewSentences(newSentences) {
-    const numSelectors = countSelectors(newSentences);
-    const selectedOption = Array(numSelectors).fill(0);
-    const selectedBgColour = Array(numSelectors).fill(undefined);
+  addNewSentences(newSentences: string[]) {
+    const numSelectors: number = countSelectors(newSentences);
+    const selectedOption: number[] = Array(numSelectors).fill(0);
+    const selectedBgColour: string[] = Array(numSelectors).fill(undefined);
     const sentences = this.parseSentences(
       newSentences,
       selectedOption,
@@ -125,31 +129,33 @@ class NewsStories extends Component<
     this.setState({ sentences });
   }
 
-  checkForCorrect(values) {
-    return values.map((value, index) => {
-      return this.props.options[value] === this.props.answers[index];
+  checkForCorrect(values: number[]) {
+    return values.map((value, index: number) => {
+      return this.props.options[index] === this.props.answers[index];
     });
   }
 
-  handleClick(index) {
+  handleClick(index: number) {
     if (!this.props.userAuth) return;
     const newStateSelectedOption = this.state.selectedOption.slice();
-    const selectedBgColour = [];
+    const selectedBgColour: string[] = [];
     newStateSelectedOption[index] =
       (this.state.selectedOption[index] + 1) % this.props.options.length;
     if (newStateSelectedOption.every(val => val > 0)) {
-      this.checkForCorrect(newStateSelectedOption).map((value, index) => {
-        switch (value) {
-          case true:
-            selectedBgColour[index] = "#99BB99"; // TODO
-            break;
-          case false:
-            selectedBgColour[index] = "#BB9999"; // TODO
-            break;
-          default:
-            selectedBgColour[index] = undefined;
+      this.checkForCorrect(newStateSelectedOption).map(
+        (value: boolean, index: number) => {
+          switch (value) {
+            case true:
+              selectedBgColour[index] = "#99BB99"; // TODO
+              break;
+            case false:
+              selectedBgColour[index] = "#BB9999"; // TODO
+              break;
+            default:
+              selectedBgColour[index] = undefined;
+          }
         }
-      });
+      );
     }
     this.setState({
       selectedOption: newStateSelectedOption,
