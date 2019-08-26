@@ -1,42 +1,42 @@
-{
+export default {
   "long-e": {
-    "ipa": "~/i:/~",
-    "title": "long ~e~ ‘s~ee~’",
-    "tag": "long ‘e’",
-    "activities": {
+    ipa: "~/i:/~",
+    title: "long ~e~ ‘s~ee~’",
+    tag: "long ‘e’",
+    activities: {
       "how to pronounce": {
-        "image": {
-          "url": "/assets/images/how-to-pronounce-long-e-english.jpg",
-          "alt": "How to pronounce the long 'e' in English",
-          "title": "How to pronounce the long 'e' in English"
+        image: {
+          url: "/assets/images/how-to-pronounce-long-e-english.jpg",
+          alt: "How to pronounce the long 'e' in English",
+          title: "How to pronounce the long 'e' in English"
         },
-        "text": [
+        text: [
           "Spread your lips a little",
           "Drop your jaw a little",
           "Keep the tip of your tongue forward – touch the back of your bottom front teeth (the tip of your tongue is down)"
         ]
       },
-      "movie": {
-        "url": "/assets/images/movie-english-pronounce-long-e.jpg"
+      movie: {
+        url: "/assets/images/movie-english-pronounce-long-e.jpg"
       },
-      "words": {
-        "words": {
+      words: {
+        words: {
           "pl~ea~sed": "/pl~i:~zd/",
           "n~ie~ce": "/n~i:~s/",
           "m~ee~t": "/m~i:~t/",
           "s~ee~": "/s~i:~/"
         }
       },
-      "phrases": {
-        "phrases": {
+      phrases: {
+        phrases: {
           "Pl~ea~sed to meet you..": "/pl~i:~zd/",
           "This is my n~ie~ce.": "/n~i:~s/",
           "Nice to m~ee~t you.": "/m~i:~t/",
           "Nice to s~ee~ you.": "/s~i:~/"
         }
       },
-      "dialogues": {
-        "dialogues": [
+      dialogues: {
+        dialogues: [
           [
             "Hi, I'm St~e~ven, What's your name?",
             "Hi St~e~ven, I'm Nina.",
@@ -62,7 +62,7 @@
         ]
       },
       "common words": {
-        "words": [
+        words: [
           "pl~ea~se",
           "k~ey~",
           "tr~ee~",
@@ -90,14 +90,14 @@
         ]
       },
       "tongue twisters": {
-        "twisters": [
+        twisters: [
           "I need to sweep the street three times a week to keep it clean.",
           "Tea with cream for me, please.",
           "Green beans and peas, cream cheese and lean meat will keep you really healthy."
         ]
       },
       "minimal pairs": {
-        "pairs": [
+        pairs: [
           ["m~ea~n", "m~i~ne"],
           ["n~ea~t", "n~igh~t"],
           ["s~ee~n", "s~ig~n"],
@@ -115,27 +115,27 @@
         ]
       },
       "sort the words": {
-        "words": [
+        words: [
           ["key", "bean", "sheep", "tree", "tea", "TV"],
           ["bin", "ship", "peach", "fish", "bridge", "zip"]
         ]
       },
       "odd one out": {
-        "subscription": 1,
-        "example": ["deal", "dream", "deep", "dead"],
-        "exampleHilite": 4,
-        "rows": [
+        subscription: 1,
+        example: ["deal", "dream", "deep", "dead"],
+        exampleHilite: 4,
+        rows: [
           ["bed", "breathe", "bead", "been"],
           ["week", "weak", "wheel", "when"],
           ["mean", "men", "meat", "meet"],
           ["sheet", "see", "slept", "sleep"],
           ["each", "earn", "eat", "east"]
         ],
-        "correct": ["dead", "bed", "when", "men", "slept", "earn"]
+        correct: ["dead", "bed", "when", "men", "slept", "earn"]
       },
       "rhyming words": {
-        "subscrition": 1,
-        "sentences": [
+        subscrition: 1,
+        sentences: [
           "“Hello Tina, this is my niece.",
           "She's from Brisbane.",
           "Her name is Therese.”",
@@ -151,17 +151,18 @@
         ]
       },
       "count the sounds": {
-        "subscription": 1,
-        "word": ["1917 (year)", "14 ¾", "3 315", "16 303"],
-        "count": [2, 2, 3, 3]
+        subscription: 1,
+        word: ["1917 (year)", "14 ¾", "3 315", "16 303"],
+        count: [2, 2, 3, 3]
       },
       "beginner news stories": {
-        "level": "beginner",
-        "subscription": 1,
-        "title": "Choose the correct sound: ~/:i/~ (the long ‘e’ sound) or ~/e/~ (the short ‘e’ sound)",
-        "headline": "Eels travel far",
-        "options": ["...", "i:", "e", "o"],
-        "answers": [
+        level: "beginner",
+        subscription: 1,
+        title:
+          "Choose the correct sound: ~/:i/~ (the long ‘e’ sound) or ~/e/~ (the short ‘e’ sound)",
+        headline: "Eels travel far",
+        options: ["...", "i:", "e", "o"],
+        answers: [
           "i:",
           "i:",
           "i:",
@@ -176,19 +177,20 @@
           "o",
           "o"
         ],
-        "sentences": [
+        sentences: [
           "A Sydney ~ee~l OPTION br~ee~ds OPTION once. The eel l~ea~ves OPTION it's pond from a park in Sydney. It swims through cr~ee~ks OPTION and drainpipes. It slithers over grass to the n~e~xt OPTION suburb. It moves across two golf courses. It crosses swampy ~a~reas OPTION. It arrives at the airport. Sydney Airport is next to a bay. It ~e~nters OPTION the bay and swims across the s~ea~ OPTION 2 000 km to N~e~w OPTION Caledonia.",
           "It lays m~a~ny OPTION eggs – about 20 million ~e~ggs OPTION.",
-          "The eel d~ie~s OPTION, but its offpsring float back to Australia. They swim to the bay next to Sydney Airport. They move across the swampy land, th~e~ OPTION two golf courses, through the drainpipes and creeks back to the pond in the park'."
+          "The eel d~ie~s OPTION, but its offspring float back to Australia. They swim to the bay next to Sydney Airport. They move across the swampy land, th~e~ OPTION two golf courses, through the drainpipes and creeks back to the pond in the park'."
         ]
       },
       "intermediate news stories": {
-        "level": "intermediate",
-        "subscription": 1,
-        "title": "Choose the correct sound: ~/:i/~ (the long ‘e’ sound) or ~/e/~ (the short ‘e’ sound)",
-        "headline": "Eels travel far",
-        "options": ["...", "i:", "e", "o"],
-        "answers": [
+        level: "intermediate",
+        subscription: 1,
+        title:
+          "Choose the correct sound: ~/:i/~ (the long ‘e’ sound) or ~/e/~ (the short ‘e’ sound)",
+        headline: "Eels travel far",
+        options: ["...", "i:", "e", "o"],
+        answers: [
           "i:",
           "o",
           "e",
@@ -211,7 +213,7 @@
           "o",
           "o"
         ],
-        "sentences": [
+        sentences: [
           "This is a story of migrating ~ee~ls OPTION. In part~i~cular OPTION the long-finned eels of Cent~e~nnial OPTION Park, Sydney. These eel br~ee~d OPTION once in their lifetime and they travel quite a distance to reproduce.",
           "Their breeding migration b~e~gins OPTION when the eel l~ea~ves OPTION its pond during the w~e~t OPTION s~ea~son OPTION of autumn. It swims through cr~ee~ks OPTION and drainpipes. It slithers over grass to the n~e~xt OPTION suburb. It moves across two golf courses. It crosses swampy ~a~reas OPTION and continues south through the d~e~nsely OPTION populated suburb of Kensington . It ev~e~ntually OPTION arrives at Sydney airport. The Airport is next to a bay. It ~e~nters OPTION the bay and swims across the s~ea~ OPTION 2 000 km to N~e~w OPTION Caledonia.",
           "It lays m~a~ny OPTION eggs – about 20 million ~e~ggs OPTION.",
@@ -219,8 +221,8 @@
         ]
       },
       "words maze": {
-        "subscription": 1,
-        "words": [
+        subscription: 1,
+        words: [
           ["street", "TV", "leave", "please", "agree"],
           ["pretty", "eye", "empty", "break", "believe"],
           ["level", "weather", "guest", "teacher", "key"],
@@ -230,7 +232,7 @@
           ["weekend", "screen", "these", "English", "niece"],
           ["bread", "open", "September", "text", "easy"]
         ],
-        "correct": [
+        correct: [
           "happy",
           "TV",
           "leave",
@@ -257,4 +259,4 @@
       }
     }
   }
-}
+};

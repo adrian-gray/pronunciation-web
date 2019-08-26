@@ -1,42 +1,42 @@
-{
+export default {
   "short-a": {
-    "ipa": "~/æ/~",
-    "title": "short ~a~ ‘b~a~d’",
-    "tag": "short ‘a’",
-    "activities": {
+    ipa: "~/æ/~",
+    title: "short ~a~ ‘b~a~d’",
+    tag: "short ‘a’",
+    activities: {
       "how to pronounce": {
-        "image": {
-          "url": "/assets/images/how-to-pronounce-short-a-english.jpg",
-          "alt": "How to pronounce the short 'a' in English",
-          "title": "How to pronounce the short 'a' in English"
+        image: {
+          url: "/assets/images/how-to-pronounce-short-a-english.jpg",
+          alt: "How to pronounce the short 'a' in English",
+          title: "How to pronounce the short 'a' in English"
         },
-        "text": [
+        text: [
           "Drop your jaw (quite a bit)",
           "Spread your lips (quite a bit)",
           "Keep the tip of your tongue forward – touch the back of your bottom front teeth (tongue tip is down)"
         ]
       },
-      "movie": {
-        "url": "/assets/images/movie-english-pronounce-short-a.jpg"
+      movie: {
+        url: "/assets/images/movie-english-pronounce-short-a.jpg"
       },
-      "words": {
-        "words": {
+      words: {
+        words: {
           "b~a~d": "/b~æ~d/",
           "c~a~tch": "/k~æ~tʃ/",
           "th~a~nk": "/θ~æ~ŋk/",
           "h~a~nging": "/h~æ~ŋɪŋ/"
         }
       },
-      "phrases": {
-        "phrases": {
+      phrases: {
+        phrases: {
           "I’m not b~a~d.": "/b~æ~d/",
           "We'll c~a~tch up soon.": "/k~æ~tʃ/",
           "I’m good, th~a~nks.": "/θ~æ~ŋk/",
           "I’m h~a~nging in there.": "/h~æ~ŋɪŋ/"
         }
       },
-      "dialogues": {
-        "dialogues": [
+      dialogues: {
+        dialogues: [
           [
             "Morning, ~A~nne.",
             "Morning, S~a~m.",
@@ -59,7 +59,7 @@
         ]
       },
       "common words": {
-        "words": [
+        words: [
           "c~a~sh",
           "tr~a~sh",
           "tr~a~nsfer",
@@ -87,14 +87,14 @@
         ]
       },
       "tongue twisters": {
-        "twisters": [
+        twisters: [
           "The black bag had a snagged tag.",
           "Can you can a can as a canner can can a can?",
           "I’m chatting with the man standing at the cab stand."
         ]
       },
       "minimal pairs": {
-        "pairs": [
+        pairs: [
           ["g~a~s", "gu~e~ss"],
           ["l~a~nd", "l~e~nd"],
           ["l~au~ghed", "l~e~ft"],
@@ -112,16 +112,16 @@
         ]
       },
       "say the sentences": {
-        "subscription": 1,
-        "sentences": [
+        subscription: 1,
+        sentences: [
           "My uncle had a bad ankle.",
           "Whatever you mutter doesn’t matter.",
           "Just tap the top of the tape."
         ]
       },
       "find the words": {
-        "subscription": 1,
-        "words": [
+        subscription: 1,
+        words: [
           "cap",
           "hat",
           "bug",
@@ -133,11 +133,11 @@
           "said",
           "hot"
         ],
-        "correct": ["cap", "hat", "sad", "bag"]
+        correct: ["cap", "hat", "sad", "bag"]
       },
       "hear the words": {
-        "subscription": 1,
-        "words": [
+        subscription: 1,
+        words: [
           "matter",
           "mutter",
           "pain",
@@ -149,11 +149,11 @@
           "ankle",
           "uncle"
         ],
-        "correct": ["matter", "pan", "tap", "ankle"]
+        correct: ["matter", "pan", "tap", "ankle"]
       },
       "odd one out": {
-        "subscription": 1,
-        "words": [
+        subscription: 1,
+        words: [
           "ran",
           "answer",
           "band",
@@ -165,28 +165,30 @@
           "table",
           "name"
         ],
-        "correct": ["start", "all", "table", "name"]
+        correct: ["start", "all", "table", "name"]
       },
       "beginner news stories": {
-        "level": "beginner",
-        "subscription": 1,
-        "title": "Choose the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)",
-        "headline": "Snake Eats Tongs",
-        "options": ["...", "æ", "eɪ"],
-        "answers": ["æ", "eɪ", "eɪ", "æ", "eɪ", "eɪ", "eɪ", "eɪ"],
-        "sentences": [
+        level: "beginner",
+        subscription: 1,
+        title:
+          "Choose the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)",
+        headline: "Snake Eats Tongs",
+        options: ["...", "æ", "eɪ"],
+        answers: ["æ", "eɪ", "eɪ", "æ", "eɪ", "eɪ", "eɪ", "eɪ"],
+        sentences: [
           "A m~a~n OPTION from Austr~a~lia OPTION has a sn~a~ke OPTION. He feeds it a r~a~t OPTION. He holds the rat with tongs. The snake eats the tongs, too.",
           "This is d~a~ngerous OPTION for the snake. Doctors operate on it. They t~a~ke OPTION out the tongs.",
           "The snake’s n~a~me OPTION is Winston. After the oper~a~tion OPTION he gets better."
         ]
       },
       "intermediate news stories": {
-        "level": "intermediate",
-        "subscription": 1,
-        "title": "Choose the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)",
-        "headline": "Snake Eats Tongs",
-        "options": ["...", "æ", "eɪ"],
-        "answers": [
+        level: "intermediate",
+        subscription: 1,
+        title:
+          "Choose the correct sound: ~/æ/~ (the short ‘a’ sound) or ~/eɪ/~ (the long ‘a’ sound)",
+        headline: "Snake Eats Tongs",
+        options: ["...", "æ", "eɪ"],
+        answers: [
           "æ",
           "æ",
           "eɪ",
@@ -204,7 +206,7 @@
           "eɪ",
           "eɪ"
         ],
-        "sentences": [
+        sentences: [
           "A m~a~n OPTION from ~A~delaide OPTION, Austr~a~lia OPTION was feeding his pet sn~a~ke OPTION a r~a~t OPTION using tongs, when the snake l~a~tched OPTION onto the tongs and swallowed them.",
           "The man r~a~ng OPTION the vet immediately.",
           "When the man arrived, the vet ex~a~mined OPTION the snake. He could easily see the sh~a~pe OPTION of the tongs through the snake. The tongs were j~a~mmed OPTION inside its body. The d~a~nger OPTION was that the tongs were m~a~de OPTION of metal and the edges were quite sharp.",
@@ -213,13 +215,13 @@
         ]
       },
       "pronunciation journey": {
-        "pairs": [
+        pairs: [
           ["ankle", "unkle"],
           ["match", "much"],
           ["pack", "park"],
           ["sad", "said"]
         ],
-        "map": [
+        map: [
           "india",
           "argentina",
           "canada",
@@ -239,8 +241,8 @@
         ]
       },
       "words maze": {
-        "subscription": 1,
-        "words": [
+        subscription: 1,
+        words: [
           ["happy", "weather", "doctor", "natural", "thank", "value"],
           ["family", "number", "jacket", "cancel", "nothing", "narrow"],
           ["carry", "scratch", "travel", "hundred", "seven", "sandwich"],
@@ -254,7 +256,7 @@
           ["level", "national", "wrong", "catch", "mother", "ambulance"],
           ["model", "answer", "shallow", "salary", "become", "relax"]
         ],
-        "correct": [
+        correct: [
           "happy",
           "family",
           "carry",
@@ -298,4 +300,4 @@
       }
     }
   }
-}
+};

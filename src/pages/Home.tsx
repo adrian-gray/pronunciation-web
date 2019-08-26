@@ -2,12 +2,12 @@ import React from "react";
 
 import Container from "react-bootstrap/Container";
 
-import data from "./../data/sounds.json";
+import soundsData from "./../data/sounds.js";
 import SEO from "../components/SEO";
 import Phoneme from "../components/Phoneme";
 
 export default props => {
-  const phonemes = data.phonemes;
+  const phonemes = soundsData;
   const list = Object.keys(phonemes);
   const cards = list.map(phoneme => {
     const ipa = phonemes[phoneme]["ipa"];

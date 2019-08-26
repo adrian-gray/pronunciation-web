@@ -4,7 +4,7 @@ import { ISoundData, ISoundProps } from "./../../@types/PronounceWeb";
 
 import Container from "react-bootstrap/Container";
 
-import jsonData from "./../data/sounds.json";
+import soundsData from "../data/sounds";
 import ActivityButtons from "../components/ActivityButtons";
 import ExtractActivity from "../components/ExtractActivity";
 import SEO from "../components/SEO";
@@ -17,10 +17,8 @@ export default (props: ISoundProps) => {
       props.match.params.activity.replace(/-/g, " ")) ||
     "none";
 
-  // TODO WTF?
-  const data: ISoundData = jsonData.phonemes[phoneme];
-  console.log(">", data);
-  debugger;
+  const data: ISoundData = soundsData[phoneme];
+  console.log("DATA>", data);
 
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
 

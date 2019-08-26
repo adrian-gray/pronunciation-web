@@ -1,27 +1,27 @@
-{
+export default {
   "short-i": {
-    "ipa": "~/ɪ/~",
-    "title": "short ~i~ ‘s~i~t’",
-    "tag": "short ‘i’",
-    "activities": {
+    ipa: "~/ɪ/~",
+    title: "short ~i~ ‘s~i~t’",
+    tag: "short ‘i’",
+    activities: {
       "how to pronounce": {
-        "image": {
-          "url": "/assets/images/how-to-pronounce-short-i-english.jpg",
-          "alt": "How to pronounce the short 'i' in English",
-          "title": "How to pronounce the short 'i' in English"
+        image: {
+          url: "/assets/images/how-to-pronounce-short-i-english.jpg",
+          alt: "How to pronounce the short 'i' in English",
+          title: "How to pronounce the short 'i' in English"
         },
-        "text": [
+        text: [
           "Drop your jaw a little",
           "Relax your mouth",
           "Relax your lips",
           "Lightly touch the back of your bottom front teeth with the tip of your tongue"
         ]
       },
-      "movie": {
-        "url": "/assets/images/english-pronounce-short-i.jpg"
+      movie: {
+        url: "/assets/images/english-pronounce-short-i.jpg"
       },
-      "words": {
-        "words": {
+      words: {
+        words: {
           "sk~i~nny": "/sk~ɪ~ni:/",
           "qu~i~t": "/kw~ɪ~t/",
           "s~i~x": "/s~ɪ~ks/",
@@ -29,16 +29,16 @@
           "f~i~ngers": "/f~ɪ~ŋgəz/"
         }
       },
-      "phrases": {
-        "phrases": {
+      phrases: {
+        phrases: {
           "A sk~i~nny latte.": "/sk~ɪ~ni:/",
           "I'm tying to qu~i~t.": "/kw~ɪ~t/",
           "S~i~x dollars f~i~fty.": "/s~ɪ~ks/ /f~ɪ~fti:/",
           "I always burn my f~i~ngers.": "/f~ɪ~ŋgəz/"
         }
       },
-      "dialogues": {
-        "dialogues": [
+      dialogues: {
+        dialogues: [
           [
             "What can I get you?",
             "A skinny latte.",
@@ -56,7 +56,7 @@
         ]
       },
       "common words": {
-        "words": [
+        words: [
           "th~i~nk",
           "~i~nternet",
           "m~i~nutes",
@@ -84,14 +84,14 @@
         ]
       },
       "tongue twisters": {
-        "twisters": [
+        twisters: [
           "The little kitten with the pink ribbon spilt its milk.",
           "The women sit next to the window in the English lesson.",
           "I live in Fifth Avenue, Unit sixteen, Building Fifty-six."
         ]
       },
       "minimal pairs": {
-        "pairs": [
+        pairs: [
           ["s~i~t", "s~ea~t"],
           ["b~i~n", "b~ee~n"],
           ["ch~i~p", "ch~ea~p"],
@@ -109,8 +109,8 @@
         ]
       },
       "write the minimal pair": {
-        "subscription": 1,
-        "words": [
+        subscription: 1,
+        words: [
           ["steal", "still"],
           ["leave", "live"],
           ["heel", "hill"],
@@ -121,24 +121,24 @@
         ]
       },
       "join to make words": {
-        "subscription": 1,
-        "begin": ["wi", "plea", "be", "sti", "cre", "me", "fee", "bui"],
-        "end": ["am", "ll", "n", "lt", "l", "se", "sh", "st"],
-        "solution": {
+        subscription: 1,
+        begin: ["wi", "plea", "be", "sti", "cre", "me", "fee", "bui"],
+        end: ["am", "ll", "n", "lt", "l", "se", "sh", "st"],
+        solution: {
           "/~e~/": ["best", "melt"],
           "/~i:~/": ["please", "cream", "feel"],
           "/~ɪ~/": ["win", "still", "built"]
         }
       },
       "listen to the sounds": {
-        "subscription": 1,
-        "options": [
+        subscription: 1,
+        options: [
           ["live", "leave"],
           ["fill", "feel"],
           ["litter", "letter"],
           ["lift", "left"]
         ],
-        "sentences": [
+        sentences: [
           "I don't want to OPTION here.",
           "You need to OPTION here.",
           "Did you get the OPTION?",
@@ -146,12 +146,13 @@
         ]
       },
       "beginner news stories": {
-        "level": "beginner",
-        "subscription": 1,
-        "title": "Choose the correct sound: ~/ɪ/~ (the short ‘i’ sound); ~/e/~ (the short ‘e’ sound), or '~0~' (not the short 'i' sound; not the short 'e' sound)",
-        "headline": "From riches to rags",
-        "options": ["...", "ɪ", "e", "0"],
-        "answers": [
+        level: "beginner",
+        subscription: 1,
+        title:
+          "Choose the correct sound: ~/ɪ/~ (the short ‘i’ sound); ~/e/~ (the short ‘e’ sound), or '~0~' (not the short 'i' sound; not the short 'e' sound)",
+        headline: "From riches to rags",
+        options: ["...", "ɪ", "e", "0"],
+        answers: [
           "ɪ",
           "ɪ",
           "0",
@@ -173,7 +174,7 @@
           "0",
           "e"
         ],
-        "sentences": [
+        sentences: [
           "Scott Neeson had everyth~i~ng OPTION: a job that paid $1 m~i~llion OPTION a year, a n~i~ce OPTION car and a b~i~g OPTION house. He l~i~ved OPTION in America and he was r~i~ch OPTION.",
           "In 2004, he trav~e~lled OPTION to Cambodia. During his tr~i~p OPTION he v~i~sited OPTION four s~i~ck OPTION kids someone had told him about. The kids did not go to school. They worked in a rubb~i~sh OPTION dump.",
           "Scott looked at the children working in the middle of d~ea~dly OPTION smoke and burning rubbish and f~e~lt OPTION sad. He wanted to help these children. He dec~i~ded OPTION to qu~i~t OPTION his job and help the k~i~ds OPTION of Cambodia.",
@@ -181,12 +182,13 @@
         ]
       },
       "intermediate news stories": {
-        "level": "intermediate",
-        "subscription": 1,
-        "title": "Choose the correct sound: ~/ɪ/~ (the short ‘i’ sound); ~/e/~ (the short ‘e’ sound), or '~0~' (not the short 'i' sound; not the short 'e' sound)",
-        "headline": "From riches to rags",
-        "options": ["...", "ɪ", "e", "0"],
-        "answers": [
+        level: "intermediate",
+        subscription: 1,
+        title:
+          "Choose the correct sound: ~/ɪ/~ (the short ‘i’ sound); ~/e/~ (the short ‘e’ sound), or '~0~' (not the short 'i' sound; not the short 'e' sound)",
+        headline: "From riches to rags",
+        options: ["...", "ɪ", "e", "0"],
+        answers: [
           "ɪ",
           "ɪ",
           "ɪ",
@@ -232,7 +234,7 @@
           "0",
           "ɪ"
         ],
-        "sentences": [
+        sentences: [
           "Scott Neeson had everyth~i~ng OPTION: a job earning $1 m~i~llion OPTION a year, an expens~i~ve OPTION car and a b~i~g OPTION house. He was the h~ea~d OPTION of Sony P~i~ctures OPTION and was r~i~ch OPTION. He l~i~ved OPTION in America.",
           "In 2004, he trav~e~lled OPTION to Cambodia. During his tr~i~p OPTION he v~i~sited OPTION a rubb~i~sh OPTION dump to f~i~nd OPTION four ~i~ll OPTION children someone had told him about.",
           "As Scott looked at the children working in the m~i~ddle OPTION of d~ea~dly OPTION smoke and burning rubbish, he rec~ei~ved OPTION a tel~e~phone OPTION call from his Amer~i~can OPTION office. The off~i~ce OPTION told him that a star actor from Sony Pictures was ‘p~i~ssed OPTION off because his f~a~vourite OPTION computer game was not on his pr~i~vate OPTION plane. The actor who was ~ear~ning OPTION $20 million a f~i~lm OPTION said ‘L~i~fe OPTION wasn’t m~ea~nt OPTION to be that d~i~fficult OPTION’ . Scott made the dec~i~sion OPTION then and there to l~ea~ve OPTION his job and help the k~i~ds OPTION of Cambodia.",
@@ -242,9 +244,9 @@
         ]
       },
       "minimal pairs dominos": {
-        "subscription": 1,
-        "options": ["I", "i:", "aɪ", "e", "ɜː"],
-        "pairs": [
+        subscription: 1,
+        options: ["I", "i:", "aɪ", "e", "ɜː"],
+        pairs: [
           ["~ea~ch", "~i~tch"],
           ["b~e~ll", "b~i~ll"],
           ["r~i~ch", "r~ea~ch"],
@@ -276,8 +278,8 @@
         ]
       },
       "words maze": {
-        "subscription": 1,
-        "words": [
+        subscription: 1,
+        words: [
           ["itch", "kind", "friend", "pizze", "diet"],
           ["six", "final", "machine", "night", "item"],
           ["ticket", "stir", "gym", "internet", "typical"],
@@ -288,7 +290,7 @@
           ["simple", "climb", "trip", "vineyard", "give"],
           ["begin", "business", "syrup", "guide", "million"]
         ],
-        "correct": [
+        correct: [
           "itch",
           "six",
           "ticket",
@@ -318,4 +320,4 @@
       }
     }
   }
-}
+};
