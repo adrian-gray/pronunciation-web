@@ -6,7 +6,9 @@ import Cell from "./Cell";
 import MemberGate from "./MemberGate";
 import SplitHilite from "./SplitHilite";
 
-export default props => {
+import { IOddOneOutProps } from "./../../@types/PronounceWeb";
+
+export default (props: IOddOneOutProps) => {
   const title = `Select the words that ~DON'T~ have the ${props.tag} – ${props.ipa} sound.`;
 
   const [rowHiliteColor, setRowHiliteColor] = useState(

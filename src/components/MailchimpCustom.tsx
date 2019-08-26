@@ -16,13 +16,15 @@ export default props => {
   const [formStatus, setFormStatus] = useState(null);
 
   const handleChange = property => {
-    return e => {
+    return (e: React.FormEvent) => {
+      const element = e.target as HTMLInputElement;
+      const value = element.value;
       switch (property) {
         case "name":
-          setName(e.target.value);
+          setName(value);
           break;
         case "email":
-          setEmail(e.target.value);
+          setEmail(value);
           break;
         default:
           console.log(`Erm. what's a ${property}?`);

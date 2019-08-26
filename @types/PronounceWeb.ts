@@ -15,23 +15,6 @@ export interface IGame extends Phaser.Game {
   isAuth?: boolean;
 }
 
-export interface INewsStoriesCustomProps {
-  title: string;
-  headline: string;
-  sentences: string[];
-  options: string[];
-  answers: string[];
-  userAuth: number;
-  other: any[];
-}
-
-export interface INewsStoriesCustomState {
-  sentences: string[];
-  selectedOption: number[];
-  selectedBgColour: string[];
-  other: any[];
-}
-
 export interface ILoginProps {
   user: any;
 }
@@ -49,4 +32,31 @@ export interface ISoundData {
   title: string;
   tag: string;
   activities: any;
+}
+
+export interface INewsStoriesCustomProps {
+  title: string;
+  headline: string;
+  sentences: string[];
+  options: string[];
+  answers: string[];
+  userAuth: number;
+  other: any[];
+}
+
+export interface INewsStoriesCustomState {
+  sentences: string[];
+  selectedOption: number[];
+  selectedBgColour: string[];
+  other: any[];
+}
+
+export interface IOddOneOutProps {
+  tag: string;
+  ipa: string;
+  subscription: number;
+  example: string[];
+  exampleHilite: number;
+  rows: string[][];
+  correct: string[];
 }
