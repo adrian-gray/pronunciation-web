@@ -7,10 +7,12 @@ afterEach(cleanup);
 
 test("FindTheWords", async () => {
   const props = {
+    tag: "~a",
     ipa: "a:",
     words: ["foo", "bar", "baz", "quox", "apple", "banana", "chad", "elle"],
     correct: ["foo", "bar", "baz"],
-    userAuth: 1
+    isUserAuth: true,
+    isHearTheDifference: false
   };
 
   const { container } = render(<FindTheWords {...props} />);

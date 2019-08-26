@@ -3,14 +3,19 @@ import { Link } from "react-router-dom";
 
 import { capitalise } from "./../utils/utils";
 
-const toLink = (phoneme, activity) => {
+const toLink = (phoneme: string, activity: string) => {
   const title = capitalise(activity);
   const websafe = activity.split(" ").join("-");
   const link = `/sound/${phoneme}/${websafe}`;
   return { title, link };
 };
 
-export default props => {
+export default (props: {
+  accessStatus: string;
+  activity: string;
+  phoneme: string;
+  subscriptionLevel: number;
+}) => {
   const { accessStatus, activity, phoneme, subscriptionLevel } = props;
   const { title, link } = toLink(phoneme, activity);
 

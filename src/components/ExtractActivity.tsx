@@ -15,14 +15,19 @@ import TongueTwisters from "./../components/TongueTwisters";
 import Words from "./../components/Words";
 import WordsMaze from "./../components/WordsMaze";
 
-const ExtractActivity = params => {
+const ExtractActivity = (params: {
+  props: any;
+  activityName: string;
+  data: any;
+  subscriptionLevel: number;
+}) => {
   const { props, activityName, data, subscriptionLevel } = params;
 
   let activityComponent = null;
   const activity = data.activities[activityName];
   const requiredSubscriptionLevel: number =
     (activity && activity["subscription"]) || 0;
-  const userAuth: boolean = subscriptionLevel >= requiredSubscriptionLevel;
+  const isUserAuth: boolean = subscriptionLevel >= requiredSubscriptionLevel;
 
   switch (activityName) {
     case "common words":
@@ -30,7 +35,7 @@ const ExtractActivity = params => {
         <CommonWords
           ipa={data.ipa}
           words={activity.words}
-          userAuth={userAuth}
+          isUserAuth={isUserAuth}
         />
       );
       break;
@@ -40,7 +45,7 @@ const ExtractActivity = params => {
         <Dialogues
           ipa={data.ipa}
           dialogues={activity.dialogues}
-          userAuth={userAuth}
+          isUserAuth={isUserAuth}
         />
       );
       break;
@@ -52,7 +57,8 @@ const ExtractActivity = params => {
           tag={data.tag}
           words={activity.words}
           correct={activity.correct}
-          userAuth={userAuth}
+          isHearTheDifference={false}
+          isUserAuth={isUserAuth}
         />
       );
       break;
@@ -62,10 +68,10 @@ const ExtractActivity = params => {
         <FindTheWords
           ipa={data.ipa}
           tag={data.tag}
-          OddOneOut
           words={activity.words}
           correct={activity.correct}
-          userAuth={userAuth}
+          isUserAuth={isUserAuth}
+          isHearTheDifference={false}
         />
       );
       break;
@@ -79,7 +85,7 @@ const ExtractActivity = params => {
           ipa={data.ipa}
           tag={data.tag}
           rows={activity.rows}
-          userAuth={userAuth}
+          isUserAuth={isUserAuth}
         />
       );
       break;
@@ -90,7 +96,7 @@ const ExtractActivity = params => {
           ipa={data.ipa}
           arr={activity.text}
           image={activity.image}
-          userAuth={userAuth}
+          isUserAuth={isUserAuth}
         />
       );
       break;
@@ -101,14 +107,14 @@ const ExtractActivity = params => {
           ipa={data.ipa}
           tag={data.tag}
           pairs={activity.pairs}
-          userAuth={userAuth}
+          isUserAuth={isUserAuth}
         />
       );
       break;
 
     case "movie":
       activityComponent = (
-        <Movie ipa={data.ipa} url={activity.url} userAuth={userAuth} />
+        <Movie ipa={data.ipa} url={activity.url} isUserAuth={isUserAuth} />
       );
       break;
 
@@ -123,7 +129,7 @@ const ExtractActivity = params => {
           options={activity.options}
           sentences={activity.sentences}
           answers={activity.answers}
-          userAuth={userAuth}
+          isUserAuth={isUserAuth}
           {...props}
         />
       );
@@ -134,7 +140,7 @@ const ExtractActivity = params => {
         <Phrases
           phrases={activity.phrases}
           ipa={data.ipa}
-          userAuth={userAuth}
+          isUserAuth={isUserAuth}
         />
       );
       break;
@@ -150,14 +156,14 @@ const ExtractActivity = params => {
         <TongueTwisters
           tag={data.tag}
           tongueTwisters={activity.twisters}
-          userAuth={userAuth}
+          isUserAuth={isUserAuth}
         />
       );
       break;
 
     case "words":
       activityComponent = (
-        <Words ipa={data.ipa} words={activity.words} userAuth={userAuth} />
+        <Words ipa={data.ipa} words={activity.words} isUserAuth={isUserAuth} />
       );
       break;
 
@@ -168,7 +174,7 @@ const ExtractActivity = params => {
           tag={data.tag}
           words={activity.words}
           correct={activity.correct}
-          userAuth={userAuth}
+          isUserAuth={isUserAuth}
         />
       );
       break;

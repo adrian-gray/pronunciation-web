@@ -3,7 +3,7 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import Container from "react-bootstrap/Container";
 
-import MailchimpCustom from "./MailchimpCustom";
+import MailchimpCustom from "./MailChimpCustom";
 
 const url =
   "//endual.us8.list-manage.com/subscribe/post?u=5cfcc43825365c2c32230cdde&id=f0489cd39a";
@@ -20,7 +20,7 @@ const form = (params: IMailChimp) => {
     <MailchimpCustom
       status={status}
       message={message}
-      onValidated={formData => subscribe(formData)}
+      onValidated={(formData: any) => subscribe(formData)}
     />
   );
 };

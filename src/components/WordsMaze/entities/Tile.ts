@@ -8,7 +8,18 @@ const YELLOW = 0xffffcc;
 const BLUE = 0xccccff;
 const STACK = "'Helvetica Neue', Helvetica, Arial, sans-serif";
 
-export default function Tile(params) {
+interface TileParams {
+  index: number;
+  state: Phaser.State;
+  $tiles: Phaser.Signal;
+  parent: Phaser.Group;
+  TILE_SIZE: number;
+  row: number;
+  col: number;
+  word: string;
+}
+
+export default function Tile(params: TileParams) {
   const { index, state, $tiles, parent, TILE_SIZE, row, col, word } = params;
 
   const group = state.add.group();
@@ -32,7 +43,7 @@ export default function Tile(params) {
     g.beginFill(color);
     g.lineStyle(2, STROKE, 1);
 
-    g.drawRect(0, 0, TILE_SIZE, TILE_SIZE, 5);
+    g.drawRect(0, 0, TILE_SIZE, TILE_SIZE);
     return g;
   }
 

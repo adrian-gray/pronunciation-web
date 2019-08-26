@@ -1,13 +1,14 @@
 import React from "react";
+import { IFindTheWordsProps } from "./../../@types/PronounceWeb";
 
 import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
 
-export default props => {
+export default (props: IFindTheWordsProps) => {
   const { ipa, words } = props;
-  const cells = words.map((el, index) => (
+  const cells = words.map((el: string, index: number) => (
     <td className="cell padded-cell" key={index}>
       <p className="large-text">
         <SplitHilite str={el} key={el} />

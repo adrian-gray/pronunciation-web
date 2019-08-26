@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { auth } from "./../firebase";
 
-import { ILoginProps } from "./../../@types/PronounceWeb";
+import { IUser } from "./../../@types/PronounceWeb";
 
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 
-export default (props: ILoginProps) => {
+export default (props: { user: IUser }) => {
   const [signupName, setSignupName] = useState("");
   const [signupEmail, setSignupEmail] = useState("");
   const [signinEmail, setSigninEmail] = useState("");

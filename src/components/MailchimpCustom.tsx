@@ -4,7 +4,11 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 
-export default props => {
+export default (props: {
+  status?: string;
+  message?: string;
+  onValidated?: any;
+}) => {
   const [status, setStatus] = useState(null);
   const [message, setMessage] = useState(null);
   const [name, setName] = useState("");
@@ -15,7 +19,7 @@ export default props => {
   const [emailErrorMsg, setEmailErrorMsg] = useState("");
   const [formStatus, setFormStatus] = useState(null);
 
-  const handleChange = property => {
+  const handleChange = (property: string) => {
     return (e: React.FormEvent) => {
       const element = e.target as HTMLInputElement;
       const value = element.value;

@@ -7,7 +7,7 @@ afterEach(cleanup);
 
 test("WordsMaze", async () => {
   const props = {
-    userAuth: 1,
+    isUserAuth: true,
     tag: "bob",
     ipa: "b~",
     words: ["cat", "dog", "mouse", "bunny", "shoe"],

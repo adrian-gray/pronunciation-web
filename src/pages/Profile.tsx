@@ -1,9 +1,11 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 
+import { IUser } from "./../../@types/PronounceWeb";
+
 import Container from "react-bootstrap/Container";
 
-export default props => {
+export default (props: { user: IUser }) => {
   const { user } = props;
 
   if (!user) {

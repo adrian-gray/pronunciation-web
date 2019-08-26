@@ -5,7 +5,7 @@ import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
 
-export default props => {
+export default (props: { ipa: string; pairs: string[]; tag: string }) => {
   const { ipa, pairs, tag } = props;
 
   const rows = pairs.map((pair, key) => (

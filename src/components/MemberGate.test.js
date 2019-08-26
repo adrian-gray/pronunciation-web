@@ -7,7 +7,8 @@ afterEach(cleanup);
 
 test("MemberGate authorized", async () => {
   const props = {
-    userAuth: false
+    isUserAuth: true,
+    content: "Hello"
   };
 
   const { container } = render(<MemberGate {...props} />);

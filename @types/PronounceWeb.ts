@@ -1,13 +1,8 @@
-import { RouteComponentProps } from "react-router-dom";
-
 export interface IUser {
+  displayName?: string;
   id?: string;
   email?: string;
-}
-
-export interface IProps extends RouteComponentProps {
-  subscriptionLevel: number;
-  user: IUser;
+  photoURL?: string;
 }
 
 export interface IGame extends Phaser.Game {
@@ -15,48 +10,19 @@ export interface IGame extends Phaser.Game {
   isAuth?: boolean;
 }
 
-export interface ILoginProps {
-  user: any;
-}
-
-interface SoundMatchParams {
-  phoneme: string;
-  activity: string;
-}
-export interface ISoundProps extends RouteComponentProps<SoundMatchParams> {
-  subscriptionLevel: number;
-}
-
-export interface ISoundData {
-  ipa: string;
-  title: string;
-  tag: string;
-  activities: any;
-}
-
-export interface INewsStoriesCustomProps {
-  title: string;
-  headline: string;
-  sentences: string[];
-  options: string[];
-  answers: string[];
-  userAuth: number;
-  other: any[];
-}
-
-export interface INewsStoriesCustomState {
-  sentences: any[];
-  selectedOption: number[];
-  selectedBgColour: string[];
-  other?: any[];
-}
-
-export interface IOddOneOutProps {
+export interface IWordsMaze {
   tag: string;
   ipa: string;
-  subscription: number;
-  example: string[];
-  exampleHilite: number;
-  rows: string[][];
+  isUserAuth: boolean;
+  words: string[];
+  correct: string[];
+}
+
+export interface IFindTheWordsProps {
+  isUserAuth: boolean;
+  tag: string;
+  ipa: string;
+  isHearTheDifference: boolean;
+  words: string[];
   correct: string[];
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-
-import { ISoundData, ISoundProps } from "./../../@types/PronounceWeb";
+import { RouteComponentProps } from "react-router-dom";
 
 import Container from "react-bootstrap/Container";
 
@@ -10,6 +9,15 @@ import ExtractActivity from "../components/ExtractActivity";
 import SEO from "../components/SEO";
 import SoundTitle from "../components/SoundTitle";
 
+interface SoundMatchParams {
+  phoneme: string;
+  activity: string;
+}
+
+interface ISoundProps extends RouteComponentProps<SoundMatchParams> {
+  subscriptionLevel: number;
+}
+
 export default (props: ISoundProps) => {
   const phoneme = props.match.params.phoneme;
   const activity =
@@ -17,7 +25,12 @@ export default (props: ISoundProps) => {
       props.match.params.activity.replace(/-/g, " ")) ||
     "none";
 
-  const data: ISoundData = soundsData[phoneme];
+  const data: {
+    ipa: string;
+    title: string;
+    tag: string;
+    activities: any;
+  } = soundsData[phoneme];
   console.log("DATA>", data);
 
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);

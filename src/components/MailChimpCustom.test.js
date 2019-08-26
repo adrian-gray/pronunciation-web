@@ -6,7 +6,9 @@ import MailChimpCustom from "./MailChimpCustom";
 afterEach(cleanup);
 
 test("MailChimpCustom", async () => {
-  const props = {};
+  const props = {
+    status: "OK"
+  };
 
   const { container } = render(<MailChimpCustom {...props} />);
 

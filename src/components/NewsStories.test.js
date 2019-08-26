@@ -17,8 +17,8 @@ test("NewsStories", async () => {
       "It lays m~a~ny OPTION eggs – about 20 million ~e~ggs OPTION.",
       "The eel d~ie~s OPTION, but its offpsring float back to Australia. They swim to the bay next to Sydney Airport. They move across the swampy land, th~e~ OPTION two golf courses, through the drainpipes and creeks back to the pond in the park'."
     ],
-    other: [],
-    userAuth: 1
+    isUserAuth: true,
+    other: ["foo"]
   };
 
   const { container } = render(<NewsStories {...props} />);

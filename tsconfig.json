@@ -14,7 +14,11 @@
     "resolveJsonModule": true,
     "typeRoots": ["./node_modules/@types"]
   },
-  "files": ["@types/PronounceWeb.ts", "@types/phaser/phaser.d.ts"],
+  "files": [
+    "@types/PronounceWeb.ts",
+    "@types/phaser/phaser.d.ts",
+    "@types/globals.d.ts"
+  ],
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

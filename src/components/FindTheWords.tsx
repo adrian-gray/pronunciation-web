@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IFindTheWordsProps } from "./../../@types/PronounceWeb";
 
 import Container from "react-bootstrap/Container";
 
@@ -6,13 +7,13 @@ import MemberGate from "./MemberGate";
 import SplitHilite from "./SplitHilite";
 import Tile from "./Tile";
 
-export default props => {
+export default (props: IFindTheWordsProps) => {
   const [isCorrect, setIsCorrect] = useState(
     Array(props.words.length).fill(undefined)
   );
   const [allCorrect, setAllCorrect] = useState(false);
 
-  function checkAllCorrect(correct) {
+  function checkAllCorrect(correct: boolean[]) {
     let numRemaining = props.correct.length;
 
     for (let i = 0; i < props.words.length; i++) {
@@ -25,7 +26,7 @@ export default props => {
     return numRemaining === 0;
   }
 
-  const handleClick = index => {
+  const handleClick = (index: number) => {
     const isWordCorrect = props.correct.includes(props.words[index]);
     const newStateIsCorrect = isCorrect.slice();
 
@@ -46,7 +47,7 @@ export default props => {
     resultBG = true;
   }
 
-  const wordTiles = words.map((word, index) => (
+  const wordTiles = words.map((word: string, index: number) => (
     <Tile
       word={word}
       key={index}
@@ -88,7 +89,7 @@ export default props => {
     <Container>
       {title}
       <p>{description}</p>
-      <MemberGate content={display} userAuth={props.userAuth} />
+      <MemberGate content={display} isUserAuth={props.isUserAuth} />
     </Container>
   );
 };

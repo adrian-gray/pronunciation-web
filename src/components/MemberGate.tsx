@@ -1,9 +1,9 @@
 import React from "react";
 
-export default props => {
+export default (props: { isUserAuth: boolean; content: any }) => {
   let display;
 
-  if (props.userAuth) {
+  if (props.isUserAuth) {
     display = props.content;
   } else {
     display = (

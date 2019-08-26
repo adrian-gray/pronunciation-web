@@ -6,7 +6,15 @@ import Cell from "./Cell";
 import MemberGate from "./MemberGate";
 import SplitHilite from "./SplitHilite";
 
-import { IOddOneOutProps } from "./../../@types/PronounceWeb";
+interface IOddOneOutProps {
+  isUserAuth: boolean;
+  tag: string;
+  ipa: string;
+  example: string[];
+  exampleHilite: number;
+  rows: string[][];
+  correct: string[];
+}
 
 export default (props: IOddOneOutProps) => {
   const title = `Select the words that ~DON'T~ have the ${props.tag} – ${props.ipa} sound.`;
@@ -54,8 +62,8 @@ export default (props: IOddOneOutProps) => {
     );
   }
 
-  function handleClick(params) {
-    if (!props.userAuth) return;
+  function handleClick(params: { column: number; row: number }) {
+    if (!props.isUserAuth) return;
     const { column, row } = params;
     const arr = selected.slice();
     arr[row] = column;
@@ -64,9 +72,9 @@ export default (props: IOddOneOutProps) => {
     checkComplete(arr);
   }
 
-  function checkComplete(arr) {
+  function checkComplete(arr: number[]) {
     const hiliteColor = rowHiliteColor.slice();
-    arr.forEach((column, row) => {
+    arr.forEach((column: number, row: number) => {
       if (column > -1) {
         const word = props.rows[row][column];
         if (props.correct.includes(word)) {
@@ -94,7 +102,7 @@ export default (props: IOddOneOutProps) => {
       <p>
         {`Can you spot the difference? In each group of words there are three with the ${props.tag} vowel sound and one with a different vowel sound. Say the words and choose the one that doesn’t sound the same as the others. Advance to the next level with more challenging words. Odd One Out encourages you to identify the differences between words with similar sounding vowels.`}
       </p>
-      <MemberGate content={content} userAuth={props.userAuth} />
+      <MemberGate content={content} isUserAuth={props.isUserAuth} />
     </div>
   );
 };

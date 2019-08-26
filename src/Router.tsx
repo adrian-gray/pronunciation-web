@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-
-import { IProps } from "./../@types/PronounceWeb";
+import { RouteComponentProps } from "react-router-dom";
+import { IUser } from "./../@types/PronounceWeb";
 
 import FourOhFour from "./pages/404";
 import Home from "./pages/Home";
@@ -10,7 +10,12 @@ import Login from "./pages/Login";
 import Sound from "./pages/Sound";
 import Profile from "./pages/Profile";
 
-export default (props: IProps) => {
+interface IRouterProps extends RouteComponentProps {
+  subscriptionLevel: number;
+  user: IUser;
+}
+
+export default (props: IRouterProps) => {
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
   const [user, setUser] = useState(null);
 

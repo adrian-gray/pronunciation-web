@@ -1,10 +1,8 @@
 import React from "react";
 
-import Container from "react-bootstrap/Container";
-
 import { capitalise } from "./../utils/utils";
 
-export default props => {
+export default (props: { tag: string; tongueTwisters: string[] }) => {
   const { tag, tongueTwisters } = props;
 
   const twisters = tongueTwisters.map((line, index) => (

@@ -4,10 +4,10 @@ import SplitHilite from "./SplitHilite";
 
 import Container from "react-bootstrap/Container";
 
-export default props => {
+export default (props: { ipa: string; sentences: string[] }) => {
   const { ipa, sentences } = props;
 
-  const lines = sentences.map((line, index) => (
+  const lines = sentences.map((line: string, index: number) => (
     <Container className="sub-canvas personal-space" key={index}>
       <p>{line}</p>
     </Container>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IWordsMaze } from "./../../@types/PronounceWeb";
 import Script from "react-load-script";
 
 import MemberGate from "./MemberGate";
@@ -7,14 +8,6 @@ import WordsMaze from "./WordsMaze/index";
 
 const NATIVE_WIDTH = 750;
 const NATIVE_HEIGHT = 750;
-
-interface IWordsMaze {
-  tag: string;
-  ipa: string;
-  userAuth: number;
-  words: string[];
-  correct: string[];
-}
 
 export default (props: IWordsMaze) => {
   let screenWidth = NATIVE_WIDTH;
@@ -25,7 +18,7 @@ export default (props: IWordsMaze) => {
     wordsMaze.init({
       words: props.words,
       correct: props.correct,
-      auth: props.userAuth
+      auth: props.isUserAuth
     });
   };
 
@@ -62,7 +55,7 @@ export default (props: IWordsMaze) => {
       </h3>
       <p>{description}</p>
       <p>{instructions}</p>
-      <MemberGate content={display} userAuth={props.userAuth} />
+      <MemberGate content={display} isUserAuth={props.isUserAuth} />
     </div>
   );
 };

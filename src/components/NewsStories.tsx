@@ -1,14 +1,27 @@
 import React, { Component } from "react";
-import {
-  INewsStoriesCustomProps,
-  INewsStoriesCustomState
-} from "./../../@types/PronounceWeb";
 
 import Container from "react-bootstrap/Container";
 
 import SplitHilite from "./SplitHilite";
 import MemberGate from "./MemberGate";
 import Picker from "./Picker";
+
+interface INewsStoriesCustomProps {
+  title: string;
+  headline: string;
+  sentences: string[];
+  options: string[];
+  answers: string[];
+  isUserAuth: boolean;
+  other: any[];
+}
+
+interface INewsStoriesCustomState {
+  sentences: any[];
+  selectedOption: number[];
+  selectedBgColour: string[];
+  other?: any[];
+}
 
 const countSelectors = (arr: string[]) => {
   let count = 0;
@@ -26,13 +39,10 @@ class NewsStories extends Component<
   constructor(props: INewsStoriesCustomProps) {
     super(props);
 
-    const { ...other } = props;
-
     this.state = {
       sentences: [],
       selectedOption: [],
-      selectedBgColour: [],
-      other: []
+      selectedBgColour: []
     } as INewsStoriesCustomState;
 
     this.handleClick = this.handleClick.bind(this);
@@ -77,7 +87,6 @@ class NewsStories extends Component<
               handleClick={this.handleClick}
               key={key}
               index={id}
-              {...this.state.other}
             />
           );
           id++;
@@ -136,7 +145,7 @@ class NewsStories extends Component<
   }
 
   handleClick(index: number) {
-    if (!this.props.userAuth) return;
+    if (!this.props.isUserAuth) return;
     const newStateSelectedOption = this.state.selectedOption.slice();
     const selectedBgColour: string[] = [];
     newStateSelectedOption[index] =
@@ -185,7 +194,7 @@ class NewsStories extends Component<
         </h5>
         <MemberGate
           content={content}
-          userAuth={this.props.userAuth}
+          isUserAuth={this.props.isUserAuth}
           {...this.props.other}
         />
       </Container>
