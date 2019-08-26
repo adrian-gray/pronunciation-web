@@ -5,7 +5,7 @@
     "postbuild": "react-snap",
     "deploy": "yarn firebase deploy",
     "sitemap": "node ./bin/generate-sitemap.js",
-    "types": "tsc",
+    "types": "yarn tsc",
     "test": "jest --watch",
     "test:update": "jest -u",
     "test:coverage": "jest --coverage"

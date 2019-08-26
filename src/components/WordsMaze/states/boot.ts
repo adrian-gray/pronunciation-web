@@ -1,10 +1,8 @@
-/* global Phaser, document */
-
 import { IGame } from "../../../../@types/PronounceWeb";
 
 const Boot = function boot() {};
 
-let state;
+let state: Phaser.State;
 let game: IGame;
 
 Boot.prototype = {

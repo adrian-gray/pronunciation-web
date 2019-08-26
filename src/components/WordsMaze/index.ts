@@ -1,3 +1,4 @@
+/// <reference path="./../../../@types/phaser/phaser.d.ts" />
 import Boot from "./states/boot";
 import Game from "./states/game";
 
