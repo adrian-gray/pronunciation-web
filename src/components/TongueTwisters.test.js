@@ -11,7 +11,8 @@ test("TongueTwisters", async () => {
     tongueTwisters: [
       "The cat can't cope crying",
       "My mum must make melon molasses"
-    ]
+    ],
+    isUserAuth: true
   };
 
   const { container } = render(<TongueTwisters {...props} />);

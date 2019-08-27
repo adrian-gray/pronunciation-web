@@ -10,7 +10,7 @@ import Login from "./pages/Login";
 import Sound from "./pages/Sound";
 import Profile from "./pages/Profile";
 
-interface IRouterProps extends RouteComponentProps {
+interface IRouterProps {
   subscriptionLevel: number;
   user: IUser;
 }

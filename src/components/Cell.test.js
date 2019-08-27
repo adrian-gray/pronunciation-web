@@ -7,7 +7,7 @@ import Cell from "./Cell";
 afterEach(cleanup);
 
 test("Cell", async () => {
-  const hilite = true;
+  const hilite = "blue-green";
   const handleClick = function noop() {};
   const { container } = render(
     <table>
@@ -18,6 +18,8 @@ test("Cell", async () => {
             key="dog"
             str="rabbit"
             handleClick={handleClick}
+            row={null}
+            column={null}
           />
         </tr>
       </tbody>
@@ -28,12 +30,19 @@ test("Cell", async () => {
 });
 
 test("Cell with hilite", async () => {
-  const hilite = false;
+  const hilite = "maganta";
   const { container } = render(
     <table>
       <tbody>
         <tr>
-          <Cell hilite={hilite} key="dog" str="rabbit" handleClick={null} />
+          <Cell
+            hilite={hilite}
+            key="dog"
+            str="rabbit"
+            row={null}
+            column={null}
+            handleClick={null}
+          />
         </tr>
       </tbody>
     </table>
@@ -42,7 +51,7 @@ test("Cell with hilite", async () => {
 });
 
 test("Cell click callback", async () => {
-  const hilite = true;
+  const hilite = "orange";
   const mockCallback = jest.fn();
   const container = mount(
     <table>
@@ -53,6 +62,8 @@ test("Cell click callback", async () => {
             hilite={hilite}
             key="dog"
             str="rabbit"
+            row={null}
+            column={null}
             handleClick={mockCallback}
           />
         </tr>
@@ -68,13 +79,21 @@ test("Cell click callback", async () => {
 });
 
 test("Cell click no callback", async () => {
-  const hilite = true;
+  const hilite = "sepia";
   const mockCallback = jest.fn();
   const container = mount(
     <table>
       <tbody>
         <tr>
-          <Cell className="bob" hilite={hilite} key="dog" str="rabbit" />
+          <Cell
+            className="bob"
+            hilite={hilite}
+            key="dog"
+            str="rabbit"
+            row={null}
+            column={null}
+            handleClick={mockCallback}
+          />
         </tr>
       </tbody>
     </table>

@@ -22,7 +22,6 @@ const ExtractActivity = (params: {
   subscriptionLevel: number;
 }) => {
   const { props, activityName, data, subscriptionLevel } = params;
-
   let activityComponent = null;
   const activity = data.activities[activityName];
   const requiredSubscriptionLevel: number =
@@ -96,7 +95,6 @@ const ExtractActivity = (params: {
           ipa={data.ipa}
           arr={activity.text}
           image={activity.image}
-          isUserAuth={isUserAuth}
         />
       );
       break;
@@ -136,13 +134,7 @@ const ExtractActivity = (params: {
       break;
 
     case "phrases":
-      activityComponent = (
-        <Phrases
-          phrases={activity.phrases}
-          ipa={data.ipa}
-          isUserAuth={isUserAuth}
-        />
-      );
+      activityComponent = <Phrases phrases={activity.phrases} ipa={data.ipa} />;
       break;
 
     case "say the sentences":
@@ -162,9 +154,7 @@ const ExtractActivity = (params: {
       break;
 
     case "words":
-      activityComponent = (
-        <Words ipa={data.ipa} words={activity.words} isUserAuth={isUserAuth} />
-      );
+      activityComponent = <Words ipa={data.ipa} words={activity.words} />;
       break;
 
     case "words maze":

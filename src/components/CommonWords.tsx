@@ -6,7 +6,11 @@ import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
 
-export default (props: IFindTheWordsProps) => {
+export default (props: {
+  ipa: string;
+  words: string[];
+  isUserAuth: boolean;
+}) => {
   const { ipa, words } = props;
   const cells = words.map((el: string, index: number) => (
     <td className="cell padded-cell" key={index}>

@@ -2,7 +2,7 @@ import React from "react";
 
 import SplitHilite from "./SplitHilite";
 
-export default props => {
+export default (props: { phoneme: string; str: string }) => {
   const { phoneme, str } = props;
 
   return (

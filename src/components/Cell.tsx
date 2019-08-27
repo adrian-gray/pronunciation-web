@@ -1,8 +1,16 @@
 import React from "react";
 import SplitHilite from "./SplitHilite";
 
-export default props => {
-  const handleClick = e => {
+// TODO WTF have I needed to add row/column/onClick
+export default (props: {
+  str: string;
+  row: number;
+  column: number;
+  hilite: string;
+  handleClick: any;
+  className?: string;
+}) => {
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     if (!props.handleClick) return;
     props.handleClick({

@@ -11,7 +11,8 @@ test("Dialogues", async () => {
     dialogues: [
       ["foo", "bar", "baz", "quox"],
       ["apple", "banana", "chad", "elle"]
-    ]
+    ],
+    isUserAuth: true
   };
 
   const { container } = render(<Dialogues {...props} />);

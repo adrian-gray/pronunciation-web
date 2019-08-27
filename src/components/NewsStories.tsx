@@ -7,13 +7,13 @@ import MemberGate from "./MemberGate";
 import Picker from "./Picker";
 
 interface INewsStoriesCustomProps {
+  level: string;
   title: string;
   headline: string;
   sentences: string[];
   options: string[];
   answers: string[];
   isUserAuth: boolean;
-  other: any[];
 }
 
 interface INewsStoriesCustomState {
@@ -192,11 +192,7 @@ class NewsStories extends Component<
         <h5>
           <SplitHilite str={title} />
         </h5>
-        <MemberGate
-          content={content}
-          isUserAuth={this.props.isUserAuth}
-          {...this.props.other}
-        />
+        <MemberGate content={content} isUserAuth={this.props.isUserAuth} />
       </Container>
     );
   }

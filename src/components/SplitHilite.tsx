@@ -1,6 +1,6 @@
 import React from "react";
 
-export default props => {
+export default (props: { str: string }) => {
   const { str } = props;
   const elements = str.split(/(~)/);
   const arr = [];

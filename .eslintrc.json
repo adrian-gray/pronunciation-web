@@ -38,6 +38,7 @@
   "globals": {
     "expect": "readonly",
     "test": "readonly",
-    "afterEach": "readonly"
+    "afterEach": "readonly",
+    "jest": "readonly"
   }
 }

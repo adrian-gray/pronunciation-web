@@ -8,7 +8,8 @@ afterEach(cleanup);
 test("Movie", async () => {
   const props = {
     ipa: "a:",
-    url: "https://foo.com/movie.mpg"
+    url: "https://foo.com/movie.mpg",
+    isUserAuth: true
   };
 
   const { container } = render(<Movie {...props} />);

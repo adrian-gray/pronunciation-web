@@ -18,7 +18,8 @@ test("NewsStories", async () => {
       "The eel d~ie~s OPTION, but its offpsring float back to Australia. They swim to the bay next to Sydney Airport. They move across the swampy land, th~e~ OPTION two golf courses, through the drainpipes and creeks back to the pond in the park'."
     ],
     isUserAuth: true,
-    other: ["foo"]
+    other: ["foo"],
+    level: "beginner"
   };
 
   const { container } = render(<NewsStories {...props} />);

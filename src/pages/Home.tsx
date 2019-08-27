@@ -6,7 +6,7 @@ import soundsData from "./../data/sounds.js";
 import SEO from "../components/SEO";
 import Phoneme from "../components/Phoneme";
 
-export default props => {
+export default () => {
   const phonemes = soundsData;
   const list = Object.keys(phonemes);
   const cards = list.map(phoneme => {

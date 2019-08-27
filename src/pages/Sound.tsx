@@ -49,12 +49,21 @@ export default (props: ISoundProps) => {
 
   const SEOlocation = `sound ${phoneme} ${activity}`;
 
-  const activityComponent = ExtractActivity({
+  const passingProps = {
     props,
     activityName: activity,
     data,
     subscriptionLevel
-  });
+  };
+
+  const activityComponent = (
+    <ExtractActivity
+      activityName={activity}
+      data={data}
+      subscriptionLevel={subscriptionLevel}
+      props
+    />
+  );
 
   return (
     <Container>

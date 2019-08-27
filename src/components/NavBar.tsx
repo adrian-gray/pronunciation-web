@@ -1,11 +1,12 @@
 import React from "react";
+import { IUser } from "./../../@types/PronounceWeb";
 
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 
-export default props => {
+export default (props: { user: IUser; signout: any }) => {
   let homeLink = "/";
   let changeLoginStatus;
 

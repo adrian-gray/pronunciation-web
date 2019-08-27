@@ -9,7 +9,8 @@ test("MinimalPairs", async () => {
   const props = {
     ipa: "a:",
     tag: "dork",
-    pairs: [["fat", "cat"], ["happy", "dog"]]
+    pairs: [["fat", "cat"], ["happy", "dog"]],
+    isUserAuth: true
   };
 
   const { container } = render(<MinimalPairs {...props} />);

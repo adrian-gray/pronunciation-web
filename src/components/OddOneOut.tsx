@@ -46,7 +46,17 @@ export default (props: IOddOneOutProps) => {
 
     const guide = props.example.map((word, i) => {
       const hilite = i + 1 === props.exampleHilite ? "selected-bg" : null;
-      return <Cell str={word} key={i} hilite={hilite} />;
+      // TODO why am I passing extra data here?
+      return (
+        <Cell
+          str={word}
+          key={i}
+          hilite={hilite}
+          row={null}
+          column={null}
+          handleClick={(): void => null}
+        />
+      );
     });
 
     return (

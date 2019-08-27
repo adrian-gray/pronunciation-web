@@ -5,7 +5,13 @@ import Container from "react-bootstrap/Container";
 
 import SplitHilite from "./SplitHilite";
 
-export default props => {
+export default (props: {
+  phoneme: string;
+  ipa: string;
+  tag: string;
+  title: string;
+  words: string[];
+}) => {
   const { phoneme, ipa, tag, title, words } = props;
   const displayTitle = (
     <span>
@@ -14,7 +20,7 @@ export default props => {
   );
   const wordList = words
     .slice(0, 6)
-    .map(word => <SplitHilite str={word} key={word} />);
+    .map((word: string) => <SplitHilite str={word} key={word} />);
 
   return (
     <Container>

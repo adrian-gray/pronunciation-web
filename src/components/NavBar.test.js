@@ -8,7 +8,12 @@ import NavBar from "./NavBar";
 afterEach(cleanup);
 
 test("NavBar", async () => {
-  const props = {};
+  const props = {
+    user: {
+      displayName: "bob"
+    },
+    signout: jest.fn()
+  };
 
   const { container } = render(
     <BrowserRouter>

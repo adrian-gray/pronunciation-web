@@ -9,7 +9,7 @@ afterEach(cleanup);
 
 test("ActivityButton", async () => {
   const props = {
-    accessStatus: undefined,
+    accessStatus: "open",
     subscriptionLevel: 0,
     activity: "harry",
     phoneme: "a:"

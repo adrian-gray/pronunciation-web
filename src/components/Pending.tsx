@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 
 import { capitalise } from "./../utils/utils";
 
-export default props => {
+export default (props: { name: string }) => {
   const { name } = props;
 
   return (

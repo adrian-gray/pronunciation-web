@@ -4,11 +4,15 @@ import Container from "react-bootstrap/Container";
 
 import SplitHilite from "./SplitHilite";
 
-export default props => {
+export default (props: {
+  dialogues: string[][];
+  ipa: string;
+  isUserAuth: boolean;
+}) => {
   const { dialogues, ipa } = props;
 
-  const extractLines = dialogue => {
-    return dialogue.map((line, index) => {
+  const extractLines = (dialogue: string[]) => {
+    return dialogue.map((line: string, index: number) => {
       let style = "text-left";
       if (index % 2) style = "text-right";
       const classes = `tight-text list-group-item ${style}`;
@@ -21,7 +25,7 @@ export default props => {
     });
   };
 
-  const expandDialogue = (dialogue, index) => (
+  const expandDialogue = (dialogue: string[], index: number) => (
     <div className="sub-canvas" key={index}>
       <ul className="list-group">{extractLines(dialogue)}</ul>
     </div>

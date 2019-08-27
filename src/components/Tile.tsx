@@ -1,7 +1,12 @@
 import React from "react";
 
-export default props => {
-  const handleClick = e => {
+export default (props: {
+  index: number;
+  isCorrect: boolean;
+  word: string;
+  handleClick: any;
+}) => {
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     props.handleClick(props.index);
   };
 

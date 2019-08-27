@@ -2,7 +2,7 @@ import React from "react";
 
 import SplitHilite from "./SplitHilite";
 
-export default props => {
+export default (props: { ipa: string; url: string; isUserAuth: boolean }) => {
   const { ipa, url } = props;
 
   return (

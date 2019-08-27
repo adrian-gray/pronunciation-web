@@ -2,7 +2,11 @@ import React from "react";
 
 import { capitalise } from "./../utils/utils";
 
-export default (props: { tag: string; tongueTwisters: string[] }) => {
+export default (props: {
+  tag: string;
+  tongueTwisters: string[];
+  isUserAuth: boolean;
+}) => {
   const { tag, tongueTwisters } = props;
 
   const twisters = tongueTwisters.map((line, index) => (

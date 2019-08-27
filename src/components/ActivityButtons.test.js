@@ -9,6 +9,8 @@ afterEach(cleanup);
 
 test("ActivityButtons", async () => {
   const props = {
+    phoneme: "bob",
+    subscriptionLevel: 1,
     activityNames: [
       "foo",
       "bar",

@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 import Mailchimp from "../components/Mailchimp";
 import SEO from "../components/SEO";
 
-export default props => {
+export default () => {
   return (
     <Container>
       <SEO meta="landing" />

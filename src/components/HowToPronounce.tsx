@@ -6,7 +6,11 @@ import Col from "react-bootstrap/Col";
 
 import SplitHilite from "./SplitHilite";
 
-export default props => {
+export default (props: {
+  arr: string[];
+  ipa: string;
+  image: { url: string; alt: string; title: string };
+}) => {
   const { arr, image, ipa } = props;
   const { url, alt, title } = image;
 
