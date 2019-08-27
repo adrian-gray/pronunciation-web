@@ -11,7 +11,7 @@ export default (props: {
 
   const twisters = tongueTwisters.map((line, index) => (
     <div className="personal-space sub-canvas" key={index}>
-      <p>{line}</p>
+      <p className="no-margin-bottom">{line}</p>
     </div>
   ));
 

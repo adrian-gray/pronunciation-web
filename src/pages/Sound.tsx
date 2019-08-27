@@ -31,7 +31,6 @@ export default (props: ISoundProps) => {
     tag: string;
     activities: any;
   } = soundsData[phoneme];
-  console.log("DATA>", data);
 
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
 
@@ -61,7 +60,7 @@ export default (props: ISoundProps) => {
       activityName={activity}
       data={data}
       subscriptionLevel={subscriptionLevel}
-      props
+      props={props}
     />
   );
 

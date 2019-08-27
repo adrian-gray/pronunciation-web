@@ -181,11 +181,8 @@ const ExtractActivity = (params: {
       activityComponent = <Pending name={activityName} />;
       break;
 
-    case undefined:
-      break;
-
     default:
-      activityComponent = undefined;
+      activityComponent = null;
   }
 
   return activityComponent;

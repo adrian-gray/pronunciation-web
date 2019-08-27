@@ -14,7 +14,11 @@ export default (props: {
   const { arr, image, ipa } = props;
   const { url, alt, title } = image;
 
-  const list = arr.map((el, i) => <li key={i}>{el}</li>);
+  const list = arr.map((el, i) => (
+    <li key={i} className="list-group-item">
+      {el}
+    </li>
+  ));
 
   return (
     <div className="headspace">
@@ -31,8 +35,8 @@ export default (props: {
               <h5>{title}</h5>
             </div>
           </Col>
-          <Col>
-            <ul>{list}</ul>
+          <Col className="align-self-center">
+            <ul className="list-group">{list}</ul>
           </Col>
         </Row>
       </Container>

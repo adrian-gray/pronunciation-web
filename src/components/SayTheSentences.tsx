@@ -9,7 +9,7 @@ export default (props: { ipa: string; sentences: string[] }) => {
 
   const lines = sentences.map((line: string, index: number) => (
     <Container className="sub-canvas personal-space" key={index}>
-      <p>{line}</p>
+      <p className="no-margin-bottom">{line}</p>
     </Container>
   ));
 
