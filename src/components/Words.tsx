@@ -1,6 +1,5 @@
 import React from "react";
 
-import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
@@ -25,17 +24,17 @@ export default (props: { ipa: string; words: string[] }) => {
   });
 
   return (
-    <Container className="headspace">
-      <h4>
+    <div className="headspace">
+      <h3>
         {`Words using `}
         <SplitHilite str={ipa} />
-      </h4>
+      </h3>
 
-      <Container>
+      <div>
         <Table>
           <tbody>{list}</tbody>
         </Table>
-      </Container>
-    </Container>
+      </div>
+    </div>
   );
 };

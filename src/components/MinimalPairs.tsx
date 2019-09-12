@@ -1,6 +1,5 @@
 import React from "react";
 
-import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
@@ -34,11 +33,11 @@ export default (props: {
         {`English  minimal pairs with ${tag} - `}
         <SplitHilite str={ipa} />
       </h3>
-      <Container>
+      <div>
         <Table>
           <tbody>{rows}</tbody>
         </Table>
-      </Container>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import React from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
-import Container from "react-bootstrap/Container";
-
 import MailchimpCustom from "./MailChimpCustom";
 
 const url =
@@ -27,10 +25,10 @@ const form = (params: IMailChimp) => {
 
 export default () => {
   return (
-    <Container className="mailchimp-bg">
+    <div className="mailchimp-bg">
       <div className="mailchimp-subscribe">
         <MailchimpSubscribe url={url} render={form} />
       </div>
-    </Container>
+    </div>
   );
 };

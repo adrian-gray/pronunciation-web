@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Container from "react-bootstrap/Container";
-
 import SplitHilite from "./SplitHilite";
 
 export default (props: {
@@ -23,7 +21,7 @@ export default (props: {
     .map((word: string) => <SplitHilite str={word} key={word} />);
 
   return (
-    <Container>
+    <div className="headspace">
       <Link to={{ pathname: `/sound/${phoneme}` }} className="undecorated">
         <div>
           <h3>{displayTitle}</h3>
@@ -32,6 +30,6 @@ export default (props: {
           <h5>{`Click to learn more about the ${tag} sound`}</h5>
         </div>
       </Link>
-    </Container>
+    </div>
   );
 };

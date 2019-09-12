@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { RouteComponentProps } from "react-router-dom";
 
-import Container from "react-bootstrap/Container";
+import div from "react-bootstrap/div";
 
 import soundsData from "../data/sounds";
 import ActivityButtons from "../components/ActivityButtons";
@@ -40,9 +40,9 @@ export default (props: ISoundProps) => {
 
   if (!data) {
     return (
-      <Container>
-        <h4>{"Oops, not a valid sound"}</h4>
-      </Container>
+      <div>
+        <h3>{"Oops, not a valid sound"}</h3>
+      </div>
     );
   }
 
@@ -65,12 +65,12 @@ export default (props: ISoundProps) => {
   );
 
   return (
-    <Container>
+    <div className="headspace">
       <SEO meta={SEOlocation} />
       <SoundTitle phoneme={data.ipa} str={data.title} />
       <hr />
 
-      <h3>{`Pronunciation activities for ${data.tag}`}</h3>
+      <h1>{`Pronunciation activities for ${data.tag}`}</h1>
 
       <div>
         <ActivityButtons
@@ -82,6 +82,6 @@ export default (props: ISoundProps) => {
       <hr />
 
       {activityComponent}
-    </Container>
+    </div>
   );
 };

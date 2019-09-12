@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IFindTheWordsProps } from "./../../@types/PronounceWeb";
 
-import Container from "react-bootstrap/Container";
+import div from "react-bootstrap/div";
 
 import MemberGate from "./MemberGate";
 import SplitHilite from "./SplitHilite";
@@ -78,18 +78,18 @@ export default (props: IFindTheWordsProps) => {
   }
 
   const display = (
-    <Container className={resultBG ? "correct" : "incorrect"}>
+    <div className={resultBG ? "correct" : "incorrect"}>
       {wordTiles}
       <div className="clear-float" />
       {result}
-    </Container>
+    </div>
   );
 
   return (
-    <Container>
+    <div className="headspace">
       {title}
       <p>{description}</p>
       <MemberGate content={display} isUserAuth={props.isUserAuth} />
-    </Container>
+    </div>
   );
 };

@@ -1,7 +1,5 @@
 import React from "react";
-import { IFindTheWordsProps } from "./../../@types/PronounceWeb";
 
-import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
@@ -35,7 +33,7 @@ export default (props: {
   } while (cellCount < cells.length);
 
   return (
-    <Container className="headspace">
+    <div className="headspace">
       <h3>
         {"Common words with "}
         <SplitHilite str={ipa} />
@@ -45,6 +43,6 @@ export default (props: {
           <tbody>{rows}</tbody>
         </Table>
       </div>
-    </Container>
+    </div>
   );
 };

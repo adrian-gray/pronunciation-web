@@ -1,7 +1,5 @@
 import React from "react";
 
-import Container from "react-bootstrap/Container";
-
 import SplitHilite from "./SplitHilite";
 
 export default (props: {
@@ -34,12 +32,12 @@ export default (props: {
   const lines = dialogues.map(expandDialogue);
 
   return (
-    <Container>
+    <div className="headspace">
       <h3>
         {"Short dialogues using "}
         <SplitHilite str={ipa} />
       </h3>
       {lines}
-    </Container>
+    </div>
   );
 };

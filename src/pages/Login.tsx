@@ -5,7 +5,6 @@ import { auth } from "./../firebase";
 import { IUser } from "./../../@types/PronounceWeb";
 
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 
 export default (props: { user: IUser }) => {
@@ -64,17 +63,17 @@ export default (props: { user: IUser }) => {
   };
 
   return (
-    <Container>
+    <div className="headspace">
       {redirectToHome ? <Redirect to="/home" /> : null}
       <div>
-        <Container className="personal-space">
+        <div className="personal-space">
           <Button variant="primary" onClick={auth.handleGoogleLogin}>
             {`Login with Google`}
           </Button>
-        </Container>
+        </div>
       </div>
       <div>
-        <Container className="personal-space">
+        <div className="personal-space">
           <p className="head-space">{`Sign in with email`}</p>
           <Form>
             <Form.Row>
@@ -98,10 +97,10 @@ export default (props: { user: IUser }) => {
               <Button onClick={signIn}>{"Sign in"}</Button>
             </Form.Row>
           </Form>
-        </Container>
+        </div>
         <hr />
       </div>
-      <Container className="personal-space">
+      <div className="personal-space">
         <p className="head-space">{`Or, sign up with email `}</p>
         <Form>
           <Form.Row>
@@ -138,7 +137,7 @@ export default (props: { user: IUser }) => {
             <Button onClick={signUp}>{"Sign up"}</Button>
           </Form.Row>
         </Form>
-      </Container>
-    </Container>
+      </div>
+    </div>
   );
 };

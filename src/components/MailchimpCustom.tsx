@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
+import div from "react-bootstrap/div";
 import Form from "react-bootstrap/Form";
 
 export default (props: {
@@ -121,7 +121,7 @@ export default (props: {
   });
 
   return (
-    <Container className="mailchip-root">
+    <div className="mailchip-root">
       <Form>
         {formStatus}
         <Form.Row>
@@ -159,6 +159,6 @@ export default (props: {
         </Form.Row>
       </Form>
       <br />
-    </Container>
+    </div>
   );
 };

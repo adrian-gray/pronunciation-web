@@ -39,12 +39,10 @@ export default () => {
 
   return (
     <BrowserRouter>
+      <NavBar user={user} signout={signout} />
+      <SEO />
       <Container>
-        <Container>
-          <SEO />
-          <NavBar user={user} signout={signout} />
-          <Router user={user} subscriptionLevel={subscriptionLevel} />
-        </Container>
+        <Router user={user} subscriptionLevel={subscriptionLevel} />
       </Container>
     </BrowserRouter>
   );

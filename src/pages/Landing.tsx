@@ -2,14 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
 
 import Mailchimp from "../components/Mailchimp";
 import SEO from "../components/SEO";
 
 export default () => {
   return (
-    <Container>
+    <div className="headspace">
       <SEO meta="landing" />
       <h1>{"Pronunciation Practice"}</h1>
       <h3>{"Improve Your Spoken English"}</h3>
@@ -48,6 +47,6 @@ export default () => {
         title="Learn to improve English pronunciation"
         alt="Learn to improve English pronunciation"
       />
-    </Container>
+    </div>
   );
 };

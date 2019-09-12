@@ -1,7 +1,5 @@
 import React from "react";
 
-import Container from "react-bootstrap/Container";
-
 import soundsData from "./../data/sounds.js";
 import SEO from "../components/SEO";
 import Phoneme from "../components/Phoneme";
@@ -27,10 +25,10 @@ export default () => {
   });
 
   return (
-    <Container className="page">
+    <div className="page">
       <SEO meta="sounds" />
       <h1>{"Phoenetic English Pronunciation"}</h1>
       {cards}
-    </Container>
+    </div>
   );
 };

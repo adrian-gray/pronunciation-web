@@ -2,19 +2,17 @@ import React from "react";
 
 import SplitHilite from "./SplitHilite";
 
-import Container from "react-bootstrap/Container";
-
 export default (props: { ipa: string; sentences: string[] }) => {
   const { ipa, sentences } = props;
 
   const lines = sentences.map((line: string, index: number) => (
-    <Container className="sub-canvas personal-space" key={index}>
+    <div className="sub-canvas personal-space" key={index}>
       <p className="no-margin-bottom">{line}</p>
-    </Container>
+    </div>
   ));
 
   return (
-    <div className="personal-space">
+    <div className="headspace">
       <h3>
         {"Say the "}
         <SplitHilite str={ipa} />

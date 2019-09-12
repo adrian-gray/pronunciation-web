@@ -8,7 +8,7 @@ export default (props: { ipa: string; url: string; isUserAuth: boolean }) => {
   return (
     <div className="head-space">
       <h3>
-        {`English Pronuniciation movie for `}
+        {`English Pronunciation movie for `}
         <SplitHilite str={ipa} />
       </h3>
 

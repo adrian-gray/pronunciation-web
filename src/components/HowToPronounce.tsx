@@ -1,6 +1,5 @@
 import React from "react";
 
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -27,7 +26,7 @@ export default (props: {
         <SplitHilite str={ipa} />
       </h3>
 
-      <Container className="sub-canvas">
+      <div className="sub-canvas">
         <Row>
           <Col>
             <div className="padded">
@@ -39,7 +38,7 @@ export default (props: {
             <ul className="list-group">{list}</ul>
           </Col>
         </Row>
-      </Container>
+      </div>
     </div>
   );
 };

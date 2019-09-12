@@ -1,6 +1,5 @@
 import React from "react";
 
-import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 
 import SplitHilite from "./SplitHilite";
@@ -32,11 +31,11 @@ export default (props: { ipa: string; phrases: string[] }) => {
         <SplitHilite str={ipa} />
       </h3>
 
-      <Container className="sub-canvas">
+      <div className="sub-canvas">
         <Table>
           <tbody>{list}</tbody>
         </Table>
-      </Container>
+      </div>
     </div>
   );
 };

@@ -2,6 +2,9 @@
   flex-grow: 1;
   padding: 1rem;
 }
+.content {
+  padding: 0 1rem;
+}
 .sub-canvas {
   margin-top: 1rem;
   margin-bottom: 1rem;

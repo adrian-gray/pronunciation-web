@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Container from "react-bootstrap/Container";
+import div from "react-bootstrap/div";
 
 import SplitHilite from "./SplitHilite";
 import MemberGate from "./MemberGate";
@@ -180,12 +180,12 @@ class NewsStories extends Component<
   render() {
     const { headline, title } = this.props;
 
-    const content = <Container>{this.state.sentences}</Container>;
+    const content = <div>{this.state.sentences}</div>;
 
     const description = `Extra! Extra! Read all about it! News Stories is a collection of interesting and feel-good stories from around the world.  Each story is written in two levels – beginners and intermediate. All you need to do is identify the highlighted sounds and choose the correct phoneme that represents that sound. News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.`;
 
     return (
-      <Container className="headspace">
+      <div className="headspace">
         <h2>{"News Stories"}</h2>
         <p>{description}</p>
         <h3>{headline}</h3>
@@ -193,7 +193,7 @@ class NewsStories extends Component<
           <SplitHilite str={title} />
         </h5>
         <MemberGate content={content} isUserAuth={this.props.isUserAuth} />
-      </Container>
+      </div>
     );
   }
 }
