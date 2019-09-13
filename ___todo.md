@@ -1,3 +1,5 @@
+- Login
+  - style: theming
 - Landing
   - mailchimp on _paper_
   - landing page optimization

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { IFindTheWordsProps } from "./../../@types/PronounceWeb";
 
-import div from "react-bootstrap/div";
-
 import MemberGate from "./MemberGate";
 import SplitHilite from "./SplitHilite";
 import Tile from "./Tile";

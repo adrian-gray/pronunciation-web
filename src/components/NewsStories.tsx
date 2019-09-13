@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import div from "react-bootstrap/div";
-
 import SplitHilite from "./SplitHilite";
 import MemberGate from "./MemberGate";
 import Picker from "./Picker";
@@ -140,49 +138,41 @@ class NewsStories extends Component<
 
   checkForCorrect(values: number[]) {
     return values.map((value, index: number) => {
-      return this.props.options[index] === this.props.answers[index];
+      return this.props.options[value] === this.props.answers[index];
     });
   }
 
   handleClick(index: number) {
     if (!this.props.isUserAuth) return;
-    const newStateSelectedOption = this.state.selectedOption.slice();
-    const selectedBgColour: string[] = [];
-    newStateSelectedOption[index] =
+    const selectedOption: number[] = this.state.selectedOption.slice();
+    const selectedBgColour: string[] = this.state.selectedBgColour.slice();
+    selectedOption[index] =
       (this.state.selectedOption[index] + 1) % this.props.options.length;
-    if (newStateSelectedOption.every(val => val > 0)) {
-      this.checkForCorrect(newStateSelectedOption).map(
+    if (selectedOption.every(val => val > 0)) {
+      this.checkForCorrect(selectedOption).map(
         (value: boolean, index: number) => {
           switch (value) {
             case true:
-              selectedBgColour[index] = "#99BB99"; // TODO
-              break;
-            case false:
-              selectedBgColour[index] = "#BB9999"; // TODO
+              selectedBgColour[index] = "correct-bg";
               break;
             default:
-              selectedBgColour[index] = undefined;
+              selectedBgColour[index] = "incorrect-bg";
           }
         }
       );
     }
-    this.setState({
-      selectedOption: newStateSelectedOption,
-      selectedBgColour
-    });
+    this.setState({ selectedOption, selectedBgColour });
     this.updateSentences({
       sentences: this.props.sentences,
-      selectedOption: newStateSelectedOption,
+      selectedOption,
       selectedBgColour
     });
   }
 
   render() {
     const { headline, title } = this.props;
-
-    const content = <div>{this.state.sentences}</div>;
-
     const description = `Extra! Extra! Read all about it! News Stories is a collection of interesting and feel-good stories from around the world.  Each story is written in two levels – beginners and intermediate. All you need to do is identify the highlighted sounds and choose the correct phoneme that represents that sound. News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.`;
+    const content = <div>{this.state.sentences}</div>;
 
     return (
       <div className="headspace">

@@ -46,12 +46,6 @@
 .cell-hilite-bg {
   background: #ccc;
 }
-.correct-bg {
-  background: #cfc;
-}
-.incorrect-bg {
-  background: #fcc;
-}
 .selected-bg {
   background: #ccc;
 }
@@ -97,6 +91,12 @@
   padding: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.correct-bg {
+  background-color: #cfc;
+}
+.incorrect-bg {
+  background-color: #fcc;
 }
 .undecorated {
   text-decoration: none;
