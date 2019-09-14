@@ -3,34 +3,26 @@
 exports[`MinimalPairs 1`] = `
 <div>
   <div
-    class="makeStyles-headspace-2"
+    class="headspace"
   >
-    <h5
-      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
-    >
+    <h3>
       English  minimal pairs with dork - 
       <span>
         a:
       </span>
        
-    </h5>
-    <div
-      class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
-    >
+    </h3>
+    <div>
       <table
-        class="MuiTable-root"
+        class="table"
       >
-        <tbody
-          class="MuiTableBody-root"
-        >
-          <tr
-            class="MuiTableRow-root"
-          >
+        <tbody>
+          <tr>
             <td
-              class="MuiTableCell-root makeStyles-cell-3 MuiTableCell-body"
+              class="cell"
             >
               <p
-                class="MuiTypography-root makeStyles-largeText-1 MuiTypography-body1"
+                class="largeText"
               >
                 <span>
                   fat
@@ -39,10 +31,10 @@ exports[`MinimalPairs 1`] = `
               </p>
             </td>
             <td
-              class="MuiTableCell-root makeStyles-cell-3 MuiTableCell-body"
+              class="cell"
             >
               <p
-                class="MuiTypography-root makeStyles-largeText-1 MuiTypography-body1"
+                class="largeText"
               >
                 <span>
                   cat
@@ -51,14 +43,12 @@ exports[`MinimalPairs 1`] = `
               </p>
             </td>
           </tr>
-          <tr
-            class="MuiTableRow-root"
-          >
+          <tr>
             <td
-              class="MuiTableCell-root makeStyles-cell-3 MuiTableCell-body"
+              class="cell"
             >
               <p
-                class="MuiTypography-root makeStyles-largeText-1 MuiTypography-body1"
+                class="largeText"
               >
                 <span>
                   happy
@@ -67,10 +57,10 @@ exports[`MinimalPairs 1`] = `
               </p>
             </td>
             <td
-              class="MuiTableCell-root makeStyles-cell-3 MuiTableCell-body"
+              class="cell"
             >
               <p
-                class="MuiTypography-root makeStyles-largeText-1 MuiTypography-body1"
+                class="largeText"
               >
                 <span>
                   dog

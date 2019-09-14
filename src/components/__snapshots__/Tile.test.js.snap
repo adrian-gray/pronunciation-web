@@ -3,16 +3,16 @@
 exports[`Tile 1`] = `
 <div>
   <div
-    class="makeStyles-clickable-5"
+    class="cursor-pointer"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-4 makeStyles-correctBG-2 MuiPaper-rounded"
+      class="tile correct-bg"
     >
       <p
-        class="MuiTypography-root makeStyles-largeText-1 MuiTypography-body1"
+        class="large-text"
       >
         <span
-          class="makeStyles-correctBG-2"
+          class="correct-bg"
         >
           Grease
         </span>

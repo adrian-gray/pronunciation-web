@@ -3,34 +3,24 @@
 exports[`Words 1`] = `
 <div>
   <div
-    class="makeStyles-headspace-1"
+    class="headspace"
   >
-    <h5
-      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
-    >
+    <h3>
       Words using 
       <span>
         Pirate
       </span>
        
-    </h5>
-    <div
-      class="MuiPaper-root MuiPaper-elevation1 makeStyles-subCanvas-3 MuiPaper-rounded"
-    >
+    </h3>
+    <div>
       <table
-        class="MuiTable-root"
+        class="table"
       >
-        <tbody
-          class="MuiTableBody-root"
-        >
-          <tr
-            class="MuiTableRow-root"
-          >
-            <td
-              class="MuiTableCell-root MuiTableCell-body"
-            >
+        <tbody>
+          <tr>
+            <td>
               <p
-                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+                class="large-text"
               >
                 <span>
                   0
@@ -38,11 +28,9 @@ exports[`Words 1`] = `
                  
               </p>
             </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body"
-            >
+            <td>
               <p
-                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+                class="large-text"
               >
                 <span>
                   car
@@ -51,14 +39,10 @@ exports[`Words 1`] = `
               </p>
             </td>
           </tr>
-          <tr
-            class="MuiTableRow-root"
-          >
-            <td
-              class="MuiTableCell-root MuiTableCell-body"
-            >
+          <tr>
+            <td>
               <p
-                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+                class="large-text"
               >
                 <span>
                   1
@@ -66,11 +50,9 @@ exports[`Words 1`] = `
                  
               </p>
             </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body"
-            >
+            <td>
               <p
-                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+                class="large-text"
               >
                 <span>
                   cat
@@ -79,14 +61,10 @@ exports[`Words 1`] = `
               </p>
             </td>
           </tr>
-          <tr
-            class="MuiTableRow-root"
-          >
-            <td
-              class="MuiTableCell-root MuiTableCell-body"
-            >
+          <tr>
+            <td>
               <p
-                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+                class="large-text"
               >
                 <span>
                   2
@@ -94,11 +72,9 @@ exports[`Words 1`] = `
                  
               </p>
             </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body"
-            >
+            <td>
               <p
-                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+                class="large-text"
               >
                 <span>
                   cad
@@ -107,14 +83,10 @@ exports[`Words 1`] = `
               </p>
             </td>
           </tr>
-          <tr
-            class="MuiTableRow-root"
-          >
-            <td
-              class="MuiTableCell-root MuiTableCell-body"
-            >
+          <tr>
+            <td>
               <p
-                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+                class="large-text"
               >
                 <span>
                   3
@@ -122,11 +94,9 @@ exports[`Words 1`] = `
                  
               </p>
             </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body"
-            >
+            <td>
               <p
-                class="MuiTypography-root makeStyles-largeText-2 MuiTypography-body1"
+                class="large-text"
               >
                 <span>
                   cap

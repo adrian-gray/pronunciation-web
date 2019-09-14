@@ -3,34 +3,30 @@
 exports[`FindTheWords 1`] = `
 <div>
   <div
-    class="makeStyles-headspace-1"
+    class="headspace"
   >
-    <h5
-      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
-    >
+    <h3>
       Select the words with an 
       <span>
         a:
       </span>
        
       sound
-    </h5>
-    <p
-      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-    >
-      Find the correct sound. Say the words and select those with the undefined vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the words before your time runs out? You can click on words to hear the pronunciation. Find the words helps you recognise and pronounce the vowel sounds of common English words.
+    </h3>
+    <p>
+      Find the correct sound. Say the words and select those with the ~a vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the words before your time runs out? You can click on words to hear the pronunciation. Find the words helps you recognise and pronounce the vowel sounds of common English words.
     </p>
     <div
-      class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+      class="incorrect"
     >
       <div
-        class="makeStyles-clickable-70"
+        class="cursor-pointer"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+          class="tile"
         >
           <p
-            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+            class="large-text"
           >
             <span>
               foo
@@ -39,13 +35,13 @@ exports[`FindTheWords 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-clickable-70"
+        class="cursor-pointer"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+          class="tile"
         >
           <p
-            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+            class="large-text"
           >
             <span>
               bar
@@ -54,13 +50,13 @@ exports[`FindTheWords 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-clickable-70"
+        class="cursor-pointer"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+          class="tile"
         >
           <p
-            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+            class="large-text"
           >
             <span>
               baz
@@ -69,13 +65,13 @@ exports[`FindTheWords 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-clickable-70"
+        class="cursor-pointer"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+          class="tile"
         >
           <p
-            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+            class="large-text"
           >
             <span>
               quox
@@ -84,13 +80,13 @@ exports[`FindTheWords 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-clickable-70"
+        class="cursor-pointer"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+          class="tile"
         >
           <p
-            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+            class="large-text"
           >
             <span>
               apple
@@ -99,13 +95,13 @@ exports[`FindTheWords 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-clickable-70"
+        class="cursor-pointer"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+          class="tile"
         >
           <p
-            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+            class="large-text"
           >
             <span>
               banana
@@ -114,13 +110,13 @@ exports[`FindTheWords 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-clickable-70"
+        class="cursor-pointer"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+          class="tile"
         >
           <p
-            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+            class="large-text"
           >
             <span>
               chad
@@ -129,13 +125,13 @@ exports[`FindTheWords 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-clickable-70"
+        class="cursor-pointer"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation1 makeStyles-left-69 MuiPaper-rounded"
+          class="tile"
         >
           <p
-            class="MuiTypography-root makeStyles-largeText-66 MuiTypography-body1"
+            class="large-text"
           >
             <span>
               elle
@@ -144,9 +140,8 @@ exports[`FindTheWords 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-clearFloat-2"
+        class="clear-float"
       />
-      
     </div>
   </div>
 </div>

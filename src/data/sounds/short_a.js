@@ -151,7 +151,7 @@ export default {
         ],
         correct: ["matter", "pan", "tap", "ankle"]
       },
-      "odd one out": {
+      "missing sound": {
         subscription: 1,
         words: [
           "ran",

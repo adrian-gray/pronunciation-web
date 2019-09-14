@@ -3,73 +3,53 @@
 exports[`HowToPronounce 1`] = `
 <div>
   <div
-    class="makeStyles-headspace-1"
+    class="headspace"
   >
-    <h5
-      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
-    >
+    <h3>
       How to pronounce 
       <span>
         a:
       </span>
        
-    </h5>
+    </h3>
     <div
-      class="MuiPaper-root MuiPaper-elevation1 makeStyles-subCanvas-3 MuiPaper-rounded"
+      class="sub-canvas"
     >
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+        class="row"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+          class="col"
         >
           <div
-            class="makeStyles-padded-4"
+            class="padded"
           >
             <img
               alt="image"
-              class="makeStyles-fullWidth-2"
+              class="fill-width"
               src="foo.com"
               title="image"
             />
-            <h6
-              class="MuiTypography-root MuiTypography-h6"
-            >
+            <h5>
               image
-            </h6>
+            </h5>
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+          class="align-self-center col"
         >
           <ul
-            class="MuiList-root MuiList-padding"
+            class="list-group"
           >
             <li
-              class="MuiListItem-root MuiListItem-gutters"
+              class="list-group-item"
             >
-              <div
-                class="MuiListItemText-root"
-              >
-                <span
-                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
-                >
-                  foo
-                </span>
-              </div>
+              foo
             </li>
             <li
-              class="MuiListItem-root MuiListItem-gutters"
+              class="list-group-item"
             >
-              <div
-                class="MuiListItemText-root"
-              >
-                <span
-                  class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
-                >
-                  bar
-                </span>
-              </div>
+              bar
             </li>
           </ul>
         </div>

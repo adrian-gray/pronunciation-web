@@ -6,7 +6,7 @@ exports[`SplitHilite 1`] = `
     pl
   </span>
   <span
-    class="makeStyles-hilite-1"
+    class="hilite"
   >
     i
   </span>
@@ -14,7 +14,7 @@ exports[`SplitHilite 1`] = `
     zzz
   </span>
   <span
-    class="makeStyles-hilite-1"
+    class="hilite"
   >
     i
   </span>

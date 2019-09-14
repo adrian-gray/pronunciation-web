@@ -3,47 +3,269 @@
 exports[`NewsStories 1`] = `
 <div>
   <div
-    class="NewsStories-headspace-1"
+    class="headspace"
   >
-    <h4
-      class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
-    >
+    <h2>
       News Stories
-    </h4>
-    <p
-      class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
-    >
+    </h2>
+    <p>
       Extra! Extra! Read all about it! News Stories is a collection of interesting and feel-good stories from around the world.  Each story is written in two levels – beginners and intermediate. All you need to do is identify the highlighted sounds and choose the correct phoneme that represents that sound. News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.
     </p>
-    <h4
-      class="MuiTypography-root MuiTypography-h4 MuiTypography-gutterBottom"
-    >
-      A story
-    </h4>
-    <h5
-      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
-    >
+    <h3>
+      Eels travel far
+    </h3>
+    <h5>
       <span>
-        About a boy
+        Choose the correct sound: 
+      </span>
+      <span
+        class="hilite"
+      >
+        /:i/
+      </span>
+      <span>
+         (the long ‘e’ sound) or 
+      </span>
+      <span
+        class="hilite"
+      >
+        /e/
+      </span>
+      <span>
+         (the short ‘e’ sound)
       </span>
        
     </h5>
-    <div
-      class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
-    >
-      <p
-        class="MuiTypography-root NewsStories-sentence-2 MuiTypography-body1"
-      >
+    <div>
+      <p>
         <span>
-          the cat 
+          A Sydney 
+        </span>
+        <span
+          class="hilite"
+        >
+          ee
+        </span>
+        <span>
+          l 
         </span>
          
         <span
-          class="makeStyles-clickable-65 undefined"
+          class="clickable undefined"
         >
-          foo
+          ...
         </span>
-         had a rat
+        <span>
+           br
+        </span>
+        <span
+          class="hilite"
+        >
+          ee
+        </span>
+        <span>
+          ds 
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+        <span>
+           once. The eel l
+        </span>
+        <span
+          class="hilite"
+        >
+          ea
+        </span>
+        <span>
+          ves 
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+        <span>
+           it's pond from a park in Sydney. It swims through cr
+        </span>
+        <span
+          class="hilite"
+        >
+          ee
+        </span>
+        <span>
+          ks 
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+        <span>
+           and drainpipes. It slithers over grass to the n
+        </span>
+        <span
+          class="hilite"
+        >
+          e
+        </span>
+        <span>
+          xt 
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+        <span>
+           suburb. It moves across two golf courses. It crosses swampy 
+        </span>
+        <span
+          class="hilite"
+        >
+          a
+        </span>
+        <span>
+          reas 
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+        <span>
+          . It arrives at the airport. Sydney Airport is next to a bay. It 
+        </span>
+        <span
+          class="hilite"
+        >
+          e
+        </span>
+        <span>
+          nters 
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+        <span>
+           the bay and swims across the s
+        </span>
+        <span
+          class="hilite"
+        >
+          ea
+        </span>
+        <span>
+           
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+        <span>
+           2 000 km to N
+        </span>
+        <span
+          class="hilite"
+        >
+          e
+        </span>
+        <span>
+          w 
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+         Caledonia.
+      </p>
+      <p>
+        <span>
+          It lays m
+        </span>
+        <span
+          class="hilite"
+        >
+          a
+        </span>
+        <span>
+          ny 
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+        <span>
+           eggs – about 20 million 
+        </span>
+        <span
+          class="hilite"
+        >
+          e
+        </span>
+        <span>
+          ggs 
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+        .
+      </p>
+      <p>
+        <span>
+          The eel d
+        </span>
+        <span
+          class="hilite"
+        >
+          ie
+        </span>
+        <span>
+          s 
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+        <span>
+          , but its offpsring float back to Australia. They swim to the bay next to Sydney Airport. They move across the swampy land, th
+        </span>
+        <span
+          class="hilite"
+        >
+          e
+        </span>
+        <span>
+           
+        </span>
+         
+        <span
+          class="clickable undefined"
+        >
+          ...
+        </span>
+         two golf courses, through the drainpipes and creeks back to the pond in the park'.
       </p>
     </div>
   </div>

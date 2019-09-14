@@ -3,25 +3,21 @@
 exports[`OddOneOut 1`] = `
 <div>
   <div
-    class="makeStyles-headspace-2"
+    class="head-space"
   >
-    <h5
-      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
-    >
+    <h3>
       The Odd One Out using long-a - 
       <span>
         a:
       </span>
        
-    </h5>
-    <h6
-      class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"
-    >
+    </h3>
+    <h4>
       <span>
         Select the words that 
       </span>
       <span
-        class="makeStyles-hilite-40"
+        class="hilite"
       >
         DON'T
       </span>
@@ -29,81 +25,62 @@ exports[`OddOneOut 1`] = `
          have the long-a – a: sound.
       </span>
        
-    </h6>
+    </h4>
     <br />
-    <p
-      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-    >
+    <p>
       Can you spot the difference? In each group of words there are three with the long-a vowel sound and one with a different vowel sound. Say the words and choose the one that doesn’t sound the same as the others. Advance to the next level with more challenging words. Odd One Out encourages you to identify the differences between words with similar sounding vowels.
     </p>
     <div>
-      <h6
-        class="MuiTypography-root makeStyles-headspace-2 makeStyles-center-3 MuiTypography-h6"
+      <h4
+        class="head=space text-center"
       >
         Example
-      </h6>
+      </h4>
       <table
-        class="MuiTable-root"
+        class="table"
       >
         <thead
-          class="MuiTableHead-root makeStyles-headBG-8"
+          class="th-bg"
         >
-          <tr
-            class="MuiTableRow-root MuiTableRow-head"
-          >
-            <th
-              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-head"
-              scope="col"
+          <tr>
+            <td
+              class="cell"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
+              <p>
                 <span>
                   three
                 </span>
                  
               </p>
-            </th>
-            <th
-              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-head"
-              scope="col"
+            </td>
+            <td
+              class="cell"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
+              <p>
                 <span>
                   blind
                 </span>
                  
               </p>
-            </th>
-            <th
-              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-head"
-              scope="col"
+            </td>
+            <td
+              class="cell hilite"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
+              <p>
                 <span>
                   moice
                 </span>
                  
               </p>
-            </th>
+            </td>
           </tr>
         </thead>
-        <tbody
-          class="MuiTableBody-root"
-        >
-          <tr
-            class="MuiTableRow-root"
-          >
+        <tbody>
+          <tr>
             <td
-              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+              class="cell"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
+              <p>
                 <span>
                   the
                 </span>
@@ -111,11 +88,9 @@ exports[`OddOneOut 1`] = `
               </p>
             </td>
             <td
-              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+              class="cell"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
+              <p>
                 <span>
                   cat
                 </span>
@@ -123,11 +98,9 @@ exports[`OddOneOut 1`] = `
               </p>
             </td>
             <td
-              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+              class="cell"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
+              <p>
                 <span>
                   sat
                 </span>
@@ -135,15 +108,11 @@ exports[`OddOneOut 1`] = `
               </p>
             </td>
           </tr>
-          <tr
-            class="MuiTableRow-root"
-          >
+          <tr>
             <td
-              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+              class="cell"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
+              <p>
                 <span>
                   on
                 </span>
@@ -151,11 +120,9 @@ exports[`OddOneOut 1`] = `
               </p>
             </td>
             <td
-              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+              class="cell"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
+              <p>
                 <span>
                   the
                 </span>
@@ -163,11 +130,9 @@ exports[`OddOneOut 1`] = `
               </p>
             </td>
             <td
-              class="MuiTableCell-root makeStyles-cell-50 MuiTableCell-body"
+              class="cell"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
+              <p>
                 <span>
                   mat
                 </span>

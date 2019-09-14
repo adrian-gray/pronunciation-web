@@ -1,9 +1,4 @@
 {
-  "env": {
-    "test": {
-      "plugins": ["@babel/plugin-transform-runtime"]
-    }
-  },
   "presets": [
     "@babel/preset-react",
     "@babel/preset-typescript",
@@ -18,5 +13,18 @@
       }
     ]
   ],
-  "plugins": ["@babel/plugin-proposal-object-rest-spread"]
+  "plugins": ["@babel/plugin-proposal-object-rest-spread"],
+  "env": {
+    "test": {
+      "presets": [
+        ["@babel/preset-env", { "modules": "commonjs" }],
+        "@babel/react",
+        "jest"
+      ],
+      "plugins": [
+        "@babel/plugin-transform-modules-commonjs",
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
 }

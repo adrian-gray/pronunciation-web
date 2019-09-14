@@ -3,7 +3,7 @@
 exports[`Picker 1`] = `
 <div>
   <span
-    class="makeStyles-clickable-1 red"
+    class="clickable red"
   >
     dog
   </span>

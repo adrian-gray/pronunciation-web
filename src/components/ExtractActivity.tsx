@@ -169,6 +169,7 @@ const ExtractActivity = (params: {
       );
       break;
 
+    case "missing sound":
     case "sort the words":
     case "hear the words":
     case "pronunciation journey":

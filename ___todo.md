@@ -17,6 +17,10 @@
 
 <hr />
 
+- Odd One Out (short-a) different activity for (long-e) - maybe rename the short-a one to Missing-sounds
+
+<hr />
+
 - Choose the Sound ❌ /u:/
 - Common words
   - Maybe style like 'Find the words'

@@ -3,16 +3,11 @@
 exports[`ActivityButton 1`] = `
 <div>
   <a
-    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
+    class="chip activity-open"
     href="/sound/a:/harry"
-    role="button"
-    tabindex="0"
+    title="Harry"
   >
-    <span
-      class="MuiChip-label"
-    >
-      Harry
-    </span>
+    Harry
   </a>
 </div>
 `;

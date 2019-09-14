@@ -20,6 +20,7 @@ export const memberActivities = [
 ];
 
 export const pendingActivities = [
+  "missing sound",
   "choose the sound",
   "count the sounds",
   "fill in the spaces",

@@ -3,17 +3,15 @@
 exports[`SayTheSentences 1`] = `
 <div>
   <div
-    class="makeStyles-personalSpace-3"
+    class="headspace"
   >
-    <h5
-      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
-    >
+    <h3>
       Say the 
       <span>
         c
       </span>
       <span
-        class="makeStyles-hilite-34"
+        class="hilite"
       >
         a
       </span>
@@ -22,21 +20,21 @@ exports[`SayTheSentences 1`] = `
       </span>
        
        sentences
-    </h5>
+    </h3>
     <div
-      class="MuiPaper-root MuiPaper-elevation1 makeStyles-personalSpace-3 MuiPaper-rounded"
+      class="sub-canvas personal-space"
     >
       <p
-        class="MuiTypography-root MuiTypography-body1"
+        class="no-margin-bottom"
       >
         my ~hat~ has ears
       </p>
     </div>
     <div
-      class="MuiPaper-root MuiPaper-elevation1 makeStyles-personalSpace-3 MuiPaper-rounded"
+      class="sub-canvas personal-space"
     >
       <p
-        class="MuiTypography-root MuiTypography-body1"
+        class="no-margin-bottom"
       >
         My ~ca~t does not
       </p>

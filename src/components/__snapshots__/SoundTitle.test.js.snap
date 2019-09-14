@@ -3,9 +3,7 @@
 exports[`SoundTitle 1`] = `
 Object {
   "container": <div>
-    <h3
-      class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
-    >
+    <h3>
       <span>
         Bob
       </span>

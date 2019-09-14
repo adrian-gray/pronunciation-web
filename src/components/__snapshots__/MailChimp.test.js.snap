@@ -3,81 +3,66 @@
 exports[`MailChimp 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation1 makeStyles-mailchimp-1 MuiPaper-rounded"
+    class="mailchimp-bg"
   >
     <div
       class="mailchimp-subscribe"
     >
       <div
-        class="makeStyles-root-29"
+        class="mailchip-root"
       >
-        <form>
+        <form
+          class=""
+        >
           <div
-            class="MuiFormControl-root MuiTextField-root form-control MuiFormControl-marginNormal"
+            class="form-row"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink="false"
-              for="name"
+              class="form-label"
             >
               Your first name
             </label>
-            <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-            >
-              <input
-                class="MuiInputBase-input MuiInput-input"
-                id="name"
-                type="text"
-                value=""
-              />
-            </div>
-            
+            <input
+              autocomplete="name"
+              class="form-control form-control"
+              id="signin_email"
+              placeholder="Your first name"
+              value=""
+            />
           </div>
           <div
-            class="MuiFormControl-root MuiTextField-root form-control MuiFormControl-marginNormal"
+            class="form-row"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-              data-shrink="false"
-              for="email"
+              class="form-label"
             >
               Your Email
             </label>
-            <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
-            >
-              <input
-                class="MuiInputBase-input MuiInput-input"
-                id="email"
-                type="text"
-                value=""
-              />
-            </div>
-            
+            <input
+              autocomplete="email"
+              class="form-control form-control"
+              id="email"
+              placeholder="Your Email"
+              value=""
+            />
           </div>
-          <br />
-          <p
-            class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+          <div
+            class="form-row"
           >
-            We hate spam and will never share your details with anyone else.
-          </p>
-          <br />
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary"
-            tabindex="0"
-            type="button"
-          >
-            <span
-              class="MuiButton-label"
+            <br />
+            <p>
+              We hate spam and will never share your details with anyone else.
+            </p>
+            <br />
+            <button
+              class="btn btn-warning"
+              type="button"
             >
               Keep me updated!
-            </span>
-            <span
-              class="MuiTouchRipple-root"
-            />
-          </button>
+            </button>
+          </div>
         </form>
+        <br />
       </div>
     </div>
   </div>

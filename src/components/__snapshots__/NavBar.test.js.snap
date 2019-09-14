@@ -2,57 +2,44 @@
 
 exports[`NavBar 1`] = `
 <div>
-  <div
-    class="makeStyles-root-1"
+  <nav
+    class="justify-content-between navbar navbar-expand navbar-dark bg-dark"
   >
-    <header
-      class="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary"
+    <a
+      class="navbar-brand"
+      href="/home"
+    >
+      Pronounce Web
+    </a>
+    <button
+      aria-controls="basic-navbar-nav"
+      aria-label="Toggle navigation"
+      class="navbar-toggler"
+      type="button"
+    >
+      <span
+        class="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      class="justify-content-end navbar-collapse collapse"
     >
       <div
-        class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+        class="navbar-nav"
       >
-        <h6
-          class="MuiTypography-root makeStyles-flex-2 MuiTypography-subtitle1"
+        <form
+          class="form-inline"
         >
-          <a
-            aria-disabled="false"
-            class="MuiButtonBase-root MuiButton-root MuiButton-text"
-            href="/"
-            role="button"
-            tabindex="0"
+          <button
+            class="btn btn-outline-info"
+            color="inherit"
+            type="button"
           >
-            <span
-              class="MuiButton-label"
-            >
-              <span
-                class="makeStyles-white-5"
-              >
-                Pronounce Web
-              </span>
-            </span>
-            <span
-              class="MuiTouchRipple-root"
-            />
-          </a>
-        </h6>
-        <a
-          aria-disabled="false"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
-          href="/login"
-          role="button"
-          tabindex="0"
-        >
-          <span
-            class="MuiButton-label"
-          >
-            Sign In or Up
-          </span>
-          <span
-            class="MuiTouchRipple-root"
-          />
-        </a>
+            Sign Out
+          </button>
+        </form>
       </div>
-    </header>
-  </div>
+    </div>
+  </nav>
 </div>
 `;

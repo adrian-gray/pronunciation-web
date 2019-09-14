@@ -3,19 +3,15 @@
 exports[`Profile 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation1 makeStyles-page-1 MuiPaper-rounded"
+    class="page"
   >
     <div
-      class="makeStyles-headspace-2"
+      class="head-space"
     >
-      <h5
-        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
-      >
+      <h3>
         Your profile
-      </h5>
-      <p
-        class="MuiTypography-root MuiTypography-body1"
-      >
+      </h3>
+      <p>
         Bob
       </p>
       <div>

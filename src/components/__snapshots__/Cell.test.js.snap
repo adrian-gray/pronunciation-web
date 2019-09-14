@@ -5,11 +5,9 @@ exports[`Cell 1`] = `
   <tbody>
     <tr>
       <td
-        class="MuiTableCell-root makeStyles-cell-1 true"
+        class="cell hilite"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
-        >
+        <p>
           <span>
             rabbit
           </span>
@@ -26,11 +24,9 @@ exports[`Cell with hilite 1`] = `
   <tbody>
     <tr>
       <td
-        class="MuiTableCell-root makeStyles-cell-45"
+        class="cell hilite"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
-        >
+        <p>
           <span>
             rabbit
           </span>

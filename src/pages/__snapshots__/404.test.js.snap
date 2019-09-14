@@ -3,16 +3,12 @@
 exports[`FourOhFour 1`] = `
 <div>
   <div
-    class="makeStyles-headspace-1"
+    class="head-space"
   >
-    <h5
-      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
-    >
+    <h3>
       Oops, that address is not a thing I understand.
-    </h5>
-    <p
-      class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
-    >
+    </h3>
+    <p>
       <a
         href="/"
       >

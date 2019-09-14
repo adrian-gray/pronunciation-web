@@ -2,15 +2,6 @@
 
 exports[`MemberGate authorized 1`] = `
 <div>
-  <div>
-    <h6
-      class="MuiTypography-root makeStyles-headspace-1 MuiTypography-h6 MuiTypography-gutterBottom"
-    >
-      Sorry, this interactive activity is for members only.
-    </h6>
-    <div
-      class="makeStyles-blocked-2"
-    />
-  </div>
+  Hello
 </div>
 `;

@@ -3,158 +3,92 @@
 exports[`Dialogues 1`] = `
 <div>
   <div
-    class="makeStyles-headspace-1"
+    class="headspace"
   >
-    <h5
-      class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
-    >
+    <h3>
       Short dialogues using 
       <span>
         a:
       </span>
        
-    </h5>
+    </h3>
     <div
-      class="MuiPaper-root MuiPaper-elevation1 makeStyles-subCanvas-3 MuiPaper-rounded"
+      class="sub-canvas"
     >
       <ul
-        class="MuiList-root MuiList-padding"
+        class="list-group"
       >
         <li
-          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+          class="tight-text list-group-item text-left"
         >
-          <div
-            class="MuiListItemText-root makeStyles-left-4"
-          >
-            <span
-              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
-            >
-              <span>
-                foo
-              </span>
-               
-            </span>
-          </div>
+          <span>
+            foo
+          </span>
+           
         </li>
         <li
-          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+          class="tight-text list-group-item text-right"
         >
-          <div
-            class="MuiListItemText-root makeStyles-right-5"
-          >
-            <span
-              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
-            >
-              <span>
-                bar
-              </span>
-               
-            </span>
-          </div>
+          <span>
+            bar
+          </span>
+           
         </li>
         <li
-          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+          class="tight-text list-group-item text-left"
         >
-          <div
-            class="MuiListItemText-root makeStyles-left-4"
-          >
-            <span
-              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
-            >
-              <span>
-                baz
-              </span>
-               
-            </span>
-          </div>
+          <span>
+            baz
+          </span>
+           
         </li>
         <li
-          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+          class="tight-text list-group-item text-right"
         >
-          <div
-            class="MuiListItemText-root makeStyles-right-5"
-          >
-            <span
-              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
-            >
-              <span>
-                quox
-              </span>
-               
-            </span>
-          </div>
+          <span>
+            quox
+          </span>
+           
         </li>
       </ul>
     </div>
     <div
-      class="MuiPaper-root MuiPaper-elevation1 makeStyles-subCanvas-3 MuiPaper-rounded"
+      class="sub-canvas"
     >
       <ul
-        class="MuiList-root MuiList-padding"
+        class="list-group"
       >
         <li
-          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+          class="tight-text list-group-item text-left"
         >
-          <div
-            class="MuiListItemText-root makeStyles-left-4"
-          >
-            <span
-              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
-            >
-              <span>
-                apple
-              </span>
-               
-            </span>
-          </div>
+          <span>
+            apple
+          </span>
+           
         </li>
         <li
-          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+          class="tight-text list-group-item text-right"
         >
-          <div
-            class="MuiListItemText-root makeStyles-right-5"
-          >
-            <span
-              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
-            >
-              <span>
-                banana
-              </span>
-               
-            </span>
-          </div>
+          <span>
+            banana
+          </span>
+           
         </li>
         <li
-          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+          class="tight-text list-group-item text-left"
         >
-          <div
-            class="MuiListItemText-root makeStyles-left-4"
-          >
-            <span
-              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
-            >
-              <span>
-                chad
-              </span>
-               
-            </span>
-          </div>
+          <span>
+            chad
+          </span>
+           
         </li>
         <li
-          class="MuiListItem-root makeStyles-tight-6 MuiListItem-gutters"
+          class="tight-text list-group-item text-right"
         >
-          <div
-            class="MuiListItemText-root makeStyles-right-5"
-          >
-            <span
-              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
-            >
-              <span>
-                elle
-              </span>
-               
-            </span>
-          </div>
+          <span>
+            elle
+          </span>
+           
         </li>
       </ul>
     </div>

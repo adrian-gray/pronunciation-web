@@ -3,16 +3,14 @@
 exports[`Pending 1`] = `
 <div>
   <div
-    class="makeStyles-headspace-1"
+    class="head-space"
   >
-    <div
-      class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
-    >
-      <h5
-        class="MuiTypography-root makeStyles-personalSpace-3 MuiTypography-h5 MuiTypography-gutterBottom"
+    <div>
+      <h3
+        class="personals-pace"
       >
         Bob's Burgers - activity coming soon
-      </h5>
+      </h3>
     </div>
   </div>
 </div>

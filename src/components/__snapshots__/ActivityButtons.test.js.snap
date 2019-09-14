@@ -2,101 +2,63 @@
 
 exports[`ActivityButtons 1`] = `
 <div>
-  <a
-    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
-    href="/sound/undefined/foo"
-    role="button"
-    tabindex="0"
-  >
-    <span
-      class="MuiChip-label"
+  <div>
+    <a
+      class="chip activity-undefined"
+      href="/sound/bob/foo"
+      title="Foo"
     >
       Foo
-    </span>
-  </a>
-  <a
-    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
-    href="/sound/undefined/bar"
-    role="button"
-    tabindex="0"
-  >
-    <span
-      class="MuiChip-label"
+    </a>
+    <a
+      class="chip activity-undefined"
+      href="/sound/bob/bar"
+      title="Bar"
     >
       Bar
-    </span>
-  </a>
-  <a
-    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
-    href="/sound/undefined/baz"
-    role="button"
-    tabindex="0"
-  >
-    <span
-      class="MuiChip-label"
+    </a>
+    <a
+      class="chip activity-undefined"
+      href="/sound/bob/baz"
+      title="Baz"
     >
       Baz
-    </span>
-  </a>
-  <a
-    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
-    href="/sound/undefined/quox"
-    role="button"
-    tabindex="0"
-  >
-    <span
-      class="MuiChip-label"
+    </a>
+    <a
+      class="chip activity-undefined"
+      href="/sound/bob/quox"
+      title="Quox"
     >
       Quox
-    </span>
-  </a>
-  <a
-    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
-    href="/sound/undefined/apple"
-    role="button"
-    tabindex="0"
-  >
-    <span
-      class="MuiChip-label"
+    </a>
+    <a
+      class="chip activity-undefined"
+      href="/sound/bob/apple"
+      title="Apple"
     >
       Apple
-    </span>
-  </a>
-  <a
-    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
-    href="/sound/undefined/banana"
-    role="button"
-    tabindex="0"
-  >
-    <span
-      class="MuiChip-label"
+    </a>
+    <a
+      class="chip activity-undefined"
+      href="/sound/bob/banana"
+      title="Banana"
     >
       Banana
-    </span>
-  </a>
-  <a
-    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
-    href="/sound/undefined/chad"
-    role="button"
-    tabindex="0"
-  >
-    <span
-      class="MuiChip-label"
+    </a>
+    <a
+      class="chip activity-undefined"
+      href="/sound/bob/chad"
+      title="Chad"
     >
       Chad
-    </span>
-  </a>
-  <a
-    class="MuiChip-root makeStyles-chip-1 undefined MuiChip-clickable"
-    href="/sound/undefined/elle"
-    role="button"
-    tabindex="0"
-  >
-    <span
-      class="MuiChip-label"
+    </a>
+    <a
+      class="chip activity-undefined"
+      href="/sound/bob/elle"
+      title="Elle"
     >
       Elle
-    </span>
-  </a>
+    </a>
+  </div>
 </div>
 `;
