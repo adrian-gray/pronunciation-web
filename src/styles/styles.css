@@ -11,6 +11,15 @@
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   border-radius: 0.25rem !important;
 }
+.mini-canvas {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border-radius: 0.25rem !important;
+}
+.padded {
+  padding: 0.5rem;
+}
 .tile {
   margin: 1rem;
   padding: 1rem;
@@ -92,6 +101,9 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.default-bg {
+  background-color: #fff;
+}
 .correct-bg {
   background-color: #cfc;
 }
@@ -133,12 +145,19 @@
   text-decoration: none;
   background-color: #e0e0e0;
 }
-.mailchimp-root {
-  padding: 1rem;
-}
 .mailchimp-bg {
+  width: 100%;
   background-color: #fff8f0;
+}
+.mailchimp-subscribe {
+  padding: 1rem;
 }
 .no-margin-bottom {
   margin-bottom: 0;
+}
+.form-bottomspace {
+  margin-bottom: 1em;
+}
+.form-divider {
+  width: 100%;
 }

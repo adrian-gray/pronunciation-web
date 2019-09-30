@@ -1,23 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FindTheWords 1`] = `
+exports[`MissingSounds 1`] = `
 <div>
   <div
     class="headspace"
   >
-    <h3>
-      Select the words with an 
-      <span>
-        a:
-      </span>
-       
-      sound
-    </h3>
-    <p>
-      Find the correct sound. Say the words and select those with the ~a vowel sound. Once you get a word, it is replaced with a more challenging word. Can you find all the words before your time runs out? You can click on words to hear the pronunciation. Find the words helps you recognise and pronounce the vowel sounds of common English words.
-    </p>
+    <span>
+      Select the words that are 
+    </span>
+    <span
+      class="hilite"
+    >
+      MISSING
+    </span>
+    <span>
+       the short-a – a: sound.
+    </span>
+     
     <div
-      class="incorrect"
+      class="sub-canvas padded null"
     >
       <div
         class="cursor-pointer"
@@ -29,7 +30,7 @@ exports[`FindTheWords 1`] = `
             class="large-text"
           >
             <span>
-              foo
+              ran
             </span>
           </p>
         </div>
@@ -44,7 +45,7 @@ exports[`FindTheWords 1`] = `
             class="large-text"
           >
             <span>
-              bar
+              answer
             </span>
           </p>
         </div>
@@ -59,7 +60,7 @@ exports[`FindTheWords 1`] = `
             class="large-text"
           >
             <span>
-              baz
+              band
             </span>
           </p>
         </div>
@@ -74,7 +75,7 @@ exports[`FindTheWords 1`] = `
             class="large-text"
           >
             <span>
-              quox
+              start
             </span>
           </p>
         </div>
@@ -89,7 +90,7 @@ exports[`FindTheWords 1`] = `
             class="large-text"
           >
             <span>
-              apple
+              axe
             </span>
           </p>
         </div>
@@ -104,7 +105,7 @@ exports[`FindTheWords 1`] = `
             class="large-text"
           >
             <span>
-              banana
+              all
             </span>
           </p>
         </div>
@@ -119,7 +120,7 @@ exports[`FindTheWords 1`] = `
             class="large-text"
           >
             <span>
-              chad
+              thanks
             </span>
           </p>
         </div>
@@ -134,7 +135,37 @@ exports[`FindTheWords 1`] = `
             class="large-text"
           >
             <span>
-              elle
+              black
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="cursor-pointer"
+      >
+        <div
+          class="tile default-bg"
+        >
+          <p
+            class="large-text"
+          >
+            <span>
+              table
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="cursor-pointer"
+      >
+        <div
+          class="tile default-bg"
+        >
+          <p
+            class="large-text"
+          >
+            <span>
+              name
             </span>
           </p>
         </div>

@@ -39,7 +39,7 @@ exports[`Login 1`] = `
             </label>
             <input
               autocomplete="username"
-              class="form-control form-control"
+              class="form-control form-bottomspace form-control"
               id="signin_email"
               value=""
             />
@@ -50,7 +50,7 @@ exports[`Login 1`] = `
             </label>
             <input
               autocomplete="current-password"
-              class="form-control form-control"
+              class="form-control form-bottomspace form-control"
               id="signin_password"
               type="password"
               value=""
@@ -86,7 +86,7 @@ exports[`Login 1`] = `
             Your name
           </label>
           <input
-            class="form-control form-control"
+            class="form-control form-bottomspace form-control"
             id="signup_name"
             value=""
           />
@@ -101,7 +101,7 @@ exports[`Login 1`] = `
           </label>
           <input
             autocomplete="username"
-            class="form-control form-control"
+            class="form-control form-bottomspace form-control"
             id="signup_email"
             value=""
           />
@@ -116,7 +116,7 @@ exports[`Login 1`] = `
           </label>
           <input
             autocomplete="current-password"
-            class="form-control form-control"
+            class="form-control form-bottomspace form-control"
             id="signup_password"
             type="password"
             value=""

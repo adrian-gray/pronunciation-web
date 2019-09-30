@@ -65,7 +65,7 @@ export default (props: ISoundProps) => {
   );
 
   return (
-    <div className="headspace">
+    <div className="page">
       <SEO meta={SEOlocation} />
       <SoundTitle phoneme={data.ipa} str={data.title} />
       <hr />

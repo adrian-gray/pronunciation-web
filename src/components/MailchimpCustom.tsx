@@ -129,7 +129,7 @@ export default (props: {
           <Form.Control
             id="signin_email"
             placeholder="Your first name"
-            className="form-control"
+            className="form-control form-bottomspace"
             value={name}
             onChange={handleChange("fname")}
             autoComplete="name"
@@ -141,7 +141,7 @@ export default (props: {
           <Form.Control
             id="email"
             placeholder="Your Email"
-            className="form-control"
+            className="form-control form-bottomspace"
             value={name}
             onChange={handleChange("email")}
             autoComplete="email"
@@ -149,7 +149,7 @@ export default (props: {
         </Form.Row>
         <Form.Row>
           <br />
-          <p>
+          <p className="form-divider">
             {`We hate spam and will never share your details with anyone else.`}
           </p>
           <br />

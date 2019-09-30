@@ -17,7 +17,6 @@ interface IOddOneOutProps {
 }
 
 export default (props: IOddOneOutProps) => {
-  debugger;
   const title = `Select the words that ~DON'T~ have the ${props.tag} – ${props.ipa} sound.`;
 
   const [rowHiliteColor, setRowHiliteColor] = useState(

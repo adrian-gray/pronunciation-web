@@ -23,7 +23,7 @@ export default (props: {
   return (
     <div className="headspace">
       <Link to={{ pathname: `/sound/${phoneme}` }} className="undecorated">
-        <div>
+        <div className="mini-canvas">
           <h3>{displayTitle}</h3>
           <p>{"Example words containing short ‘a’"}</p>
           <p className="larger-text">{wordList}</p>

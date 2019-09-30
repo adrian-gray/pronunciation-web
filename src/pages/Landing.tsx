@@ -8,7 +8,7 @@ import SEO from "../components/SEO";
 
 export default () => {
   return (
-    <div className="headspace">
+    <div className="page">
       <SEO meta="landing" />
       <h1>{"Pronunciation Practice"}</h1>
       <h3>{"Improve Your Spoken English"}</h3>

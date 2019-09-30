@@ -151,7 +151,7 @@ export default {
         ],
         correct: ["matter", "pan", "tap", "ankle"]
       },
-      "missing sound": {
+      "missing sounds": {
         subscription: 1,
         words: [
           "ran",
@@ -165,7 +165,7 @@ export default {
           "table",
           "name"
         ],
-        correct: ["start", "all", "table", "name"]
+        answers: ["start", "all", "table", "name"]
       },
       "beginner news stories": {
         level: "beginner",

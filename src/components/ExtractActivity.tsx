@@ -7,6 +7,7 @@ import OddOneOut from "./../components/OddOneOut";
 import HowToPronounce from "./../components/HowToPronounce";
 import NewsStories from "./../components/NewsStories";
 import MinimalPairs from "./../components/MinimalPairs";
+import MissingSounds from "./../components/MissingSounds";
 import Movie from "./../components/Movie";
 import Pending from "./../components/Pending";
 import Phrases from "./../components/Phrases";
@@ -56,6 +57,19 @@ const ExtractActivity = (params: {
           tag={data.tag}
           words={activity.words}
           correct={activity.correct}
+          isHearTheDifference={false}
+          isUserAuth={isUserAuth}
+        />
+      );
+      break;
+
+    case "missing sounds":
+      activityComponent = (
+        <MissingSounds
+          ipa={data.ipa}
+          tag={data.tag}
+          words={activity.words}
+          answers={activity.answers}
           isHearTheDifference={false}
           isUserAuth={isUserAuth}
         />
@@ -169,7 +183,6 @@ const ExtractActivity = (params: {
       );
       break;
 
-    case "missing sound":
     case "sort the words":
     case "hear the words":
     case "pronunciation journey":

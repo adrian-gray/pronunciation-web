@@ -25,7 +25,7 @@ const form = (params: IMailChimp) => {
 
 export default () => {
   return (
-    <div className="mailchimp-bg">
+    <div className="sub-canvas mailchimp-bg">
       <div className="mailchimp-subscribe">
         <MailchimpSubscribe url={url} render={form} />
       </div>

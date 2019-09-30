@@ -13,7 +13,9 @@ export default (props: {
   const paperClasses = ["tile"];
 
   let correctStatus = null;
-  if (props.isCorrect) {
+  if (props.isCorrect === undefined) {
+    paperClasses.push("default-bg");
+  } else if (props.isCorrect) {
     paperClasses.push("correct-bg");
     correctStatus = "correct-bg";
   } else if (props.isCorrect === false) {

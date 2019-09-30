@@ -1,13 +1,9 @@
-- Login
-  - style: theming
 - Landing
-  - mailchimp on _paper_
   - landing page optimization
   - add mock info about paid users, ands and prelaunch users
   - space at bottom
 - Home
   - Styling looks weird
-  - style: _page_ for each sound
 - Sound
   - Maybe short text description of sound
 
@@ -17,7 +13,8 @@
 
 <hr />
 
-- Odd One Out (short-a) different activity for (long-e) - maybe rename the short-a one to Missing-sounds
+- Odd One Out (short-a) different activity for (long-e) - (short-a) renamed to Missing-sounds
+- fix odd one out
 
 <hr />
 

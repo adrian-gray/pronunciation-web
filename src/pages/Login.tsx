@@ -80,7 +80,7 @@ export default (props: { user: IUser }) => {
               <Form.Label>Your email</Form.Label>
               <Form.Control
                 id="signin_email"
-                className="form-control"
+                className="form-control form-bottomspace"
                 value={signinEmail}
                 onChange={handleChange("signinEmail")}
                 autoComplete="username"
@@ -88,7 +88,7 @@ export default (props: { user: IUser }) => {
               <Form.Label>Password</Form.Label>
               <Form.Control
                 id="signin_password"
-                className="form-control"
+                className="form-control form-bottomspace"
                 type="password"
                 value={signinPassword}
                 onChange={handleChange("signinPassword")}
@@ -107,7 +107,7 @@ export default (props: { user: IUser }) => {
             <Form.Label>Your name</Form.Label>
             <Form.Control
               id="signup_name"
-              className="form-control"
+              className="form-control form-bottomspace"
               value={signupName}
               onChange={handleChange("signupName")}
             />
@@ -116,7 +116,7 @@ export default (props: { user: IUser }) => {
             <Form.Label>Your email</Form.Label>
             <Form.Control
               id="signup_email"
-              className="form-control"
+              className="form-control form-bottomspace"
               value={signupEmail}
               onChange={handleChange("signupEmail")}
               autoComplete="username"
@@ -127,7 +127,7 @@ export default (props: { user: IUser }) => {
             <Form.Control
               autoComplete="current-password"
               id="signup_password"
-              className="form-control"
+              className="form-control form-bottomspace"
               type="password"
               value={signupPassword}
               onChange={handleChange("signupPassword")}

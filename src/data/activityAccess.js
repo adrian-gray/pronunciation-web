@@ -11,16 +11,15 @@ export const openActivities = [
 ];
 
 export const memberActivities = [
-  "find the words",
-  "odd one out",
   "beginner news stories",
+  "missing sounds",
+  "find the words",
   "intermediate news stories",
-  "words maze",
-  "odd one out"
+  "odd one out",
+  "words maze"
 ];
 
 export const pendingActivities = [
-  "missing sound",
   "choose the sound",
   "count the sounds",
   "fill in the spaces",
