@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SplitHilite from "./SplitHilite";
 
 // TODO WTF have I needed to add row/column/onClick
@@ -8,7 +8,6 @@ export default (props: {
   column: number;
   hilite: string;
   handleClick: any;
-  className?: string;
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
@@ -20,14 +19,16 @@ export default (props: {
     });
   };
 
-  const { hilite, str } = props;
-  const cellClasses = hilite ? `cell hilite` : "cell";
+  const cellClasses = props.hilite ? "cell cell-hilite-bg" : "cell";
+
+  let textClass;
+  if (props.hilite !== null) {
+    textClass = props.hilite ? "correct-text" : "incorrect-text";
+  }
 
   return (
     <td className={cellClasses} key={props.column} onClick={handleClick}>
-      <p>
-        <SplitHilite str={str} />
-      </p>
+      <p className={textClass}>{props.str}</p>
     </td>
   );
 };

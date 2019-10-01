@@ -38,6 +38,7 @@ export default (props: IOddOneOutProps) => {
             row={row}
             handleClick={handleClick}
             hilite={cellBG}
+            key={word}
           />
         );
       });
@@ -88,9 +89,9 @@ export default (props: IOddOneOutProps) => {
       if (column > -1) {
         const word = props.rows[row][column];
         if (props.correct.includes(word)) {
-          hiliteColor[row] = "correct-bg";
+          hiliteColor[row] = true;
         } else {
-          hiliteColor[row] = "incorrect-bg";
+          hiliteColor[row] = false;
         }
       }
     });

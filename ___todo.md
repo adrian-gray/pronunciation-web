@@ -13,7 +13,6 @@
 
 <hr />
 
-- Odd One Out (short-a) different activity for (long-e) - (short-a) renamed to Missing-sounds
 - fix odd one out
 
 <hr />

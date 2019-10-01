@@ -52,6 +52,9 @@
   padding-right: 1rem;
   text-align: center;
 }
+.cell p {
+  margin-bottom: 0;
+}
 .cell-hilite-bg {
   background: #ccc;
 }
@@ -103,6 +106,12 @@
 }
 .default-bg {
   background-color: #fff;
+}
+.correct-text {
+  color: #292;
+}
+.incorrect-text {
+  color: #c22;
 }
 .correct-bg {
   background-color: #cfc;
