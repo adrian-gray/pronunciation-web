@@ -3,7 +3,7 @@
 exports[`MailChimp 1`] = `
 <div>
   <div
-    class="mailchimp-bg"
+    class="sub-canvas mailchimp-bg"
   >
     <div
       class="mailchimp-subscribe"
@@ -24,7 +24,7 @@ exports[`MailChimp 1`] = `
             </label>
             <input
               autocomplete="name"
-              class="form-control form-control"
+              class="form-control form-bottomspace form-control"
               id="signin_email"
               placeholder="Your first name"
               value=""
@@ -40,7 +40,7 @@ exports[`MailChimp 1`] = `
             </label>
             <input
               autocomplete="email"
-              class="form-control form-control"
+              class="form-control form-bottomspace form-control"
               id="email"
               placeholder="Your Email"
               value=""
@@ -50,7 +50,9 @@ exports[`MailChimp 1`] = `
             class="form-row"
           >
             <br />
-            <p>
+            <p
+              class="form-divider"
+            >
               We hate spam and will never share your details with anyone else.
             </p>
             <br />

@@ -47,30 +47,23 @@ exports[`OddOneOut 1`] = `
               class="cell"
             >
               <p>
-                <span>
-                  three
-                </span>
-                 
+                three
               </p>
             </td>
             <td
               class="cell"
             >
               <p>
-                <span>
-                  blind
-                </span>
-                 
+                blind
               </p>
             </td>
             <td
-              class="cell hilite"
+              class="cell cell-hilite-bg"
             >
-              <p>
-                <span>
-                  moice
-                </span>
-                 
+              <p
+                class="correct-text"
+              >
+                moice
               </p>
             </td>
           </tr>
@@ -81,30 +74,21 @@ exports[`OddOneOut 1`] = `
               class="cell"
             >
               <p>
-                <span>
-                  the
-                </span>
-                 
+                the
               </p>
             </td>
             <td
               class="cell"
             >
               <p>
-                <span>
-                  cat
-                </span>
-                 
+                cat
               </p>
             </td>
             <td
               class="cell"
             >
               <p>
-                <span>
-                  sat
-                </span>
-                 
+                sat
               </p>
             </td>
           </tr>
@@ -113,30 +97,21 @@ exports[`OddOneOut 1`] = `
               class="cell"
             >
               <p>
-                <span>
-                  on
-                </span>
-                 
+                on
               </p>
             </td>
             <td
               class="cell"
             >
               <p>
-                <span>
-                  the
-                </span>
-                 
+                the
               </p>
             </td>
             <td
               class="cell"
             >
               <p>
-                <span>
-                  mat
-                </span>
-                 
+                mat
               </p>
             </td>
           </tr>

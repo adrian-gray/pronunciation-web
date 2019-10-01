@@ -5,13 +5,12 @@ exports[`Cell 1`] = `
   <tbody>
     <tr>
       <td
-        class="cell hilite"
+        class="cell cell-hilite-bg"
       >
-        <p>
-          <span>
-            rabbit
-          </span>
-           
+        <p
+          class="correct-text"
+        >
+          rabbit
         </p>
       </td>
     </tr>
@@ -24,13 +23,12 @@ exports[`Cell with hilite 1`] = `
   <tbody>
     <tr>
       <td
-        class="cell hilite"
+        class="cell cell-hilite-bg"
       >
-        <p>
-          <span>
-            rabbit
-          </span>
-           
+        <p
+          class="correct-text"
+        >
+          rabbit
         </p>
       </td>
     </tr>
