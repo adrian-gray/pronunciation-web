@@ -33,6 +33,17 @@ $tight-corners: 0.25rem !important;
   border-radius: $tight-corners;
   float: left;
 }
+h2 {
+  a {
+    color: #aaa;
+    padding-right: 0.75rem;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #666;
+    text-decoration: none;
+  }
+}
 .phoneme-word {
   font-size: 1rem;
   padding-right: 1rem;
