@@ -16,16 +16,20 @@ export default (props: {
       <SplitHilite str={ipa} /> – <SplitHilite str={title} />
     </span>
   );
-  const wordList = words
-    .slice(0, 6)
-    .map((word: string) => <SplitHilite str={word} key={word} />);
+  const wordList = words.slice(0, 6).map((word: string) => {
+    return (
+      <span className="phoneme-word" key={word}>
+        <SplitHilite str={word} key={word} />
+      </span>
+    );
+  });
 
   return (
     <div className="headspace">
       <div className="mini-canvas">
         <h3>{displayTitle}</h3>
         <p>{"Example words containing short ‘a’"}</p>
-        <p className="larger-text">{wordList}</p>
+        <p>{wordList}</p>
         <Link to={{ pathname: `/sound/${phoneme}` }} className="undecorated">
           <h5>{`Click to learn more about the ${tag} sound`}</h5>
         </Link>

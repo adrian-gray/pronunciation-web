@@ -10,6 +10,7 @@ const sitemap = sm.createSitemap({
     { url: "/home", changefreq: "weekly", priority: 0.5 },
     { url: "/sounds", changefreq: "weekly", priority: 0.5 },
 
+    // ! short a
     { url: "/sound/short-a", changefreq: "weekly", priority: 0.5 },
     {
       url: "/sound/short-a/how-to-pronounce",
@@ -32,16 +33,20 @@ const sitemap = sm.createSitemap({
       priority: 0.5
     },
     {
+      url: "/sound/short-a/say-the-sentences",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    {
       url: "/sound/short-a/find-the-words",
       changefreq: "weekly",
       priority: 0.5
     },
     {
-      url: "/sound/short-a/say-the-sentences",
+      url: "/sound/short-a/missing-sounds",
       changefreq: "weekly",
       priority: 0.5
     },
-    { url: "/sound/short-a/odd-one-out", changefreq: "weekly", priority: 0.5 },
     {
       url: "/sound/short-a/beginner-news-stories",
       changefreq: "weekly",
@@ -54,6 +59,7 @@ const sitemap = sm.createSitemap({
     },
     { url: "/sound/short-a/words-maze", changefreq: "weekly", priority: 0.5 },
 
+    // ! long e
     { url: "/sound/long-e", changefreq: "weekly", priority: 0.5 },
     {
       url: "/sound/long-e/how-to-pronounce",
@@ -72,7 +78,7 @@ const sitemap = sm.createSitemap({
     },
     { url: "/sound/long-e/minimal-pairs", changefreq: "weekly", priority: 0.5 },
     {
-      url: "/sound/long-e/the-odd-one-out",
+      url: "/sound/long-e/odd-one-out",
       changefreq: "weekly",
       priority: 0.5
     },
@@ -88,6 +94,7 @@ const sitemap = sm.createSitemap({
     },
     { url: "/sound/long-e/words-maze", changefreq: "weekly", priority: 0.5 },
 
+    // ! short i
     { url: "/sound/short-i", changefreq: "weekly", priority: 0.5 },
     {
       url: "/sound/short-i/how-to-pronounce",
@@ -119,7 +126,40 @@ const sitemap = sm.createSitemap({
       changefreq: "weekly",
       priority: 0.5
     },
-    { url: "/sound/short-i/words-maze", changefreq: "weekly", priority: 0.5 }
+    { url: "/sound/short-i/words-maze", changefreq: "weekly", priority: 0.5 },
+
+    { url: "/sound/long-u", changefreq: "weekly", priority: 0.5 },
+    {
+      url: "/sound/long-u/how-to-pronounce",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    { url: "/sound/long-u/movie", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/long-u/words", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/long-u/phrases", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/long-u/dialogues", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/long-u/common-words", changefreq: "weekly", priority: 0.5 },
+    {
+      url: "/sound/long-u/tongue-twisters",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    {
+      url: "/sound/long-u/minimal-pairs",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    {
+      url: "/sound/long-u/beginner-news-stories",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    {
+      url: "/sound/long-u/intermediate-news-stories",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    { url: "/sound/long-u/words-maze", changefreq: "weekly", priority: 0.5 }
   ]
 });
 
