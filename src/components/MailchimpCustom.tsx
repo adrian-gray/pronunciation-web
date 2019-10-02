@@ -121,7 +121,7 @@ export default (props: {
   });
 
   return (
-    <div className="mailchip-root">
+    <div className="mailchimp-root">
       <Form>
         {formStatus}
         <Form.Row>
