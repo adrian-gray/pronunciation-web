@@ -9,6 +9,10 @@
 
 <hr />
 
+- https://stackoverflow.com/questions/39064441/webpack-2-error-in-public-bundle-js-from-uglifyjs-unexpected-character
+
+<hr />
+
 - Choose the Sound ❌ /u:/
 - Common words
   - Maybe style like 'Find the words'

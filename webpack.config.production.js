@@ -1,24 +1,23 @@
-require("babel-polyfill");
-
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const publicPath = "dist";
 
 module.exports = {
   context: __dirname,
   mode: "production",
-  entry: ["babel-polyfill", "./src/Index.tsx"],
+  entry: ["./src/Index.tsx"],
   output: {
     path: path.join(__dirname, publicPath),
     publicPath: "/",
     filename: "bundle.js"
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json"]
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".scss"]
   },
   stats: {
     colors: true,
@@ -28,9 +27,42 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        loader: "babel-loader",
-        exclude: /node_modules/
+        test: /\.tsx?$/,
+        exclude: [/node_modules/],
+        loader: "babel-loader"
+      },
+      {
+        test: /\.module\.s(a|c)ss$/,
+        loader: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              sourceMap: false
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: false
+            }
+          }
+        ]
+      },
+      {
+        test: /\.s(a|c)ss$/,
+        exclude: /\.module.(s(a|c)ss)$/,
+        loader: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: false
+            }
+          }
+        ]
       }
     ]
   },
@@ -57,6 +89,10 @@ module.exports = {
         }
       }
     }),
-    new CompressionPlugin({ algorithm: "gzip" })
+    new CompressionPlugin({ algorithm: "gzip" }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[hash].css",
+      chunkFilename: "[id].[hash].css"
+    })
   ]
 };
