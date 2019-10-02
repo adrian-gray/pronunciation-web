@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { RouteComponentProps } from "react-router-dom";
-
-import div from "react-bootstrap/div";
+import { RouteComponentProps, Link } from "react-router-dom";
 
 import soundsData from "../data/sounds";
 import ActivityButtons from "../components/ActivityButtons";
@@ -48,13 +46,6 @@ export default (props: ISoundProps) => {
 
   const SEOlocation = `sound ${phoneme} ${activity}`;
 
-  const passingProps = {
-    props,
-    activityName: activity,
-    data,
-    subscriptionLevel
-  };
-
   const activityComponent = (
     <ExtractActivity
       activityName={activity}
@@ -67,11 +58,12 @@ export default (props: ISoundProps) => {
   return (
     <div className="page">
       <SEO meta={SEOlocation} />
+      <Link to={{ pathname: `/home` }} className="undecorated">
+        <p className="big-link">Home</p>
+      </Link>
       <SoundTitle phoneme={data.ipa} str={data.title} />
       <hr />
-
       <h1>{`Pronunciation activities for ${data.tag}`}</h1>
-
       <div>
         <ActivityButtons
           phoneme={phoneme}
@@ -80,7 +72,6 @@ export default (props: ISoundProps) => {
         />
       </div>
       <hr />
-
       {activityComponent}
     </div>
   );

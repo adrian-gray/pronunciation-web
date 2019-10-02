@@ -3,7 +3,7 @@
 exports[`SoundTitle 1`] = `
 Object {
   "container": <div>
-    <h3>
+    <h2>
       <span>
         Bob
       </span>
@@ -13,7 +13,7 @@ Object {
         The cat in the hat
       </span>
        
-    </h3>
+    </h2>
   </div>,
 }
 `;

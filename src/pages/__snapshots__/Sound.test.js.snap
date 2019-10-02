@@ -5,7 +5,17 @@ exports[`Sound 1`] = `
   <div
     class="page"
   >
-    <h3>
+    <a
+      class="undecorated"
+      href="/home"
+    >
+      <p
+        class="big-link"
+      >
+        Home
+      </p>
+    </a>
+    <h2>
       <span />
       <span
         class="hilite"
@@ -35,7 +45,7 @@ exports[`Sound 1`] = `
         ’
       </span>
        
-    </h3>
+    </h2>
     <hr />
     <h1>
       Pronunciation activities for long ‘e’
