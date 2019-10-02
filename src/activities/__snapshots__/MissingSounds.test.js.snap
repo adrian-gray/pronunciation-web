@@ -5,18 +5,20 @@ exports[`MissingSounds 1`] = `
   <div
     class="headspace"
   >
-    <span>
-      Select the words that are 
-    </span>
-    <span
-      class="hilite"
-    >
-      MISSING
-    </span>
-    <span>
-       the short-a – a: sound.
-    </span>
-     
+    <h3>
+      <span>
+        Select the words that are 
+      </span>
+      <span
+        class="hilite"
+      >
+        MISSING
+      </span>
+      <span>
+         the short-a – a: sound.
+      </span>
+       
+    </h3>
     <div
       class="sub-canvas padded null"
     >

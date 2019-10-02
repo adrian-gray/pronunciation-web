@@ -101,6 +101,8 @@ $tight-corners: 0.25rem !important;
 }
 .blocked {
   opacity: 0.2;
+  pointer-events: none;
+  user-select: none;
 }
 .clickable {
   cursor: pointer;

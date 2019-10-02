@@ -33,7 +33,7 @@ exports[`Landing 1`] = `
         class="mailchimp-subscribe"
       >
         <div
-          class="mailchip-root"
+          class="mailchimp-root"
         >
           <form
             class=""
@@ -48,7 +48,7 @@ exports[`Landing 1`] = `
               </label>
               <input
                 autocomplete="name"
-                class="form-control form-bottomspace form-control"
+                class="form-control form-bottom-space form-control"
                 id="signin_email"
                 placeholder="Your first name"
                 value=""
@@ -64,7 +64,7 @@ exports[`Landing 1`] = `
               </label>
               <input
                 autocomplete="email"
-                class="form-control form-bottomspace form-control"
+                class="form-control form-bottom-space form-control"
                 id="email"
                 placeholder="Your Email"
                 value=""

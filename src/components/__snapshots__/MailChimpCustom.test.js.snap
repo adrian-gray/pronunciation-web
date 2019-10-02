@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MailChimpCustom 1`] = `
+<div>
+  <div
+    class="mailchimp-root"
+  >
+    <form
+      class=""
+    >
+      <div
+        class="form-row"
+      >
+        <label
+          class="form-label"
+        >
+          Your first name
+        </label>
+        <input
+          autocomplete="name"
+          class="form-control form-bottom-space form-control"
+          id="signin_email"
+          placeholder="Your first name"
+          value=""
+        />
+      </div>
+      <div
+        class="form-row"
+      >
+        <label
+          class="form-label"
+        >
+          Your Email
+        </label>
+        <input
+          autocomplete="email"
+          class="form-control form-bottom-space form-control"
+          id="email"
+          placeholder="Your Email"
+          value=""
+        />
+      </div>
+      <div
+        class="form-row"
+      >
+        <br />
+        <p
+          class="form-divider"
+        >
+          We hate spam and will never share your details with anyone else.
+        </p>
+        <br />
+        <button
+          class="btn btn-warning"
+          type="button"
+        >
+          Keep me updated!
+        </button>
+      </div>
+    </form>
+    <br />
+  </div>
+</div>
+`;

@@ -9,10 +9,6 @@
 
 <hr />
 
-- Consistent <Header> tages for size and priority
-
-<hr />
-
 - Choose the Sound ❌ /u:/
 - Common words
   - Maybe style like 'Find the words'

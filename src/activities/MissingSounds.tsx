@@ -18,11 +18,6 @@ export default (props: IMissingSoundsProps) => {
   );
 
   const { ipa, tag, words, answers } = props;
-  const title = (
-    <SplitHilite
-      str={`Select the words that are ~MISSING~ the ${tag} – ${ipa} sound.`}
-    />
-  );
 
   let hasIncorrect = false;
 
@@ -41,9 +36,6 @@ export default (props: IMissingSoundsProps) => {
   }
 
   const handleClick = (index: number) => {
-    if (!props.isUserAuth) {
-      return;
-    }
     const isAnswerCorrect = answers.includes(words[index]);
     const newStateIsCorrect = isCorrect.slice();
 
@@ -91,9 +83,15 @@ export default (props: IMissingSoundsProps) => {
     </div>
   );
 
+  const title = (
+    <SplitHilite
+      str={`Select the words that are ~MISSING~ the ${tag} – ${ipa} sound.`}
+    />
+  );
+
   return (
     <div className="headspace">
-      {title}
+      <h3>{title}</h3>
       <MemberGate content={display} isUserAuth={props.isUserAuth} />
     </div>
   );

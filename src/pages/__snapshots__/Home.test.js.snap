@@ -11,204 +11,150 @@ exports[`Home 1`] = `
     <div
       class="headspace"
     >
-      <a
-        class="undecorated"
-        href="/sound/short-a"
+      <div
+        class="mini-canvas"
       >
-        <div
-          class="mini-canvas"
+        <h3>
+          <span>
+            <span />
+            <span
+              class="hilite"
+            >
+              /æ/
+            </span>
+            <span />
+             
+             – 
+            <span>
+              short 
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+               ‘b
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              d’
+            </span>
+             
+          </span>
+        </h3>
+        <p>
+          Example words containing short ‘a’
+        </p>
+        <p
+          class="larger-text"
         >
-          <h3>
-            <span>
-              <span />
-              <span
-                class="hilite"
-              >
-                /æ/
-              </span>
-              <span />
-               
-               – 
-              <span>
-                short 
-              </span>
-              <span
-                class="hilite"
-              >
-                a
-              </span>
-              <span>
-                 ‘b
-              </span>
-              <span
-                class="hilite"
-              >
-                a
-              </span>
-              <span>
-                d’
-              </span>
-               
-            </span>
-          </h3>
-          <p>
-            Example words containing short ‘a’
-          </p>
-          <p
-            class="larger-text"
+          <span>
+            c
+          </span>
+          <span
+            class="hilite"
           >
-            <span>
-              c
-            </span>
-            <span
-              class="hilite"
-            >
-              a
-            </span>
-            <span>
-              sh
-            </span>
-             
-            <span>
-              tr
-            </span>
-            <span
-              class="hilite"
-            >
-              a
-            </span>
-            <span>
-              sh
-            </span>
-             
-            <span>
-              tr
-            </span>
-            <span
-              class="hilite"
-            >
-              a
-            </span>
-            <span>
-              nsfer
-            </span>
-             
-            <span>
-              st
-            </span>
-            <span
-              class="hilite"
-            >
-              a
-            </span>
-            <span>
-              nd
-            </span>
-             
-            <span>
-              ch
-            </span>
-            <span
-              class="hilite"
-            >
-              a
-            </span>
-            <span>
-              t
-            </span>
-             
-            <span>
-              tr
-            </span>
-            <span
-              class="hilite"
-            >
-              a
-            </span>
-            <span>
-              ffic
-            </span>
-             
-          </p>
+            a
+          </span>
+          <span>
+            sh
+          </span>
+           
+          <span>
+            tr
+          </span>
+          <span
+            class="hilite"
+          >
+            a
+          </span>
+          <span>
+            sh
+          </span>
+           
+          <span>
+            tr
+          </span>
+          <span
+            class="hilite"
+          >
+            a
+          </span>
+          <span>
+            nsfer
+          </span>
+           
+          <span>
+            st
+          </span>
+          <span
+            class="hilite"
+          >
+            a
+          </span>
+          <span>
+            nd
+          </span>
+           
+          <span>
+            ch
+          </span>
+          <span
+            class="hilite"
+          >
+            a
+          </span>
+          <span>
+            t
+          </span>
+           
+          <span>
+            tr
+          </span>
+          <span
+            class="hilite"
+          >
+            a
+          </span>
+          <span>
+            ffic
+          </span>
+           
+        </p>
+        <a
+          class="undecorated"
+          href="/sound/short-a"
+        >
           <h5>
             Click to learn more about the short ‘a’ sound
           </h5>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
     <div
       class="headspace"
     >
-      <a
-        class="undecorated"
-        href="/sound/short-i"
+      <div
+        class="mini-canvas"
       >
-        <div
-          class="mini-canvas"
-        >
-          <h3>
-            <span>
-              <span />
-              <span
-                class="hilite"
-              >
-                /ɪ/
-              </span>
-              <span />
-               
-               – 
-              <span>
-                short 
-              </span>
-              <span
-                class="hilite"
-              >
-                i
-              </span>
-              <span>
-                 ‘s
-              </span>
-              <span
-                class="hilite"
-              >
-                i
-              </span>
-              <span>
-                t’
-              </span>
-               
-            </span>
-          </h3>
-          <p>
-            Example words containing short ‘a’
-          </p>
-          <p
-            class="larger-text"
-          >
-            <span>
-              th
-            </span>
-            <span
-              class="hilite"
-            >
-              i
-            </span>
-            <span>
-              nk
-            </span>
-             
+        <h3>
+          <span>
             <span />
             <span
               class="hilite"
             >
-              i
+              /ɪ/
             </span>
-            <span>
-              nternet
-            </span>
+            <span />
              
+             – 
             <span>
-              m
+              short 
             </span>
             <span
               class="hilite"
@@ -216,11 +162,7 @@ exports[`Home 1`] = `
               i
             </span>
             <span>
-              nutes
-            </span>
-             
-            <span>
-              g
+               ‘s
             </span>
             <span
               class="hilite"
@@ -228,285 +170,343 @@ exports[`Home 1`] = `
               i
             </span>
             <span>
-              ve
+              t’
             </span>
              
-            <span>
-              qu
-            </span>
-            <span
-              class="hilite"
-            >
-              i
-            </span>
-            <span>
-              ck
-            </span>
-             
-            <span>
-              br
-            </span>
-            <span
-              class="hilite"
-            >
-              i
-            </span>
-            <span>
-              dge
-            </span>
-             
-          </p>
+          </span>
+        </h3>
+        <p>
+          Example words containing short ‘a’
+        </p>
+        <p
+          class="larger-text"
+        >
+          <span>
+            th
+          </span>
+          <span
+            class="hilite"
+          >
+            i
+          </span>
+          <span>
+            nk
+          </span>
+           
+          <span />
+          <span
+            class="hilite"
+          >
+            i
+          </span>
+          <span>
+            nternet
+          </span>
+           
+          <span>
+            m
+          </span>
+          <span
+            class="hilite"
+          >
+            i
+          </span>
+          <span>
+            nutes
+          </span>
+           
+          <span>
+            g
+          </span>
+          <span
+            class="hilite"
+          >
+            i
+          </span>
+          <span>
+            ve
+          </span>
+           
+          <span>
+            qu
+          </span>
+          <span
+            class="hilite"
+          >
+            i
+          </span>
+          <span>
+            ck
+          </span>
+           
+          <span>
+            br
+          </span>
+          <span
+            class="hilite"
+          >
+            i
+          </span>
+          <span>
+            dge
+          </span>
+           
+        </p>
+        <a
+          class="undecorated"
+          href="/sound/short-i"
+        >
           <h5>
             Click to learn more about the short ‘i’ sound
           </h5>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
     <div
       class="headspace"
     >
-      <a
-        class="undecorated"
-        href="/sound/long-e"
+      <div
+        class="mini-canvas"
       >
-        <div
-          class="mini-canvas"
+        <h3>
+          <span>
+            <span />
+            <span
+              class="hilite"
+            >
+              /i:/
+            </span>
+            <span />
+             
+             – 
+            <span>
+              long 
+            </span>
+            <span
+              class="hilite"
+            >
+              e
+            </span>
+            <span>
+               ‘s
+            </span>
+            <span
+              class="hilite"
+            >
+              ee
+            </span>
+            <span>
+              ’
+            </span>
+             
+          </span>
+        </h3>
+        <p>
+          Example words containing short ‘a’
+        </p>
+        <p
+          class="larger-text"
         >
-          <h3>
-            <span>
-              <span />
-              <span
-                class="hilite"
-              >
-                /i:/
-              </span>
-              <span />
-               
-               – 
-              <span>
-                long 
-              </span>
-              <span
-                class="hilite"
-              >
-                e
-              </span>
-              <span>
-                 ‘s
-              </span>
-              <span
-                class="hilite"
-              >
-                ee
-              </span>
-              <span>
-                ’
-              </span>
-               
-            </span>
-          </h3>
-          <p>
-            Example words containing short ‘a’
-          </p>
-          <p
-            class="larger-text"
+          <span>
+            pl
+          </span>
+          <span
+            class="hilite"
           >
-            <span>
-              pl
-            </span>
-            <span
-              class="hilite"
-            >
-              ea
-            </span>
-            <span>
-              se
-            </span>
-             
-            <span>
-              k
-            </span>
-            <span
-              class="hilite"
-            >
-              ey
-            </span>
-            <span />
-             
-            <span>
-              tr
-            </span>
-            <span
-              class="hilite"
-            >
-              ee
-            </span>
-            <span />
-             
-            <span>
-              n
-            </span>
-            <span
-              class="hilite"
-            >
-              ee
-            </span>
-            <span>
-              d
-            </span>
-             
-            <span>
-              sl
-            </span>
-            <span
-              class="hilite"
-            >
-              ee
-            </span>
-            <span>
-              p
-            </span>
-             
-            <span />
-            <span
-              class="hilite"
-            >
-              ea
-            </span>
-            <span>
-              st
-            </span>
-             
-          </p>
+            ea
+          </span>
+          <span>
+            se
+          </span>
+           
+          <span>
+            k
+          </span>
+          <span
+            class="hilite"
+          >
+            ey
+          </span>
+          <span />
+           
+          <span>
+            tr
+          </span>
+          <span
+            class="hilite"
+          >
+            ee
+          </span>
+          <span />
+           
+          <span>
+            n
+          </span>
+          <span
+            class="hilite"
+          >
+            ee
+          </span>
+          <span>
+            d
+          </span>
+           
+          <span>
+            sl
+          </span>
+          <span
+            class="hilite"
+          >
+            ee
+          </span>
+          <span>
+            p
+          </span>
+           
+          <span />
+          <span
+            class="hilite"
+          >
+            ea
+          </span>
+          <span>
+            st
+          </span>
+           
+        </p>
+        <a
+          class="undecorated"
+          href="/sound/long-e"
+        >
           <h5>
             Click to learn more about the long ‘e’ sound
           </h5>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
     <div
       class="headspace"
     >
-      <a
-        class="undecorated"
-        href="/sound/long-u"
+      <div
+        class="mini-canvas"
       >
-        <div
-          class="mini-canvas"
+        <h3>
+          <span>
+            <span />
+            <span
+              class="hilite"
+            >
+              /u:/
+            </span>
+            <span />
+             
+             – 
+            <span>
+              long 
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+               ‘bl
+            </span>
+            <span
+              class="hilite"
+            >
+              ue
+            </span>
+            <span>
+              ’
+            </span>
+             
+          </span>
+        </h3>
+        <p>
+          Example words containing short ‘a’
+        </p>
+        <p
+          class="larger-text"
         >
-          <h3>
-            <span>
-              <span />
-              <span
-                class="hilite"
-              >
-                /u:/
-              </span>
-              <span />
-               
-               – 
-              <span>
-                long 
-              </span>
-              <span
-                class="hilite"
-              >
-                u
-              </span>
-              <span>
-                 ‘bl
-              </span>
-              <span
-                class="hilite"
-              >
-                ue
-              </span>
-              <span>
-                ’
-              </span>
-               
-            </span>
-          </h3>
-          <p>
-            Example words containing short ‘a’
-          </p>
-          <p
-            class="larger-text"
+          <span>
+            st
+          </span>
+          <span
+            class="hilite"
           >
-            <span>
-              st
-            </span>
-            <span
-              class="hilite"
-            >
-              u
-            </span>
-            <span>
-              dent
-            </span>
-             
-            <span>
-              J
-            </span>
-            <span
-              class="hilite"
-            >
-              u
-            </span>
-            <span>
-              ne
-            </span>
-             
-            <span>
-              j
-            </span>
-            <span
-              class="hilite"
-            >
-              ew
-            </span>
-            <span>
-              ellery (jewelry)
-            </span>
-             
-            <span>
-              m
-            </span>
-            <span
-              class="hilite"
-            >
-              u
-            </span>
-            <span>
-              sic
-            </span>
-             
-            <span>
-              n
-            </span>
-            <span
-              class="hilite"
-            >
-              ew
-            </span>
-            <span />
-             
-            <span>
-              f
-            </span>
-            <span
-              class="hilite"
-            >
-              ew
-            </span>
-            <span />
-             
-          </p>
+            u
+          </span>
+          <span>
+            dent
+          </span>
+           
+          <span>
+            J
+          </span>
+          <span
+            class="hilite"
+          >
+            u
+          </span>
+          <span>
+            ne
+          </span>
+           
+          <span>
+            j
+          </span>
+          <span
+            class="hilite"
+          >
+            ew
+          </span>
+          <span>
+            ellery (jewelry)
+          </span>
+           
+          <span>
+            m
+          </span>
+          <span
+            class="hilite"
+          >
+            u
+          </span>
+          <span>
+            sic
+          </span>
+           
+          <span>
+            n
+          </span>
+          <span
+            class="hilite"
+          >
+            ew
+          </span>
+          <span />
+           
+          <span>
+            f
+          </span>
+          <span
+            class="hilite"
+          >
+            ew
+          </span>
+          <span />
+           
+        </p>
+        <a
+          class="undecorated"
+          href="/sound/long-u"
+        >
           <h5>
             Click to learn more about the long ‘u’ sound
           </h5>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
   </div>
 </div>

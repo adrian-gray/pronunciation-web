@@ -22,14 +22,14 @@ export default (props: {
 
   return (
     <div className="headspace">
-      <Link to={{ pathname: `/sound/${phoneme}` }} className="undecorated">
-        <div className="mini-canvas">
-          <h3>{displayTitle}</h3>
-          <p>{"Example words containing short ‘a’"}</p>
-          <p className="larger-text">{wordList}</p>
+      <div className="mini-canvas">
+        <h3>{displayTitle}</h3>
+        <p>{"Example words containing short ‘a’"}</p>
+        <p className="larger-text">{wordList}</p>
+        <Link to={{ pathname: `/sound/${phoneme}` }} className="undecorated">
           <h5>{`Click to learn more about the ${tag} sound`}</h5>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 };

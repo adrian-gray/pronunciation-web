@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActivityButton 1`] = `
+<div>
+  <a
+    class="chip activity-open"
+    href="/sound/a:/harry"
+    title="Harry"
+  >
+    Harry
+  </a>
+</div>
+`;

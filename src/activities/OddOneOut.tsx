@@ -74,7 +74,6 @@ export default (props: IOddOneOutProps) => {
   }
 
   function handleClick(params: { column: number; row: number }) {
-    if (!props.isUserAuth) return;
     const { column, row } = params;
     const arr = selected.slice();
     arr[row] = column;

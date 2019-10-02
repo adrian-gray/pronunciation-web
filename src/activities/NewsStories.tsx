@@ -143,7 +143,6 @@ class NewsStories extends Component<
   }
 
   handleClick(index: number) {
-    if (!this.props.isUserAuth) return;
     const selectedOption: number[] = this.state.selectedOption.slice();
     const selectedBgColour: string[] = this.state.selectedBgColour.slice();
     selectedOption[index] =
@@ -176,9 +175,9 @@ class NewsStories extends Component<
 
     return (
       <div className="headspace">
-        <h2>{"News Stories"}</h2>
+        <h3>{"News Stories"}</h3>
         <p>{description}</p>
-        <h3>{headline}</h3>
+        <h4>{headline}</h4>
         <h5>
           <SplitHilite str={title} />
         </h5>

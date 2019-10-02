@@ -5,50 +5,50 @@ exports[`Phoneme 1`] = `
   <div
     class="headspace"
   >
-    <a
-      class="undecorated"
-      href="/sound/long-z"
+    <div
+      class="mini-canvas"
     >
-      <div
-        class="mini-canvas"
+      <h3>
+        <span>
+          <span>
+            z:!
+          </span>
+           
+           – 
+          <span>
+            Long Zorro
+          </span>
+           
+        </span>
+      </h3>
+      <p>
+        Example words containing short ‘a’
+      </p>
+      <p
+        class="larger-text"
       >
-        <h3>
-          <span>
-            <span>
-              z:!
-            </span>
-             
-             – 
-            <span>
-              Long Zorro
-            </span>
-             
-          </span>
-        </h3>
-        <p>
-          Example words containing short ‘a’
-        </p>
-        <p
-          class="larger-text"
-        >
-          <span>
-            zoo
-          </span>
-           
-          <span>
-            zork
-          </span>
-           
-          <span>
-            zorb
-          </span>
-           
-        </p>
+        <span>
+          zoo
+        </span>
+         
+        <span>
+          zork
+        </span>
+         
+        <span>
+          zorb
+        </span>
+         
+      </p>
+      <a
+        class="undecorated"
+        href="/sound/long-z"
+      >
         <h5>
           Click to learn more about the zzzz sound
         </h5>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
 </div>
 `;
