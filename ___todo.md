@@ -3,7 +3,7 @@
   - add mock info about paid users, ands and prelaunch users
   - space at bottom
 - Home
-  - Styling looks weird
+  - Styling in general looks weird
 - Sound
   - Maybe short text description of sound
 
