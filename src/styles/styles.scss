@@ -1,3 +1,6 @@
+@import "mailchimp";
+@import "google";
+
 .page {
   flex-grow: 1;
   padding: 1rem;
@@ -153,13 +156,6 @@
   justify-content: center;
   text-decoration: none;
   background-color: #e0e0e0;
-}
-.mailchimp-bg {
-  width: 100%;
-  background-color: #fff8f0;
-}
-.mailchimp-subscribe {
-  padding: 1rem;
 }
 .no-margin-bottom {
   margin-bottom: 0;

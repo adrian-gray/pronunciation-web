@@ -12,6 +12,8 @@ import NavBar from "./components/NavBar";
 import Router from "./Router";
 import SEO from "./components/SEO";
 
+import "./styles/styles.scss";
+
 export default () => {
   const [user, setUser] = useState(null);
   const [subscriptionLevel, setSubscriptionLevel] = useState(null);
