@@ -1,0 +1,21 @@
+pronunciation | 10K – 1000 | Low
+phonetic spelling | 10K – 100K | Low
+pronunciation audio | 1K – 10K | Low
+pronunciation website | 1K – 10K | Low
+english pronunciation | 1K – 10K | Low
+ipa pronunciation | 1K – 10K | Low
+phonetic pronunciation | 1K – 10K | Low
+correct pronunciation | 1K – 10K | Low
+international phonetic alphabet vowels | 100 – 1K | Low
+phonetic sounds in english | 100 – 1K | Low
+
+MOZ
+
+english pronunciation
+volume: 851-1.7k    difficulty: 44    organic CTR: 62%     priority: 61
+
+pronunciation website
+volume: 201-500    difficulty: 52    organic CTR: 64%     priority: 52
+
+pronunciation
+volume: 11.5k - 30.3k    difficulty: 58    organic CTR: 100%     priority: 80
