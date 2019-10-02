@@ -8,7 +8,6 @@ const sitemap = sm.createSitemap({
   urls: [
     { url: "/", changefreq: "weekly", priority: 0.5 },
     { url: "/home", changefreq: "weekly", priority: 0.5 },
-    { url: "/sounds", changefreq: "weekly", priority: 0.5 },
 
     // ! short a
     { url: "/sound/short-a", changefreq: "weekly", priority: 0.5 },
