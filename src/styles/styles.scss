@@ -1,6 +1,9 @@
 @import "mailchimp";
 @import "google";
 
+$page-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+$tight-corners: 0.25rem !important;
+
 .page {
   flex-grow: 1;
   padding: 1rem;
@@ -11,14 +14,14 @@
 .sub-canvas {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  border-radius: 0.25rem !important;
+  box-shadow: $page-shadow;
+  border-radius: $tight-corners;
 }
 .mini-canvas {
   margin: 0.5rem;
   padding: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  border-radius: 0.25rem !important;
+  box-shadow: $page-shadow;
+  border-radius: $tight-corners;
 }
 .padded {
   padding: 0.5rem;
@@ -26,8 +29,8 @@
 .tile {
   margin: 1rem;
   padding: 1rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  border-radius: 0.25rem !important;
+  box-shadow: $page-shadow;
+  border-radius: $tight-corners;
   float: left;
 }
 .larger-text {
@@ -54,9 +57,9 @@
   padding-left: 1rem;
   padding-right: 1rem;
   text-align: center;
-}
-.cell p {
-  margin-bottom: 0;
+  p {
+    margin-bottom: 0;
+  }
 }
 .cell-hilite-bg {
   background: #ccc;
@@ -84,7 +87,7 @@
 .text-tight {
   padding-top: 0;
   padding-bottom: 0;
-  border-bottom: "1px solid #EEE";
+  border-bottom: 1px solid #eee;
 }
 .padded-cell {
   padding-left: 1rem;
@@ -160,7 +163,7 @@
 .no-margin-bottom {
   margin-bottom: 0;
 }
-.form-bottomspace {
+.form-bottom-space {
   margin-bottom: 1em;
 }
 .form-divider {
