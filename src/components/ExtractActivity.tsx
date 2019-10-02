@@ -1,20 +1,20 @@
 import React from "react";
 
-import CommonWords from "./../components/CommonWords";
-import Dialogues from "./../components/Dialogues";
-import FindTheWords from "./../components/FindTheWords";
-import OddOneOut from "./../components/OddOneOut";
-import HowToPronounce from "./../components/HowToPronounce";
-import NewsStories from "./../components/NewsStories";
-import MinimalPairs from "./../components/MinimalPairs";
-import MissingSounds from "./../components/MissingSounds";
-import Movie from "./../components/Movie";
-import Pending from "./../components/Pending";
-import Phrases from "./../components/Phrases";
-import SayTheSentences from "./../components/SayTheSentences";
-import TongueTwisters from "./../components/TongueTwisters";
-import Words from "./../components/Words";
-import WordsMaze from "./../components/WordsMaze";
+import CommonWords from "./../activities/CommonWords";
+import Dialogues from "./../activities/Dialogues";
+import FindTheWords from "./../activities/FindTheWords";
+import OddOneOut from "./../activities/OddOneOut";
+import HowToPronounce from "./../activities/HowToPronounce";
+import NewsStories from "./../activities/NewsStories";
+import MinimalPairs from "./../activities/MinimalPairs";
+import MissingSounds from "./../activities/MissingSounds";
+import Movie from "./../activities/Movie";
+import Pending from "./../activities/Pending";
+import Phrases from "./../activities/Phrases";
+import SayTheSentences from "./../activities/SayTheSentences";
+import TongueTwisters from "./../activities/TongueTwisters";
+import Words from "./../activities/Words";
+import WordsMaze from "./../activities/WordsMaze";
 
 const ExtractActivity = (params: {
   props: any;

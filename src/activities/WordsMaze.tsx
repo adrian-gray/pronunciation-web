@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { IWordsMaze } from "./../../@types/PronounceWeb";
 import Script from "react-load-script";
 
-import MemberGate from "./MemberGate";
-import SplitHilite from "./SplitHilite";
+import MemberGate from "./../components/MemberGate";
+import SplitHilite from "./../components/SplitHilite";
+
 import WordsMaze from "./WordsMaze/index";
 
 const NATIVE_WIDTH = 750;

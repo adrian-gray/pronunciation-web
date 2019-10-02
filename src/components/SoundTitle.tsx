@@ -1,6 +1,6 @@
 import React from "react";
 
-import SplitHilite from "./SplitHilite";
+import SplitHilite from "./../components/SplitHilite";
 
 export default (props: { phoneme: string; str: string }) => {
   const { phoneme, str } = props;

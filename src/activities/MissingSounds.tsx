@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import MemberGate from "./MemberGate";
-import SplitHilite from "./SplitHilite";
-import Tile from "./Tile";
+import MemberGate from "./../components/MemberGate";
+import SplitHilite from "./../components/SplitHilite";
+import Tile from "./../components/Tile";
 
 interface IMissingSoundsProps {
   isUserAuth: boolean;

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import Table from "react-bootstrap/Table";
 
-import Cell from "./Cell";
-import MemberGate from "./MemberGate";
-import SplitHilite from "./SplitHilite";
+import Cell from "./../components/Cell";
+import MemberGate from "./../components/MemberGate";
+import SplitHilite from "./../components/SplitHilite";
 
 interface IOddOneOutProps {
   isUserAuth: boolean;

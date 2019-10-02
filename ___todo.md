@@ -9,11 +9,7 @@
 
 <hr />
 
-- Consistent \<Header> tages for size and priority
-
-<hr />
-
-- fix odd one out
+- Consistent <Header> tages for size and priority
 
 <hr />
 
@@ -24,7 +20,7 @@
 - Dialogues ✅
 - Fill in the Spaces ❌ /u:/
 - Find the Words
-  - Implment a timer
+  - Implement a timer
   - Audio: **time out**, **success**
   - Space at bottom of page
   - style: maybe words on **page**
@@ -43,8 +39,6 @@
   - How to annotate videos
 - News Stories
   - Not validating correctly ❌
-- Odd one out
-  - BROKED ❌
 - Phrases
   - Look into line at top of 'paper'
 - Pronunciation Journey ❌

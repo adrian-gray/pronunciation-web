@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import SplitHilite from "./SplitHilite";
-import MemberGate from "./MemberGate";
-import Picker from "./Picker";
+import SplitHilite from "./../components/SplitHilite";
+import MemberGate from "./../components/MemberGate";
+import Picker from "./../components/Picker";
 
 interface INewsStoriesCustomProps {
   level: string;

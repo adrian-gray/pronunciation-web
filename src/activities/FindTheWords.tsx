@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { IFindTheWordsProps } from "./../../@types/PronounceWeb";
 
-import MemberGate from "./MemberGate";
-import SplitHilite from "./SplitHilite";
-import Tile from "./Tile";
+import SplitHilite from "./../components/SplitHilite";
+import MemberGate from "./../components/MemberGate";
+import Tile from "./../components/Tile";
 
 export default (props: IFindTheWordsProps) => {
   const [isCorrect, setIsCorrect] = useState(

@@ -2,7 +2,7 @@ import React from "react";
 
 import Table from "react-bootstrap/Table";
 
-import SplitHilite from "./SplitHilite";
+import SplitHilite from "./../components/SplitHilite";
 
 export default (props: { ipa: string; phrases: string[] }) => {
   const { ipa, phrases } = props;

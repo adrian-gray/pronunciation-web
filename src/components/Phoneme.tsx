@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import SplitHilite from "./SplitHilite";
+import SplitHilite from "./../components/SplitHilite";
 
 export default (props: {
   phoneme: string;

@@ -3,7 +3,7 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import SplitHilite from "./SplitHilite";
+import SplitHilite from "./../components/SplitHilite";
 
 export default (props: {
   arr: string[];

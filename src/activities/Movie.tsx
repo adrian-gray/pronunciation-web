@@ -1,6 +1,6 @@
 import React from "react";
 
-import SplitHilite from "./SplitHilite";
+import SplitHilite from "./../components/SplitHilite";
 
 export default (props: { ipa: string; url: string; isUserAuth: boolean }) => {
   const { ipa, url } = props;
