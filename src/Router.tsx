@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import { RouteComponentProps } from "react-router-dom";
 import { IUser } from "./../@types/PronounceWeb";
 
 import FourOhFour from "./pages/404";

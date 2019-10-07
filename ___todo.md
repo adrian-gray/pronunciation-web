@@ -14,8 +14,7 @@
 <hr />
 
 - Choose the Sound ❌ /u:/
-- Common words
-  - Maybe style like 'Find the words'
+- Common words ✅
 - Count the Sounds ❌ /i:/
 - Dialogues ✅
 - Fill in the Spaces ❌ /u:/
@@ -31,24 +30,20 @@
   - photos to mix for angles of mouth
 - Join to Make Words ❌ /I/
 - Listen to the Sounds ❌ /I/ /u:/
-- Minimal pairs
-  - Style: keep words close together as a pair
+- Minimal pairs ✅
 - Minimal Pairs Dominos ❌ /I/ /u:/
 - Movie
   - Research setting up Youtube channel
   - How to annotate videos
 - News Stories
   - Not validating correctly ❌
-- Phrases
-  - Look into line at top of 'paper'
+- Phrases ✅
 - Pronunciation Journey ❌
 - Rhyming Words ❌ /i:/
 - Say the sentences ✅
 - Sort the Words ❌ /i:/
 - Tongue Twisters ✅
-- Words
-  - Style onto page
-  - Headspace above 'Words using ...'
+- Words ✅
 - Words Maze
   - Audio **correct**, **incorrect**
 - Write the Minimal Pair ❌ /I/

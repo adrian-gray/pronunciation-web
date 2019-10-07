@@ -15,12 +15,12 @@ export default (props: {
   const rows = pairs.map((pair, key) => (
     <tr key={key}>
       <td className="cell" key={0}>
-        <p className="largeText">
+        <p className="largeText right-align right-pad">
           <SplitHilite str={pair[0]} />
         </p>
       </td>
       <td className="cell" key={1}>
-        <p className="largeText">
+        <p className="largeText left-align left-pad">
           <SplitHilite str={pair[1]} />
         </p>
       </td>

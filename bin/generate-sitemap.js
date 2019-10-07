@@ -127,6 +127,7 @@ const sitemap = sm.createSitemap({
     },
     { url: "/sound/short-i/words-maze", changefreq: "weekly", priority: 0.5 },
 
+    // ! long u
     { url: "/sound/long-u", changefreq: "weekly", priority: 0.5 },
     {
       url: "/sound/long-u/how-to-pronounce",
