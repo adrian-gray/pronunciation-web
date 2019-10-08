@@ -50,81 +50,103 @@ exports[`Home 1`] = `
         <p>
           Example words containing short ‘a’
         </p>
-        <p
-          class="larger-text"
-        >
-          <span>
-            c
+        <p>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              c
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              sh
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            a
-          </span>
-          <span>
-            sh
-          </span>
-           
-          <span>
-            tr
+            <span>
+              tr
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              sh
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            a
-          </span>
-          <span>
-            sh
-          </span>
-           
-          <span>
-            tr
+            <span>
+              tr
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              nsfer
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            a
-          </span>
-          <span>
-            nsfer
-          </span>
-           
-          <span>
-            st
+            <span>
+              st
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              nd
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            a
-          </span>
-          <span>
-            nd
-          </span>
-           
-          <span>
-            ch
+            <span>
+              ch
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              t
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            a
+            <span>
+              tr
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              ffic
+            </span>
+             
           </span>
-          <span>
-            t
-          </span>
-           
-          <span>
-            tr
-          </span>
-          <span
-            class="hilite"
-          >
-            a
-          </span>
-          <span>
-            ffic
-          </span>
-           
         </p>
         <a
           class="undecorated"
@@ -148,29 +170,29 @@ exports[`Home 1`] = `
             <span
               class="hilite"
             >
-              /ɪ/
+              /eɪ/
             </span>
             <span />
              
              – 
             <span>
-              short 
+              long 
             </span>
             <span
               class="hilite"
             >
-              i
+              a
             </span>
             <span>
-               ‘s
+               ‘n
             </span>
             <span
               class="hilite"
             >
-              i
+              a
             </span>
             <span>
-              t’
+              me’
             </span>
              
           </span>
@@ -178,86 +200,110 @@ exports[`Home 1`] = `
         <p>
           Example words containing short ‘a’
         </p>
-        <p
-          class="larger-text"
-        >
-          <span>
-            th
+        <p>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              m
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              ke
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            i
-          </span>
-          <span>
-            nk
-          </span>
-           
-          <span />
-          <span
-            class="hilite"
-          >
-            i
-          </span>
-          <span>
-            nternet
-          </span>
-           
-          <span>
-            m
+            <span>
+              ch
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              nge
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            i
-          </span>
-          <span>
-            nutes
-          </span>
-           
-          <span>
-            g
+            <span>
+              p
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              per
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            i
-          </span>
-          <span>
-            ve
-          </span>
-           
-          <span>
-            qu
+            <span>
+              w
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              y
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            i
-          </span>
-          <span>
-            ck
-          </span>
-           
-          <span>
-            br
+            <span>
+              f
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              ce
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            i
+            <span>
+              g
+            </span>
+            <span
+              class="hilite"
+            >
+              a
+            </span>
+            <span>
+              me
+            </span>
+             
           </span>
-          <span>
-            dge
-          </span>
-           
         </p>
         <a
           class="undecorated"
-          href="/sound/short-i"
+          href="/sound/long-a"
         >
           <h5>
-            Click to learn more about the short ‘i’ sound
+            Click to learn more about the long ‘a’ sound
           </h5>
         </a>
       </div>
@@ -304,75 +350,97 @@ exports[`Home 1`] = `
         <p>
           Example words containing short ‘a’
         </p>
-        <p
-          class="larger-text"
-        >
-          <span>
-            pl
+        <p>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              pl
+            </span>
+            <span
+              class="hilite"
+            >
+              ea
+            </span>
+            <span>
+              se
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            ea
-          </span>
-          <span>
-            se
-          </span>
-           
-          <span>
-            k
+            <span>
+              k
+            </span>
+            <span
+              class="hilite"
+            >
+              ey
+            </span>
+            <span />
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            ey
-          </span>
-          <span />
-           
-          <span>
-            tr
+            <span>
+              tr
+            </span>
+            <span
+              class="hilite"
+            >
+              ee
+            </span>
+            <span />
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            ee
-          </span>
-          <span />
-           
-          <span>
-            n
+            <span>
+              n
+            </span>
+            <span
+              class="hilite"
+            >
+              ee
+            </span>
+            <span>
+              d
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            ee
-          </span>
-          <span>
-            d
-          </span>
-           
-          <span>
-            sl
+            <span>
+              sl
+            </span>
+            <span
+              class="hilite"
+            >
+              ee
+            </span>
+            <span>
+              p
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            ee
+            <span />
+            <span
+              class="hilite"
+            >
+              ea
+            </span>
+            <span>
+              st
+            </span>
+             
           </span>
-          <span>
-            p
-          </span>
-           
-          <span />
-          <span
-            class="hilite"
-          >
-            ea
-          </span>
-          <span>
-            st
-          </span>
-           
         </p>
         <a
           class="undecorated"
@@ -380,6 +448,154 @@ exports[`Home 1`] = `
         >
           <h5>
             Click to learn more about the long ‘e’ sound
+          </h5>
+        </a>
+      </div>
+    </div>
+    <div
+      class="headspace"
+    >
+      <div
+        class="mini-canvas"
+      >
+        <h3>
+          <span>
+            <span />
+            <span
+              class="hilite"
+            >
+              /ɪ/
+            </span>
+            <span />
+             
+             – 
+            <span>
+              short 
+            </span>
+            <span
+              class="hilite"
+            >
+              i
+            </span>
+            <span>
+               ‘s
+            </span>
+            <span
+              class="hilite"
+            >
+              i
+            </span>
+            <span>
+              t’
+            </span>
+             
+          </span>
+        </h3>
+        <p>
+          Example words containing short ‘a’
+        </p>
+        <p>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              th
+            </span>
+            <span
+              class="hilite"
+            >
+              i
+            </span>
+            <span>
+              nk
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span />
+            <span
+              class="hilite"
+            >
+              i
+            </span>
+            <span>
+              nternet
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              m
+            </span>
+            <span
+              class="hilite"
+            >
+              i
+            </span>
+            <span>
+              nutes
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              g
+            </span>
+            <span
+              class="hilite"
+            >
+              i
+            </span>
+            <span>
+              ve
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              qu
+            </span>
+            <span
+              class="hilite"
+            >
+              i
+            </span>
+            <span>
+              ck
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              br
+            </span>
+            <span
+              class="hilite"
+            >
+              i
+            </span>
+            <span>
+              dge
+            </span>
+             
+          </span>
+        </p>
+        <a
+          class="undecorated"
+          href="/sound/short-i"
+        >
+          <h5>
+            Click to learn more about the short ‘i’ sound
           </h5>
         </a>
       </div>
@@ -426,77 +642,99 @@ exports[`Home 1`] = `
         <p>
           Example words containing short ‘a’
         </p>
-        <p
-          class="larger-text"
-        >
-          <span>
-            st
+        <p>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              st
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+              dent
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            u
-          </span>
-          <span>
-            dent
-          </span>
-           
-          <span>
-            J
+            <span>
+              J
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+              ne
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            u
-          </span>
-          <span>
-            ne
-          </span>
-           
-          <span>
-            j
+            <span>
+              j
+            </span>
+            <span
+              class="hilite"
+            >
+              ew
+            </span>
+            <span>
+              ellery (jewelry)
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            ew
-          </span>
-          <span>
-            ellery (jewelry)
-          </span>
-           
-          <span>
-            m
+            <span>
+              m
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+              sic
+            </span>
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            u
-          </span>
-          <span>
-            sic
-          </span>
-           
-          <span>
-            n
+            <span>
+              n
+            </span>
+            <span
+              class="hilite"
+            >
+              ew
+            </span>
+            <span />
+             
           </span>
           <span
-            class="hilite"
+            class="phoneme-word"
           >
-            ew
+            <span>
+              f
+            </span>
+            <span
+              class="hilite"
+            >
+              ew
+            </span>
+            <span />
+             
           </span>
-          <span />
-           
-          <span>
-            f
-          </span>
-          <span
-            class="hilite"
-          >
-            ew
-          </span>
-          <span />
-           
         </p>
         <a
           class="undecorated"

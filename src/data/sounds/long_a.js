@@ -1,19 +1,19 @@
 export default {
   "long-a": {
-    ipa: "~/eI/~",
+    ipa: "~/eɪ/~",
     title: "long ~a~ ‘n~a~me’",
     tag: "long ‘a’",
     activities: {
       "how to pronounce": {
         image: {
           url: "/assets/images/how-to-pronounce-short-a-english.jpg",
-          alt: "How to pronounce the short 'a' in English",
-          title: "How to pronounce the short 'a' in English"
+          alt: "How to pronounce the long 'a' in English",
+          title: "How to pronounce the long 'a' in English"
         },
         text: [
           "Drop your jaw (quite a bit)",
           "Open your mouth",
-          "Push the tip pf your tongue forward – touch the base of the bottom front teeth (the tip of your tongue is down)."
+          "Push the tip of your tongue forward – touch the base of the bottom front teeth (the tip of your tongue is down)"
         ]
       },
       movie: {
@@ -152,7 +152,7 @@ export default {
         end: ["nd", "in", "ght", "nk", "rry", "it", "ce", "te"],
         solution: {
           "/æ/": ["hand", "carry", "marry", "plank", "thank", "plait", "stand"],
-          "/~ei~/": [
+          "/~eɪ~/": [
             "eight",
             "mace",
             "plain",
@@ -171,7 +171,7 @@ export default {
         level: "beginner",
         subscription: 1,
         title:
-          "Choose the correct sound: ~/eɪ/~ (the long ‘a’ sound), ~/æ/~ (the short ‘a’ sound), or ~/0/~ (not /eI/ not /æ/)",
+          "Choose the correct sound: ~/eɪ/~ (the long ‘a’ sound), ~/æ/~ (the short ‘a’ sound), or ~/0/~ (not /eɪ/ not /æ/)",
         headline: "The Latest Trend on the Beach",
         options: ["...", "æ", "eɪ", "0"],
         answers: [
@@ -203,7 +203,7 @@ export default {
         level: "intermediate",
         subscription: 1,
         title:
-          "Choose the correct sound: ~/eI/~ (the long ‘a’ sound), ~/æ/~ (the short ‘a’ sound), or ~/0/~ (not /eI/ not /æ/)",
+          "Choose the correct sound: ~/eɪ/~ (the long ‘a’ sound), ~/æ/~ (the short ‘a’ sound), or ~/0/~ (not /eɪ/ not /æ/)",
         headline: "The Latest Trend on the Beach",
         options: ["...", "æ", "eɪ", "0"],
         answers: [

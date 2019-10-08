@@ -24,12 +24,6 @@ exports[`HowToPronounce 1`] = `
           <div
             class="padded"
           >
-            <img
-              alt="image"
-              class="fill-width"
-              src="foo.com"
-              title="image"
-            />
             <h5>
               image
             </h5>

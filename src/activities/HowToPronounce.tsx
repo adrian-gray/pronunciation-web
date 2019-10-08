@@ -30,7 +30,6 @@ export default (props: {
         <Row>
           <Col>
             <div className="padded">
-              <img className="fill-width" src={url} title={title} alt={alt} />
               <h5>{title}</h5>
             </div>
           </Col>
