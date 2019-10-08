@@ -58,6 +58,40 @@ const sitemap = sm.createSitemap({
     },
     { url: "/sound/short-a/words-maze", changefreq: "weekly", priority: 0.5 },
 
+    // ! long a
+    { url: "/sound/long-a", changefreq: "weekly", priority: 0.5 },
+    {
+      url: "/sound/long-a/how-to-pronounce",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    { url: "/sound/long-a/movie", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/long-a/words", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/long-a/phrases", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/long-a/dialogues", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/long-a/common-words", changefreq: "weekly", priority: 0.5 },
+    {
+      url: "/sound/long-a/tongue-twisters",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    {
+      url: "/sound/long-a/minimal-pairs",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    {
+      url: "/sound/long-a/beginner-news-stories",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    {
+      url: "/sound/long-a/intermediate-news-stories",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    { url: "/sound/long-a/words-maze", changefreq: "weekly", priority: 0.5 },
+
     // ! long e
     { url: "/sound/long-e", changefreq: "weekly", priority: 0.5 },
     {

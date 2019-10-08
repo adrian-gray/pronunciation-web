@@ -22,8 +22,10 @@ export const memberActivities = [
 export const pendingActivities = [
   "choose the sound",
   "count the sounds",
+  "complete the rhymes",
   "fill in the spaces",
   "hear the words",
+  "jigsaw",
   "join to make words",
   "listen to the sounds",
   "minimal pairs dominos",

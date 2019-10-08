@@ -15,6 +15,7 @@
 
 - Choose the Sound ❌ /u:/
 - Common words ✅
+- Complete the rhymes /eI/
 - Count the Sounds ❌ /i:/
 - Dialogues ✅
 - Fill in the Spaces ❌ /u:/
@@ -28,8 +29,9 @@
 - Hear the Words ❌
 - How to pronounce
   - photos to mix for angles of mouth
-- Join to Make Words ❌ /I/
-- Listen to the Sounds ❌ /I/ /u:/
+- Jigsaw /eI/
+- Join to Make Words ❌ /I/ /eI/
+- Listen to the Sounds ❌ /I/ /u:/ /eI/
 - Minimal pairs ✅
 - Minimal Pairs Dominos ❌ /I/ /u:/
 - Movie
@@ -41,7 +43,7 @@
 - Pronunciation Journey ❌
 - Rhyming Words ❌ /i:/
 - Say the sentences ✅
-- Sort the Words ❌ /i:/
+- Sort the Words ❌ /i:/ /eI/
 - Tongue Twisters ✅
 - Words ✅
 - Words Maze

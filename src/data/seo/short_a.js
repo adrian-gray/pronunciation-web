@@ -11,54 +11,56 @@ export default {
   },
   "sound short-a how to pronounce": {
     title:
-      "How to pronounce æ, the short ‘a’ in English. Description and images.",
+      "How to pronounce /æ/, the short ‘a’ in English. Description and images.",
     canonical: `${URL}/sound/short-a/how-to-pronounce`
   },
   "sound short-a movie": {
     title:
-      "Movie demonstrating the correct pronunciation of short ‘a’ - the æ sound.",
+      "Movie demonstrating the correct pronunciation of short ‘a’ - the /æ/ sound.",
     canonical: `${URL}/sound/short-a/movie`
   },
   "sound short-a words": {
     title:
-      "Common English words using æ, the short ‘a’ sound, with phoenetic spelling",
+      "Common English words using /æ/, the short ‘a’ sound, with phoenetic spelling",
     canonical: `${URL}/sound/short-a/words`
   },
   "sound short-a phrases": {
-    title: "English language phrases using the short ‘a’, or phoenetic æ sound",
+    title:
+      "English language phrases using the short ‘a’, or phoenetic /æ/ sound",
     canonical: `${URL}/sound/short-a/phrases`
   },
   "sound short-a dialogues": {
     title:
-      "Example English dialogues showing use of the short ‘a’, or æ, sound",
+      "Example English dialogues showing use of the short ‘a’, or /æ/, sound",
     canonical: `${URL}/sound/short-a/dialogues`
   },
   "sound short-a common words": {
     title:
-      "A list of common English words using the short ‘a’ sound, the IPA æ sound",
+      "A list of common English words using the short ‘a’ sound, the IPA /æ/ sound",
     canonical: `${URL}/sound/short-a/common-words`
   },
   "sound short-a tongue twisters": {
-    title: "English language tongue twisters featuring short ‘a’, or æ sounds",
+    title:
+      "English language tongue twisters featuring short ‘a’, or /æ/ sounds",
     description:
       "Enjoy the challenge of Tongue Twisters. Three tongue twisters to perfect the short ‘a’ sound. Try to say each one as many times as you can, no mistakes.",
     canonical: `${URL}/sound/short-a/tongue-twisters`
   },
   "sound short-a minimal pairs": {
     title:
-      "English language minimal pairs pronunciation practice with short ‘a’, or æ sounds",
+      "English language minimal pairs pronunciation practice with short ‘a’, or /æ/ sounds",
     canonical: `${URL}/sound/short-a/minimal-pairs`
   },
   "sound short-a find the words": {
     title:
-      "English pronunciation activity for the short ‘a’ sound. Find The Words with æ",
+      "English pronunciation activity for the short ‘a’ sound. Find The Words with /æ/",
     description:
       "Say words and select those with a short ‘a’ sound. Click on words to hear the pronunciation. Helps you recognise and pronounce common English words.",
     canonical: `${URL}/sound/short-a/find-the-words`
   },
   "sound short-a say the sentences": {
     title:
-      "Say The Sentences with short ‘a’ English pronunciation. Practice the æ sound.",
+      "Say The Sentences with short ‘a’ English pronunciation. Practice the /æ/ sound.",
     canonical: `${URL}/sound/short-a/say-the-sentences`
   },
   "sound short-a odd one out": {
