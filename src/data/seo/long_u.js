@@ -71,23 +71,23 @@ export default {
   },
   "sound long-u beginner news stories": {
     title:
-      "Beginner Identify the News Story sounds,  practice long and long ‘u’ sounds",
+      "Beginner Identify the News Story sounds, long ‘u’ sounds",
     description:
       "News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.",
     canonical: `${URL}/sound/long-u/beginner-news-stories`
   },
   "sound long-u intermediate news stories": {
     title:
-      "Intermediate Identify the News Story sounds,  practice long and long ‘u’ sounds",
+      "Intermediate Identify the News Story sounds, long ‘u’ sounds",
     description:
       "News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.",
     canonical: `${URL}/sound/long-u/intermediate-news-stories`
   },
   "sound long-u words maze": {
     title:
-      "Solve the Words Maze puzzle - long ‘u’. long puactice English pronunciation with long ‘u’",
+      "Solve the Words Maze puzzle - long ‘u’. Practice English pronunciation with long ‘u’",
     description:
-      "Maze is an interactive pronunciation game that helps you become familiar with common English words so you can speak with confidence.",
+      "Words Maze is an interactive pronunciation game that helps you become familiar with common English words so you can speak with confidence.",
     canonical: `${URL}/sound/long-u/words-maze`
   }
 };
