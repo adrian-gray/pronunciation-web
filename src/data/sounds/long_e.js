@@ -159,7 +159,7 @@ export default {
         level: "beginner",
         subscription: 1,
         title:
-          "Choose the correct sound: ~/:i/~ (the long ‘e’ sound) or ~/e/~ (the short ‘e’ sound)",
+          "Choose the correct sound: ~/i:/~ (the long ‘e’ sound) or ~/e/~ (the short ‘e’ sound)",
         headline: "Eels travel far",
         options: ["...", "i:", "e", "o"],
         answers: [
@@ -187,7 +187,7 @@ export default {
         level: "intermediate",
         subscription: 1,
         title:
-          "Choose the correct sound: ~/:i/~ (the long ‘e’ sound) or ~/e/~ (the short ‘e’ sound)",
+          "Choose the correct sound: ~/i:/~ (the long ‘e’ sound) or ~/e/~ (the short ‘e’ sound)",
         headline: "Eels travel far",
         options: ["...", "i:", "e", "o"],
         answers: [

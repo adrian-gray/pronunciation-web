@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
 import Mailchimp from "../components/Mailchimp";
+import YouTube from "../components/YouTube";
 import SEO from "../components/SEO";
 
 export default () => {
@@ -24,13 +25,13 @@ export default () => {
       </p>
       <p>
         {
-          "Following the pronunciation lessons are English pronunciation examples, recorded conversations, and interactive activities to help improve your pronunciation the right way. We are adding currently adding sounds and activities weekly. Improve your English pronunciation to speak clearly and professionally."
+          "Following the pronunciation lessons are English pronunciation examples, recorded conversations, and interactive activities to help improve your pronunciation the right way. We are currently adding sounds and activities weekly. Improve your English pronunciation to speak clearly and professionally."
         }
       </p>
       <h5>{"Stay up to date as we add pronunciation activities"}</h5>
       <p>
         {
-          "We are currently adding sounds and activities multiple times a week and are open in a limited testing capacity. We aim to launch in late 2019."
+          "We are currently adding sounds and activities weekly and are open in a limited testing capacity. We aim to launch in early 2020."
         }
       </p>
       <Mailchimp />
@@ -41,12 +42,7 @@ export default () => {
           </Button>
         </Link>
       </div>
-      <img
-        className="full-width"
-        src="/assets/images/improve-english-pronounciation.jpg"
-        title="Learn to improve English pronunciation"
-        alt="Learn to improve English pronunciation"
-      />
+      <YouTube src="eisQ1bONHP4" title="Improve English pronunciation" />
     </div>
   );
 };

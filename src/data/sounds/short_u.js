@@ -1,92 +1,96 @@
 export default {
-  "long-u": {
-    ipa: "~/u:/~",
-    title: "long ~u~ ‘bl~ue~’",
-    tag: "long ‘u’",
+  "short-u": {
+    ipa: "~/Λ/~",
+    title: "short ~Λ~ ‘bl~ue~’",
+    tag: "short ‘u’",
     activities: {
       "how to pronounce": {
         image: {
-          url: "/assets/images/how-to-pronounce-long-u-english.jpg",
-          alt: "How to pronounce the long 'u' in English",
-          title: "How to pronounce the long 'u' in English"
+          url: "/assets/images/how-to-pronounce-short-u-english.jpg",
+          alt: "How to pronounce the short 'u' in English",
+          title: "How to pronounce the short 'u' in English"
         },
         text: [
-          "Keep your jaw up (it does not drop at all)",
-          "Move your lips forward",
-          "Make a tight circle with your lips",
-          "Move your tongue to the back of your mouth",
-          "Keep your tongue down"
+          "Drop your jaw quite a lot",
+          "Relax your mouth",
+          "Relax your lips",
+          "Relax your longue",
+          "Touch (gently) the back of your bottom teeth to with the tip of your tongue"
         ]
       },
       movie: {
-        title: "English pronunciation of /u:/ the long u sound",
-        url: "L80v4dBTvEg"
+        url: "/assets/images/movie-english-pronounce-short-u.jpg"
       },
       words: {
         words: {
-          "t~wo~": "/t~u:~/",
-          "sh~oe~s": "/ʃ~u:~z/",
-          "bl~ue~": "/bl~u:~/",
-          "ch~oo~se": "/tʃ~u:~z/"
+          "t~u~b": "/t~Λ~b/",
+          "b~u~nch": "/b~Λ~ntʃ/",
+          "c~ou~ple": "/k~Λ~pəl/",
+          "m~u~ch": "/m~Λ~tʃ/"
         }
       },
       phrases: {
         phrases: {
-          "t~wo~ pairs": "/t~u:~/",
-          "a pair of flat sh~oe~s": "/ʃ~u:~z/",
-          "I like the bl~ue~ pair": "/bl~u:~/",
-          "I can’t ch~oo~se": "/tʃ~u:~z/:"
+          "A tub of yoghurt.": "/t~Λ~b/",
+          "A bunch of grapes.": "/b~Λ~ntʃ/",
+          "A couple of apples.": "/k~Λ~pəl/",
+          "How much are they?": "/m~Λ~tʃ/"
         }
       },
       dialogues: {
         dialogues: [
           [
-            "Good morning, is anyone looking after you?",
-            "No. I’m after t~wo~ pairs of sh~oe~s – a flat pair for work and a pair for going out.",
-            "Are you looking for a particular colour?",
-            "Not really, but I like those bl~ue~ ones.",
-            "They also come in f~u~chia.",
-            "F~u~chia?",
-            "Yes, a bright purple-pink colour.",
-            "Oh, they're really c~u~te, t~oo~. Hmm, now I can't ch~oo~se. Let me try both colours."
+            "Can I help you?",
+            "Yes. I'd like a 175g t~u~b of n~u~t and h~o~ney yoghurt, thanks.",
+            "Sure. J~u~st the ~o~ne?",
+            "Yep. How m~u~ch is that?",
+            "That'll be $2.95.",
+            "Great! Thanks"
+          ],
+          [
+            "J~u~st the grapes?",
+            "Yes, thanks. How m~u~ch are they?",
+            "$5.46 a b~u~nch.",
+            "Great, thanks, and I'll also grab a c~ou~ple of pl~u~ms."
           ]
         ]
       },
       "common words": {
         words: [
-          "st~u~dent",
-          "J~u~ne",
-          "j~ew~ellery (jewelry)",
-          "m~u~sic",
-          "n~ew~",
-          "f~ew~",
-          "~u~nit",
-          "f~u~ture",
-          "h~u~ge",
-          "tr~ue~",
-          "q~ueue~",
-          "introd~u~ce",
-          "comp~u~ter",
-          "barbec~ue~",
-          "s~ui~tcase",
-          "sh~oe~",
-          "men~u~",
-          "tiss~ue",
-          "m~u~seum",
-          "ch~e~w",
-          "contin~ue~",
-          "T~ue~sday",
-          "b~eau~tiful",
-          "n~eu~tral"
+          "j~u~st",
+          "en~ou~gh"
+          "c~o~lour (color)",
+          "n~u~mber",
+          "l~o~ve",
+          "tr~ou~ble",
+          "m~o~ther",
+          "c~ou~ple",
+          "n~o~ne",
+          "r~u~n",
+          "s~u~mmer",
+          "c~ou~ntry",
+          "y~ou~ng",
+          "h~u~ndred",
+          "l~u~nch",
+          "m~o~nth",
+          "M~o~nday",
+          "t~ou~ch",
+          "c~o~ver",
+          "h~u~sband",
+          "m~o~ney",
+          "n~o~thing",
+          "bl~oo~d",
+          "ab~o~ve"
         ]
       },
       "tongue twisters": {
         twisters: [
-          "Luke's tooth is loose.",
-          "The students usually walk to the music studio on Tuesdays.",
-          "I moved into a new unit in June."
+          "The young couple loved each other so much.",
+          "Once a month a couple of friends and I meet up.",
+          "I just had enough money for the bus."
         ]
       },
+      // !UPTO
       "minimal pairs": {
         pairs: [
           ["f~u~el", "f~u~ll"],
@@ -157,7 +161,7 @@ export default {
         level: "beginner",
         subscription: 1,
         title:
-          "Choose the correct sound: ~/u:/~ (the long ‘u’ sound) or ~/ʌ/~ (the short 'u' sound)",
+          "Choose the correct sound: ~/u:/~ (the short ‘u’ sound) or ~/ʌ/~ (the short 'u' sound)",
         headline: "A cat named Bob",
         options: ["...", "u:", "ʌ"],
         answers: [
@@ -191,7 +195,7 @@ export default {
         level: "intermediate",
         subscription: 1,
         title:
-          "Choose the correct sound: ~/u:/~ (the long ‘u’ sound) or ~/ʌ/~ (the short 'u' sound)",
+          "Choose the correct sound: ~/u:/~ (the short ‘u’ sound) or ~/ʌ/~ (the short 'u' sound)",
         headline: "A cat named Bob",
         options: ["...", "u:", "ʌ"],
         answers: [

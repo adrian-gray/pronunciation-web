@@ -1,9 +1,15 @@
 import React from "react";
 
+import YouTube from "../components/YouTube";
 import SplitHilite from "./../components/SplitHilite";
 
-export default (props: { ipa: string; url: string; isUserAuth: boolean }) => {
-  const { ipa, url } = props;
+export default (props: {
+  ipa: string;
+  title: string;
+  src: string;
+  isUserAuth: boolean;
+}) => {
+  const { ipa, title, src } = props;
 
   return (
     <div className="head-space">
@@ -12,7 +18,7 @@ export default (props: { ipa: string; url: string; isUserAuth: boolean }) => {
         <SplitHilite str={ipa} />
       </h3>
 
-      <img className="full-width" src={url} alt={`Pronouncing ${ipa}`} />
+      <YouTube src={src} title={title} />
     </div>
   );
 };
