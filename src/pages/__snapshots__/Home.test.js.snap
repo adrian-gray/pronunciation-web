@@ -20,6 +20,152 @@ exports[`Home 1`] = `
             <span
               class="hilite"
             >
+              /u:/
+            </span>
+            <span />
+             
+             – 
+            <span>
+              long 
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+               ‘bl
+            </span>
+            <span
+              class="hilite"
+            >
+              ue
+            </span>
+            <span>
+              ’
+            </span>
+             
+          </span>
+        </h3>
+        <p>
+          Example words containing short ‘a’
+        </p>
+        <p>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              st
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+              dent
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              J
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+              ne
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              j
+            </span>
+            <span
+              class="hilite"
+            >
+              ew
+            </span>
+            <span>
+              ellery (jewelry)
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              m
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+              sic
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              n
+            </span>
+            <span
+              class="hilite"
+            >
+              ew
+            </span>
+            <span />
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              f
+            </span>
+            <span
+              class="hilite"
+            >
+              ew
+            </span>
+            <span />
+             
+          </span>
+        </p>
+        <a
+          class="undecorated"
+          href="/sound/long-u"
+        >
+          <h5>
+            Click to learn more about the long ‘u’ sound
+          </h5>
+        </a>
+      </div>
+    </div>
+    <div
+      class="headspace"
+    >
+      <div
+        class="mini-canvas"
+      >
+        <h3>
+          <span>
+            <span />
+            <span
+              class="hilite"
+            >
               /æ/
             </span>
             <span />
@@ -596,152 +742,6 @@ exports[`Home 1`] = `
         >
           <h5>
             Click to learn more about the short ‘i’ sound
-          </h5>
-        </a>
-      </div>
-    </div>
-    <div
-      class="headspace"
-    >
-      <div
-        class="mini-canvas"
-      >
-        <h3>
-          <span>
-            <span />
-            <span
-              class="hilite"
-            >
-              /u:/
-            </span>
-            <span />
-             
-             – 
-            <span>
-              long 
-            </span>
-            <span
-              class="hilite"
-            >
-              u
-            </span>
-            <span>
-               ‘bl
-            </span>
-            <span
-              class="hilite"
-            >
-              ue
-            </span>
-            <span>
-              ’
-            </span>
-             
-          </span>
-        </h3>
-        <p>
-          Example words containing short ‘a’
-        </p>
-        <p>
-          <span
-            class="phoneme-word"
-          >
-            <span>
-              st
-            </span>
-            <span
-              class="hilite"
-            >
-              u
-            </span>
-            <span>
-              dent
-            </span>
-             
-          </span>
-          <span
-            class="phoneme-word"
-          >
-            <span>
-              J
-            </span>
-            <span
-              class="hilite"
-            >
-              u
-            </span>
-            <span>
-              ne
-            </span>
-             
-          </span>
-          <span
-            class="phoneme-word"
-          >
-            <span>
-              j
-            </span>
-            <span
-              class="hilite"
-            >
-              ew
-            </span>
-            <span>
-              ellery (jewelry)
-            </span>
-             
-          </span>
-          <span
-            class="phoneme-word"
-          >
-            <span>
-              m
-            </span>
-            <span
-              class="hilite"
-            >
-              u
-            </span>
-            <span>
-              sic
-            </span>
-             
-          </span>
-          <span
-            class="phoneme-word"
-          >
-            <span>
-              n
-            </span>
-            <span
-              class="hilite"
-            >
-              ew
-            </span>
-            <span />
-             
-          </span>
-          <span
-            class="phoneme-word"
-          >
-            <span>
-              f
-            </span>
-            <span
-              class="hilite"
-            >
-              ew
-            </span>
-            <span />
-             
-          </span>
-        </p>
-        <a
-          class="undecorated"
-          href="/sound/long-u"
-        >
-          <h5>
-            Click to learn more about the long ‘u’ sound
           </h5>
         </a>
       </div>

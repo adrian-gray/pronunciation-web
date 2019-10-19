@@ -1,5 +1,7 @@
-import short_a from "./short_a.js";
+import long_a from "./long_a.js";
 import long_e from "./long_e.js";
+import long_u from "./long_u.js";
+import short_a from "./short_a.js";
 import short_i from "./short_i.js";
 
 const URL = "https://pronounceweb.com";
@@ -34,4 +36,12 @@ const base = {
   }
 };
 
-export default Object.assign({}, base, short_a, long_e, short_i);
+export default Object.assign(
+  {},
+  base,
+  long_a,
+  long_e,
+  long_u,
+  short_a,
+  short_i
+);
