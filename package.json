@@ -2,6 +2,7 @@
   "scripts": {
     "build": "yarn rimraf dist && yarn sitemap && webpack --config webpack.config.production.js",
     "dev": "webpack-dev-server --config webpack.config.development.js --watch",
+    "postbuild": "react-snap",
     "deploy": "yarn firebase deploy",
     "sitemap": "node ./bin/generate-sitemap.js",
     "types": "yarn tsc",
@@ -10,7 +11,8 @@
     "test:coverage": "jest --coverage"
   },
   "reactSnap": {
-    "source": "dist"
+    "source": "dist",
+    "concurrency": 20
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -69,7 +71,7 @@
     "phaser": "2.6.2",
     "prettier": "^1.18.2",
     "prop-types": "15.7.2",
-    "react-snap": "^1.10.1",
+    "react-snap": "^1.23.0",
     "react-test-renderer": "^16.9.0",
     "regenerator-runtime": "^0.13.3",
     "rimraf": "^2.6.2",

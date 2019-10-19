@@ -19,3 +19,9 @@ volume: 201-500    difficulty: 52    organic CTR: 64%     priority: 52
 
 pronunciation
 volume: 11.5k - 30.3k    difficulty: 58    organic CTR: 100%     priority: 80
+
+
+YouTube keywords:
+english pronunciation practice
+english speaking practice
+english lesson˝
