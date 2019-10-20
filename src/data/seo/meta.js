@@ -3,6 +3,7 @@ import long_e from "./long_e.js";
 import long_u from "./long_u.js";
 import short_a from "./short_a.js";
 import short_i from "./short_i.js";
+import short_u from "./short_u.js";
 
 const URL = "https://pronounceweb.com";
 
@@ -43,5 +44,6 @@ export default Object.assign(
   long_e,
   long_u,
   short_a,
-  short_i
+  short_i,
+  short_u
 );

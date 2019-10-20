@@ -193,7 +193,31 @@ const sitemap = sm.createSitemap({
       changefreq: "weekly",
       priority: 0.5
     },
-    { url: "/sound/long-u/words-maze", changefreq: "weekly", priority: 0.5 }
+    { url: "/sound/long-u/words-maze", changefreq: "weekly", priority: 0.5 },
+
+    // ! short u
+    { url: "/sound/short-u", changefreq: "weekly", priority: 0.5 },
+    {
+      url: "/sound/short-u/how-to-pronounce",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    { url: "/sound/short-u/movie", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/short-u/words", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/short-u/phrases", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/short-u/dialogues", changefreq: "weekly", priority: 0.5 },
+    { url: "/sound/short-u/common-words", changefreq: "weekly", priority: 0.5 },
+    {
+      url: "/sound/short-u/tongue-twisters",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    {
+      url: "/sound/short-u/minimal-pairs",
+      changefreq: "weekly",
+      priority: 0.5
+    },
+    { url: "/sound/short-u/words-maze", changefreq: "weekly", priority: 0.5 }
   ]
 });
 

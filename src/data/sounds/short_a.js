@@ -17,7 +17,7 @@ export default {
         ]
       },
       movie: {
-        url: "/assets/images/movie-english-pronounce-short-a.jpg"
+        src: ""
       },
       words: {
         words: {

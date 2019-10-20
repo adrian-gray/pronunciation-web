@@ -13,12 +13,14 @@
 
 <hr />
 
-- Choose the Sound ❌ /u:/
+- Choose the Sound ❌ /u:/ - long U
 - Common words ✅
 - Complete the rhymes /eI/
 - Count the Sounds ❌ /i:/
+- Decide the Sound ❌ /Λ/ - short U
 - Dialogues ✅
 - Fill in the Spaces ❌ /u:/
+- Fill in the words ❌ /Λ/ - short u
 - Find the Words
   - Implement a timer
   - Audio: **time out**, **success**
@@ -31,6 +33,9 @@
   - photos to mix for angles of mouth
 - Jigsaw /eI/
 - Join to Make Words ❌ /I/ /eI/
+- Identify the sound ❌/~Λ~/
+  - beginner
+  - intermediate
 - Listen to the Sounds ❌ /I/ /u:/ /eI/
 - Minimal pairs ✅
 - Minimal Pairs Dominos ❌ /I/ /u:/
@@ -40,7 +45,7 @@
 - News Stories
   - Not validating correctly ❌
 - Phrases ✅
-- Pronunciation Journey ❌
+- Pronunciation Journey ❌ /~Λ~/
 - Rhyming Words ❌ /i:/
 - Say the sentences ✅
 - Sort the Words ❌ /i:/ /eI/

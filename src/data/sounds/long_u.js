@@ -20,7 +20,7 @@ export default {
       },
       movie: {
         title: "English pronunciation of /u:/ the long u sound",
-        url: "L80v4dBTvEg"
+        src: "L80v4dBTvEg"
       },
       words: {
         words: {

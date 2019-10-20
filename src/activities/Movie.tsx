@@ -10,6 +10,20 @@ export default (props: {
   isUserAuth: boolean;
 }) => {
   const { ipa, title, src } = props;
+  debugger;
+
+  let media;
+
+  if (src) {
+    media = <YouTube src={src} title={title} />;
+  } else {
+    media = (
+      <img
+        src="/assets/images/movie-english-pronounce-coming-soon.jpg"
+        className="full-width"
+      />
+    );
+  }
 
   return (
     <div className="head-space">
@@ -18,7 +32,7 @@ export default (props: {
         <SplitHilite str={ipa} />
       </h3>
 
-      <YouTube src={src} title={title} />
+      {media}
     </div>
   );
 };

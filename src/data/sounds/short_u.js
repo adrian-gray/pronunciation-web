@@ -1,7 +1,7 @@
 export default {
   "short-u": {
     ipa: "~/Λ/~",
-    title: "short ~Λ~ ‘bl~ue~’",
+    title: "short ~u~ ‘bl~ue~’",
     tag: "short ‘u’",
     activities: {
       "how to pronounce": {
@@ -14,12 +14,12 @@ export default {
           "Drop your jaw quite a lot",
           "Relax your mouth",
           "Relax your lips",
-          "Relax your longue",
-          "Touch (gently) the back of your bottom teeth to with the tip of your tongue"
+          "Relax your tongue",
+          "Touch (gently) the back of your bottom teeth with the tip of your tongue"
         ]
       },
       movie: {
-        url: "/assets/images/movie-english-pronounce-short-u.jpg"
+        src: ""
       },
       words: {
         words: {
@@ -31,10 +31,10 @@ export default {
       },
       phrases: {
         phrases: {
-          "A tub of yoghurt.": "/t~Λ~b/",
-          "A bunch of grapes.": "/b~Λ~ntʃ/",
-          "A couple of apples.": "/k~Λ~pəl/",
-          "How much are they?": "/m~Λ~tʃ/"
+          "A t~u~b of yoghurt.": "/t~Λ~b/",
+          "A b~u~nch of grapes.": "/b~Λ~ntʃ/",
+          "A c~ou~ple of apples.": "/k~Λ~pəl/",
+          "How m~u~ch are they?": "/m~Λ~tʃ/"
         }
       },
       dialogues: {
@@ -58,7 +58,7 @@ export default {
       "common words": {
         words: [
           "j~u~st",
-          "en~ou~gh"
+          "en~ou~gh",
           "c~o~lour (color)",
           "n~u~mber",
           "l~o~ve",
@@ -90,189 +90,205 @@ export default {
           "I just had enough money for the bus."
         ]
       },
-      // !UPTO
       "minimal pairs": {
         pairs: [
-          ["f~u~el", "f~u~ll"],
-          ["f~oo~d", "f~oo~t"],
-          ["st~ew~ed", "st~oo~d"],
-          ["wh~o~'d", "h~oo~d"],
-          ["q~ueue~d", "c~ou~ld"],
-          ["r~oo~f", "r~ou~gh"],
-          ["s~oo~n", "s~o~n"],
-          ["c~u~te", "c~augh~t"],
-          ["ch~oo~se", "ch~o~se"],
-          ["s~ou~p", "s~oa~p"],
-          ["r~u~de", "r~oa~d"],
-          ["bl~ue~", "bl~ow~"],
-          ["sh~oe~s", "sh~ow~s"],
-          ["c~u~be", "c~o~b"]
+          ["l~u~ck", "l~oo~k"],
+          ["m~u~d", "m~oo~d"],
+          ["n~o~ne", "n~oo~n"],
+          ["sh~u~t", "sh~oo~t"],
+          ["s~o~n", "s~oo~n"],
+          ["b~u~s", "b~o~ss"],
+          ["b~u~nch", "b~e~nch"],
+          ["r~ou~gh", "r~oo~f"],
+          ["m~u~ch", "m~a~tch"],
+          ["~o~ne", "wh~e~n"],
+          ["c~u~t", "c~au~ght"],
+          ["w~o~nder", "w~a~nder"],
+          ["l~u~nch", "l~au~nch"],
+          ["l~u~mp", "l~a~mp"]
         ]
       },
-      "choose the sound": {
+      "decide the sound": {
+        sounds: ["Λ", "æ"],
         text:
-          "I have just arrived in London. I am from Seoul, South Korea. I am studying at university here. The other students are very nice and my course is really good. I am currently looking for a cheap unit to lease. I don’t mind sharing with other people, but I would prefer a new unit rather than an old one. I think that could be expensive. I may not have enough money. Hopefully I find something soon.",
-        sections: [["u:", "bl~ue"], ["ʊ", "f~oo~t"], ["Λ", "s~u~n"]],
-        words: [
-          ["university", "students", "unit", "new"],
-          ["good", "looking", "soon"],
-          [
-            "just",
-            "currently",
-            "London",
-            "one",
-            "studying",
-            "enough",
-            "other",
-            "money"
-          ]
+          "I st~u~dy OPTION at TAFE. I've been studying English for only ~o~ne OPTION m~o~nth OPTION. My br~o~ther OPTION also studies at TAFE. My brother's English is not b~a~d OPTION so he's in a higher class. We c~o~me OPTION from Jap~a~n OPTION. S~o~metimes when we have a bit of c~a~sh OPTION we travel, we leave on S~a~turday OPTION morning and come b~a~ck OPTION on S~u~nday OPTION night.",
+        answers: [
+          "Λ",
+          "Λ",
+          "Λ",
+          "Λ",
+          "æ",
+          "Λ",
+          "æ",
+          "Λ",
+          "æ",
+          "æ",
+          "Λ",
+          "æ",
+          "æ",
+          "Λ"
         ]
       },
-      "fill in the spaces": {
-        letters: ["u", "oo", "ou", "o"],
-        sounds: ["u:", "Λ"],
-        words: [
-          [["s", "_", "p"], "ou", "u:"],
-          [["r", "_", "gh"], "ou", "ʌ"],
-          [["t", "_"], "oo", "u:"],
-          [["r]", "_", "f"], "oo", "u:"],
-          [["l", "_", "mp"], "u", "ʌ"],
-          [["m", "_", "nth"], "o", "ʌ"],
-          [["h", "_", "ge"], "u", "u:"],
-          [["y", "_", "th"], "ou", "u:"],
-          [["y", "_", "ng"], "ou", "ʌ"]
-        ]
-      },
-      "listen to the sounds": {
+      "fill in the words": {
         options: [
-          ["shoes", "shows"],
-          ["soup", "soap"],
-          ["choose", "chose"],
-          ["June", "Joan"]
+          "land",
+          "cup",
+          "son",
+          "January",
+          "come",
+          "month",
+          "uncle",
+          "country",
+          "shut",
+          "won",
+          "abandoned",
+          "Japan",
+          "brother",
+          "cat"
         ],
         sentences: [
-          "I saw some new OPTION in town.",
-          "She didn't like the smell of the OPTION.",
-          "I OPTION the blue pair of shoes.",
-          "His wife's name is OPTION."
+          "The OPTION /~Λ~/ after OPTION /~æ~/ is February",
+          "My mother's OPTION /~Λ~/ is my OPTION /~æ~/.",
+          "Brazil OPTION /~Λ~/ the World OPTION /~Λ~/ in 2002.",
+          "OPTION /~æ~/ is a OPTION /~Λ~/ in Asia.",
+          "My OPTION /~Λ~/ has a OPTION /~æ~/ called Fluffy.",
+          "OPTION /~Λ~/ in and OPTION /~Λ~/ the door, please.",
+          "The OPTION /~æ~/ next to the park in OPTION /~æ~/."
         ]
       },
-      "beginner news stories": {
+      "beginner identify the sounds": {
         level: "beginner",
         subscription: 1,
         title:
-          "Choose the correct sound: ~/u:/~ (the short ‘u’ sound) or ~/ʌ/~ (the short 'u' sound)",
-        headline: "A cat named Bob",
-        options: ["...", "u:", "ʌ"],
-        answers: [
-          "u:",
-          "ʌ",
-          "ʌ",
-          "ʌ",
-          "ʌ",
-          "ʌ",
-          "u:",
-          "ʌ",
-          "u:",
-          "ʌ",
-          "ʌ",
-          "ʌ",
-          "u:",
-          "u:",
-          "ʌ",
-          "u:",
-          "ʌ"
-        ],
+          "Identify the correct sound. Tick ✅ the words with the short 'u' sound /~Λ~/ and put a cross ❌for the words with no short 'u' sound.",
+        headline: "Captain Norman sails home",
         sentences: [
-          "Bob is a cat. A h~u~ge OPTION cat. James is a y~ou~ng OPTION man from L~o~ndon OPTION. They are great friends.",
-          "Before they met, James’s life was t~ou~gh OPTION. He went b~u~sking OPTION everyday to get m~o~ney OPTION.",
-          "One day, he came home and saw a cat sitting outside his ~u~nit OPTION. The cat h~u~ng OPTION around for a f~ew~ OPTION days. It had a c~u~t OPTION on his leg, so James took the cat to the veterinarian. James looked after the cat and named the cat Bob.",
-          "Bob went everywhere with James. They even caught the b~u~s OPTION together to go busking. James played the guitar and Bob sat on his shoulders. People l~o~ved OPTION seeing Bob and gave James more money. People prod~u~ced OPTION videos of Bob and James on YouT~u~be OPTION. People came from around the c~ou~ntry OPTION to see them.",
-          "Bob changed James’s life. James wrote a book about Bob. The book sold close to t~wo~ OPTION million copies. He wrote an~o~ther OPTION five books. A film was also made. Now James owns a house and has a good life with Bob."
+          "Norman Sanders l~o~ved OPTION sailing. He wanted to b~uy~ OPTION his own boat, but he never had en~ou~gh OPTION m~o~ney OPTION for ~o~ne OPTION.",
+          "He was from England and moved to ~Au~stralia OPTION in 1987. In his new c~ou~ntry OPTION he worked in a g~o~vernment OPTION job ~u~ntil OPTION he retired.",
+          "Norman and his family spent every s~u~mmer OPTION holiday at the beach. Norman sat looking at the sea and dreamed about sailing ar~ou~nd OPTION the world.",
+          "In September 2017, Norman died. He was 89 years old. He never got to buy his boat.",
+          "A c~ou~ple OPTION of m~o~nths OPTION after he died, his family decided to b~ui~ld OPTION a f~u~n OPTION sized boat. They p~u~t OPTION his ashes in the boat and put it into the sea. They were hoping the boat would sail to England, 16,000km away.",
+          "The family also sent a note with the boat asking anyone who c~o~mes OPTION across the boat to ret~u~rn it to the water."
+        ],
+        options: ["...", "✅", "❌"],
+        answers: [
+          "✅",
+          "❌",
+          "✅",
+          "✅",
+          "✅",
+          "❌",
+          "✅:",
+          "✅",
+          "❌",
+          "✅",
+          "❌",
+          "✅",
+          "✅:",
+          "❌",
+          "✅",
+          "❌",
+          "✅",
+          "❌"
         ]
       },
-      "intermediate news stories": {
+      "intermediate identify the sounds": {
         level: "intermediate",
         subscription: 1,
         title:
-          "Choose the correct sound: ~/u:/~ (the short ‘u’ sound) or ~/ʌ/~ (the short 'u' sound)",
-        headline: "A cat named Bob",
-        options: ["...", "u:", "ʌ"],
-        answers: [
-          "u:",
-          "ʌ",
-          "ʌ",
-          "ʌ",
-          "ʌ",
-          "ʌ",
-          "ʌ",
-          "ʌ",
-          "u:",
-          "u:",
-          "u:",
-          "ʌ",
-          "u:",
-          "ʌ",
-          "u:",
-          "ʌ",
-          "ʌ",
-          "ʌ",
-          "u:",
-          "ʌ",
-          "u:",
-          "u:",
-          "ʌ",
-          "ʌ"
-        ],
+          "Identify the correct sound. Tick ✅ the words with the short 'u' sound /~Λ~/ and put a cross ❌for the words with no short 'u' sound.",
+        headline: "Captain Norman sails home",
         sentences: [
-          "Bob is a cat. A h~u~ge OPTION ginger cat. James is a y~ou~ng OPTION man from L~o~ndon OPTION. They are great friends.",
-          "In 2007, James was living in a g~o~vernment OPTION unit. He was addicted to dr~u~gs OPTION, but was trying to stop. He went b~u~sking OPTION everyday to get m~o~ney OPTION.",
-          "One day, he returned home and disc~o~vered OPTION a ginger cat sitting outside his ~u~nit OPTION. The cat didn’t leave - he contin~u~ed OPTION to hang around for a f~ew~ OPTION days. James saw that the cat had a c~u~t OPTION on his leg. So, he took the cat to the veterinary. James looked after the cat and it rec~u~perated OPTION. James named the cat Bob.",
-          "Bob acc~o~mpanied OPTION James everywhere incl~u~ding OPTION catching the b~u~s OPTION to go busking. James played the guitar and Bob sat on his shoulders. People l~o~ved OPTION seeing Bob and gave James more money. People started to ~u~pload OPTION videos of Bob and James on YouT~u~be OPTION. They came from around the c~ou~ntry OPTION to see them.",
-          "Bob changed James’s life. James stopped ab~u~sing OPTION his body with drugs. He wrote a book about Bob. The book sold close to tw~o~ OPTION million copies. He wrote an~o~ther OPTION five books. A film was also made.",
-          "Now James owns a house and has a w~o~nderful OPTION life with Bob."
+          "Norman Sanders l~o~ved OPTION sailing. He wanted to own his own boat, but he never had en~ou~gh OPTION m~o~ney OPTION to b~u~y OPTION one.",
+          "He was from England and moved his y~ou~ng OPTION family to ~Au~stralia OPTION in 1987. In his adopted c~ou~ntry OPTION he worked as a p~u~blic OPTION servant ~u~ntil OPTION he retired.",
+          "Norman and his family spent their s~u~mmer OPTION holidays along the s~ou~th OPTION coast of Australia dreaming about sailing ar~ou~nd OPTION the world.",
+          "In September 2017, Norman died. He was 89 years old. He never got to f~u~lfill OPTION his dream.",
+          "A c~ou~ple OPTION of m~o~nths OPTION after he died, his family decided to b~ui~ld OPTION a miniature boat. They p~u~t OPTION his ashes in it and l~au~nched OPTION it into the sea towards England, 16,000km away.",
+          "The family also sent a note to the boat asking anyone who c~o~mes OPTION across the boat to ret~u~rn it to the water."
+        ],
+        options: ["...", "✅", "❌"],
+        answers: [
+          "✅",
+          "✅",
+          "✅",
+          "❌",
+          "✅",
+          "❌",
+          "✅:",
+          "✅",
+          "❌",
+          "✅",
+          "✅",
+          "❌",
+          "❌",
+          "✅:",
+          "✅",
+          "❌",
+          "❌",
+          "❌",
+          "✅",
+          "❌"
         ]
       },
-      "minimal pairs dominos": {
-        subscription: 1,
-        options: ["I", "i:", "aɪ", "e", "ɜː"],
-        pairs: [["~ea~ch", "~i~tch"]]
+      "pronunciation journey": {
+        pairs: [
+          ["none", "noon"],
+          ["bunch", "bench"],
+          ["rough", "roof"],
+          ["puddle", "saddle"]
+        ],
+        map: [
+          "india",
+          "argentina",
+          "canada",
+          "iran",
+          "lebanon",
+          "japan",
+          "mexico",
+          "indonesia",
+          "england",
+          "korea",
+          "australia",
+          "china",
+          "germany",
+          "brazil",
+          "switzerland",
+          "america"
+        ]
       },
       "words maze": {
         subscription: 1,
         words: [
-          ["street", "TV", "leave", "please", "agree"],
-          ["pretty", "eye", "empty", "break", "believe"],
-          ["level", "weather", "guest", "teacher", "key"],
-          ["great", "sea", "between", "receive", "item"],
-          ["speak", "each", "address", "yesterday", "instead"],
-          ["fifteen", "because", "magazine", "three", "need"],
-          ["weekend", "screen", "these", "English", "niece"],
-          ["bread", "open", "September", "text", "easy"]
+          ["cut", "quick", "busy", "museum", "count"],
+          ["Sunday", "building", "front", "love", "tongue"],
+          ["other", "unit", "rough", "introduce", "once"],
+          ["something", "computer", "under", "true", "lunch"],
+          ["flood", "cover", "southern", "hour", "comfortable"],
+          ["house", "flu", "mountain", "come", "none"],
+          ["use", "through", "welcome", "double", "explain"],
+          ["ground", "buy", "tube", "brother", "uncle"]
         ],
         correct: [
-          "street",
-          "TV",
-          "leave",
-          "please",
-          "agree",
-          "believe",
-          "key",
-          "teacher",
-          "receive",
-          "between",
-          "sea",
-          "each",
-          "speak",
-          "fifteen",
-          "weekend",
-          "screen",
-          "these",
-          "magazine",
-          "three",
-          "need",
-          "niece",
-          "easy"
+          "cut",
+          "Sunday",
+          "other",
+          "something",
+          "flood",
+          "cover",
+          "southern",
+          "under",
+          "rough",
+          "front",
+          "love",
+          "tongue",
+          "once",
+          "lunch",
+          "comfortable",
+          "none",
+          "come",
+          "double",
+          "brother",
+          "uncle"
         ]
       }
     }

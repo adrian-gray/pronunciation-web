@@ -1,30 +1,34 @@
 export const openActivities = [
-  "how to pronounce",
-  "movie",
-  "words",
-  "phrases",
-  "dialogues",
   "common words",
-  "tongue twisters",
+  "dialogues",
+  "how to pronounce",
   "minimal pairs",
-  "say the sentences"
+  "movie",
+  "phrases",
+  "say the sentences",
+  "tongue twisters",
+  "words"
 ];
 
 export const memberActivities = [
   "beginner news stories",
-  "missing sounds",
   "find the words",
   "intermediate news stories",
+  "missing sounds",
   "odd one out",
   "words maze"
 ];
 
 export const pendingActivities = [
+  "beginner identify the sounds",
   "choose the sound",
   "count the sounds",
   "complete the rhymes",
+  "decide the sound",
   "fill in the spaces",
+  "fill in the words",
   "hear the words",
+  "intermediate identify the sounds",
   "jigsaw",
   "join to make words",
   "listen to the sounds",

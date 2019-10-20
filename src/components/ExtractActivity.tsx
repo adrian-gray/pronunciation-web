@@ -128,14 +128,14 @@ const ExtractActivity = (params: {
       activityComponent = (
         <Movie
           ipa={data.ipa}
-          src={activity.stc}
+          src={activity.src}
           title={activity.title}
           isUserAuth={isUserAuth}
         />
       );
       break;
 
-    case "new stories":
+    case "news stories":
     case "beginner news stories":
     case "intermediate news stories":
       activityComponent = (

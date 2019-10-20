@@ -13,9 +13,8 @@ exports[`Movie 1`] = `
        
     </h3>
     <img
-      alt="Pronouncing a:"
       class="full-width"
-      src="https://foo.com/movie.mpg"
+      src="/assets/images/movie-english-pronounce-coming-soon.jpg"
     />
   </div>
 </div>

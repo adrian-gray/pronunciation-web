@@ -746,6 +746,156 @@ exports[`Home 1`] = `
         </a>
       </div>
     </div>
+    <div
+      class="headspace"
+    >
+      <div
+        class="mini-canvas"
+      >
+        <h3>
+          <span>
+            <span />
+            <span
+              class="hilite"
+            >
+              /Λ/
+            </span>
+            <span />
+             
+             – 
+            <span>
+              short 
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+               ‘bl
+            </span>
+            <span
+              class="hilite"
+            >
+              ue
+            </span>
+            <span>
+              ’
+            </span>
+             
+          </span>
+        </h3>
+        <p>
+          Example words containing short ‘a’
+        </p>
+        <p>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              j
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+              st
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              en
+            </span>
+            <span
+              class="hilite"
+            >
+              ou
+            </span>
+            <span>
+              gh
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              c
+            </span>
+            <span
+              class="hilite"
+            >
+              o
+            </span>
+            <span>
+              lour (color)
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              n
+            </span>
+            <span
+              class="hilite"
+            >
+              u
+            </span>
+            <span>
+              mber
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              l
+            </span>
+            <span
+              class="hilite"
+            >
+              o
+            </span>
+            <span>
+              ve
+            </span>
+             
+          </span>
+          <span
+            class="phoneme-word"
+          >
+            <span>
+              tr
+            </span>
+            <span
+              class="hilite"
+            >
+              ou
+            </span>
+            <span>
+              ble
+            </span>
+             
+          </span>
+        </p>
+        <a
+          class="undecorated"
+          href="/sound/short-u"
+        >
+          <h5>
+            Click to learn more about the short ‘u’ sound
+          </h5>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 `;
