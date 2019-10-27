@@ -1,5 +1,3 @@
-import { URL } from "./constants";
-
 // title 65-75
 //  title: `##########**********##########**********##########**********@@@@@----------
 // description 150 - 170
@@ -72,13 +70,15 @@ export default {
     canonical: `${URL}/sound/long-u/listen-to-the-sounds`
   },
   "sound long-u beginner news stories": {
-    title: "Beginner Identify the News Story sounds, long ‘u’ sounds",
+    title:
+      "Beginner Identify the News Story sounds, long ‘u’ sounds",
     description:
       "News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.",
     canonical: `${URL}/sound/long-u/beginner-news-stories`
   },
   "sound long-u intermediate news stories": {
-    title: "Intermediate Identify the News Story sounds, long ‘u’ sounds",
+    title:
+      "Intermediate Identify the News Story sounds, long ‘u’ sounds",
     description:
       "News Stories helps you to identify individual sounds in long and more difficult written text. This improves your pronunciation of the words you read and your reading fluency.",
     canonical: `${URL}/sound/long-u/intermediate-news-stories`
