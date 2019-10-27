@@ -1,11 +1,11 @@
+import { URL } from "./constants";
+
 import long_a from "./long_a.js";
 import long_e from "./long_e.js";
 import long_u from "./long_u.js";
 import short_a from "./short_a.js";
 import short_i from "./short_i.js";
 import short_u from "./short_u.js";
-
-const URL = "https://pronounceweb.com";
 
 // title 65-75
 //  title: `##########**********##########**********##########**********@@@@@----------
