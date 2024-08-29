@@ -1,13 +1,13 @@
 {
   "presets": [
-    "@babel/preset-react",
-    "@babel/preset-typescript",
+    ["@babel/preset-react"],
+    ["@babel/preset-typescript"],
     [
       "@babel/preset-env",
       {
         "exclude": ["transform-async-to-generator"],
         "loose": true,
-        "modules": "false",
+        "modules": "auto",
         "useBuiltIns": "entry",
         "corejs": 3
       }
