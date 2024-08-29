@@ -28,6 +28,9 @@ export default () => {
           "Following the pronunciation lessons are English pronunciation examples, recorded conversations, and interactive activities to help improve your pronunciation the right way. We are currently adding sounds and activities weekly. Improve your English pronunciation to speak clearly and professionally."
         }
       </p>
+      <p>
+        Web application developed in Sydney's inner west by <a href="https://endual.com">Endual</a>
+      </p>
       <h5>{"Stay up to date as we add pronunciation activities"}</h5>
       <p>
         {

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "yarn rimraf dist && yarn sitemap && webpack --config webpack.config.production.js",
+    "build": "yarn rimraf dist && webpack --config webpack.config.production.js",
     "dev": "webpack-dev-server --config webpack.config.development.js",
     "postbuild": "react-snap",
     "deploy": "yarn firebase deploy",
@@ -11,8 +11,15 @@
     "test:coverage": "jest --coverage"
   },
   "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
     "source": "dist",
-    "concurrency": 20
+    "puppeteer": {
+      "timeout": 180000
+    },
+    "concurrency": 1
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -66,12 +73,12 @@
     "phaser": "2.6.2",
     "prettier": "^3.3.3",
     "prop-types": "15.7.2",
-    "react-snap": "^1.23.0",
+    "react-snap": "1.10.0",
     "regenerator-runtime": "^0.13.3",
     "rimraf": "^5.0.10",
     "sass": "^1.77.8",
     "sass-loader": "^10.5.2",
-    "sitemap": "^3.2.2",
+    "sitemap": "^8.0.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^2.1.2",

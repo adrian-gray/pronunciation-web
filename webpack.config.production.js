@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -29,40 +29,16 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: [/node_modules/],
-        loader: "babel-loader"
+        use: { loader: "babel-loader" }
       },
       {
         test: /\.module\.s(a|c)ss$/,
-        loader: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-              sourceMap: false
-            }
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: false
-            }
-          }
-        ]
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.s(a|c)ss$/,
         exclude: /\.module.(s(a|c)ss)$/,
-        loader: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: false
-            }
-          }
-        ]
+        use: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
   },
@@ -70,7 +46,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "/src/index.html")
     }),
-    new CopyWebpackPlugin([{ from: "./src/assets", to: "assets" }]),
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/assets", to: "assets" },
+        { from: "./src/styles", to: "styles" }
+      ]
+    }),
     new CompressionPlugin({ algorithm: "gzip" }),
     new MiniCssExtractPlugin({
       filename: "[name].[hash].css",
